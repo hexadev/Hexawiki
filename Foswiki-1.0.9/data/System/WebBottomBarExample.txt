@@ -1,0 +1,4 @@
+%META:TOPICINFO{author="ProjectContributor" date="1111929255" format="1.0" version="1"}%
+%META:TOPICPARENT{name="PatternSkin"}%
+%WEBCOPYRIGHT%
+

@@ -1,4 +1,0 @@
-Test topic for TestCaseWikiWordRendering and TestCaseSpacedWikiWordPlugin.
-
-#TestAnchor
----++ Header

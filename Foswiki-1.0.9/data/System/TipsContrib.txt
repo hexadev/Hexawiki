@@ -1,0 +1,92 @@
+%META:TOPICINFO{author="ProjectContributor" date="1167969723" format="1.1" version="$Rev$"}%
+%META:TOPICPARENT{name="Contribs"}%
+---+!! Tips Contrib Package
+
+Displays a rotating "Tip of the Day" to help familiarize new users with Foswiki features. Includes an application for creating custom tips for local installation.
+
+%TOC%
+
+---++ Summary of Contents
+   * Set on =TipTopic= topics providing brief lessons on Foswiki features. See %SYSTEMWEB%.TipsTopics.
+   * Set of topics for creating and managing =TipTopicXXX= topics. See %SYSTEMWEB%.TipsOfTheDayAdmin.
+
+---++ Detailed Documentation
+   * See %SYSTEMWEB%.TipsOfTheDayAdmin for instructions on managing and displaying tips.
+   * See %SYSTEMWEB%.TipsOfTheDayAddNew for instructions for adding new custom tips.
+
+---++ Settings
+
+This extension requires no settings.  See %SYSTEMWEB%.TipsOfTheDayAdmin for administration details.
+
+   * One line description:
+   * Set SHORTDESCRIPTION = Displays rotating list of "Tip-of-the-day"
+
+---++ CSS used by !TipsContrib
+
+   * .tipsOfTheDay - overall container
+   * .tipsOfTheDayContents - container for tipsOfTheDayHeader and tipsOfTheDayText
+   * strong.tipsOfTheDayHeader - header that says "Tip of the Day"
+   * .tipsOfTheDayText - the tip; contains title and tip summary and link "Read on"
+   * .tipsOfTheDayTitle - title of the tip; the link to the tip topic
+
+---++ Installation Instructions
+
+*Note:* You do not need to install anything on the browser to use this contrib package. The following instructions are for the administrator who installs the package on the server where Foswiki is running.
+
+   * Download the ZIP file from the Plugin web (see below)
+   * Unzip ==%TOPIC%.zip== in your Foswiki installation directory. Content:
+     | *File:* | *Description:* |
+        | ==lib/Foswiki/Contrib/TipsContrib.pm== |  |
+   | ==data/System/TipsContrib.txt== |  |
+   | ==data/System/TipTopic001.txt== |  |
+   | ==data/System/TipTopic002.txt== |  |
+   | ==data/System/TipTopic003.txt== |  |
+   | ==data/System/TipTopic004.txt== |  |
+   | ==data/System/TipTopic005.txt== |  |
+   | ==data/System/TipTopic006.txt== |  |
+   | ==data/System/TipTopic007.txt== |  |
+   | ==data/System/TipTopic008.txt== |  |
+   | ==data/System/TipTopic009.txt== |  |
+   | ==data/System/TipTopic010.txt== |  |
+   | ==data/System/TipTopic011.txt== |  |
+   | ==data/System/TipTopic012.txt== |  |
+   | ==data/System/TipTopic013.txt== |  |
+   | ==data/System/TipTopic014.txt== |  |
+   | ==data/System/TipTopic015.txt== |  |
+   | ==data/System/TipTopic016.txt== |  |
+   | ==data/System/TipTopic017.txt== |  |
+   | ==data/System/TipTopic018.txt== |  |
+   | ==data/System/TipTopic019.txt== |  |
+   | ==data/System/TipTopic020.txt== |  |
+   | ==data/System/TipTopic021.txt== |  |
+   | ==data/System/TipTopic022.txt== |  |
+   | ==data/System/TipTopic023.txt== |  |
+   | ==data/System/TipTopic024.txt== |  |
+   | ==data/System/TipTopic025.txt== |  |
+   | ==data/System/TipTopic026.txt== |  |
+   | ==data/System/TipTopic027.txt== |  |
+   | ==data/System/TipTopic028.txt== |  |
+   | ==data/System/TipTopic029.txt== |  |
+   | ==data/System/TipsTopics.txt== |  |
+   | ==data/System/TipsOfTheDay.txt== |  |
+   | ==data/System/TipsOfTheDayAddNew.txt== |  |
+   | ==data/System/TipsOfTheDayAdmin.txt== |  |
+   | ==data/System/TipsOfTheDayInclude.txt== |  |
+   | ==data/System/TipsOfTheDayTemplate.txt== |  |
+
+
+---++ Contrib Info
+
+|  Copyright  | Copyright (C) 2005-2007 Peter Thoeny, peter@thoeny.org and TWiki Contributors  |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Version: | 16 Dec 2008 |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  16 Dec 2008: | Foswiki version | 
+|  04 Jan 2007: | Performance improvement |
+|  10 Oct 2005: | Initial version - Packaging by TWiki:Main.LynnwoodBrown |
+|  Dependencies: | Foswiki:Extensions.SpreadSheetPlugin 18 Dec 2006 (r12315) |
+|  Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Support: | http://foswiki.org/Support/%TOPIC% |
+
+---
+*Related Topics:* %USERSWEB%.SitePreferences

@@ -1,2 +1,0 @@
-%META:TOPICINFO{author="ProjectContributor" date="1231502400" format="1.1" version="$Rev$"}%
-%INCLUDE{"%SYSTEMWEB%.%TOPIC%"}%

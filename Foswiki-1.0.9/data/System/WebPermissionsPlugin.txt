@@ -1,0 +1,200 @@
+---+ Web Permissions Plugin
+%SHORTDESCRIPTION%
+<a href="http://wikiring.com"><img src="%ATTACHURL%/logo.gif" style="float:right" /></a>
+
+<!--
+   * Set C = <img src="%ATTACHURL%/CHANGE.gif" />
+   * Set V = <img src="%ATTACHURL%/VIEW.gif" />
+   * Set Y = <input checked="checked" type="checkbox" />
+   * Set N = <input type="checkbox" />
+-->
+This plugin provides a centralised interface to Foswiki permissions.
+
+Web permissions are presented as a matrix that has columns of webs and rows of users. For each web, you can control which users can view or change that web. All user webs, every registered user (except admin users), and every group (except admin groups) are shown in the matrix.
+
+To interactivly edit topic permissions, it adds an "Edit topic ACLs" option to the "More Actions" page.
+
+---++++ Web Permissions
+This interface allows you to control 
+<table class="foswikiTable">
+<tr><th width="50%"> Viewing </th><th width="50%"> Editing </th></tr>
+<tr><td>
+VIEW = %V% CHANGE = %C%
+<table class="foswikiTable">
+<tr><th></th><th>Albums</th><th>Singles</th><th>Reviews</th><th>Statistics</th></tr>
+<tr><th>AnnieLennox<td>%V%%C%</td><td>%V%%C%</td><td>%V%%C%</td><td>%V%</td></tr>
+<tr><th>BillyBragg </th><td>%V%<td>%V%</td><td>%V%</td><td></td></tr>
+<tr><th>ColinTowns </th><td>%V%%C%</td><td>%V%%C%</td><td>%V%%C%</td><td>%V%</td></tr>
+<tr><th>DavidSoul </th><td></td><td>%V%%C%</td><td></td><td>%V%</td></tr>
+<tr><th>EaglesGroup </th><td>%C%<td></td><td>%V%%C%</td><td>%V%</td></tr>
+</table>
+<button>Edit</button>
+</td><td>
+VIEW = %V% CHANGE = %C%
+<table class="foswikiTable" border="1">
+<tr><th></th><th>Albums</th><th>Singles</th><th>Reviews</th><th>Statistics</th></tr>
+<tr><th> AnnieLennox </th><td>%V%%Y% %C%%Y%</td><td>%V%%Y%%C%%Y%</td><td>%V%%Y%%C%%Y%</td><td>%V%%Y%%C%%N%</td></tr>
+<tr><th> BillyBragg </th><td>%V%%Y%%C%%N%<td>%V%%Y%%C%%N%</td><td>%V%%Y%%C%%N%</td><td>%V%%N%%C%%N%</td></tr>
+<tr><th> ColinTowns </th><td>%V%%Y%%C%%Y%</td><td>%V%%Y%%C%%Y%</td><td>%V%%Y%%C%%Y%</td><td>%V%%Y%%C%%N%</td></tr>
+<tr><th> DavidSoul </th><td>%V%%N%%C%%N%</td><td>%V%%Y%%C%%Y%</td><td>%V%%N%%C%%N%</td><td>%V%%Y%%C%%N%</td></tr>
+<tr><th> EaglesGroup </th><td>%V%%N%%C%%Y%<td>%V%%N%%C%%N%</td><td>%V%%Y%%C%%Y%</td><td>%V%%Y%%C%%N%</td></tr>
+</table>
+<button>Save</button> <button>Cancel</button>
+</td></tr></table>
+
+<hr />
+
+This control model is very useful in cases such as a web per project environment. In this case you will probably want to give team members change access to the specific projects they are working on. The plugin gives you a simple, one page interface, for handling these permissions.
+
+The plugin tries very hard to keep the permissions specification you started with, though it does move them to METADATA.
+
+---++++ Topic Permissions
+<!--
+   * Set LEFT = <img src="%ATTACHURL%/leftarrow.png"  alt="<"/>
+   * Set RIGHT = <img src="%ATTACHURL%/rightarrow.png"  alt=">"/>
+   * Set UP = <img src="%ATTACHURL%/uparrow.png"  alt="^"/>
+   * Set DOWN = <img src="%ATTACHURL%/downarrow.png"  alt="v"/>
+-->
+<form name="topicpermissionsform" method="post" >
+<table border="0"><tbody><tr>
+		  <td rowspan="3" width="40%">
+<h4><a name="All_Users_and_Groups"></a> All Users and Groups </h4>
+				<select size="14" name="disallowedusers" multiple="multiple" style="width: 100%;">
+					 <optgroup label="Groups"></optgroup>
+					 <optgroup label="Users"><option>ProjectContributor</option><option>WikiGuest</option></optgroup></select>
+		  </td><td align="center" width="100">
+				<button type="button" style="width: 100%;" class="foswikiSubmit" name="action_save" id="save">%LEFT% Remove</button>
+				<button type="button" style="width: 100%;" class="foswikiSubmit" name="action_cancel" id="cancel">Add %RIGHT%</button></td>
+		  <td width="40%">
+<h4><a name="Editors"></a> Editors </h4>
+				<select size="5" name="topiceditors" multiple="multiple" style="width: 100%;">
+					 <optgroup label="Groups">
+                    <option>AdminGroup</option>			 
+					 </optgroup><optgroup label="Users">
+                    <option>AnnieLennox</option>
+				</optgroup></select>
+		  </td>
+	 </tr>
+	 <tr><td></td>
+		  <td align="center" valign="center">
+				<button type="button" style="height: 20px; width: 30%;" class="foswikiSubmit" name="action_save" id="save">%DOWN%</button>
+				<button type="button" style="height: 20px; width: 30%;" class="foswikiSubmit" name="action_cancel" id="cancel">%UP%</button>
+		  </td>
+	 </tr>
+	 <tr><td align="center">
+				<button type="button" style="width: 100%;"class="foswikiSubmit" name="action_save" id="save">%LEFT% Remove</button>
+				<button type="button" style="width: 100%;" class="foswikiSubmit" name="action_cancel" id="cancel">Add %RIGHT%</button></td>
+		  <td><h4><a name="Viewers"></a> Viewers </h4>
+				<select size="5" name="topicviewers" multiple="multiple" style="width: 100%;">
+					 <optgroup label="Groups">
+                        <option>NobodyGroup</option>					 
+					 </optgroup><optgroup label="Users">
+                        <option>RegistrationAgent</option><option>UnknownUser</option>
+				</optgroup></select></td>
+	 </tr><tr height="10">
+	 </tr><tr>
+		  <td colspan="3" align="right">
+				<input class="foswikiSubmit" name="topic_permissions_action" id="save" value="Save" >
+				<input class="foswikiSubmit" name="topic_permissions_action" id="cancel" value="Cancel"> &nbsp; &nbsp; &nbsp; &nbsp;
+			</td>
+	 </tr>
+</tbody></table>
+</form>
+<hr />
+
+---++ Syntax Rules
+
+The web permissions matrix can be viewed (and edited) by entering =%<nop>WEBPERMISSIONS%= anywhere in a topic. 
+You have to have admin rights to view/edit the matrix.
+
+The topic permissions UI can be viewed (and edited) by entering =%<nop>TOPICPERMISSIONS%= anywhere in a topic (or accesing it via the 'More topic actions' page). 
+You have to have write permissions to that topic to view/edit the UI.
+
+
+---+++ =WEBPERMISSIONS=
+The =WEBPERMISSIONS= TML variable accepts the following parameters:
+   * =repeatheads= - if set to a number, headings will be repeated every this number of rows. This is very useful when you have a lot of users and groups.
+   * =webs= - a comma-separated list of webs to show. Default is to show all webs.
+   * =users= - a comma-separated list of users (and groups) to show. Default is to show all users and groups.
+Both =webs= and =users= lists can use _wildcards_. A star (*) in a name will match any number of characters - so =Brian*= will match all users and groups whose names start with =Brian=. =*Group= will match all users or groups whose name ends in =Group=. If you put a minus sign (-) before a name in either list, then the next expression will be treated as a _filter_ e.g. =-Secret= will _exclude_ the name =Secret= from the list, and =*Group= will exclude all names ending in =Group= from the list.
+
+Use the following form to select the subset of webs and users you want to display. If you have admin rights, and the plugin is installed, you will see the matrix below the form:
+
+<!-- Copy from HERE -->
+#PermissionsMatrix
+<div style="background-color: #ffffdf; padding: 10px">
+Select the webs, users, and groups you want to change permissions for from the list below. Ctrl+click and Shift+click work as normal.<br />
+<form action="%SCRIPTURL{view}%/%WEB%/%TOPIC%#PermissionsMatrix" method="POST">
+<select size="7" name="webs" multiple="multiple">
+%WEBLIST{format="<option $marker>$name</option>" selection="%URLPARAM{"webs" multiple="on" separator=", "}%"}%
+</select>
+<select size="7" name="users" multiple="multiple">
+%USERSLIST{format="<option $marker>$wikiname</option>" selection="%URLPARAM{"users" multiple="on" separator=", "}%"}%
+</select> <br />
+<input type="submit" value="Select"/>
+</form>
+
+%WEBPERMISSIONS{webs="%URLPARAM{"webs" multiple="on" separator="," default="%SYSTEMWEB%,%MAINWEB%,%WEB%"}%" users="%URLPARAM{"users" multiple="on" separator="," default="%USERNAME%"}%" repeatheads="10"}%
+</div>
+<!-- TO HERE -->
+
+%X% When using the plugin with sub-web permissions, beware of access
+control settings that are [[%SYSTEMWEB%.Macros#FinalMacros][finalised]]
+in parent webs, as these settings will override settings in subwebs.
+Use the =[[VarSHOWPREFERENCE][%<nop>SHOWPREFERENCE%]]= macro to review preference
+settings (not available on all Foswiki versions).
+
+---+++ =TOPICPERMISSIONS=
+The topic permissions tool can be viewed (and edited) by entering =%<nop>TOPICPERMISSIONS%= anywhere in a topic. 
+
+To add  an "Edit ACLS" option to the "More topic actions" screen  add =webpermissions= to the front of the SKIN setting (e.g. =Set SKIN = webpermissions,pattern=)
+
+---++ Plugin Settings
+<!--
+   * One line description, is shown in the %SYSTEMWEB%.TextFormattingRules topic:
+      * Set SHORTDESCRIPTION = View and edit web permissions
+-->
+By default, the plugin only supports VIEW and CHANGE permissions on webs. You can change the set of access modes handled by the plugin by defining a configuration variable (in !LocalSite.cfg) to be a comma-separated list of access modes. For example,
+<verbatim>
+$Foswiki::cfg{Plugins}{WebPermissionsPlugin}{modes} = 'VIEW,CHANGE,RENAME';
+</verbatim>
+See %SYSTEMWEB%.AccessControl for more information on what access modes can be used to control.
+
+---++ Plugin Installation Instructions
+
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+To access the Topic Permission editor, add =webpermissions= to the SKIN setting in %USERSWEB%.SitePreferences .
+e.g. =Set SKIN=webpermissions,pattern=)
+
+
+---++ Plugin Info
+
+Another great Foswiki extension from the <a style="text-decoration:none" href="http://wikiring.com"><img src="%ATTACHURLPATH%/wikiringlogo20x20.png" alt="" /> *WikiRing* </a> - working together to improve your wiki experience!
+
+Many thanks to the following sponsors for supporting this work:
+   * This plugin was developed on behalf of <a href="http://www.evolvedmedianetwork.com">Evolved Media Network</a>
+   * Further work supported by [[http://www.spanlink.com/][Spanlink Communications]]
+
+|  Author: | Foswiki:Main.CrawfordCurrie & Foswiki:Main.SvenDowideit, http://wikiring.com |
+|  Copyright: | &copy; 2006, Evolved Media Network, Spanlink Communications and WikiRing |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Version: | 7708 (2010-06-09) |
+|  Release: | 9 Jun 2010 |
+|  Change History: | |
+|  9 Jun 2010 | Foswikitask:Item1484: Aaron Scamehorn finished porting |
+|  21 Apr 2009 | Foswikitask:Item1484: Sven Dowideit, Crawford Currie, ported to Foswiki |
+|  Dependencies: | None |
+|  Plugin Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Feedback: | http://foswiki.org/Extensions/%TOPIC%Dev |
+|  Appraisal: | http://foswiki.org/Extensions/%TOPIC%Appraisal |
+
+__Related Topics:__ %SYSTEMWEB%.DefaultPreferences, %USERSWEB%.SitePreferences, %SYSTEMWEB%.DeveloperDocumentationCategory, %SYSTEMWEB%.AdminDocumentationCategory, %SYSTEMWEB%.DefaultPreferences, %USERSWEB%.SitePreferences
+
+%META:FILEATTACHMENT{name="wikiringlogo20x20.png" attr="h" comment="" version="1"}%
+%META:FILEATTACHMENT{name="logo.gif" attr="h" comment="" version="1"}%

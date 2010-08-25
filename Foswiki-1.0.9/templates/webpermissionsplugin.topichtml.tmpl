@@ -1,0 +1,82 @@
+
+<div id="topicpermissionsdiv" style="display:inline;">
+<form name="topicpermissionsform"  method="post" action="%SCRIPT%/%WEB%/%TOPIC%">
+---++ Set Permissions for %WEB%.%TOPIC%
+<table border="0">
+    <tr>
+        <td rowspan="3" width="40%">
+---++++ All Users and Groups
+            <SELECT SIZE="17"  NAME=disallowedusers MULTIPLE style="width:100%;">
+                <OPTGROUP label="Groups">
+%UNSELECTEDGROUPS%
+                </OPTGROUPS>
+                <OPTGROUP label="Users">
+%UNSELECTEDUSERS%
+                </OPTGROUPS>
+            </SELECT>
+        </td>
+        <td align="center" width="100px">
+            <button type="button" style="width:100%;" onclick="Foswiki.WebPermissionsPlugin.moveSelectionTo(event, 'topiceditors', 'disallowedusers');" class="foswikiSubmit" >
+                <IMG src="%PUBURL%/%SYSTEMWEB%/%PLUGINNAME%/leftarrow.png" alt="<-"> Remove
+            </button>
+            <button type="button"  style="width: 100%;" onclick="Foswiki.WebPermissionsPlugin.moveSelectionTo(event, 'disallowedusers', 'topiceditors');" class="foswikiSubmit" >
+                Add <IMG src="%PUBURL%/%SYSTEMWEB%/%PLUGINNAME%/rightarrow.png" alt="->">
+            </button>
+        </td>
+        <td width="40%">
+---++++ Editors
+            <SELECT SIZE="5" NAME=topiceditors MULTIPLE style="width:100%;">
+                <OPTGROUP label="Groups">
+%EDITGROUPS%
+                </OPTGROUPS>
+                <OPTGROUP label="Users">
+%EDITUSERS%
+                </OPTGROUPS>
+            </SELECT>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td align="center" valign="center">
+            <button type="button" style="height: 20px;width:30%;" onclick="Foswiki.WebPermissionsPlugin.moveSelectionTo(event, 'topiceditors', 'topicviewers');" class="foswikiSubmit" >
+                <IMG src="%PUBURL%/%SYSTEMWEB%/%PLUGINNAME%/downarrow.png" alt="V">
+            </button>
+            <button type="button" style="height: 20px;width:30%;" onclick="Foswiki.WebPermissionsPlugin.moveSelectionTo(event, 'topicviewers', 'topiceditors');" class="foswikiSubmit" >
+                <IMG src="%PUBURL%/%SYSTEMWEB%/%PLUGINNAME%/uparrow.png" alt="^">
+            </button>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+            <button type="button" style="width: 100%;" onclick="Foswiki.WebPermissionsPlugin.moveSelectionTo(event, 'topicviewers', 'disallowedusers');" class="foswikiSubmit" >
+                <IMG src="%PUBURL%/%SYSTEMWEB%/%PLUGINNAME%/leftarrow.png" alt="<-"> Remove
+            </button>
+            <button type="button" style="width: 100%;" onclick="Foswiki.WebPermissionsPlugin.moveSelectionTo(event, 'disallowedusers', 'topicviewers');" class="foswikiSubmit" >
+                Add <IMG src="%PUBURL%/%SYSTEMWEB%/%PLUGINNAME%/rightarrow.png" alt="->">
+            </button>
+        </td>
+        <td>
+---++++ Viewers
+            <SELECT SIZE="5" NAME=topicviewers MULTIPLE style="width:100%;">
+                <OPTGROUP label="Groups">
+%VIEWGROUPS%
+                </OPTGROUPS>
+                <OPTGROUP label="Users">
+%VIEWUSERS%
+                </OPTGROUPS>
+            </SELECT>
+        </td>
+    </tr>
+    <tr height="10px">
+    </tr>
+    <tr>
+        <td align="right" colspan="3">
+            <input type="submit" %DISABLESAVE% class="foswikiSubmit%DISABLESAVE%" name="topic_permissions_action" id="save" value='Save' onclick="return prepareForSave(event);" />
+            <input type="submit" class="foswikiSubmit" name="topic_permissions_action" id="cancel" value='Cancel' accesskey='c' /> &nbsp; &nbsp; &nbsp; &nbsp;
+         </td>
+    </tr>
+</table>
+    <input type="hidden" name="topicname" value="%WEB%.%TOPIC%" />
+</form>
+</div>

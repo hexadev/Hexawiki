@@ -1,0 +1,5 @@
+| Wed Aug 25 02:56:16 2010 |  | {Site}{CharSet} | $Foswiki::cfg{Site}{CharSet} = 'iso-8859-1';
+| Wed Aug 25 02:56:16 2010 |  | {WebMasterEmail} | $Foswiki::cfg{WebMasterEmail} = 'foswiki@hexa.co';
+| Wed Aug 25 02:56:16 2010 |  | {SMTP}{MAILHOST} | $Foswiki::cfg{SMTP}{MAILHOST} = 'ASPMX.L.GOOGLE.COM.';
+| Wed Aug 25 02:56:16 2010 |  | {SMTP}{Username} | $Foswiki::cfg{SMTP}{Username} = 'foswiki';
+| Wed Aug 25 02:56:16 2010 |  | {SMTP}{Password} | $Foswiki::cfg{SMTP}{Password} = 'mandrilenano';

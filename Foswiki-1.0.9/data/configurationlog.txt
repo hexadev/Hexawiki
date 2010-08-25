@@ -3,3 +3,12 @@
 | Wed Aug 25 02:56:16 2010 |  | {SMTP}{MAILHOST} | $Foswiki::cfg{SMTP}{MAILHOST} = 'ASPMX.L.GOOGLE.COM.';
 | Wed Aug 25 02:56:16 2010 |  | {SMTP}{Username} | $Foswiki::cfg{SMTP}{Username} = 'foswiki';
 | Wed Aug 25 02:56:16 2010 |  | {SMTP}{Password} | $Foswiki::cfg{SMTP}{Password} = 'mandrilenano';
+| Wed Aug 25 03:03:11 2010 |  | {Plugins}{WebPermissionsPlugin}{Enabled} | $Foswiki::cfg{Plugins}{WebPermissionsPlugin}{Enabled} = 1;
+| Wed Aug 25 03:03:11 2010 |  | {Plugins}{WebPermissionsPlugin}{Module} | $Foswiki::cfg{Plugins}{WebPermissionsPlugin}{Module} = 'Foswiki::Plugins::WebPermissionsPlugin';
+| Wed Aug 25 03:07:43 2010 |  | {Plugins}{JQueryPlugin}{Enabled} | $Foswiki::cfg{Plugins}{JQueryPlugin}{Enabled} = 1;
+| Wed Aug 25 03:07:43 2010 |  | {Plugins}{JQueryPlugin}{Module} | $Foswiki::cfg{Plugins}{JQueryPlugin}{Module} = 'Foswiki::Plugins::JQueryPlugin';
+| Wed Aug 25 03:07:43 2010 |  | {Plugins}{ZonePlugin}{Enabled} | $Foswiki::cfg{Plugins}{ZonePlugin}{Enabled} = 1;
+| Wed Aug 25 03:07:43 2010 |  | {Plugins}{ZonePlugin}{Module} | $Foswiki::cfg{Plugins}{ZonePlugin}{Module} = 'Foswiki::Plugins::ZonePlugin';
+| Wed Aug 25 03:22:53 2010 |  | {Plugins}{DBCachePlugin}{Enabled} | $Foswiki::cfg{Plugins}{DBCachePlugin}{Enabled} = 1;
+| Wed Aug 25 03:22:53 2010 |  | {Plugins}{DBCachePlugin}{Module} | $Foswiki::cfg{Plugins}{DBCachePlugin}{Module} = 'Foswiki::Plugins::DBCachePlugin';
+| Wed Aug 25 03:36:58 2010 |  | {Register}{AllowLoginName} | $Foswiki::cfg{Register}{AllowLoginName} = 1;

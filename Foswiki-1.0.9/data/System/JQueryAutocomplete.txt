@@ -1,0 +1,82 @@
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1265646565" format="1.1" reprev="1.3" version="1.3"}%
+%META:TOPICPARENT{name="JQueryPlugin"}%
+---+ %TOPIC%
+%JQPLUGINS{"autocomplete"
+  format="
+    Homepage: $homepage <br />
+    Author(s): $author <br />
+    Version: $version
+  "
+}%
+
+
+%STARTSECTION{"summary"}%
+Autocomplete an input field to enable users quickly finding and selecting some
+value, leveraging searching and filtering.
+By giving an autocompleted field focus or entering something into it, the
+plugin starts searching for matching entries and displays a list of values to
+choose from. By entering more characters, the user can filter down the list to
+better matches.
+This can be used to enter previous selected values, eg. for tags, to complete
+an address, eg. enter a city name and get the zip code, or maybe enter email
+addresses from an addressbook.
+
+See also [[%SYSTEMWEB%.JQueryAjaxHelper][JQueryjaxHelper]] for examples on how to integrate autocompletion
+into Foswiki.
+%ENDSECTION{"summary"}%
+
+---++ Usage
+
+Autocompletion is activated for HTML input elements whose ==autocomplete== attribute value does not equal =off=.
+It can either be list of candidate values, or an url in which case candidate values are queried from an ajax backend.
+The current input prefix is provided via the =q= urlparameter. The backend must return a list of matching values
+separated by newlines.
+
+---++ Examples
+%JQREQUIRE{"autocomplete"}%
+
+This example queries candidate values from a simple ajax backend using the wiki application in the =data= section of this topic. Note, that you will need Foswiki:Extensions.FilterPlugin to run the example successfully.
+
+<div class="foswikiFormSteps">
+  <div class="foswikiFormStep">
+    <h3>Enter tags:</h3>
+    <input class="foswikiInputField {multiple:true, matchCase:false, matchSubset:true, minChars:1}" id="example" size='42' autocomplete="%SCRIPTURL{"view"}%/%WEB%/%TOPIC%?section=data;skin=text" />
+    <div class="foswikiFormDescription">
+      Tags are suggested as you type. Separate multiple tags using a comma (,).
+    </div>
+  </div>
+</div>
+
+---++ Backend Implementation
+<verbatim class="tml">
+%STARTSECTION{"data"}%%FORMATLIST{
+  "
+    admin
+    backup
+    bash
+    emulation
+    games
+    irc
+    linux
+    mercurial
+    patches
+    perl
+    php
+    python
+    site
+    surfing
+    tag
+    test
+    foswiki
+    web
+    wiki
+    windows
+    windsurfing
+    wine
+  "
+  split="\n"
+  format=" $1 "
+  separator="$n"
+  include=".*%URLPARAM{"q"}%.*"
+}%%ENDSECTION{"data"}%
+</verbatim>

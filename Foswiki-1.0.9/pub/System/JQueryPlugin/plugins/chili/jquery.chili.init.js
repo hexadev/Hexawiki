@@ -1,0 +1,1 @@
+jQuery(function(a){ChiliBook.codeLanguage=function(b){var c=jQuery(b).attr("class");c=c.replace(/\s*{.*}\s*/,"");return c?c:""};ChiliBook.recipeFolder=foswiki.pubUrlPath+"/"+foswiki.systemWebName+"/JQueryPlugin/plugins/chili/recipes/";ChiliBook.automaticSelector="pre";if(ChiliBook.automatic){a(ChiliBook.automaticSelector).livequery(function(){a(this).chili()})}});

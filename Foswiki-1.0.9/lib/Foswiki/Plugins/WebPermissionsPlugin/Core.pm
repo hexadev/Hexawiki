@@ -46,6 +46,7 @@ sub WEBPERMISSIONS {
     my $query   = $session->{cgiQuery};
     my $action  = $query->param('web_permissions_action') || 'Display';
     my $editing = $action eq 'Edit';
+    Foswiki::Func::writeWarning("la accion es: $action");
 
     unless (Foswiki::Func::checkAccessPermission(
         'CHANGE', Foswiki::Func::getWikiName(), undef,
@@ -192,7 +193,7 @@ sub WEBPERMISSIONS {
             $tab .= "Cannot edit: $reason";
         }
     }
-    my $page = CGI::start_form( -method => 'POST', -action => $action );
+    my $page = CGI::start_form( -method => 'GET', -action => $action );
     # Anchor for jumping back to
     $page .= CGI::a( { name => 'webpermissions_matrix' } );
     # Note: use CGI::input rather than CGI::hidden below because CGI::hidden

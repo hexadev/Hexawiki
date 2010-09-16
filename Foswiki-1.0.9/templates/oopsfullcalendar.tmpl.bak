@@ -1,0 +1,17 @@
+%{ Templates for FullCalendarPlugin oops messages. One DEF is selected and inserted at %INSTANTIATE }%
+%TMPL:INCLUDE{"oops"}%
+
+%TMPL:DEF{"webaction"}% *%MAKETEXT{"Attention"}%* %TMPL:END%
+%TMPL:DEF{"topicactionbuttons"}%%TMPL:END%
+
+%TMPL:DEF{"message"}%
+%INSTANTIATE%
+%TMPL:END%
+
+%TMPL:DEF{"noeventdatematch"}%
+The selected event (UID %PARAM1%) exists but does not, or no longer occurs on %PARAM2%.
+%TMPL:END%
+
+%TMPL:DEF{"noeventsfound"}%
+No matching events could be found between %PARAM1% and %PARAM2% in %PARAM3%.
+%TMPL:END%

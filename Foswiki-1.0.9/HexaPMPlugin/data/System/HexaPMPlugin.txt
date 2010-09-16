@@ -1,0 +1,48 @@
+%META:TOPICINFO{author="jgaviria" date="1284142792" format="1.1" version="1.3"}%
+---+!! !HexaPMPlugin
+<!--
+One line description, required for extensions repository catalog.
+BuildContrib will fill in the SHORTDESCRIPTION with the value of
+$SHORTDESCRIPTION from the .pm module, or you can redefine it here if you
+prefer.
+   * Set SHORTDESCRIPTION = %$SHORTDESCRIPTION%
+-->
+%SHORTDESCRIPTION%
+
+%TOC%
+
+---++ Usage
+
+---++ Project form
+
+By default this plugin use [[HexaPMPluginProjectForm][this form]] to define projects. But if you want to used your own data form, just change the {HexaPMPlugin}{ProjectFormTopic}. But be carefull the new form must contain the Name, Description, StartDate, State and ProjectManager fields.
+
+*NOTE:* If you change the form while having existing projects, you must edit them and change the formtemplate manually using the edit url parameter _formtemplate=YourNewTopicForm_.
+
+---++ Project View/Edit Template
+
+By default this plugin use [[HexaPMPluginProjectViewTemplate][this view]] and [[HexaPMPluginProjectEditTemplate][this edit]] template for projects with the [[HexaPMPluginProjectForm][this form]], to add those two templates to the project webhome topic, this plugins use Foswiki:Extensions.AutoTemplatePlugin. But if you want to used your own templates, just change  {HexaPMPlugin}{ProjectFormTopic} for your own topic and create your view/edit template acording to the documentation of AutoTemplatePlugin.
+ 
+
+---++ Examples
+
+---++ Installation Instructions
+
+%$INSTALL_INSTRUCTIONS%
+
+---++ Info
+
+Many thanks to the following sponsors for supporting this work:
+   * Acknowledge any sponsors here
+
+|  Author(s): | |
+|  Copyright: | &copy; |
+|  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
+|  Release: | %$RELEASE% |
+|  Version: | %$VERSION% |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  Dependencies: | %$DEPENDENCIES% |
+|  Home page: | https://foswiki.hexa.co/bin/view/https://foswiki.hexa.co/HexaPMPlugin |
+|  Support: | https://foswiki.hexa.co/bin/view/Support/HexaPMPlugin |
+
+<!-- Do _not_ attempt to edit this topic; it is auto-generated. -->

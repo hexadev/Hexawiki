@@ -1,0 +1,81 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2010.08.28.00.16.25;	author jgaviria;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.08.27.17.23.20;	author jgaviria;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.08.27.17.23.20;	author jgaviria;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.3
+log
+@none
+@
+text
+@%META:TOPICINFO{author="jgaviria" date="1282954585" format="1.1" reprev="1.3" version="1.3"}%
+---+!! %MAKETEXT{"Welcome to the Project Management Web"}%
+
+%INCLUDE{"%HEXAPM_SCHEMASWEB%.HexaPMDashboard" section="hexapm-ports-styles"}%
+%INCLUDE{"%HEXAPM_SCHEMASWEB%.HexaPMDashboard" section="hexapm-dashboard"}%
+%INCLUDE{"%HEXAPM_SCHEMASWEB%.HexaPMDashboard" section="hexapm-ports-scripts"}%
+
+@
+
+
+1.2
+log
+@none
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="jgaviria" date="1282929800" format="1.1" version="1.2"}%
+d4 3
+@
+
+
+1.1
+log
+@none
+@
+text
+@d1 2
+a2 2
+%META:TOPICINFO{author="ProjectContributor" date="1231502400" format="1.1" version="1"}%
+---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
+a3 15
+---++ %MAKETEXT{"Available Information"}%
+   * ...
+   * ...
+   * ...
+ 
+---++ <nop>%WEB% Web Utilities
+<form action='%SCRIPTURLPATH{"search"}%/%WEB%/'>
+   * <input type="text" name="search" size="22" />&nbsp;<input type="submit" class="foswikiSubmit" value="%MAKETEXT{"Search"}%" /> - [[WebSearchAdvanced][%MAKETEXT{"advanced search"}%]]
+   * WebTopicList - all topics in alphabetical order
+   * WebChanges - recent topic changes in this web
+   * WebNotify - subscribe to an e-mail alert sent when topics change
+   * WebRss, WebAtom - RSS and ATOM news feeds of topic changes
+   * WebStatistics - listing popular topics and top contributors
+   * WebPreferences - preferences of this web
+</form>
+@

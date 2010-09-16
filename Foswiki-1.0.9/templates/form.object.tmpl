@@ -1,0 +1,5 @@
+%TMPL:INCLUDE{"form"}%
+%TMPL:DEF{"changeform"}%%TMPL:END%
+
+%TMPL:DEF{"repeatedformrows"}% %REPEAT%
+<tr class="%ROWEXTRA%"><th align="right">%ROWTITLE%%ROWEXTRA%</th><td align="left">%ROWVALUE%</td></tr>%REPEAT%<tr><th align="left" colspan="2">%ROWVALUE%</th></tr>%REPEAT% %TMPL:END%

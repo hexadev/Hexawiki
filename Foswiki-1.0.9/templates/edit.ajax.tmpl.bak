@@ -1,0 +1,10 @@
+%TMPL:INCLUDE{"edit"}%
+%TMPL:INCLUDE{"ajaxbase"}%
+%TMPL:DEF{"ajaxhead"}%%TMPL:P{"script:skintemplate"}%%TMPL:END%
+%TMPL:DEF{"textarea"}%<textarea class="foswikiTextarea foswikiEditboxStyleProportional" id="topic" name="text" rows="%EDITBOXHEIGHT%" cols="%EDITBOXWIDTH%" style='%EDITBOXSTYLE%'>%TEXT%</textarea>
+%TMPL:P{"sig_textareabuttons"}%
+%ADDTOZONE{"body" requires="JQUERYPLUGIN" text="
+%INCLUDE{"%SYSTEMWEB%.JQueryMarkItUpEditor" target="#topic" headingbuttons="yes"}%
+"}%
+%TMPL:END%
+%TMPL:DEF{context}%edit%TMPL:END%

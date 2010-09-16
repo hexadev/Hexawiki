@@ -1,0 +1,90 @@
+%META:TOPICINFO{author="ProjectContributor" date="1276173208" format="1.1" reprev="1.1" version="1.1"}%
+<verbatim>
+%STARTINCLUDE%
+%ADDTOZONE{"head" topic="%TOPIC%" section="head"}%
+%ADDTOZONE{"body" requires="JQUERYPLUGIN" text="
+%INCLUDE{"%TOPIC%" section="body" headingbuttons="%headingbuttons%"}%
+"}%
+%STOPINCLUDE%
+%STARTSECTION{type="section" name="body"}%
+<script type='text/javascript' src='%ATTACHURL%/jquery.markitup.pack.js'></script>
+<script language='javascript'>
+jQuery(function(){
+    $('%target%').markItUp(miueWikiSettings)%IF{"'%headingbuttons%' = 'yes'" else="
+		.parent().find('.markItUpButton1, .markItUpButton2, .markItUpButton3, .markItUpButton4, .markItUpButton5, .markItUpButton6').hide()"}%;
+});
+</script>
+%ENDSECTION{name="body"}%
+Note that miueWikiSettings is being added to head because in the body it gets 'rendered' which screws things up.
+%STARTSECTION{type="section" name="head"}%
+<link rel='stylesheet' type='text/css' href='%ATTACHURL%/style.css' />
+<link rel='stylesheet' type='text/css' href='%ATTACHURL%/wikistyle.css' />
+<script language='javascript'>
+var miueWikiSettings = {
+	previewParserPath:	'%SCRIPTURL{rest}%/RenderPlugin/render',
+	previewTemplatePath: '%ATTACHURL%/Preview.html',
+	previewParserVar: 'text',
+    previewAutoRefresh: 0,
+    resizeHandle: true,
+	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},
+	onTab:    		{keepDefault:false, openWith:'   * ', placeHolder:''},
+	markupSet: [
+		{name:'Heading 1', key:'1', openWith:'---+ ', placeHolder:'Your title here...' },
+		{name:'Heading 2', key:'2', openWith:'---++ ', placeHolder:'Your title here...' },
+		{name:'Heading 3', key:'3', openWith:'---+++ ', placeHolder:'Your title here...' },
+		{name:'Heading 4', key:'4', openWith:'---++++ ', placeHolder:'Your title here...' },
+		{name:'Heading 5', key:'5', openWith:'---+++++ ', placeHolder:'Your title here...' },
+		{name:'Heading 6', key:'6', openWith:'---++++++ ', placeHolder:'Your title here...' },
+		{separator:'---------------' },		
+		{name:'Bold', key:'B', openWith:'*', closeWith:'*'}, 
+		{name:'Italic', key:'I', openWith:'_', closeWith:'_'}, 
+		{name:'Stroke through', key:'S', openWith:'<del>', closeWith:'</del>'}, 
+		{separator:'---------------' },
+		{name:'Bulleted list', key:'U', openWith:'   * '}, 
+		{name:'Numeric list', key:'O', openWith:'   1 '}, 
+		{separator:'---------------' },
+		{name:'Picture', key:'P', replaceWith:'<img src="[![Source:!:%<nop>ATTACHURL%/]!]" alt="[![Alternative text]!]" />' },
+		{name:'Link', key:'L', openWith:'[[[![Link]!]][', closeWith:']]', placeHolder:'Your text to link here...' },
+		{name:'Url', openWith:'[[[![Url:!:http://]!]][', closeWith:']]', placeHolder:'Your text to link here...' },
+		{separator:'---------------' },
+		{name:'Quotes', openWith:'<blockquote>', closeWith:'</blockquote>', placeHolder:''},
+		{name:'Code', openWith:'(!(<source lang="[![Language:!:php]!]">|!|<pre>)!)', closeWith:'(!(</source>|!|</pre>)!)'}, 
+		{separator:'---------------' },
+		{name:'Colors', openWith:'%[![Color in UPPERCASE]!]%', closeWith:'%ENDCOLOR%', dropMenu: [
+          {name:'Yellow', openWith:'%<nop>YELLOW%', closeWith:'%<nop>ENDCOLOR%', className:'col1-1' },
+          {name:'Orange', openWith:'%<nop>ORANGE%', closeWith:'%<nop>ENDCOLOR%', className:'col1-2' },
+          {name:'Red', openWith:'%<nop>RED%', closeWith:'%<nop>ENDCOLOR%', className:'col1-3' },
+          {name:'Blue', openWith:'%<nop>BLUE%', closeWith:'%<nop>ENDCOLOR%', className:'col2-1' },
+          {name:'Purple', openWith:'%<nop>PURPLE%', closeWith:'%<nop>ENDCOLOR%', className:'col2-2' },
+          {name:'Green', openWith:'%<nop>GREEN%', closeWith:'%<nop>ENDCOLOR%', className:'col2-3' },
+          {name:'White', openWith:'%<nop>WHITE%', closeWith:'%<nop>ENDCOLOR%', className:'col3-1' },
+          {name:'Gray', openWith:'%<nop>GRAY%', closeWith:'%<nop>ENDCOLOR%', className:'col3-2' },
+          {name:'Black', openWith:'%<nop>BLACK%', closeWith:'%<nop>ENDCOLOR%', className:'col3-3' }
+		]},
+		{name:'Smilies', replaceWith:'', dropMenu: [
+          {name:'smile', replaceWith:' :) ', className:'col1-1' },
+          {name:'cool', replaceWith:' 8-) ', className:'col1-2' },
+          {name:'indifferent', replaceWith:' :-I ', className:'col1-3' },
+          {name:'frown', replaceWith:' :( ', className:'col2-1' },
+          {name:'embarrassment', replaceWith:' :o ', className:'col2-2' },
+          {name:'big grin', replaceWith:' :D ', className:'col2-3' },
+          {name:'wink', replaceWith:' ;) ', className:'col3-1' },
+          {name:'stick out tongue', replaceWith:' :p ', className:'col3-2' },
+          {name:'roll eyes (sarcastic)', replaceWith:' :rolleyes: ', className:'col3-3' },
+		  {name:'mad!', replaceWith:' :mad: ', className:'col4-1' },
+		  {name:'eek!', replaceWith:' :eek: ', className:'col4-2' },
+		  {name:'confused', replaceWith:' :confused: ', className:'col4-3' },
+		  {name:'hehe!', replaceWith:' :devil: ', className:'col5-1' },
+		  {name:'hehe! (friendly)', replaceWith:' :devilish: ', className:'col5-2' },
+		  {name:'sealed lips', replaceWith:' :-X ', className:'col5-3' },
+		  {name:'thumbs up', replaceWith:' :ok: ', className:'col6-1' },
+		  {name:'yes', replaceWith:' :yes: ', className:'col6-2' },
+		  {name:'no', replaceWith:' :no: ', className:'col6-3' }
+		]},
+		{separator:'---------------' },
+		{name:'Preview', call:'preview', className:'preview'}
+	]
+};
+</script>
+%ENDSECTION{name="head"}%
+</verbatim>

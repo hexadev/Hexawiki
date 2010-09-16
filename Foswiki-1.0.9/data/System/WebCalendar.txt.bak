@@ -1,0 +1,4 @@
+%META:TOPICINFO{author="ProjectContributor" date="1268316360" format="1.1" version="1.1"}%
+%META:TOPICPARENT{name="FullCalendarPlugin"}%
+
+%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="FullCalendarView"}%

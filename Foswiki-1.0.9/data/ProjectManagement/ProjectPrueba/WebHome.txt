@@ -1,0 +1,9 @@
+%META:TOPICINFO{author="jgaviria" date="1284142814" format="1.1" version="1.4"}%
+
+
+%META:FORM{name="System.HexaPMPluginProjectForm"}%
+%META:FIELD{name="Name" attributes="MU" title="Name" value="Prueba"}%
+%META:FIELD{name="Description" attributes="MU" title="Description" value="prueba"}%
+%META:FIELD{name="StartDate" attributes="MU" title="StartDate" value="2010/09/08"}%
+%META:FIELD{name="ProjectManager" attributes="MU" title="ProjectManager" value="Main.JuanGaviria"}%
+%META:FIELD{name="State" attributes="MU" title="State" value="Inprocess"}%

@@ -1,0 +1,166 @@
+%META:TOPICINFO{author="ProjectContributor" date="1215778439" format="1.1"  version="1"}%
+---+!! %TOPIC%
+<!--
+One line description, required for extensions repository catalog.
+   * Set SHORTDESCRIPTION = Render <nop>WikiApplications asynchronously
+-->
+%SHORTDESCRIPTION%
+
+%TOC%
+
+---++ Description
+<table style="float:right">
+<tr>
+  <td><img src="%ATTACHURLPATH%/wikiringlogo40x40.png" title="Make your Wiki ring!" alt="WikiRing"></td>
+  <td><a href="http://wikiring.com" title="Make your Wiki ring!" style="text-decoration:none">
+      Powered by <br /> <nop>WikiRing Consultants </a>
+  </td>
+</tr>
+</table>
+This plugin implements three simple REST handlers to get content from Foswiki.
+For example, these can be used to easily replace a server-side INCLUDE with a
+functional equivalent using an ajax call to one of these REST handlers. 
+
+This comes in handy to asynchronously load content in a tabbed interface,
+loading subsequent content for a treeview, a menu widget, or tooltips.
+
+You may also use it to just render a snippet of <nop>TopicMarkup 
+on the server and return a HTML preview back to the browser.
+
+The REST handlers of this plugin have been designed to be rather generic.
+So, besides some very basic parameter checking, most error handling is up
+to the callback analysing the return value of the REST handler. The
+main purpose is best described as being an intermediate transport device.
+
+Compare this to other plugins that implement more specific REST handlers.
+As such, they  are rather tailored to one specific service and thus will be dealing with
+error cases on the server side in much more detail.
+
+The advantage of using this plugin's REST handler is that you don't have
+to implement service backends using perl. Instead, you can write <nop>TopicFunctions
+that contain the <nop>WikiApplication to be executed when it is called by an
+appropriate ajax request. This basically is the client side equivalent of
+a parametrized =INCLUDE=, as it is used on server side <nop>WikiApplications (see examples below).
+
+---++ Syntax
+The available REST handlers are:
+
+| *Handler* | *Parameters* | *Description* |
+| =expand= | =text= | expands common variables in the submitted =text= fragment |
+| =render= | =text= | same as =expand= but also renders <nop>TopicMarkup converting it to HTML |
+| =tag= | =name=, %BR% =param=, %BR% =<named-params>*=, %BR% =render= | this is a convenience function to expand one specific \
+  variable instead of having to build up a snippet of code that you want to =expand= or =render=; \
+  The =param= parameter specifies the default parameters to this tag; the =named-params= are additional \
+  named parameters; the =render= flag indicates if the result is to be expanded only \
+  or if it should be renderd into HTML; default is off, that is only expand common tags but don't interpret \
+  <nop>TopicMarkup |
+| =template= | =name=, %BR% =expand=, %BR% =render= | this handler loads the template =name= and expands the macro \
+  given in =expand=; the =render= flag indicates whether the result is to be rendered in addition to common tags being interpreted |
+
+---++ Usage
+The REST handlers are called like this:
+<verbatim>
+%SCRIPTURLPATH{"rest"}/RenderPlugin/render?text=%ENCODE{"This is _very_ cool."}%
+</verbatim>
+
+<verbatim>
+%SCRIPTURLPATH{"rest"}/RenderPlugin/tag?name=INCLUDE;param=Applications.RenderWebTagCloud;search=screenshot
+</verbatim>
+(equivalent to a =%<nop>INCLUDE{"Applications.RenderWebTagCloud" search="screenshot"}%=)
+
+This can be schedule using jQuery like this:
+<verbatim>
+<div id="container"></div>
+
+<script type="text/javascript">
+$(function() {
+  $("#container").load("<url-to-rest-handler->");
+});
+</script>
+</verbatim>
+
+---++ Examples
+
+---+++ Fetching a message 
+<verbatim>
+%STARTSECTION{"message"}%
+*Hello World!* :)
+%ENDSECTION{"message"}%
+</verbatim>
+
+<input type="button" value="Get" onclick="getTheMessage()" />
+<input type="button" value="Clear" onclick="clearTheMessage()" />
+<div id="message" style="border:2px solid red;padding:5px;margin:10px;width:100px;background:yellow;display:none;">
+</div>
+
+<script type="text/javascript">
+function getTheMessage() {
+  $("#message").load(
+    "%SCRIPTURLPATH{"rest"}%/%TOPIC%/tag",
+    { 
+      name: 'INCLUDE',
+      param: '%WEB%.%TOPIC%',
+      section: 'message',
+      render: true
+    }, 
+    function () {
+      $(this).show()
+    });
+}
+function clearTheMessage() {
+  $("#message").empty().hide();
+}
+</script>
+
+---+++ Previewing TML
+<div class="foswikiPageForm">
+<form>
+<textarea id="mytext" name="text" rows="5" columns="80" style="width:100%"></textarea>
+
+<input type="button" value="Preview" onclick="preview()" />
+</form>
+</div>
+
+<div id="mypreview" style="border:1px solid #eee;padding:5px">
+</div>
+
+<script type type="text/javascript">
+function preview() {
+  var text = $("#mytext").val();
+  $("#mypreview").load("%SCRIPTURLPATH{"rest"}%/RenderPlugin/render",
+    {
+      'text': text,
+      'topic': '%WEB%.%TOPIC%'
+    }
+  );
+}
+</script>
+
+Okay, your turn to create an example calling SEARCH.
+
+---++ Installation Instructions
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+---++ Plugin Info
+
+|  Plugin Author: | Michael Daum |
+|  Copyright &copy;: | 2006-2009, Michael Daum http://michaeldaumconsulting.com |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Release: | 3.0 |
+|  Version: | 4818 (2009-09-09) |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  12 May 2009: | added =template= handler |
+|  24 Apr 2009: | converted to foswiki plugin |
+|  07 Jan 2009: | added upload rest handler; \
+                  fixes for foswiki and <nop>FastCGIContrib |
+|  11 Jul 2008: | initial version |
+|  Dependencies: | <table class="foswikiTable" border="1"><tr><th>Name</th><th>Version</th><th>Description</th></tr><tr><td align="left">Foswiki::Plugins::JQueryPlugin</td><td align="left">&gt;=0.5</td><td align="left">Optional.</td></tr></table> |
+|  Plugin Home: | Foswiki:Extensions/%TOPIC% |
+|  Support: | Foswiki:Support/%TOPIC% |
+
+%META:FILEATTACHMENT{name="wikiringlogo40x40.png" attachment="wikiringlogo40x40.png" attr="h" comment="" date="1189787359" path="wikiringlogo40x40.png" size="2571" stream="wikiringlogo40x40.png" tmpFilename="" user="ProjectContributor" version="1"}%

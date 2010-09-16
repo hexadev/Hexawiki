@@ -1,0 +1,27 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.09.07.01.57.30;	author jgaviria;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@none
+@
+text
+@%META:TOPICINFO{author="jgaviria" date="1283824650" format="1.1" version="1.1"}%
+%META:TOPICPARENT{name="HexaPMPluginProjectForm"}%
+@

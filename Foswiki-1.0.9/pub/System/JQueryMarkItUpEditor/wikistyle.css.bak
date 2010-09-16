@@ -1,0 +1,187 @@
+/* -------------------------------------------------------------------
+// markItUp!
+// By Jay Salvat - http://markitup.jaysalvat.com/
+// ------------------------------------------------------------------
+// the following css taken from the markItUp demo and customised
+// for use on the Foswiki platform */
+.markItUp .markItUpButton1 a {
+	background-image:url(images/h1.png); 
+}
+.markItUp .markItUpButton2 a {
+	background-image:url(images/h2.png); 
+}
+.markItUp .markItUpButton3 a {
+	background-image:url(images/h3.png); 
+}
+.markItUp .markItUpButton4 a {
+	background-image:url(images/h4.png); 
+}
+.markItUp .markItUpButton5 a {
+	background-image:url(images/h5.png); 
+}
+.markItUp .markItUpButton6 a {
+	background-image:url(images/h6.png); 
+}
+
+.markItUp .markItUpButton7 a {
+	background-image:url(images/bold.png);
+}
+.markItUp .markItUpButton8 a {
+	background-image:url(images/italic.png);
+}
+.markItUp .markItUpButton9 a {
+	background-image:url(images/stroke.png);
+}
+
+.markItUp .markItUpButton10 a {
+	background-image:url(images/list-bullet.png);
+}
+.markItUp .markItUpButton11 a {
+	background-image:url(images/list-numeric.png);
+}
+
+.markItUp .markItUpButton12 a {
+	background-image:url(images/picture.png); 
+}
+.markItUp .markItUpButton13 a {
+	background-image:url(images/link.png);
+}
+.markItUp .markItUpButton14 a {
+	background-image:url(images/url.png);
+}
+
+.markItUp .markItUpButton15 a	{
+	background-image:url(images/quotes.png);
+}
+.markItUp .markItUpButton16 a	{
+	background-image:url(images/page_white_code_red.png);
+}
+
+.markItUp .preview a {
+	background-image:url(images/eye.png);
+}
+.markItUp .markItUpButton17 a {
+	background-image:url(images/color_swatch.png);
+}
+	.markItUp .markItUpButton17 ul,
+	.markItUp .markItUpButton18 ul {
+		width:81px;
+		padding:1px;	
+	}
+	.markItUp .markItUpButton17  li,
+	.markItUp .markItUpButton18  li {
+		border:1px solid white;
+		width:25px;	height:25px;
+		overflow:hidden;
+		padding:0px; margin:0px;
+		float:left;
+	}
+	.markItUp .markItUpButton17 ul a,
+	.markItUp .markItUpButton18 ul a {
+		width:25px;	height:25px;
+	}
+	.markItUp .markItUpButton17 ul a:hover,
+	.markItUp .markItUpButton18 ul a:hover {
+		background-color:none;
+	}
+	
+	.markItUp .markItUpButton17 .col1-1 a {
+		background:yellow;
+	}
+	.markItUp .markItUpButton17 .col1-2 a {
+		background:orange;
+	}
+	.markItUp .markItUpButton17 .col1-3 a {
+		background:red;
+	}
+	
+	.markItUp .markItUpButton17 .col2-1 a {
+		background:blue;
+	}
+	.markItUp .markItUpButton17 .col2-2 a {
+		background:purple;
+	}
+	.markItUp .markItUpButton17 .col2-3 a {
+		background:green;
+	}
+	
+	.markItUp .markItUpButton17 .col3-1 a {
+		background:white;
+	}
+	.markItUp .markItUpButton17 .col3-2 a {
+		background:gray;
+	}
+	.markItUp .markItUpButton17 .col3-3 a {
+		background:black;
+	}
+	
+.markItUp .markItUpButton18 a {
+	background-image:url(images/emoticon_smile.png);
+}
+	.markItUp .markItUpButton18 .col1-1 a {
+		background-image:url(smilies/smile.gif);
+	}
+	.markItUp .markItUpButton18 .col1-2 a {
+		background-image:url(smilies/cool.gif);
+	}
+	.markItUp .markItUpButton18 .col1-3 a {
+		background-image:url(smilies/indifferent.gif);
+	}
+	
+	.markItUp .markItUpButton18 .col2-1 a {
+		background-image:url(smilies/frown.gif);
+	}
+	.markItUp .markItUpButton18 .col2-2 a {
+		background-image:url(smilies/redface.gif);
+	}
+	.markItUp .markItUpButton18 .col2-3 a {
+		background-image:url(smilies/biggrin.gif);
+	}
+	
+	.markItUp .markItUpButton18 .col3-1 a {
+		background-image:url(smilies/wink.gif);
+	}
+	.markItUp .markItUpButton18 .col3-2 a {
+		background-image:url(smilies/tongue.gif);
+	}
+	.markItUp .markItUpButton18 .col3-3 a {
+		background-image:url(smilies/rolleyes.gif);
+	}
+
+	.markItUp .markItUpButton18 .col4-1 a {
+		background-image:url(smilies/mad.gif);
+	}
+	.markItUp .markItUpButton18 .col4-2 a {
+		background-image:url(smilies/eek.gif);
+	}
+	.markItUp .markItUpButton18 .col4-3 a {
+		background-image:url(smilies/confused.gif);
+	}
+
+	.markItUp .markItUpButton18 .col5-1 a {
+		background-image:url(smilies/devil.gif);
+	}
+	.markItUp .markItUpButton18 .col5-2 a {
+		background-image:url(smilies/devilwink.gif);
+	}
+	.markItUp .markItUpButton18 .col5-3 a {
+		background-image:url(smilies/sealed.gif);
+	}
+
+	.markItUp .markItUpButton18 .col6-1 a {
+		background-image:url(smilies/thumbs.gif);
+	}
+	.markItUp .markItUpButton18 .col6-2 a {
+		background-image:url(smilies/yes.gif);
+	}
+	.markItUp .markItUpButton18 .col6-3 a {
+		background-image:url(smilies/no.gif);
+	}	
+
+.markItUp {
+    width: 90%;
+}
+.markItUpEditor {
+	padding:5px 5px 5px 5px;
+	background-image:none;
+}

@@ -1,0 +1,34 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1282755575" format="1.1" version="1.2"}%
+%META:TOPICPARENT{name="FlexWebListPlugin"}%
+---+!! %TOPIC%
+
+The fragment below can be used in a sidebar navigation to establish a folder-like subweb navigation.
+This uses the jqTreeview widget of the Foswiki:Extensions/JQueryPlugin.
+
+Use it by adding =%<nop>INCLUDE{"%WEB%.%TOPIC%"}%= to your sidebar navigation.
+
+If you want to hide the web navigation from <nop>WikiGuests then uncomment the following:
+   * #Set DENYTOPICVIEW = %MAINWEB%.WikiGuest
+
+<verbatim>
+%STARTINCLUDE%<!-- flexweblist tree -->
+%JQREQUIRE{"treeview"}%
+<div class="jqTreeview closed unique">
+%JQICON{"house"}% - <nop>%WIKITOOLNAME%
+%FLEXWEBLIST{
+  webs="%MAINWEB%,User,People,public,%SYSTEMWEB%" 
+  exclude="^(TestCases|Trash).*" 
+  adminwebs="Applications.*"
+  map="%SYSTEMWEB%=System"
+  header="<ul>"
+  format="<li><a href='$url' title='$sitemapuseto'><span style='background:$color;width:1em;height:1em;border:1px solid #eee;float:left;margin-right:0.5em'></span><nop>$name</a>"
+  separator="</li>"
+  footer="</li></ul>"
+  subheader="<ul class=\"natSubWebs\">"
+}%
+</div>
+%STOPINCLUDE%
+</verbatim>
+
+---++ Test
+%INCLUDE{"%TOPIC%"}%

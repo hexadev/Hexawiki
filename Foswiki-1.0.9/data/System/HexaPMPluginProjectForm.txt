@@ -1,0 +1,12 @@
+%META:TOPICINFO{author="jgaviria" date="1284142715" format="1.1" reprev="1.3" version="1.3"}%
+%META:TOPICPARENT{name="HexaPMPlugin"}%
+| *Name* | *Type* | *Size* | *Value* | *Tooltip message* | *Attributes* |
+| Name | text | 60 | | Name of the proyect | MU |
+| Description | textarea | 80x5 | | brief Description of the project. | MU |
+| StartDate | date | 0 | | the start date of the project | MU |
+| ProjectManager | text | 60 | | the user that is going to manage the project | MU |
+| State | select | 1 | Inprocess, closed | | MU |
+
+%STARTSECTION{"viewtemplate"}%HexaPMPluginProjectViewTemplate%ENDSECTION{"edittemplate"}%
+
+%STARTSECTION{"edittemplate"}%HexaPMPluginProjectEditTemplate%ENDSECTION{"edittemplate"}% 

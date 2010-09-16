@@ -1,0 +1,38 @@
+.fcp_label {
+	float:left;
+	width:5em;
+	text-align:right;
+}
+.fcp_calendar .action a {
+    background-color:red;
+}
+.fcp_calendar .meeting a, #eventCat .meeting {
+    background-color:blue;
+    color:#fff;
+}
+.fcp_calendar .mission a, #eventCat .mission {
+    background-color:green;
+    color:#fff;
+}
+.fcp_calendar .leave a, #eventCat .leave {
+    background-color:yellow;
+    color:#000;
+}
+.fcp_calendar .milestone a, #eventCat .milestone {
+    background-color:#000;
+    color:#fff;
+}
+.ui-datepicker {
+    z-index:2100;
+}
+.fcp_timeperiod {
+    display:inline;
+}
+.ontop {
+    z-index:2000;
+    border:solid 3px #e2e2e2;
+}
+#appt_attendees {
+    float:left;
+    margin-left:10px;
+}

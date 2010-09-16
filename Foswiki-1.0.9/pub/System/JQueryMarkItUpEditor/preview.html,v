@@ -1,0 +1,43 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.08.25.16.59.32;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@Saved by install script
+@
+text
+@<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>markItUp! preview template</title>
+<style>
+body {
+	background-color:#EFEFEF;
+	font:70% Verdana, Arial, Helvetica, sans-serif;
+}
+ol, ul {
+	margin-top:0;
+}
+</style>
+</head>
+<body>
+<!-- content -->
+</body>
+</html>
+@

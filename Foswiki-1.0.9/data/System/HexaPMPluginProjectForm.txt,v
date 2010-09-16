@@ -1,0 +1,75 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.3
+date	2010.09.10.18.18.35;	author jgaviria;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.09.08.23.59.20;	author jgaviria;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.09.07.01.56.59;	author jgaviria;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.3
+log
+@none
+@
+text
+@%META:TOPICINFO{author="jgaviria" date="1284142715" format="1.1" reprev="1.3" version="1.3"}%
+%META:TOPICPARENT{name="HexaPMPlugin"}%
+| *Name* | *Type* | *Size* | *Value* | *Tooltip message* | *Attributes* |
+| Name | text | 60 | | Name of the proyect | MU |
+| Description | textarea | 80x5 | | brief Description of the project. | MU |
+| StartDate | date | 0 | | the start date of the project | MU |
+| ProjectManager | text | 60 | | the user that is going to manage the project | MU |
+| State | select | 1 | Inprocess, closed | | MU |
+
+%STARTSECTION{"viewtemplate"}%HexaPMPluginProjectViewTemplate%ENDSECTION{"edittemplate"}%
+
+%STARTSECTION{"edittemplate"}%HexaPMPluginProjectEditTemplate%ENDSECTION{"edittemplate"}% 
+@
+
+
+1.2
+log
+@none
+@
+text
+@d1 2
+a2 1
+%META:TOPICINFO{author="jgaviria" date="1283990360" format="1.1" version="1.2"}%
+d8 1
+@
+
+
+1.1
+log
+@none
+@
+text
+@d1 2
+a2 2
+%META:TOPICINFO{author="jgaviria" date="1283824619" format="1.1" version="1.1"}%
+| *Name* | *Type* | *size* | *value* | *tooltip message* | *attributes* |
+d5 2
+a6 2
+| <nop>StartDate | date | 0 | | the start date of the project | MU |
+| <nop>ProjectManager | text | 60 | | the user that is going to manage the project | MU |
+@

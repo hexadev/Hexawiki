@@ -1,0 +1,28 @@
+%META:TOPICINFO{author="ProjectContributor" date="1276175954" format="1.1" version="1.1"}%
+%META:TOPICPARENT{name="ObjectPlugin"}%
+<verbatim>
+%STARTSECTION{"topiclist"}%
+<h3>Drag and drop the object(s) to be moved</h3>
+%INCLUDE{"%SYSTEMWEB%.JQueryQuickSearch" target="#op-topiclist li" label="Filter for a topic"}%
+<div id="op-topiclist">
+%TOPICLIST{"   * <a href='%SCRIPTURL{view}%/$web/$topic' target='$web.$topic' class='droponme'>$topic</a>" web="%web%"}%
+</div>
+<!--TREEVIEW{web="%web%" formatting="outline" format="* <a href='%SCRIPTURL{view}%/$web/$topic' target='$web.$topic' class='droponme'>$topic</a>" levelprefix="   "}%-->
+%ENDSECTION{"topiclist"}%
+%STARTSECTION{"dropbox"}%
+<div id="op-dropbox" style="text-align:left;">
+
+%FLEXWEBLIST{header="<select id='op-weblist'><option value='%BASEWEB%'>Choose a web...</option>" format="<option value='$web'> $indent(-) $name</option>" footer="</select>" subheader=" " subfooter=" "}%
+
+<div id="treecontrol" class="hidden">
+	<a title="Collapse the entire tree below" href="#">%ICON{minus}% Collapse All</a>
+	<a title="Expand the entire tree below" href="#">%ICON{plus}% Expand All</a>
+	<a title="Toggle the tree below, opening closed branches, closing open branches" href="#">Toggle All</a>
+</div>
+<div id="explorer"></div>
+<script type="text/javascript" src="%ATTACHURL%/moveobject.js"></script>
+</div>
+%ENDSECTION{"dropbox"}%
+</verbatim>
+
+%META:FILEATTACHMENT{name="moveobject.js" attachment="moveobject.js" attr="" comment="" date="1276165206" path="moveobject.js" size="1212" stream="moveobject.js" tmpFilename="/tmp/MEDXFimgcy" user="ProjectContributor" version="1"}%

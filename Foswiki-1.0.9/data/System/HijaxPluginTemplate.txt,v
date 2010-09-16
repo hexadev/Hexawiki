@@ -1,0 +1,146 @@
+head	1.4;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.4
+date	2010.08.25.17.01.50;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2010.08.25.17.00.53;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.08.25.16.59.32;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.08.25.16.59.32;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.4
+log
+@Saved by install script
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" date="1282755710" format="1.1" version="1.4"}%
+%META:TOPICPARENT{name="HijaxPlugin"}%
+<verbatim>
+%TMPL:DEF{"hijax"}%
+%TEMPLATE:location%
+<noautolink>%SCRIPTURL{%SCRIPTNAME%}%/%WEB%/%TOPIC%%IF{"'%QUERYSTRING%' != ''" then="?%QUERYSTRING%"}%</noautolink>
+%TEMPLATE:head%
+%TMPL:P{"head"}%
+%TEMPLATE:context%
+%TMPL:P{"context"}%
+%TEMPLATE:body%
+%TMPL:P{"body"}%
+%TEMPLATE:content%
+%TMPL:P{"content"}%
+%TEMPLATE:webaction%
+%TMPL:P{"webaction"}%
+%TMPL:P{"userhijaxtemplates"}%
+%TMPL:END%
+
+%TMPL:DEF{"hierarchy"}%%INCLUDE{"%SYSTEMWEB%.HierarchyModules" section="ITEM:%FORMFIELD{"TopicType" topic="%BASEWEB%.%BASETOPIC%" default="TermsOfReference" alttext="TermsOfReference"}%" web="%BASEWEB%" topic="%BASETOPIC%"}%%TMPL:END%
+
+%TMPL:DEF{hp_configurable_init}%
+<script type="text/javascript">
+(function($) {
+if (foswiki.HijaxPluginConfigurableInit == undefined) {
+	foswiki.HijaxPluginConfigurableInit = function() {
+		var menu = '%TMPL:P{hpmenu}%';
+		$(menu).appendTo('body');
+		return {nohijax:'%TMPL:P{nohijax}%', hps:'%TMPL:P{hpssleight}%'};
+	};
+}
+}(jQuery));
+</script>
+%TMPL:END%
+
+%{if you do want to customise the two divs defined here, don't change their id's or remove the 'hidden' class}%
+%TMPL:DEF{hpmenu}%<div id="hpmenu" class="hidden rounded shadow"><ul>%TMPL:P{hpmenu_items}%</ul></div>\
+<div id="hpanchor" class="hidden rounded"><img alt="M" src="%TMPL:P{hpanchor_img}%" /></div>%TMPL:END%
+
+%{use UserHijaxTemplate to customise the templates below as required}%
+
+%TMPL:DEF{hpmenu_iconpath}%%PUBURL%/%SYSTEMWEB%/FamFamFamSilkIcons%TMPL:END%
+
+%{everytime a link is hovered over, the url attribute of the anchors below is copied to the respective href attribute and the $web and $topic variables are substituted for the web and topic of the hovered link}%
+%{this is a javascript string literal, note the backslashes at the end of each line}%
+%TMPL:DEF{hpmenu_items}%<li id="hppreviewli"><a class="hpmenulink" url="%SCRIPTURL{view}%/$web/$topic">\
+<img alt="preview" src="%TMPL:P{hpmenu_iconpath}%/eye.png" title="Preview this page" /></a></li>\
+<li><a class="hpmenulink" url="%SCRIPTURL{edit}%/$web/$topic?nowysiwyg=1">\
+<img alt="edit" src="%TMPL:P{hpmenu_iconpath}%/page_edit.png" title="Edit this page" /></a></li>\
+<li><a class="hpmenulink" url="%SCRIPTURL{view}%/$web/$topic?raw=on">\
+<img alt="raw" src="%TMPL:P{hpmenu_iconpath}%/page_code.png" title="Raw view this page" /></a></li>\
+<li><a class="hpmenulink" url="%SCRIPTURL{oops}%/$web/$topic?template=oopshistory">\
+<img alt="history" src="%TMPL:P{hpmenu_iconpath}%/page_white_stack.png" title="Inspect the History of this page" /></a></li>\
+<li><a class="hpmenulink" url="%SCRIPTURL{view}%/$web/WebCreateNewTopic?topicparent=$topic">\
+<img alt="new" src="%TMPL:P{hpmenu_iconpath}%/page_add.png" title="Create a new child of this page" /></a></li>%TMPL:END%
+
+%TMPL:DEF{hpmenu_parked_for_future_dev}%<li><a class="hpmenulink" url="%SCRIPTURL{view}%/$web/$topic?template=System.SiteMapView;root=$topic">\
+<img alt="children" src="%TMPL:P{hpmenu_iconpath}%/sitemap_color.png" title="Children of this page" /></a></li>\
+<li><a class="hpmenulink" url="%SCRIPTURL{attach}%/$web/$topic">\
+<img alt="attach" src="%TMPL:P{hpmenu_iconpath}%/page_attach.png" title="Attach to this page" /></a></li>%TMPL:END%
+
+%TMPL:DEF{hpanchor_img}%%TMPL:P{hpmenu_iconpath}%/anchor.png%TMPL:END%
+
+%{the following should be a comma separated list of ids and classes of DOM anchor elements that should not be hijaxed, it is used in a jQuery selector so don't forget the # of ids or . of classes}%
+%TMPL:DEF{nohijax}%.nohijax%TMPL:END%
+
+%{for IE6 browsers only: the following should be a jQuery selector of DOM elements that should be searched for png images that need to be 'fixed' using the HijaxPlugin customisation of the jQuery SuperSleight plugin}%
+%{note that all quotes should be double as the string is wrapped in single quotes}%
+%TMPL:DEF{hpssleight}%$("body *").not(".nossleight")%TMPL:END%
+
+%TMPL:INCLUDE{"UserHijax"}%
+</verbatim>@
+
+
+1.3
+log
+@Saved by install script
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" date="1282755653" format="1.1" version="1.3"}%
+@
+
+
+1.2
+log
+@Saved by install script
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" date="1282755572" format="1.1" version="1.2"}%
+@
+
+
+1.1
+log
+@Saved by install script
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="ProjectContributor" date="1256035666" format="1.1" reprev="1.1" version="1.1"}%
+d72 1
+a72 1
+</verbatim>
+@

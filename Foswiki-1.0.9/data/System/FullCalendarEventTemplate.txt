@@ -1,0 +1,188 @@
+%META:TOPICINFO{author="ProjectContributor" date="1275395213" format="1.1" version="1.1"}%
+%META:TOPICPARENT{name="FullCalendarPlugin"}%
+<verbatim>
+%TMPL:DEF{apptUserList}%<select multiple size="5" id="appt_users" name="users" class="userlist urlParam" resetmultiple="5">
+%SEARCH{"*" nonoise="on" topic="%USERGROUP%" web="%USERSWEB%" format="$percntFORMATLIST{$quot$pattern(.*[\t\s]*\* Set GROUP = (.*?)[\r\n].*)$quot split=$quot[\s,]$quot separator=$quot $quot format=$quot<option value=$dollarquot$dollar1$dollarquot>$dollarpercntSPACEOUT{$dollar1}$dollarpercnt</option>$quot}$percnt"}%
+</select>%TMPL:END%
+
+%TMPL:DEF{userFormElements}%
+<div id="eventCat" class="foswikiFormStep">
+*Post an Event:* <span class="mission"><input type="radio" name="category" value="mission" class="mission urlParam" checked="checked" /> Mission &nbsp;</span><span class="meeting"><input type="radio" name="category" value="meeting" class="meeting urlParam" /> Meeting &nbsp;</span><span class="leave"><input type="radio" name="category" value="leave" class="leave urlParam" /> Leave &nbsp;</span><span class="milestone"><input type="radio" name="category" value="milestone" class="milestone urlParam" /> Milestone</span><br>
+</div>
+<div id="details" class="foswikiFormStep foswikiLeft">
+---+++ Details
+<div id="appt_details" style="float:left;">
+<label class="fcp_label leave" for="title">Subject:</label> <input type="text" id="appt_title" name="title" value="" size="50" class="urlParam leave" />
+
+<label class="fcp_label leave" for="location">Location:</label> <input type="text" id="appt_location" name="location" value="" size="50" class="urlParam leave" />
+ 
+<label class="fcp_label leave" for="text">Description:</label> <textarea type="textarea" id="appt_desc" name="text" value="" \
+               cols="50" rows="4" class="urlParam leave" /></textarea>
+</div>
+<div id="appt_attendees">
+<label for="users">Attendees:</label><br /> %TMPL:P{apptUserList}%
+</div>
+</div>
+%TMPL:END%
+
+%TMPL:DEF{eventForm}%
+<div id="calEventDiv" class="foswikiFormSteps hidden ontop rounded shadow">
+<form id="newCalEvent">
+%TMPL:P{userFormElements}%
+<div style="clear:both;"></div>
+<div class="foswikiFormStep">
+---+++ When?
+<div id="startdate">
+<label class="label" for="startDate">Start date:</label> <input type="text" id="appt_startDate" class="isodate" value="%SERVERTIME{"$year-$mo-$day"}%" /> <div id="starttime" class="fcp_timeperiod">
+<select id="appt_startTime" class="fcp_timeperiod" name="appt_startTime"><option value=""></option><option value="00:00:00">00:00</option> <option value="00:05:00">00:05</option> <option value="00:10:00">00:10</option> <option value="00:15:00">00:15</option> <option value="00:20:00">00:20</option> <option value="00:25:00">00:25</option> <option value="00:30:00">00:30</option> <option value="00:35:00">00:35</option> <option value="00:40:00">00:40</option> <option value="00:45:00">00:45</option> <option value="00:50:00">00:50</option> <option value="00:55:00">00:55</option> <option value="01:00:00">01:00</option> <option value="01:05:00">01:05</option> <option value="01:10:00">01:10</option> <option value="01:15:00">01:15</option> <option value="01:20:00">01:20</option> <option value="01:25:00">01:25</option> <option value="01:30:00">01:30</option> <option value="01:35:00">01:35</option> <option value="01:40:00">01:40</option> <option value="01:45:00">01:45</option> <option value="01:50:00">01:50</option> <option value="01:55:00">01:55</option> <option value="02:00:00">02:00</option> <option value="02:05:00">02:05</option> <option value="02:10:00">02:10</option> <option value="02:15:00">02:15</option> <option value="02:20:00">02:20</option> <option value="02:25:00">02:25</option> <option value="02:30:00">02:30</option> <option value="02:35:00">02:35</option> <option value="02:40:00">02:40</option> <option value="02:45:00">02:45</option> <option value="02:50:00">02:50</option> <option value="02:55:00">02:55</option> <option value="03:00:00">03:00</option> <option value="03:05:00">03:05</option> <option value="03:10:00">03:10</option> <option value="03:15:00">03:15</option> <option value="03:20:00">03:20</option> <option value="03:25:00">03:25</option> <option value="03:30:00">03:30</option> <option value="03:35:00">03:35</option> <option value="03:40:00">03:40</option> <option value="03:45:00">03:45</option> <option value="03:50:00">03:50</option> <option value="03:55:00">03:55</option> <option value="04:00:00">04:00</option> <option value="04:05:00">04:05</option> <option value="04:10:00">04:10</option> <option value="04:15:00">04:15</option> <option value="04:20:00">04:20</option> <option value="04:25:00">04:25</option> <option value="04:30:00">04:30</option> <option value="04:35:00">04:35</option> <option value="04:40:00">04:40</option> <option value="04:45:00">04:45</option> <option value="04:50:00">04:50</option> <option value="04:55:00">04:55</option> <option value="05:00:00">05:00</option> <option value="05:05:00">05:05</option> <option value="05:10:00">05:10</option> <option value="05:15:00">05:15</option> <option value="05:20:00">05:20</option> <option value="05:25:00">05:25</option> <option value="05:30:00">05:30</option> <option value="05:35:00">05:35</option> <option value="05:40:00">05:40</option> <option value="05:45:00">05:45</option> <option value="05:50:00">05:50</option> <option value="05:55:00">05:55</option> <option value="06:00:00">06:00</option> <option value="06:05:00">06:05</option> <option value="06:10:00">06:10</option> <option value="06:15:00">06:15</option> <option value="06:20:00">06:20</option> <option value="06:25:00">06:25</option> <option value="06:30:00">06:30</option> <option value="06:35:00">06:35</option> <option value="06:40:00">06:40</option> <option value="06:45:00">06:45</option> <option value="06:50:00">06:50</option> <option value="06:55:00">06:55</option> <option value="07:00:00">07:00</option> <option value="07:05:00">07:05</option> <option value="07:10:00">07:10</option> <option value="07:15:00">07:15</option> <option value="07:20:00">07:20</option> <option value="07:25:00">07:25</option> <option value="07:30:00">07:30</option> <option value="07:35:00">07:35</option> <option value="07:40:00">07:40</option> <option value="07:45:00">07:45</option> <option value="07:50:00">07:50</option> <option value="07:55:00">07:55</option> <option value="08:00:00">08:00</option> <option value="08:05:00">08:05</option> <option value="08:10:00">08:10</option> <option value="08:15:00">08:15</option> <option value="08:20:00">08:20</option> <option value="08:25:00">08:25</option> <option value="08:30:00">08:30</option> <option value="08:35:00">08:35</option> <option value="08:40:00">08:40</option> <option value="08:45:00">08:45</option> <option value="08:50:00">08:50</option> <option value="08:55:00">08:55</option> <option value="09:00:00" selected="selected">09:00</option> <option value="09:05:00">09:05</option> <option value="09:10:00">09:10</option> <option value="09:15:00">09:15</option> <option value="09:20:00">09:20</option> <option value="09:25:00">09:25</option> <option value="09:30:00">09:30</option> <option value="09:35:00">09:35</option> <option value="09:40:00">09:40</option> <option value="09:45:00">09:45</option> <option value="09:50:00">09:50</option> <option value="09:55:00">09:55</option> <option value="10:00:00">10:00</option> <option value="10:05:00">10:05</option> <option value="10:10:00">10:10</option> <option value="10:15:00">10:15</option> <option value="10:20:00">10:20</option> <option value="10:25:00">10:25</option> <option value="10:30:00">10:30</option> <option value="10:35:00">10:35</option> <option value="10:40:00">10:40</option> <option value="10:45:00">10:45</option> <option value="10:50:00">10:50</option> <option value="10:55:00">10:55</option> <option value="11:00:00">11:00</option> <option value="11:05:00">11:05</option> <option value="11:10:00">11:10</option> <option value="11:15:00">11:15</option> <option value="11:20:00">11:20</option> <option value="11:25:00">11:25</option> <option value="11:30:00">11:30</option> <option value="11:35:00">11:35</option> <option value="11:40:00">11:40</option> <option value="11:45:00">11:45</option> <option value="11:50:00">11:50</option> <option value="11:55:00">11:55</option> <option value="12:00:00">12:00</option> <option value="12:05:00">12:05</option> <option value="12:10:00">12:10</option> <option value="12:15:00">12:15</option> <option value="12:20:00">12:20</option> <option value="12:25:00">12:25</option> <option value="12:30:00">12:30</option> <option value="12:35:00">12:35</option> <option value="12:40:00">12:40</option> <option value="12:45:00">12:45</option> <option value="12:50:00">12:50</option> <option value="12:55:00">12:55</option> <option value="13:00:00">13:00</option> <option value="13:05:00">13:05</option> <option value="13:10:00">13:10</option> <option value="13:15:00">13:15</option> <option value="13:20:00">13:20</option> <option value="13:25:00">13:25</option> <option value="13:30:00">13:30</option> <option value="13:35:00">13:35</option> <option value="13:40:00">13:40</option> <option value="13:45:00">13:45</option> <option value="13:50:00">13:50</option> <option value="13:55:00">13:55</option> <option value="14:00:00">14:00</option> <option value="14:05:00">14:05</option> <option value="14:10:00">14:10</option> <option value="14:15:00">14:15</option> <option value="14:20:00">14:20</option> <option value="14:25:00">14:25</option> <option value="14:30:00">14:30</option> <option value="14:35:00">14:35</option> <option value="14:40:00">14:40</option> <option value="14:45:00">14:45</option> <option value="14:50:00">14:50</option> <option value="14:55:00">14:55</option> <option value="15:00:00">15:00</option> <option value="15:05:00">15:05</option> <option value="15:10:00">15:10</option> <option value="15:15:00">15:15</option> <option value="15:20:00">15:20</option> <option value="15:25:00">15:25</option> <option value="15:30:00">15:30</option> <option value="15:35:00">15:35</option> <option value="15:40:00">15:40</option> <option value="15:45:00">15:45</option> <option value="15:50:00">15:50</option> <option value="15:55:00">15:55</option> <option value="16:00:00">16:00</option> <option value="16:05:00">16:05</option> <option value="16:10:00">16:10</option> <option value="16:15:00">16:15</option> <option value="16:20:00">16:20</option> <option value="16:25:00">16:25</option> <option value="16:30:00">16:30</option> <option value="16:35:00">16:35</option> <option value="16:40:00">16:40</option> <option value="16:45:00">16:45</option> <option value="16:50:00">16:50</option> <option value="16:55:00">16:55</option> <option value="17:00:00">17:00</option> <option value="17:05:00">17:05</option> <option value="17:10:00">17:10</option> <option value="17:15:00">17:15</option> <option value="17:20:00">17:20</option> <option value="17:25:00">17:25</option> <option value="17:30:00">17:30</option> <option value="17:35:00">17:35</option> <option value="17:40:00">17:40</option> <option value="17:45:00">17:45</option> <option value="17:50:00">17:50</option> <option value="17:55:00">17:55</option> <option value="18:00:00">18:00</option> <option value="18:05:00">18:05</option> <option value="18:10:00">18:10</option> <option value="18:15:00">18:15</option> <option value="18:20:00">18:20</option> <option value="18:25:00">18:25</option> <option value="18:30:00">18:30</option> <option value="18:35:00">18:35</option> <option value="18:40:00">18:40</option> <option value="18:45:00">18:45</option> <option value="18:50:00">18:50</option> <option value="18:55:00">18:55</option> <option value="19:00:00">19:00</option> <option value="19:05:00">19:05</option> <option value="19:10:00">19:10</option> <option value="19:15:00">19:15</option> <option value="19:20:00">19:20</option> <option value="19:25:00">19:25</option> <option value="19:30:00">19:30</option> <option value="19:35:00">19:35</option> <option value="19:40:00">19:40</option> <option value="19:45:00">19:45</option> <option value="19:50:00">19:50</option> <option value="19:55:00">19:55</option> <option value="20:00:00">20:00</option> <option value="20:05:00">20:05</option> <option value="20:10:00">20:10</option> <option value="20:15:00">20:15</option> <option value="20:20:00">20:20</option> <option value="20:25:00">20:25</option> <option value="20:30:00">20:30</option> <option value="20:35:00">20:35</option> <option value="20:40:00">20:40</option> <option value="20:45:00">20:45</option> <option value="20:50:00">20:50</option> <option value="20:55:00">20:55</option> <option value="21:00:00">21:00</option> <option value="21:05:00">21:05</option> <option value="21:10:00">21:10</option> <option value="21:15:00">21:15</option> <option value="21:20:00">21:20</option> <option value="21:25:00">21:25</option> <option value="21:30:00">21:30</option> <option value="21:35:00">21:35</option> <option value="21:40:00">21:40</option> <option value="21:45:00">21:45</option> <option value="21:50:00">21:50</option> <option value="21:55:00">21:55</option> <option value="22:00:00">22:00</option> <option value="22:05:00">22:05</option> <option value="22:10:00">22:10</option> <option value="22:15:00">22:15</option> <option value="22:20:00">22:20</option> <option value="22:25:00">22:25</option> <option value="22:30:00">22:30</option> <option value="22:35:00">22:35</option> <option value="22:40:00">22:40</option> <option value="22:45:00">22:45</option> <option value="22:50:00">22:50</option> <option value="22:55:00">22:55</option> <option value="23:00:00">23:00</option> <option value="23:05:00">23:05</option> <option value="23:10:00">23:10</option> <option value="23:15:00">23:15</option> <option value="23:20:00">23:20</option> <option value="23:25:00">23:25</option> <option value="23:30:00">23:30</option> <option value="23:35:00">23:35</option> <option value="23:40:00">23:40</option> <option value="23:45:00">23:45</option> <option value="23:50:00">23:50</option> <option value="23:55:00">23:55</option></select>
+</div></div>
+
+<div id="enddate">
+<label class="label" for="appt_endDate">End date:</label> <input type="text" id="appt_endDate" name="appt_endDate" class="isodate" value="" /> <div id="endtime" class="fcp_timeperiod">
+<select id="appt_endTime" class="fcp_timeperiod" name="appt_endTime"><option value=""></option></option><option value="00:00:00">00:00</option> <option value="00:05:00">00:05</option> <option value="00:10:00">00:10</option> <option value="00:15:00">00:15</option> <option value="00:20:00">00:20</option> <option value="00:25:00">00:25</option> <option value="00:30:00">00:30</option> <option value="00:35:00">00:35</option> <option value="00:40:00">00:40</option> <option value="00:45:00">00:45</option> <option value="00:50:00">00:50</option> <option value="00:55:00">00:55</option> <option value="01:00:00">01:00</option> <option value="01:05:00">01:05</option> <option value="01:10:00">01:10</option> <option value="01:15:00">01:15</option> <option value="01:20:00">01:20</option> <option value="01:25:00">01:25</option> <option value="01:30:00">01:30</option> <option value="01:35:00">01:35</option> <option value="01:40:00">01:40</option> <option value="01:45:00">01:45</option> <option value="01:50:00">01:50</option> <option value="01:55:00">01:55</option> <option value="02:00:00">02:00</option> <option value="02:05:00">02:05</option> <option value="02:10:00">02:10</option> <option value="02:15:00">02:15</option> <option value="02:20:00">02:20</option> <option value="02:25:00">02:25</option> <option value="02:30:00">02:30</option> <option value="02:35:00">02:35</option> <option value="02:40:00">02:40</option> <option value="02:45:00">02:45</option> <option value="02:50:00">02:50</option> <option value="02:55:00">02:55</option> <option value="03:00:00">03:00</option> <option value="03:05:00">03:05</option> <option value="03:10:00">03:10</option> <option value="03:15:00">03:15</option> <option value="03:20:00">03:20</option> <option value="03:25:00">03:25</option> <option value="03:30:00">03:30</option> <option value="03:35:00">03:35</option> <option value="03:40:00">03:40</option> <option value="03:45:00">03:45</option> <option value="03:50:00">03:50</option> <option value="03:55:00">03:55</option> <option value="04:00:00">04:00</option> <option value="04:05:00">04:05</option> <option value="04:10:00">04:10</option> <option value="04:15:00">04:15</option> <option value="04:20:00">04:20</option> <option value="04:25:00">04:25</option> <option value="04:30:00">04:30</option> <option value="04:35:00">04:35</option> <option value="04:40:00">04:40</option> <option value="04:45:00">04:45</option> <option value="04:50:00">04:50</option> <option value="04:55:00">04:55</option> <option value="05:00:00">05:00</option> <option value="05:05:00">05:05</option> <option value="05:10:00">05:10</option> <option value="05:15:00">05:15</option> <option value="05:20:00">05:20</option> <option value="05:25:00">05:25</option> <option value="05:30:00">05:30</option> <option value="05:35:00">05:35</option> <option value="05:40:00">05:40</option> <option value="05:45:00">05:45</option> <option value="05:50:00">05:50</option> <option value="05:55:00">05:55</option> <option value="06:00:00">06:00</option> <option value="06:05:00">06:05</option> <option value="06:10:00">06:10</option> <option value="06:15:00">06:15</option> <option value="06:20:00">06:20</option> <option value="06:25:00">06:25</option> <option value="06:30:00">06:30</option> <option value="06:35:00">06:35</option> <option value="06:40:00">06:40</option> <option value="06:45:00">06:45</option> <option value="06:50:00">06:50</option> <option value="06:55:00">06:55</option> <option value="07:00:00">07:00</option> <option value="07:05:00">07:05</option> <option value="07:10:00">07:10</option> <option value="07:15:00">07:15</option> <option value="07:20:00">07:20</option> <option value="07:25:00">07:25</option> <option value="07:30:00">07:30</option> <option value="07:35:00">07:35</option> <option value="07:40:00">07:40</option> <option value="07:45:00">07:45</option> <option value="07:50:00">07:50</option> <option value="07:55:00">07:55</option> <option value="08:00:00">08:00</option> <option value="08:05:00">08:05</option> <option value="08:10:00">08:10</option> <option value="08:15:00">08:15</option> <option value="08:20:00">08:20</option> <option value="08:25:00">08:25</option> <option value="08:30:00">08:30</option> <option value="08:35:00">08:35</option> <option value="08:40:00">08:40</option> <option value="08:45:00">08:45</option> <option value="08:50:00">08:50</option> <option value="08:55:00">08:55</option> <option value="09:00:00">09:00</option> <option value="09:05:00">09:05</option> <option value="09:10:00">09:10</option> <option value="09:15:00">09:15</option> <option value="09:20:00">09:20</option> <option value="09:25:00">09:25</option> <option value="09:30:00">09:30</option> <option value="09:35:00">09:35</option> <option value="09:40:00">09:40</option> <option value="09:45:00">09:45</option> <option value="09:50:00">09:50</option> <option value="09:55:00">09:55</option> <option value="10:00:00">10:00</option> <option value="10:05:00">10:05</option> <option value="10:10:00">10:10</option> <option value="10:15:00">10:15</option> <option value="10:20:00">10:20</option> <option value="10:25:00">10:25</option> <option value="10:30:00">10:30</option> <option value="10:35:00">10:35</option> <option value="10:40:00">10:40</option> <option value="10:45:00">10:45</option> <option value="10:50:00">10:50</option> <option value="10:55:00">10:55</option> <option value="11:00:00" selected="selected">11:00</option> <option value="11:05:00">11:05</option> <option value="11:10:00">11:10</option> <option value="11:15:00">11:15</option> <option value="11:20:00">11:20</option> <option value="11:25:00">11:25</option> <option value="11:30:00">11:30</option> <option value="11:35:00">11:35</option> <option value="11:40:00">11:40</option> <option value="11:45:00">11:45</option> <option value="11:50:00">11:50</option> <option value="11:55:00">11:55</option> <option value="12:00:00">12:00</option> <option value="12:05:00">12:05</option> <option value="12:10:00">12:10</option> <option value="12:15:00">12:15</option> <option value="12:20:00">12:20</option> <option value="12:25:00">12:25</option> <option value="12:30:00">12:30</option> <option value="12:35:00">12:35</option> <option value="12:40:00">12:40</option> <option value="12:45:00">12:45</option> <option value="12:50:00">12:50</option> <option value="12:55:00">12:55</option> <option value="13:00:00">13:00</option> <option value="13:05:00">13:05</option> <option value="13:10:00">13:10</option> <option value="13:15:00">13:15</option> <option value="13:20:00">13:20</option> <option value="13:25:00">13:25</option> <option value="13:30:00">13:30</option> <option value="13:35:00">13:35</option> <option value="13:40:00">13:40</option> <option value="13:45:00">13:45</option> <option value="13:50:00">13:50</option> <option value="13:55:00">13:55</option> <option value="14:00:00">14:00</option> <option value="14:05:00">14:05</option> <option value="14:10:00">14:10</option> <option value="14:15:00">14:15</option> <option value="14:20:00">14:20</option> <option value="14:25:00">14:25</option> <option value="14:30:00">14:30</option> <option value="14:35:00">14:35</option> <option value="14:40:00">14:40</option> <option value="14:45:00">14:45</option> <option value="14:50:00">14:50</option> <option value="14:55:00">14:55</option> <option value="15:00:00">15:00</option> <option value="15:05:00">15:05</option> <option value="15:10:00">15:10</option> <option value="15:15:00">15:15</option> <option value="15:20:00">15:20</option> <option value="15:25:00">15:25</option> <option value="15:30:00">15:30</option> <option value="15:35:00">15:35</option> <option value="15:40:00">15:40</option> <option value="15:45:00">15:45</option> <option value="15:50:00">15:50</option> <option value="15:55:00">15:55</option> <option value="16:00:00">16:00</option> <option value="16:05:00">16:05</option> <option value="16:10:00">16:10</option> <option value="16:15:00">16:15</option> <option value="16:20:00">16:20</option> <option value="16:25:00">16:25</option> <option value="16:30:00">16:30</option> <option value="16:35:00">16:35</option> <option value="16:40:00">16:40</option> <option value="16:45:00">16:45</option> <option value="16:50:00">16:50</option> <option value="16:55:00">16:55</option> <option value="17:00:00">17:00</option> <option value="17:05:00">17:05</option> <option value="17:10:00">17:10</option> <option value="17:15:00">17:15</option> <option value="17:20:00">17:20</option> <option value="17:25:00">17:25</option> <option value="17:30:00">17:30</option> <option value="17:35:00">17:35</option> <option value="17:40:00">17:40</option> <option value="17:45:00">17:45</option> <option value="17:50:00">17:50</option> <option value="17:55:00">17:55</option> <option value="18:00:00">18:00</option> <option value="18:05:00">18:05</option> <option value="18:10:00">18:10</option> <option value="18:15:00">18:15</option> <option value="18:20:00">18:20</option> <option value="18:25:00">18:25</option> <option value="18:30:00">18:30</option> <option value="18:35:00">18:35</option> <option value="18:40:00">18:40</option> <option value="18:45:00">18:45</option> <option value="18:50:00">18:50</option> <option value="18:55:00">18:55</option> <option value="19:00:00">19:00</option> <option value="19:05:00">19:05</option> <option value="19:10:00">19:10</option> <option value="19:15:00">19:15</option> <option value="19:20:00">19:20</option> <option value="19:25:00">19:25</option> <option value="19:30:00">19:30</option> <option value="19:35:00">19:35</option> <option value="19:40:00">19:40</option> <option value="19:45:00">19:45</option> <option value="19:50:00">19:50</option> <option value="19:55:00">19:55</option> <option value="20:00:00">20:00</option> <option value="20:05:00">20:05</option> <option value="20:10:00">20:10</option> <option value="20:15:00">20:15</option> <option value="20:20:00">20:20</option> <option value="20:25:00">20:25</option> <option value="20:30:00">20:30</option> <option value="20:35:00">20:35</option> <option value="20:40:00">20:40</option> <option value="20:45:00">20:45</option> <option value="20:50:00">20:50</option> <option value="20:55:00">20:55</option> <option value="21:00:00">21:00</option> <option value="21:05:00">21:05</option> <option value="21:10:00">21:10</option> <option value="21:15:00">21:15</option> <option value="21:20:00">21:20</option> <option value="21:25:00">21:25</option> <option value="21:30:00">21:30</option> <option value="21:35:00">21:35</option> <option value="21:40:00">21:40</option> <option value="21:45:00">21:45</option> <option value="21:50:00">21:50</option> <option value="21:55:00">21:55</option> <option value="22:00:00">22:00</option> <option value="22:05:00">22:05</option> <option value="22:10:00">22:10</option> <option value="22:15:00">22:15</option> <option value="22:20:00">22:20</option> <option value="22:25:00">22:25</option> <option value="22:30:00">22:30</option> <option value="22:35:00">22:35</option> <option value="22:40:00">22:40</option> <option value="22:45:00">22:45</option> <option value="22:50:00">22:50</option> <option value="22:55:00">22:55</option> <option value="23:00:00">23:00</option> <option value="23:05:00">23:05</option> <option value="23:10:00">23:10</option> <option value="23:15:00">23:15</option> <option value="23:20:00">23:20</option> <option value="23:25:00">23:25</option> <option value="23:30:00">23:30</option> <option value="23:35:00">23:35</option> <option value="23:40:00">23:40</option> <option value="23:45:00">23:45</option> <option value="23:50:00">23:50</option> <option value="23:55:00">23:55</option> </select>
+</div></div> <input type="checkbox" id="appt_allDay" /> All Day<br>
+
+<div id="recur_switch"><label for="appt_recur">Recurring event?</label> <input type="checkbox" name="appt_recur" value="" id="appt_recur" /></div>
+
+<div id="recur_data">
+<fieldset id="appt_recur_pattern_fieldset"><legend><strong> &nbsp;Recurrence pattern&nbsp; </strong></legend>
+<table width="100%">
+  <tr valign="top">
+  <td width="30%">
+	<div id="appt_recur_switchboard">
+    <input type="radio" name="appt_recur_type" unit="day" value="D" id="appt_recur_daily" checked="checked" />
+    <label for="appt_recur_daily">Daily</label> <br />
+    <input type="radio" name="appt_recur_type" unit="week" value="Wdow" id="appt_recur_weekly" />    
+    <label for="appt_recur_weekly">Weekly</label> <br />
+    <input type="radio" name="appt_recur_type" unit="month" value="M" id="appt_recur_monthly" />
+    <label for="appt_recur_monthly">Monthly</label> <br />
+    <input type="radio" name="appt_recur_type" unit="year" value="YM" id="appt_recur_yearly" />
+    <label for="appt_recur_yearly">Yearly</label> <br />
+	</div>
+  </td>
+
+  <td width="70%" style="border-left:1px solid gray; padding-left:2em;">
+  <div style="position:relative">
+      Every <select id="appt_every" name="every">
+<option value="1" selected="selected">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option>
+</select>&nbsp;
+<span id="appt_every_unit">day</span>(s)
+    <div id="appt_form_day" class="appt_recur_form hidden">
+      <span> *On:* </span><br />
+      <input type="checkbox" name="dow" value="1" id="appt_dow_1" class="wdow" />
+      <label for="appt_mon">M</label>
+      <input type="checkbox" name="dow" value="2" id="appt_dow_2" class="wdow" />
+      <label for="appt_tue">T</label>
+      <input type="checkbox" name="dow" value="3" id="appt_dow_3" class="wdow" />
+      <label for="appt_wed">W</label>
+      <input type="checkbox" name="dow" value="4" id="appt_dow_4" class="wdow" />
+      <label for="appt_thu">T</label>
+      <input type="checkbox" name="dow" value="5" id="appt_dow_5" class="wdow" />
+      <label for="appt_fri">F</label>
+      <input type="checkbox" name="dow" value="6" id="appt_dow_6" class="wdow" />
+      <label for="appt_sat">S</label>
+      <input type="checkbox" name="dow" value="7" id="appt_dow_0" class="wdow" /> 
+      <label for="appt_sun">S</label>
+    </div>
+    <div id="appt_form_date" class="appt_recur_form hidden">
+
+      <input type="radio" name="appt_daydate" value="dd" id="appt_on_date" checked />
+        <label for="appt_on_date">On date</label>
+        
+      <input type="radio" name="appt_daydate" value="ndow" id="appt_monthly_day" />
+        <label for="appt_monthly_day">On day</label><br />
+		<div id="ndow">
+			<select name="nth" id="appt_day_n" class="appt_date ndow">
+			  <option value="1" selected>First</option>
+			  <option value="2">Second</option>
+			  <option value="3">Third</option>
+			  <option value="4">Fourth</option>
+			  <option value="5">Last</option>
+			</select>
+			<select name="dow" id="appt_day_d" class="appt_date ndow">
+			  <option value="1" selected>Monday</option>
+			  <option value="2">Tuesday</option>
+			  <option value="3">Wednesday</option>
+			  <option value="4">Thursday</option>
+			  <option value="5">Friday</option>
+			  <option value="6">Saturday</option>
+			  <option value="7">Sunday</option>
+			</select>
+		</div>
+    </div>
+    <div id="appt_form_month" class="appt_recur_form hidden">
+        <select name="appt_month" id="appt_month" class="appt_date">
+          <option value="1" selected>January</option>
+          <option value="2">February</option>
+          <option value="3">March</option>
+          <option value="4">April</option>
+          <option value="5">May</option>
+          <option value="6">June</option>
+          <option value="7">July</option>
+          <option value="8">August</option>
+          <option value="9">September</option>
+          <option value="10">October</option>
+          <option value="11">November</option>
+          <option value="12">December</option>
+        </select>
+    </div>
+</div></td></tr>
+</table>
+</fieldset>
+
+<fieldset id="appt_recur_range_fieldset"><legend><strong> &nbsp;Range of recurrence&nbsp; </strong></legend>
+
+  <input type="radio" name="appt_range" value="none" id="appt_range_none" checked />
+    <label for="appt_range_none">No end date</label>
+
+  <input type="radio" name="appt_range" value="by" id="appt_range_by" /> 
+    <label for="appt_range_by">End by</label>
+      <input type="text" id="appt_range_date" name="appt_range_date" value="" size="20" id="appt_range_date" class="isodate" /> (Note: this date is exclusive)
+</fieldset>
+<input type="hidden" id="fcp_exceptions" value="" name="exceptions" class="notUrlParam" />
+</div>
+</div>
+<input type="hidden" id="fcp_startDate" name="startDate" class="urlParam" />
+<input type="hidden" id="fcp_allDay" name="allDay" value="0" class="urlParam" />
+<input type="hidden" id="fcp_startTime" name="startTime" class="urlParam" />
+<input type="hidden" id="fcp_endTime" name="endTime" class="urlParam" />
+<input type="hidden" id="fcp_rangeEnd" value="" name="rangeEnd" class="urlParam" />
+<input type="hidden" id="fcp_repeater" value="" name="repeater" class="urlParam" />
+<input type="hidden" id="fcp_durationDays" value="0" name="durationDays" class="urlParam" />
+<input type="hidden" id="fcp_uid" value="" name="uid" class="notUrlParam" />
+<input type="hidden" id="fcp_topic" name="topic" value="" class="urlParam" />
+<input type="hidden" id="fcp_reltopic" name="reltopic" value="" class="urlParam" />
+<div id="calEventUpdate" class="foswikiFormStep hidden">
+<div id="recur_event_change" class="hidden">
+*This event is part of a series of recurring events. Do you want to:* <br />
+    <input type="radio" name="recur_change" value="only" checked />    
+    <label for="appt_recur_weekly">Change this instance only <span class="foswikiSmall foswikiGrayText">(Create a new event)</span></label> <br />
+    <input type="radio" name="recur_change" value="all" />
+    <label for="appt_recur_monthly">Change all instances <span class="foswikiSmall foswikiGrayText">(Update the original event record)</span></label> <br />
+    <input type="radio" name="recur_change" value="fromhere" />
+    <label for="appt_recur_yearly">Change all instances from this point onwards <span class="foswikiSmall foswikiGrayText">(Create a new event record)</span></label> <br />
+</div>
+
+<input type="submit" value="Update" id="appt_form_update" class="foswikiSubmit" />
+<input type="submit" value="Delete" id="appt_form_delete" class="foswikiSubmit foswikiButtonCancel" />
+</div>
+<div class="foswikiFormStep">
+<input type="submit" value="Submit" id="appt_form_submit" class="foswikiSubmit" />
+<input type="submit" value="Cancel" id="appt_form_cancel" class="foswikiSubmit" />
+</div>
+</form>
+</div>
+<!-- end of the form elements -->
+%TMPL:END%
+
+%TMPL:DEF{fcpCSS}%
+<link rel='stylesheet' type='text/css' href='%PUBURL%/%SYSTEMWEB%/FullCalendarPlugin/fullcalendar-1.4.4/fullcalendar.css' />
+<link rel='stylesheet' type='text/css' href='%PUBURL%/%SYSTEMWEB%/FullCalendarPlugin/fcp.css' />
+%TMPL:END%
+%TMPL:DEF{fcpJS}%
+<script type='text/javascript' src='%PUBURL%/%SYSTEMWEB%/FullCalendarPlugin/fullcalendar-1.4.4/fullcalendar.js'></script>
+<script type='text/javascript' src='%PUBURL%/%SYSTEMWEB%/FullCalendarPlugin/fcp.js'></script>
+%TMPL:END%
+
+%TMPL:INCLUDE{UserFullCalEvent}%
+</verbatim>

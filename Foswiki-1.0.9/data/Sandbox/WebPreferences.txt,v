@@ -1,9 +1,19 @@
-head	1.3;
+head	1.5;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.5
+date	2010.09.03.18.51.02;	author jgaviria;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2010.08.26.21.19.25;	author jgaviria;	state Exp;
+branches;
+next	1.3;
 
 1.3
 date	2010.08.25.05.08.12;	author jgaviria;	state Exp;
@@ -26,12 +36,12 @@ desc
 @
 
 
-1.3
+1.5
 log
 @none
 @
 text
-@%META:TOPICINFO{author="jgaviria" date="1282712892" format="1.1" version="1.3"}%
+@%META:TOPICINFO{author="jgaviria" date="1283539862" format="1.1" version="1.5"}%
 ---+!! <nop>%WEB% Web Preferences
 
 The following settings are *web preferences* of the [[%WEB%.%HOMETOPIC%][%WEB%]] web. These preferences overwrite the *site-level preferences* in [[%SYSTEMWEB%.%WIKIPREFSTOPIC%]] and [[%LOCALSITEPREFS%]], and can be overwritten by *user preferences* (your personal topic, eg: [[%USERSWEB%.%WIKINAME%][%WIKINAME%]] in the [[%USERSWEB%.%HOMETOPIC%][%USERSWEB%]] web).
@@ -71,8 +81,37 @@ These settings override the defaults for this web only. See [[%SYSTEMWEB%.Defaul
       * Set FINALPREFERENCES = NOSEARCHALL, ATTACHFILESIZELIMIT, WIKIWEBMASTER, WEBCOPYRIGHT, WEBTOPICLIST, DENYWEBVIEW, ALLOWWEBVIEW, DENYWEBCHANGE, ALLOWWEBCHANGE, DENYWEBRENAME, ALLOWWEBRENAME
 %INCLUDE{"%SYSTEMWEB%.WebPreferencesHelp"}%
 
+%META:PREFERENCE{name="DENYWEBVIEW" title="PREFERENCE_DENYWEBVIEW" type="Set" value="WikiGuest NobodyGroup"}%
+%META:PREFERENCE{name="DENYWEBCHANGE" title="PREFERENCE_DENYWEBCHANGE" type="Set" value="WikiGuest NobodyGroup"}%
+%META:PREFERENCE{name="DENYWEBRENAME" title="PREFERENCE_DENYWEBRENAME" type="Set" value="WikiGuest NobodyGroup"}%
+@
+
+
+1.4
+log
+@none
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="jgaviria" date="1282857565" format="1.1" version="1.4"}%
+d41 3
+a43 3
+%META:PREFERENCE{name="DENYWEBVIEW" title="PREFERENCE_DENYWEBVIEW" type="Set" value="WikiGuest"}%
 %META:PREFERENCE{name="DENYWEBCHANGE" title="PREFERENCE_DENYWEBCHANGE" type="Set" value="WikiGuest"}%
 %META:PREFERENCE{name="DENYWEBRENAME" title="PREFERENCE_DENYWEBRENAME" type="Set" value="WikiGuest"}%
+@
+
+
+1.3
+log
+@none
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="jgaviria" date="1282712892" format="1.1" version="1.3"}%
+d41 1
 @
 
 

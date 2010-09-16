@@ -1,0 +1,230 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2010.08.25.16.59.34;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.08.25.16.59.34;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.2
+log
+@Saved by install script
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" date="1282755574" format="1.1" version="1.2"}%
+<!--
+
+   PLEASE DO NOT EDIT THIS TOPIC
+
+   It is automatically generated from the subversion repository, and any changes
+   you make will simply be overwritten the next time a release is generated.
+
+   Instead, you could check your fix in, raise a bug in the Bugs web, or mail the author.
+-->
+---+!! <nop>%TOPIC%
+%TOC%
+---++ Description
+This is a replacement for Foswiki's standard [[%SYSTEMWEB%.VarWEBLIST][WEBLIST]] variable.
+It is extended to improve the display of hierarchical web structures,
+a feature added to later wikis and adds more flexibility when used in
+<nop>WikiApplications. The FLEXWEBLIST can be used for example 
+to generate a hierarchical navigatio scheme or a nested sitemap.
+
+---++ Syntax
+=%<nop>FLEXWEBLIST{...}%=
+
+This tag iterates over all specified webs and all of their subwebs recursively
+while using the specified format strings to produce the output. 
+
+Parameters:
+   * =webs=: a list of webs to be displayed and/or 
+     "public" - a list of all non-hidden webs, 
+     "webtemplate" - a list of all template webs; 
+     "publiccurrent" - a list of all non-hidden webs including the current one;
+     (defaults to "public")
+   * =format=: format string to render one item 
+     (defaults to "$web ")
+   * =header=: format string prepended to the output result
+   * =footer=: format string appended to the result; if the list
+     of webs is empty neither header nor footer are added.
+   * =separator=: text to be put between webs; can be =none= for no separators
+   * =subformat=: format string to be used to format subwebs
+     (defaults to =format=)
+   * =subheader=: format string preceding the output of any subweb
+     (defaults to =header=)
+   * =subfooter=: format string following the output of any subweb;
+     subheader and subfooter are only added if the list of subwebs of the 
+     current web is not empty
+     (defaults to =footer=)
+   * =subseparator=: text to be put between subwebs; can be =none= for no separators
+     (defaults to =separator=)
+   * =subwebs=: regular expression that subwebs must match to be listed; this
+     can also be =none=, =all=, =only= to suppress subwebs, show all or only dispay explicitly
+     mentioned subwebs (default is =all=)
+   * =selection=: selected items in the list of webs
+   * =marker=: text for =$marker= if the item maches the selection 
+     (see pseudo variables below)
+   * =markerformat=: format string used instead of (sub)format string
+     for selected items
+   * =exclude=: regular expression of items excluded from the output
+   * =include=: regular expressions of items that must match in order to be
+     included in the output
+   * =adminwebs=: a regular expression of webs that are considered to be only relevant for 
+     <nop>WikiAdmins and are hiddend to non-admin users. In general it is recommended to
+     hide webs by restricting access rights to it. There are however cases when you want to hide a web
+     but still _use_ it although the user is not aware of it. Best example is
+     and Application web holding <nop>WikiApplications. Users are using those
+     applications but should not be bothered with their implementation.
+   * =map=: list of =key=value= pairs to map the name of a web to a different value
+     (e.g. map="System=Documentation,Main=Home" will expand the variable =$name= as "Documentation" instead of System
+     and as "Home" instead "Main")
+
+Parameters default to the emtpy string if not mentioned otherwise. Note, that some
+of them although similar to WEBLIST have different default values. 
+
+*Pseudo-variables*: Each of the above format strings (format, header, footer, 
+subformat, subheader, subfooter and markerformat) may contain special variables
+that are replaced with a current value:
+   * =$web=: the full name of the web, e.g. =Main/Foo/Bar=
+   * =$qname=: the full name of the web in quotes, e.g. ="Main/Foo/Bar"= (deprecated)
+   * =$name=: the name of the web without the leading parent webs, e.g. =Bar=
+   * =$origname=: the original name of the web despite any name mapping
+   * =$parent=: the name of the parent web of a sub web or the empty string if there's none
+   * =$marker=: marker text (see above) if the current item is selected, empty otherwise
+   * =$depth=: level of embedding of a subweb; main level web have depth 0 etc.
+   * =$nrsubwebs=: number of subwebs a current web has
+   * =$indent=: expands to three spaces for each level a web is embeded; main level
+     webs get three spaces, subwebs on first level six spaces and so on.
+   * =$indent(string)=: same as =$indent= but using =string= instead of three spaces
+   * =$n=: replaced with a newline char (\n)
+   * =$percnt=: replaced with a percent char (%)
+   * =$dollar=: replaced with a dollar char ($)
+   * =$nop=: removed from the format string before expanding common foswiki variables
+   * =$url=: link to homepage of web
+   * =$sitemapuseto=: content of the SITEMAPUSETO preference of the web
+   * =$sitemapwhat=: content of the SITEMAPWAT preference 
+   * =$color=: content of the WEBBGCOLOR preference
+
+The following picture illustrates when which format strings are used
+<div class="box">
+  <div class="header">header</div>
+  <div class="format">format</div>
+  <div class="separator">separator</div>
+  <div class="format">format</div>
+  <div class="box">
+    <div class="header">subheader</div>
+    <div class="format">subformat</div>
+    <div class="box">
+      <div class="header">subheader</div>
+      <div class="format">subformat</div>
+      <div class="footer">subfooter</div>
+    </div>
+    <div class="separator">subseparator</div>
+    ...
+    <div class="separator">subseparator</div>
+    <div class="format">subformat</div>
+    <div class="footer">subfooter</div>
+  </div>
+  <div class="separator">separator</div>
+  ...
+  <div class="separator">subseparator</div>
+  <div class="format">format</div>
+  <div class="footer">footer</div>
+</div>
+<style type="text/css">
+.box {
+  border:1px solid blue;
+  padding:10px;
+  margin:10px;
+}
+.format,
+.separator,
+.header, 
+.footer {
+  margin:5px;
+  padding:5px;
+}
+.header, .footer {border:1px solid green; }
+.format {border:1px solid red; }
+.separator {border:1px solid yellow;}
+</style>
+
+---++ Examples
+See the FlexWebListExamples.
+
+---++ Plugin Installation Instructions
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+
+---++ Plugin Info
+<!-- provided for compatibility only
+   * Set SHORTDESCRIPTION = Flexible way to display hierarchical weblists
+-->
+
+|  Plugin Author: | Foswiki:Main.MichaelDaum |
+|  Copyright &copy;: | 2006-2009, Michael Daum http://michaeldaumconsulting.com |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Release: | v1.51 |
+|  Version: | 5698 (2009-12-02) |
+|  Change History: | &nbsp; |
+|  02 Dec 2009: | fixed regexing for subwebs |
+|  17 Nov 2009: | fixed processing subwebs and marker format |
+|  02 Jul 2009: | added =$color=, =$sitemapuseto=, =$sitemapwhat= and =$url=; fixed examples |
+|  17 Apr 2009: | converted to foswiki |
+|  03 Jul 2008: | don't blat if there's a subweb with no parent web, habbens in Trash from time to time |
+|  15 Feb 2008: | explicitly disable unwanted webs |
+|  17 Jan 2008: | added treeview example based on Foswiki:Extensions/JQueryPlugin |
+|  03 Jan 2008: | fixed hiding of subwebs |
+|  13 Sep 2007: | added adminwebs feature |
+|  21 May 2007: | added <nop>FlexWebListNavi |
+|  08 May 2007: | docu fixes, respect HOMETOPIC in the examples |
+|  10 Mar 2007: | fixed expansion of $n and $nop |
+|  13 Oct 2006: | don't bail out entering a non-existing web |
+|  31 Aug 2006: | added NO_PREFS_IN_TOPIC;\
+                  removed commonTagsHandler thus dropping support for cairo |
+|  03 Aug 2006: | fixed use of uninitialized value |
+|  &nbsp;       | start counting =$indent= at zero, not one; fixed the examples accordingly |
+|  02 Aug 2006: | added =publiccurrent= pseudo-web which is the sorted list of all public webs \
+                  including the current one; fixed =$indent= not to assume multiples of 3 items \
+                  to indent |
+|  31 Jul 2006: | don't filter webs that have been added explicitly added to =webs= |
+|  &nbsp;       | more fixes related to web filtering; fixed some testcases |
+|  28 Jul 2006: | preserve order in webs parameter |
+|  26 Jul 2006: | first release |
+|  05 Jul 2006: | initial version |
+|  Dependencies: | None |
+|  Perl Version: | 5.8 |
+|  Plugin Home: | Foswiki:Extensions/%TOPIC% |
+|  Support: | Foswiki:Support/%TOPIC% |
+@
+
+
+1.1
+log
+@Saved by install script
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="ProjectContributor" date="1259753380" format="1.1" version="1.2"}%
+@

@@ -1,0 +1,20 @@
+%META:TOPICINFO{author="ProjectContributor" date="1270024972" format="1.1" reprev="1.1" version="1.1"}%
+%META:TOPICPARENT{name="FullCalendarPlugin"}%
+---+ %SPACEOUT{%TOPIC%}%
+
+| *Name:* | *Type:* | *Size:* | *Value:*  | *Tooltip message:* | *Attributes:* |
+| startDate | text | 10 |  |  |  |
+| durationDays | text | 10 |  |  |  |
+| startTime | text | 15 |  |  |  |
+| endTime | text | 15 |  |  |  |
+| users | select+names+multi | 5 | %CALGROUPLIST% |  |  |
+| title | text | 100 |  |  |  |
+| location | text | 100 |  |  |  |
+| category | select | 1 | mission,meeting,leave,milestone |  |  |
+| repeater | select | 1 | ,YMdd,YMndow,Mdd,Mndow,Wdow,D |  |  |
+| every | select | 1 | ,1,2,3,4,5,6,7,8,9,10 |  |  |
+| nth | select | 1 | ,1,2,3,4,5 |  |  |
+| dow | checkbox+multi | 7 | 1,2,3,4,5,6,7 |  |  |
+| exceptions | text | 50 |  |  |  |
+| rangeEnd | text | 10 |  |  |  |
+| allDay | select | 1 | 1,0 |  |  |

@@ -1,0 +1,1161 @@
+| 2010-08-26T21:16:44Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | la accion es: Display |
+| 2010-08-26T21:16:45Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:16:45Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:16:45Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:16:45Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:16:45Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:16:45Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:16:45Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:16:45Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | la accion es: Display |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:18:43Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | la accion es: Edit |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:18:51Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no DENYWEBVIEW defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:25Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | la accion es: Display |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:26Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | la accion es: Display |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:19:56Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | la accion es: Edit |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:02Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:16Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | la accion es: Display |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:20:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | la accion es: Display |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:17Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | la accion es: Edit |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:27Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | la accion es: Display |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBVIEW defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBCHANGE defined |
+| 2010-08-26T21:27:35Z warning | Foswiki::Plugins::WebPermissionsPlugin::Core | WebPermissionsPlugin::Core::_getACLs: no ALLOWWEBRENAME defined |
+| 2010-08-28T00:41:15Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:41:15Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-28T00:41:17Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-28T00:41:26Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:41:26Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-28T00:42:08Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:42:09Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-28T00:42:11Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:42:11Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-28T00:43:32Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic |
+| 2010-08-28T00:43:32Z warning | Plugins: could not fully register HexaPMPlugin, no plugin topic
+Foswiki::Plugins::HexaPMPlugin::initPlugin is not defined |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x8b60430)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x86de080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x87249f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x86de1d0)', 'HASH(0x86c84c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x86de1d0)', 'CODE(0x86ffe68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x86de1d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x85c7af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x8b60430)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x86de080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x87249f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x86de1d0)', 'HASH(0x86c84c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x86de1d0)', 'CODE(0x86ffe68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x86de1d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x85c7af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x95b0380)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x912e0d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x9174a68)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x912e220)', 'HASH(0x9118560)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x912e220)', 'CODE(0x91502c8)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x912e220)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9016910)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x95b0380)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x912e0d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x9174a68)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x912e220)', 'HASH(0x9118560)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x912e220)', 'CODE(0x91502c8)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x912e220)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9016910)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9c0f300)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x978d090)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x97d39d0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x978d1e0)', 'HASH(0x97774d8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x978d1e0)', 'CODE(0x97aefd0)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x978d1e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9676b00)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9c0f300)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x978d090)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x97d39d0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x978d1e0)', 'HASH(0x97774d8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x978d1e0)', 'CODE(0x97aefd0)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x978d1e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9676b00)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9dbb410)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9939078)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x997f9e8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x99391c8)', 'HASH(0x99234c0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x99391c8)', 'CODE(0x995ae60)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x99391c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9822af8)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9dbb410)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9939078)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x997f9e8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x99391c8)', 'HASH(0x99234c0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x99391c8)', 'CODE(0x995ae60)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x99391c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9822af8)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0xa306348)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9e84050)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x9eca9f8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x9e841a0)', 'HASH(0x9e6e4e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x9e841a0)', 'CODE(0x9ea6248)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x9e841a0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9d6c8d8)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0xa306348)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9e84050)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x9eca9f8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x9e841a0)', 'HASH(0x9e6e4e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x9e841a0)', 'CODE(0x9ea6248)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x9e841a0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9d6c8d8)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9a7a418)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x95f8080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x963e9f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x95f81d0)', 'HASH(0x95e24c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x95f81d0)', 'CODE(0x9619e68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x95f81d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x94e1af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9a7a418)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x95f8080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x963e9f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x95f81d0)', 'HASH(0x95e24c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x95f81d0)', 'CODE(0x9619e68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x95f81d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x94e1af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9dbb410)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9939078)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x997f9e8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x99391c8)', 'HASH(0x99234c0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x99391c8)', 'CODE(0x995ae60)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x99391c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9822af8)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9dbb410)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9939078)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x997f9e8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x99391c8)', 'HASH(0x99234c0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x99391c8)', 'CODE(0x995ae60)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x99391c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9822af8)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x8b60430)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x86de080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x87249f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x86de1d0)', 'HASH(0x86c84c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x86de1d0)', 'CODE(0x86ffe68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x86de1d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x85c7af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x8b60430)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x86de080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x87249f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x86de1d0)', 'HASH(0x86c84c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x86de1d0)', 'CODE(0x86ffe68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x86de1d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x85c7af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x95b0380)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x912e0d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x9174a68)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x912e220)', 'HASH(0x9118560)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x912e220)', 'CODE(0x91502c8)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x912e220)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9016910)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x95b0380)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x912e0d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x9174a68)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x912e220)', 'HASH(0x9118560)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x912e220)', 'CODE(0x91502c8)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x912e220)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9016910)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9c0f300)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x978d090)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x97d39d0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x978d1e0)', 'HASH(0x97774d8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x978d1e0)', 'CODE(0x97aefd0)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x978d1e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9676b00)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9c0f300)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x978d090)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x97d39d0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x978d1e0)', 'HASH(0x97774d8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x978d1e0)', 'CODE(0x97aefd0)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x978d1e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9676b00)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9a7a418)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x95f8080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x963e9f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x95f81d0)', 'HASH(0x95e24c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x95f81d0)', 'CODE(0x9619e68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x95f81d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x94e1af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9a7a418)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x95f8080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x963e9f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x95f81d0)', 'HASH(0x95e24c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x95f81d0)', 'CODE(0x9619e68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x95f81d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x94e1af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-30T01:58:01Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0xa306348)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9e84050)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x9eca9f8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x9e841a0)', 'HASH(0x9e6e4e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x9e841a0)', 'CODE(0x9ea6248)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x9e841a0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9d6c8d8)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0xa306348)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9e84050)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x9eca9f8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x9e841a0)', 'HASH(0x9e6e4e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x9e841a0)', 'CODE(0x9ea6248)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x9e841a0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9d6c8d8)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:32Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0xa9660f0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0xa4e45d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0xa529f80)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0xa4e4720)', 'HASH(0xa4ce128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0xa4e4720)', 'CODE(0xa4e42e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0xa4e4720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0xa3cd380)') called at /var/www/Hexawiki/bin/view line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0xa9660f0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0xa4e45d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0xa529f80)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0xa4e4720)', 'HASH(0xa4ce128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0xa4e4720)', 'CODE(0xa4e42e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0xa4e4720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0xa3cd380)') called at /var/www/Hexawiki/bin/view line 45
+
+---- |
+| 2010-08-31T16:52:32Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x991d408)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x949a5d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x94e1c38)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x949a720)', 'HASH(0x9484128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x949a720)', 'CODE(0x949a2e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x949a720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9383380)') called at /var/www/Hexawiki/bin/view line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x991d408)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x949a5d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x94e1c38)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x949a720)', 'HASH(0x9484128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x949a720)', 'CODE(0x949a2e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x949a720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9383380)') called at /var/www/Hexawiki/bin/view line 45
+
+---- |
+| 2010-08-31T16:52:32Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x92f5f80)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8e745d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8eb9f60)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8e74720)', 'HASH(0x8e5e128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8e74720)', 'CODE(0x8e742e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8e74720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8d5d380)') called at /var/www/Hexawiki/bin/view line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x92f5f80)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8e745d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8eb9f60)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8e74720)', 'HASH(0x8e5e128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8e74720)', 'CODE(0x8e742e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8e74720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8d5d380)') called at /var/www/Hexawiki/bin/view line 45
+
+---- |
+| 2010-08-31T16:52:33Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x92f5f80)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8e745d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8eb9f60)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8e74720)', 'HASH(0x8e5e128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8e74720)', 'CODE(0x8e742e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8e74720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8d5d380)') called at /var/www/Hexawiki/bin/view line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x92f5f80)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8e745d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8eb9f60)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8e74720)', 'HASH(0x8e5e128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8e74720)', 'CODE(0x8e742e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8e74720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8d5d380)') called at /var/www/Hexawiki/bin/view line 45
+
+---- |
+| 2010-08-31T16:52:33Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0xa9660f0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0xa4e45d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0xa529f80)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0xa4e4720)', 'HASH(0xa4ce128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0xa4e4720)', 'CODE(0xa4e42e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0xa4e4720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0xa3cd380)') called at /var/www/Hexawiki/bin/view line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0xa9660f0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0xa4e45d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0xa529f80)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0xa4e4720)', 'HASH(0xa4ce128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0xa4e4720)', 'CODE(0xa4e42e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0xa4e4720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0xa3cd380)') called at /var/www/Hexawiki/bin/view line 45
+
+---- |
+| 2010-08-31T16:52:33Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x991d408)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x949a5d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x94e1c38)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x949a720)', 'HASH(0x9484128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x949a720)', 'CODE(0x949a2e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x949a720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9383380)') called at /var/www/Hexawiki/bin/view line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x991d408)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x949a5d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x94e1c38)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x949a720)', 'HASH(0x9484128)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x949a720)', 'CODE(0x949a2e0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x949a720)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9383380)') called at /var/www/Hexawiki/bin/view line 45
+
+---- |
+| 2010-08-31T16:52:47Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x93edfd0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8f6c090)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8fb29d0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8f6c1e0)', 'HASH(0x8f564d8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8f6c1e0)', 'CODE(0x8f8dfd0)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8f6c1e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8e55b00)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x93edfd0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8f6c090)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8fb29d0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8f6c1e0)', 'HASH(0x8f564d8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8f6c1e0)', 'CODE(0x8f8dfd0)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8f6c1e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8e55b00)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:47Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x8a73028)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x85f10d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8637a68)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x85f1220)', 'HASH(0x85db560)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x85f1220)', 'CODE(0x86132c8)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x85f1220)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x84d9910)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x8a73028)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x85f10d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8637a68)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x85f1220)', 'HASH(0x85db560)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x85f1220)', 'CODE(0x86132c8)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x85f1220)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x84d9910)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:47Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x91ee0b8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8d6c078)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8db29e8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8d6c1c8)', 'HASH(0x8d564c0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8d6c1c8)', 'CODE(0x8d8de60)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8d6c1c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8c55af8)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x91ee0b8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8d6c078)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8db29e8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8d6c1c8)', 'HASH(0x8d564c0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8d6c1c8)', 'CODE(0x8d8de60)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8d6c1c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8c55af8)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:47Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9ce00c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x985e080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x98a49f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x985e1d0)', 'HASH(0x98484c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x985e1d0)', 'CODE(0x987fe68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x985e1d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9747af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9ce00c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x985e080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x98a49f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x985e1d0)', 'HASH(0x98484c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x985e1d0)', 'CODE(0x987fe68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x985e1d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9747af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:47Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x8a73028)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x85f10d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8637a68)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x85f1220)', 'HASH(0x85db560)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x85f1220)', 'CODE(0x86132c8)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x85f1220)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x84d9910)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x8a73028)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x85f10d0)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8637a68)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x85f1220)', 'HASH(0x85db560)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x85f1220)', 'CODE(0x86132c8)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x85f1220)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x84d9910)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:48Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x93edfd0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8f6c090)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8fb29d0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8f6c1e0)', 'HASH(0x8f564d8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8f6c1e0)', 'CODE(0x8f8dfd0)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8f6c1e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8e55b00)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x93edfd0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8f6c090)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8fb29d0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8f6c1e0)', 'HASH(0x8f564d8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8f6c1e0)', 'CODE(0x8f8dfd0)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8f6c1e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8e55b00)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:48Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9358fc8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8ed7050)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8f1d9f8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8ed71a0)', 'HASH(0x8ec14e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8ed71a0)', 'CODE(0x8ef9248)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8ed71a0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8dbf8d8)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9358fc8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8ed7050)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8f1d9f8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8ed71a0)', 'HASH(0x8ec14e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8ed71a0)', 'CODE(0x8ef9248)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8ed71a0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8dbf8d8)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:48Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9ce00c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x985e080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x98a49f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x985e1d0)', 'HASH(0x98484c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x985e1d0)', 'CODE(0x987fe68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x985e1d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9747af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9ce00c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x985e080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x98a49f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x985e1d0)', 'HASH(0x98484c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x985e1d0)', 'CODE(0x987fe68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x985e1d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9747af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:48Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x91ee0b8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8d6c078)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8db29e8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8d6c1c8)', 'HASH(0x8d564c0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8d6c1c8)', 'CODE(0x8d8de60)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8d6c1c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8c55af8)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x91ee0b8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8d6c078)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8db29e8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8d6c1c8)', 'HASH(0x8d564c0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8d6c1c8)', 'CODE(0x8d8de60)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8d6c1c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8c55af8)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:48Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x98d90c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9457080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x949d9f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x94571d0)', 'HASH(0x94414c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x94571d0)', 'CODE(0x9478e68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x94571d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9340af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x98d90c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9457080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x949d9f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x94571d0)', 'HASH(0x94414c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x94571d0)', 'CODE(0x9478e68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x94571d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9340af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:48Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x98d90c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9457080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x949d9f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x94571d0)', 'HASH(0x94414c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x94571d0)', 'CODE(0x9478e68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x94571d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9340af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x98d90c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x9457080)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x949d9f0)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x94571d0)', 'HASH(0x94414c8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x94571d0)', 'CODE(0x9478e68)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x94571d0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9340af0)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |
+| 2010-08-31T16:52:48Z warning | Foswiki::Plugins::HexaPMPlugin could not be loaded.  Errors were:
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 796, near "-> ''"
+Global symbol "$name" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 800.
+Global symbol "$enum" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 804.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 813, near "}"
+Compilation failed in require at (eval 59) line 2.
+ at (eval 59) line 2
+	Foswiki::Plugin::BEGIN() called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval {...} called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9358fc8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8ed7050)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8f1d9f8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8ed71a0)', 'HASH(0x8ec14e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8ed71a0)', 'CODE(0x8ef9248)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8ed71a0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8dbf8d8)') called at /var/www/Hexawiki/bin/viewfile line 45
+BEGIN failed--compilation aborted at (eval 59) line 2.
+ at (eval 59) line 2
+	eval 'use Foswiki::Plugins::HexaPMPlugin
+;' called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugin.pm line 133
+	Foswiki::Plugin::load('Foswiki::Plugin=HASH(0x9358fc8)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins.pm line 174
+	Foswiki::Plugins::load('Foswiki::Plugins=HASH(0x8ed7050)', undef) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Users.pm line 247
+	Foswiki::Users::initialiseUser('Foswiki::Users=HASH(0x8f1d9f8)', 'jgaviria') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 1593
+	Foswiki::new('Foswiki', undef, 'Foswiki::Request=HASH(0x8ed71a0)', 'HASH(0x8ec14e0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 293
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8ed71a0)', 'CODE(0x8ef9248)', 'viewfile', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8ed71a0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8dbf8d8)') called at /var/www/Hexawiki/bin/viewfile line 45
+
+---- |

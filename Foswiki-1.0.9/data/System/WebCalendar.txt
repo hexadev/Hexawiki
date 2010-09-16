@@ -1,0 +1,6 @@
+%META:TOPICINFO{author="jgaviria" date="1282851432" format="1.1" version="1.5"}%
+%META:TOPICPARENT{name="FullCalendarPlugin"}%
+%OBJECT{ allDay="0" category="mission" created="2010-08-25T16:02:59-05:00" creator="JuanGaviria" durationDays="0" edited="2010-08-26T14:37:12-05:00=JuanGaviria" endTime="11:00:00" location="asd" reltopic="Sandbox.TestTopic0" startDate="2010-08-25" startTime="09:00:00" title="asd" type="event" uid="event000006"}%asdsad%ENDOBJECT%
+
+
+%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="FullCalendarView"}%

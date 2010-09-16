@@ -1,0 +1,10 @@
+%META:TOPICINFO{author="jgaviria" date="1283991025" format="1.1" version="1.2"}%
+%META:TOPICPARENT{name="HexaPMPluginProjectForm"}%
+%TMPL:INCLUDE{"view"}%
+%TMPL:DEF{"form"}%%TMPL:END%
+%TMPL:DEF{"attachments"}%%TMPL:END%
+%TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
+---+ %MAKETEXT{Project}%: %FORMFIELD{"Name"}% 
+%FORMFIELD{"Description"}%
+---
+%TMPL:END%

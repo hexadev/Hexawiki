@@ -1,0 +1,64 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.08.25.16.59.32;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@Saved by install script
+@
+text
+@// -------------------------------------------------------------------
+// markItUp!
+// -------------------------------------------------------------------
+// Copyright (C) 2008 Jay Salvat
+// http://markitup.jaysalvat.com/
+// -------------------------------------------------------------------
+// Mediawiki Wiki tags example
+// -------------------------------------------------------------------
+// Feel free to add more tags
+// -------------------------------------------------------------------
+mySettings = {
+	previewParserPath:	'ewiki/bin/rest/RenderPlugin/render', // path to your Wiki parser
+	previewTemplatePath: 'ewiki/pub/Groups/OPS_HSA/OPSHSAWeeklyMeetings/Preview.html',
+	previewParserVar: 'text',
+	onShiftEnter:		{keepDefault:false, replaceWith:'\n\n'},
+	onTab:    		{keepDefault:false, openWith:'   * ', placeHolder:''},
+	markupSet: [
+		{name:'Heading 1', key:'1', openWith:'---+ ', placeHolder:'Your title here...' },
+		{name:'Heading 2', key:'2', openWith:'---++ ', placeHolder:'Your title here...' },
+		{name:'Heading 3', key:'3', openWith:'---+++ ', placeHolder:'Your title here...' },
+		{name:'Heading 4', key:'4', openWith:'---++++ ', placeHolder:'Your title here...' },
+		{name:'Heading 5', key:'5', openWith:'---+++++ ', placeHolder:'Your title here...' },
+		{name:'Heading 6', key:'6', openWith:'---++++++ ', placeHolder:'Your title here...' },
+		{separator:'---------------' },		
+		{name:'Bold', key:'B', openWith:"*", closeWith:"*"}, 
+		{name:'Italic', key:'I', openWith:"_", closeWith:"_"}, 
+		{name:'Stroke through', key:'S', openWith:'<del>', closeWith:'</del>'}, 
+		{separator:'---------------' },
+		{name:'Bulleted list', key:'.', openWith:'   * '}, 
+		{name:'Numeric list', key:'1', openWith:'   1 '}, 
+		{separator:'---------------' },
+		{name:'Picture', key:'P', replaceWith:'<img src="[![Source:!:http://]!]" alt="[![Alternative text]!]" />' },
+		{name:'Link', key:"L", openWith:"[[![Link]!][", closeWith:']]', placeHolder:'Your text to link here...' },
+		{name:'Url', openWith:"[[![Url:!:http://]!][", closeWith:']]', placeHolder:'Your text to link here...' },
+		{separator:'---------------' },
+		{name:'Quotes', openWith:'<blockquote>', closeWith:'</blockquote>', placeHolder:''},
+		{name:'Code', openWith:'(!(<source lang="[![Language:!:php]!]">|!|<pre>)!)', closeWith:'(!(</source>|!|</pre>)!)'}, 
+		{separator:'---------------' },
+		{name:'Preview', call:'preview', className:'preview'}
+	]
+}@

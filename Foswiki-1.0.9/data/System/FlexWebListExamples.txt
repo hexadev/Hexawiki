@@ -1,0 +1,192 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1282755575" format="1.1" version="1.2"}%
+%META:TOPICPARENT{name="FlexWebListPlugin"}%
+---+!! %TOPIC%
+
+These are some simple examples to show how to use the basic features
+of the FlexWebListPlugin. Please create some subwebs in the Sandbox web 
+for a better illustration of the examples below. 
+
+%TOC%
+
+---++ No params
+<verbatim>
+%FLEXWEBLIST%
+</verbatim>
+%FLEXWEBLIST%
+
+---++ Influencing order
+<verbatim>
+%FLEXWEBLIST{webs="%MAINWEB%,public,%SYSTEMWEB%"}%
+</verbatim>
+%FLEXWEBLIST{webs="%MAINWEB%,public,%SYSTEMWEB%"}%
+
+---++ Controlling subwebs
+---+++ No subwebs
+<verbatim>
+%FLEXWEBLIST{subwebs="none"}%
+</verbatim>
+%FLEXWEBLIST{subwebs="none"}%
+
+---+++ Only subwebs
+<verbatim>
+%FLEXWEBLIST{subwebs="only"}%
+</verbatim>
+%FLEXWEBLIST{subwebs="only"}%
+
+---+++ Subwebs of "Sandbox"
+<verbatim>
+%FLEXWEBLIST{subwebs="Sandbox"}%
+</verbatim>
+%FLEXWEBLIST{subwebs="Sandbox"}%
+
+---++ Using include and exclude
+
+---+++ Exclude <nop>TestCases and Trash webs
+<verbatim>
+%FLEXWEBLIST{exclude="(TestCases|Trash).*" subwebs="none"}%
+</verbatim>
+%FLEXWEBLIST{exclude="(TestCases|Trash).*" subwebs="none"}%
+
+---+++ Include Sandbox web and all of its subwebs
+<verbatim>
+%FLEXWEBLIST{include="Sandbox(/\w+)?"}%
+</verbatim>
+%FLEXWEBLIST{include="Sandbox(/\w+)?"}%
+
+---++ Creating lists
+---+++ Simple nested list
+<verbatim>
+%FLEXWEBLIST{format="$indent   * [[$web.%HOMETOPIC%][$name]]$n"}%
+</verbatim>
+%FLEXWEBLIST{format="$indent   * [[$web.%HOMETOPIC%][$name]]$n"}%
+
+---+++ Nested list using HTML
+<verbatim>
+%FLEXWEBLIST{
+   header="<ul>" 
+   format="<li>[[$web.%HOMETOPIC%][$name]]" 
+   separator="</li>"
+   footer="</li></ul>" 
+}%
+</verbatim>
+%FLEXWEBLIST{header="<ul>" format="<li>[[$web.%HOMETOPIC%][$name]]" separator="</li>" footer="</li></ul>"}%
+
+---+++ Nested calls to FLEXWEBLIST
+<verbatim>
+%FLEXWEBLIST{
+   exclude="(TestCases|Trash).*" 
+   subwebs="none"
+   selection="Applications"
+   format="$indent   * [[$web.%HOMETOPIC%][$name]]$n"
+   markerformat="$percntFLEXWEBLIST{
+     include=\"^$web.*\"
+     format=\"$dollarindent   * [[$dollarweb.%HOMETOPIC%][$dollarname]]$dollarn\"
+   }$percnt"
+}%
+</verbatim>
+%FLEXWEBLIST{
+   exclude="(TestCases|Trash).*" 
+   subwebs="none"
+   selection="Applications"
+   format="$indent   * [[$web.%HOMETOPIC%][$name]]$n"
+   markerformat="$percntFLEXWEBLIST{
+     include=\"^$web.*\"
+     format=\"$dollarindent   * [[$dollarweb.%HOMETOPIC%][$dollarname]]$dollarn\"
+   }$percnt"
+}%
+---+++ Twisty weblist
+needs the Foswiki:Extensions/TwistyPlugin
+<verbatim>
+%FLEXWEBLIST{
+   header="<ul><li>" 
+   format="
+     $percntTWISTY{
+       link=\"$name $percntIF{\"$nrsubwebs > 0\" then=\"($nrsubwebs)\"}$percnt\"
+     }$percnt"
+   separator="$percntENDTWISTY$percnt</li><li>"
+   footer="</li></ul>" 
+}%
+</verbatim>
+%FLEXWEBLIST{
+   header="<ul><li>" 
+   format="
+     $percntTWISTY{
+       link=\"$name $percntIF{\"$nrsubwebs > 0\" then=\"($nrsubwebs)\"}$percnt\"
+     }$percnt"
+   separator="$percntENDTWISTY$percnt</li><li>"
+   footer="</li></ul>" 
+}%
+
+
+---++ Sitemap
+%FLEXWEBLIST{
+  webs="%MAINWEB%,public,%SYSTEMWEB%"
+  header="<div class=\"header\">" 
+  format="<div class=\"web\">
+    [[$web.%HOMETOPIC%][$name]] $percntVAR{\"SITEMAPWHAT\" web=\"$web\"}$percnt
+  </div>" 
+  footer="</div>" 
+}%
+<style type="text/css">
+.web,
+.header {
+  margin:5px 50px;
+  padding:5px;
+  border:1px solid #f3a;
+}
+.web {
+  margin:5px;
+}
+.header a:visited,
+.header a:hover,
+.header a {
+  font-weight:bold;
+}
+</style>
+
+---++ Mapping names
+<verbatim>
+%FLEXWEBLIST{
+    map="TestCases=Tests,%SYSTEMWEB%=Documentation,%USERSWEB%=Users"
+    format="$indent   * [[$web.%HOMETOPIC%][$name]]$n"
+}%
+</verbatim>
+%FLEXWEBLIST{
+    map="TestCases=Tests,%SYSTEMWEB%=Documentation,%USERSWEB%=Users"
+    format="$indent   * [[$web.%HOMETOPIC%][$name]]$n"
+}%
+
+
+---++ Marking a selection
+---+++ Using marker
+<verbatim>
+%FLEXWEBLIST{
+   exclude="(TestCases|Trash).*"
+   format="$indent   * <span class=\"$marker\"> $web </span>$n"
+   marker="foswikiAlert"
+   selection="%BASEWEB%"
+}%
+</verbatim>
+%FLEXWEBLIST{
+   exclude="(TestCases|Trash).*"
+   format="$indent   * <span class=\"$marker\"> $web </span>$n"
+   marker="foswikiAlert"
+   selection="%BASEWEB%"
+}%
+---+++ Using markerformat
+<verbatim>
+%FLEXWEBLIST{
+   exclude="(TestCases|Trash).*"
+   format="$indent   * [[$web.%HOMETOPIC%][$name]]$n"
+   markerformat="$indent   * 
+     [[$web.%HOMETOPIC%][<span class=\"foswikiAlert\">$name</span>]]$n"
+   selection="%BASEWEB%"
+}%
+</verbatim>
+%FLEXWEBLIST{
+   exclude="(TestCases|Trash).*"
+   format="$indent   * [[$web.%HOMETOPIC%][$name]]$n"
+   markerformat="$indent   * 
+     [[$web.%HOMETOPIC%][<span class=\"foswikiAlert\">$name</span>]]$n"
+   selection="%BASEWEB%"
+}%

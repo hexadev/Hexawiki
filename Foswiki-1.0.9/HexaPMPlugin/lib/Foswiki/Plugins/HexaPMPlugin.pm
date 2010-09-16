@@ -781,7 +781,6 @@ sub restProjectList {
         my $description = $query->param('description');
         my $startDate = $query->param('startDate');
         if (Foswiki::Plugins::HexaPMPlugin::Core::checkAccessControll(Foswiki::Func::getWikiName(), 'view','projects')){
-		#return Foswiki::Plugins::HexaPMPlugin::Core::getProjectList(,$format);
 	 	return Foswiki::Plugins::HexaPMPlugin::Core::getProjectList($query);
 	}
         return "This is an example of a REST invocation\n\n";

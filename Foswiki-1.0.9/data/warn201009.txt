@@ -19942,3 +19942,138 @@ Compilation failed in require at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/
 | 2010-09-16T00:19:16Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - dashboard |
 | 2010-09-16T00:19:16Z warning | Foswiki::Plugins::HexaPMPlugin::Core | AdminGroup |
 | 2010-09-16T00:19:20Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:38:40Z warning | Global symbol "$quer" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 178.
+Global symbol "$quer" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 180.
+Compilation failed in require at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 133.
+ at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 133
+	Foswiki::Plugins::HexaPMPlugin::_renderDashboard('Foswiki=HASH(0x9d083f0)', 'Foswiki::Attrs=HASH(0xac98a80)', 'WebHome', 'ProjectManagement', 'Foswiki::Meta=HASH(0xa9f1e58)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Func.pm line 2116
+	Foswiki::Func::__ANON__('Foswiki=HASH(0x9d083f0)', 'Foswiki::Attrs=HASH(0xac98a80)', 'WebHome', 'ProjectManagement', 'Foswiki::Meta=HASH(0xa9f1e58)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 2891
+	Foswiki::_expandTagOnTopicRendering('Foswiki=HASH(0x9d083f0)', 'HEXAPMDASHBOARD', undef, 'WebHome', 'ProjectManagement', 'Foswiki::Meta=HASH(0xa9f1e58)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 2796
+	Foswiki::_processTags('Foswiki=HASH(0x9d083f0)', '---+ %WEB%\x{a}\x{a}%HEXAPMDASHBOARD%\x{a}', 'CODE(0x9ffd168)', 16, 'WebHome', 'ProjectManagement', 'Foswiki::Meta=HASH(0xa9f1e58)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 2713
+	Foswiki::expandAllTags('Foswiki=HASH(0x9d083f0)', 'SCALAR(0x9ffd958)', 'WebHome', 'ProjectManagement', 'Foswiki::Meta=HASH(0xa9f1e58)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 3041
+	Foswiki::handleCommonTags('Foswiki=HASH(0x9d083f0)', '---+ %WEB%\x{a}\x{a}%HEXAPMDASHBOARD%\x{a}', 'ProjectManagement', 'WebHome', 'Foswiki::Meta=HASH(0xa9f1e58)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI/View.pm line 388
+	Foswiki::UI::View::_prepare('---+ %WEB%\x{a}\x{a}%HEXAPMDASHBOARD%\x{a}', 'Foswiki=HASH(0x9d083f0)', 'ProjectManagement', 'WebHome', 'Foswiki::Meta=HASH(0xa9f1e58)', 0) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI/View.pm line 368
+	Foswiki::UI::View::view('Foswiki=HASH(0x9d083f0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 304
+	Foswiki::UI::__ANON__() called at /usr/share/perl5/Error.pm line 416
+	eval {...} called at /usr/share/perl5/Error.pm line 408
+	Error::subs::try('CODE(0x9e78bf8)', 'HASH(0xa9eb798)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 391
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x9e66110)', 'CODE(0x9e65cd0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x9e66110)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x9f81348)') called at /var/www/Hexawiki/bin/view line 45.
+ |
+| 2010-09-16T04:38:56Z warning | Global symbol "$quer" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 178.
+Compilation failed in require at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 133.
+ at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 133
+	Foswiki::Plugins::HexaPMPlugin::_renderDashboard('Foswiki=HASH(0x8f2f3f0)', 'Foswiki::Attrs=HASH(0x9ebfa50)', 'WebHome', 'ProjectManagement', 'Foswiki::Meta=HASH(0x9c18e38)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Func.pm line 2116
+	Foswiki::Func::__ANON__('Foswiki=HASH(0x8f2f3f0)', 'Foswiki::Attrs=HASH(0x9ebfa50)', 'WebHome', 'ProjectManagement', 'Foswiki::Meta=HASH(0x9c18e38)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 2891
+	Foswiki::_expandTagOnTopicRendering('Foswiki=HASH(0x8f2f3f0)', 'HEXAPMDASHBOARD', undef, 'WebHome', 'ProjectManagement', 'Foswiki::Meta=HASH(0x9c18e38)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 2796
+	Foswiki::_processTags('Foswiki=HASH(0x8f2f3f0)', '---+ %WEB%\x{a}\x{a}%HEXAPMDASHBOARD%\x{a}', 'CODE(0x9224168)', 16, 'WebHome', 'ProjectManagement', 'Foswiki::Meta=HASH(0x9c18e38)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 2713
+	Foswiki::expandAllTags('Foswiki=HASH(0x8f2f3f0)', 'SCALAR(0x9224958)', 'WebHome', 'ProjectManagement', 'Foswiki::Meta=HASH(0x9c18e38)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki.pm line 3041
+	Foswiki::handleCommonTags('Foswiki=HASH(0x8f2f3f0)', '---+ %WEB%\x{a}\x{a}%HEXAPMDASHBOARD%\x{a}', 'ProjectManagement', 'WebHome', 'Foswiki::Meta=HASH(0x9c18e38)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI/View.pm line 388
+	Foswiki::UI::View::_prepare('---+ %WEB%\x{a}\x{a}%HEXAPMDASHBOARD%\x{a}', 'Foswiki=HASH(0x8f2f3f0)', 'ProjectManagement', 'WebHome', 'Foswiki::Meta=HASH(0x9c18e38)', 0) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI/View.pm line 368
+	Foswiki::UI::View::view('Foswiki=HASH(0x8f2f3f0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 304
+	Foswiki::UI::__ANON__() called at /usr/share/perl5/Error.pm line 416
+	eval {...} called at /usr/share/perl5/Error.pm line 408
+	Error::subs::try('CODE(0x909fbf8)', 'HASH(0x9c12778)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 391
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x908d110)', 'CODE(0x908ccd0)', 'view', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x908d110)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x91a8348)') called at /var/www/Hexawiki/bin/view line 45.
+ |
+| 2010-09-16T04:39:15Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - dashboard |
+| 2010-09-16T04:39:15Z warning | Foswiki::Plugins::HexaPMPlugin::Core | AdminGroup |
+| 2010-09-16T04:39:18Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:41:35Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - dashboard |
+| 2010-09-16T04:41:35Z warning | Foswiki::Plugins::HexaPMPlugin::Core | AdminGroup |
+| 2010-09-16T04:41:39Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:41:53Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - dashboard |
+| 2010-09-16T04:41:53Z warning | Foswiki::Plugins::HexaPMPlugin::Core | AdminGroup |
+| 2010-09-16T04:41:56Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:42:35Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - dashboard |
+| 2010-09-16T04:42:35Z warning | Foswiki::Plugins::HexaPMPlugin::Core | AdminGroup |
+| 2010-09-16T04:42:38Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:44:07Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - dashboard |
+| 2010-09-16T04:44:07Z warning | Foswiki::Plugins::HexaPMPlugin::Core | AdminGroup |
+| 2010-09-16T04:44:11Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:44:20Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - dashboard |
+| 2010-09-16T04:44:20Z warning | Foswiki::Plugins::HexaPMPlugin::Core | AdminGroup |
+| 2010-09-16T04:44:24Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:45:24Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - dashboard |
+| 2010-09-16T04:45:24Z warning | Foswiki::Plugins::HexaPMPlugin::Core | AdminGroup |
+| 2010-09-16T04:45:28Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:45:34Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:45:56Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:46:11Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:47:37Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:47:49Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:48:00Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:48:08Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:50:13Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:52:53Z warning | syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 179, near ") " - fieldVal: ""
+Global symbol "$filter" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 180.
+Global symbol "$filter" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 181.
+Global symbol "$filterResult" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 190.
+Global symbol "$discartResult" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 190.
+Global symbol "$filterResult" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 191.
+Global symbol "$discartResult" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 191.
+Global symbol "$filterResult" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 191.
+Global symbol "$discartResult" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 191.
+Global symbol "%projectValues" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 192.
+Global symbol "$filterResult" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 193.
+Global symbol "$discartResult" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 194.
+Global symbol "$format" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 198.
+Global symbol "@projectsName" requires explicit package name at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 200.
+syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 202, near "}"
+/home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm has too many errors.
+ at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 202
+	require Foswiki/Plugins/HexaPMPlugin/Core.pm called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 775
+	Foswiki::Plugins::HexaPMPlugin::restProjectList('Foswiki=HASH(0x8237a18)', 'HexaPMPlugin', 'getProjectList', 'Foswiki::Response=HASH(0x8386d10)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Func.pm line 2211
+	Foswiki::Func::__ANON__('Foswiki=HASH(0x8237a18)', 'HexaPMPlugin', 'getProjectList', 'Foswiki::Response=HASH(0x8386d10)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI/Rest.pm line 187
+	Foswiki::UI::Rest::rest('Foswiki=HASH(0x8237a18)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 304
+	Foswiki::UI::__ANON__() called at /usr/share/perl5/Error.pm line 416
+	eval {...} called at /usr/share/perl5/Error.pm line 408
+	Error::subs::try('CODE(0x8395b50)', 'HASH(0x8ee9c70)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 391
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x83871b0)', 'CODE(0x8386f30)', 'rest', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x83871b0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x849e3a8)') called at /var/www/Hexawiki/bin/rest line 45
+Compilation failed in require at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 775.
+ at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 775
+	Foswiki::Plugins::HexaPMPlugin::restProjectList('Foswiki=HASH(0x8237a18)', 'HexaPMPlugin', 'getProjectList', 'Foswiki::Response=HASH(0x8386d10)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Func.pm line 2211
+	Foswiki::Func::__ANON__('Foswiki=HASH(0x8237a18)', 'HexaPMPlugin', 'getProjectList', 'Foswiki::Response=HASH(0x8386d10)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI/Rest.pm line 187
+	Foswiki::UI::Rest::rest('Foswiki=HASH(0x8237a18)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 304
+	Foswiki::UI::__ANON__() called at /usr/share/perl5/Error.pm line 416
+	eval {...} called at /usr/share/perl5/Error.pm line 408
+	Error::subs::try('CODE(0x8395b50)', 'HASH(0x8ee9c70)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 391
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x83871b0)', 'CODE(0x8386f30)', 'rest', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x83871b0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x849e3a8)') called at /var/www/Hexawiki/bin/rest line 45.
+ |
+| 2010-09-16T04:53:30Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:53:37Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:59:18Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T04:59:25Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:02:12Z warning | syntax error at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin/Core.pm line 181, near "&vbar;&vbar;;"
+Compilation failed in require at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 775.
+ at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Plugins/HexaPMPlugin.pm line 775
+	Foswiki::Plugins::HexaPMPlugin::restProjectList('Foswiki=HASH(0x89f5a18)', 'HexaPMPlugin', 'getProjectList', 'Foswiki::Response=HASH(0x8b44d10)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Func.pm line 2211
+	Foswiki::Func::__ANON__('Foswiki=HASH(0x89f5a18)', 'HexaPMPlugin', 'getProjectList', 'Foswiki::Response=HASH(0x8b44d10)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI/Rest.pm line 187
+	Foswiki::UI::Rest::rest('Foswiki=HASH(0x89f5a18)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 304
+	Foswiki::UI::__ANON__() called at /usr/share/perl5/Error.pm line 416
+	eval {...} called at /usr/share/perl5/Error.pm line 408
+	Error::subs::try('CODE(0x8b53b50)', 'HASH(0x96a7c88)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 391
+	Foswiki::UI::_execute('Foswiki::Request=HASH(0x8b451b0)', 'CODE(0x8b44f30)', 'rest', 1) called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/UI.pm line 275
+	Foswiki::UI::handleRequest('Foswiki::Request=HASH(0x8b451b0)') called at /home/jgaviria/hexa/dev/Hexawiki/Foswiki-1.0.9/lib/Foswiki/Engine/CGI.pm line 29
+	Foswiki::Engine::CGI::run('Foswiki::Engine::CGI=HASH(0x8c5c3a8)') called at /var/www/Hexawiki/bin/rest line 45.
+ |
+| 2010-09-16T05:02:42Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:02:58Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:03:22Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:03:27Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:03:42Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:05:56Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:06:26Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:06:29Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:06:45Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:07:15Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:07:24Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:07:59Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |
+| 2010-09-16T05:08:05Z warning | Foswiki::Plugins::HexaPMPlugin::Core | JuanGaviria - view - projects |

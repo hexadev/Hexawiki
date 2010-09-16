@@ -141,7 +141,8 @@ sub setProjectForm {
 	}
 }
 sub getProjectList {
-	my $format = $_[0] || 'json';
+	my $query = $_[0] || 'json';
+	my $format = $query->param('format') || 'json';
 	my $projectsWeb = $Foswiki::cfg{Plugins}{HexaPMPlugin}{ProjectsWeb} || '';
 	my $projectsNamePrefix = $Foswiki::cfg{Plugins}{HexaPMPlugin}{ProjectNamePrefix} || 'Project';
 	my $projectsForm = $Foswiki::cfg{Plugins}{HexaPMPlugin}{ProjectFormTopic} || 'System.HexaPMPluginProjectForm';
@@ -160,23 +161,36 @@ sub getProjectList {
 	}
 	foreach my $item (@subWebs){
 		my $projectname = '';
-		Foswiki::Func::writeDebug('Prefix: ' . $projectsNamePrefix);
 		my ($meta, $text) = Foswiki::Func::readTopic($item , 'WebHome');
 		my $projectForm = $meta->get('FORM');
-		Foswiki::Func::writeDebug('entro ' . $projectForm->{name});
 		my ($webHomeFormWeb, $webHomeFormTopic) = Foswiki::Func::normalizeWebTopicName('', $projectForm->{name});
 		my ($projectFormWeb, $projectFormTopic) = Foswiki::Func::normalizeWebTopicName('', $projectsForm);
 		if($webHomeFormTopic eq $projectFormTopic && $webHomeFormWeb eq $projectFormWeb){
-			Foswiki::Func::writeDebug('entro - crear item' . $meta->get('FIELD', 'Name')->{value});
 			my @fields = $meta->find('FIELD');
-    		#while ( my ($key, $value) = each(%campos))  {
-			#Foswiki::Func::writeDebug($key . ' - ' . $value );
 			my %projectValues = ();
 			$projectValues{'home'} = $item . '.WebHome';
+			my $filterResult = 0;
+			my $discartResult = 0;
 			foreach my $projectField (@fields){
-				$projectValues{$projectField->{'name'}} = $projectField->{'value'};
+				foreach my $filter ($query->param()){
+					if ($filter eq $projectField->{'name'}){
+							my $projectFieldValue = $projectField->{'value'} || '';
+							my $queryFieldValue = $query->param($filter) || '.*';
+							if ($projectFieldValue =~ /$queryFieldValue/){
+								$filterResult = 1;
+							}else {
+								$discartResult = 1;
+								last;
+							}
+					}
+					$projectValues{$projectField->{'name'}} = $projectField->{'value'};
+				}
 			}
-			push(@projectsName, \%projectValues); 
+			if (($filterResult == 1 && $discartResult == 0) || ($filterResult == 0 && $discartResult == 0)){
+				push(@projectsName, \%projectValues); 
+				$filterResult = 0;
+				$discartResult = 0;
+			}
 		}
 	}
 	if ($format eq 'json'){

@@ -1,0 +1,75 @@
+%META:TOPICINFO{author="ProjectContributor" date="1118671025" format="1.0" version="1"}%
+%META:TOPICPARENT{name="GenPDFAddOnDemo"}%
+This page serves as the title page for documents created with %SYSTEMWEB%.GenPDFAddOn. The content between the horizontal rules will be printed on the title page of the PDF document.
+
+   * The ==GENPDFADDON_== parameters can be overwritten in the final document either by setting preferences in %WEB%.WebPreferences or in the base topic (Ie. the one you are generating a PDF from):
+      * Set GENPDFADDON_BANNER = Our Slogan %ORANGE%Rocks!!!%ENDCOLOR%
+      * Set GENPDFADDON_TITLE = %TOPIC%
+      * Set GENPDFADDON_SUBTITLE = %REVINFO%
+
+There is currently no =%<nop>ATTACHURL{topic="%<nop>WEB%.TopicName"}%= so you must expand the full path to attachments like this:
+
+=%<nop>PUBURL%/%<nop>WEB%/ProjectLogos/foswiki-badge.gif=
+
+Also, htmldoc must be able to download it so be sure to use =%<nop>PUBURL%= not =%<nop>PUBURLPATH%=
+<!-- %PDFBANNER% -->
+
+---
+<!-- PDFSTART -->
+<p>
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%</p>
+<img src="%PUBURL%/%WEB%/ProjectLogos/foswiki-badge.gif" alt="Powered by Foswiki" width="88" height="31" align="left" />
+<img src="%PUBURL%/%WEB%/ProjectLogos/foswiki-poweredby.gif" alt="Powered by Foswiki" width="80" height="15" align="right" />%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+<font size="7"><i>%GENPDFADDON_BANNER%</i></font>%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+<hr size="5" noshade>
+<font size="7">%WEB%.%GENPDFADDON_TITLE%</font>%BR%
+&nbsp;%BR%
+<i>%FORMFIELD{"TopicHeadline" topic="%WEB%.%BASETOPIC%"}%</i>%BR%
+&nbsp;%BR%
+<font size="3">%GENPDFADDON_SUBTITLE%</font>
+<hr noshade>
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+| *DocumentClassification* | %FORMFIELD{"DocumentClassification" topic="%WEB%.%BASETOPIC%"}% |
+| *DocumentType* | %FORMFIELD{"DocumentType" topic="%WEB%.%BASETOPIC%"}% |
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+Copyright &copy; %DISPLAYTIME{"$year"}% Your Company%BR%
+All rights reserved
+
+This document contains Proprietary and Confidential information of Your Company, 
+and is protected by copyright, trade secret and other state and federal 
+laws. Its receipt or possession does not convey any rights to reproduce, disclose 
+its contents, or to manufacture, use or sell anything it may describe. Reproduction, 
+disclosure or use without specific written authorization of Your Company
+is strictly prohibited.
+&nbsp;%BR%
+Generated: %DISPLAYTIME%
+<!-- PDFSTOP -->
+---
+
+-- Main.WadeTurland - 13 Jun 2005
+
+%META:FORM{name="GenPDFAddOnDemoForm"}%
+%META:FIELD{name="DocumentClassification" attributes="" title="DocumentClassification" value="CompanyConfidential"}%
+%META:FIELD{name="DocumentType" attributes="" title="DocumentType" value="HowTo"}%
+%META:FIELD{name="TopicHeadline" attributes="" title="TopicHeadline" value="Oh yeah - We Rock Too!!! Just look at this cool document :-)"}%
+%META:FIELD{name="KeyWords" attributes="" title="KeyWords" value="PDF, acrobat, generator, copyright, proprietary, confidential, legal rights"}%

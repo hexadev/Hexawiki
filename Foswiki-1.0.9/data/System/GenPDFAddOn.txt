@@ -1,0 +1,338 @@
+%META:TOPICINFO{author="ProjectContributor" date="1265477638" format="1.1" version="1.2"}%
+%GENPDFLINK% 
+<!-- PDFSTART -->
+---+!! Generate PDF Add-On
+<!-- PDFSTOP --> 
+%TOC% 
+<!-- PDFSTART --> 
+<!--
+   * Set SHORTDESCRIPTION = Generate a PDF from a Foswiki topic or topic hierarchy
+--> 
+%SHORTDESCRIPTION%
+
+This Add On to Foswiki adds a supplementary =view= script called =genpdf=. =genpdf= generates a PDF document using the =htmldoc= tool from http://www.htmldoc.org/. =genpdf= can generate a single topic, or a hierarchy of topics. Configuration options can control page headers and footers, and generation of cover pages.
+
+See Sandbox.GenPDFAddOnDemo for a demonstration of some of the PDF generation capabilities.
+
+---++ Usage
+
+There are multiple ways to incorporate PDF rendering of your Foswiki topics or topic hierarchies:
+
+   * The simplest way to activate PDF printing, is to add =genpdf= to front of the =SKIN= setting. This will replace the PatternSkin 'Print Version' on the lower action bar with 'Generate PDF', eliminating the HTML printable view of the topic.
+      * eg =Set SKIN=genpdf,pattern= (add =?skin=genpdf,pattern= to the end of the URL to test)
+   * A page can also be published by substituting =genpdf= for =view= in the topic URL. (If using short URLs, insert =/bin/genpdf/= prior to the Web name).
+   * To make it even easier for novice Foswiki users to use, you can add a link (like edit and attach) to =view.tmpl= to publish the current page (using the current topic as the document title). For example: <verbatim><a href="%SCRIPTURLPATH%/genpdf%SCRIPTSUFFIX%/%WEB%/%TOPIC%?pdftitle=%TOPIC%">PDF</a></verbatim>
+   * Another option is to create a global variable that inserts a PDF ICON in the document. The following variable is expanded in the upper-right corner of this page. You can click it to get a PDF of this page. If you set this in your Main.SitePreferences topic, it can be used in any topic.
+<verbatim>
+   * Set GENPDFLINK=<span style="margin:0 0 2em 5em; width:64px height:64px; text-align:center; float:right">
+   [[%SCRIPTURL{"genpdf"}%/%WEB%/%TOPIC%?%QUERYSTRING%][<img src="%PUBURL%/System/GenPDFAddOn/pdf-64.gif">]]
+   </span>
+</verbatim>
+   * You may also choose to replace the Printable (?skin=print) targets in your favourite skin with
+<verbatim>
+[[%SCRIPTURL{genpdf}%/%WEB%/%TOPIC%][Printable]]
+</verbatim>
+
+---+++ !GenPDFPlugin helper plugin
+
+%INCLUDE{"GenPDFAddOnPlugin"}%
+
+---++ Configuring the Script
+
+The script can be configured using URL parameters and/or web preference variables. URL parameters have precedence over web preference variables. If neither of these are present, the script will use hard-coded default variables. The general script configuration variables are explained in the next section while header/footer and title page configuration are explained in subsequent sections.
+
+---+++ General Configuration
+
+The following table shows the various configuration variables and their meaning. The first column gives the variable to use if passed in the URL. The second column shows the variable to use if using a Foswiki preference variable (i.e. Set VARIABLE = ). The third column gives the default value if neither the URL nor Foswiki preference variable is used. Note that URL variables have precedence over Foswiki preference variables.
+
+%X% Foswiki preference variables *must be prefixed with GENPDFADDON*.
+_%Prefixes are omitted from this table to improve the layout_
+
+_The HTMLDOC software and related variables, see the HTMLDOC documentation at http://www.htmldoc.org/ for detailed information_
+<small>
+%TABLE{ cellpadding="3" columnwidths="15%, 15%, 15%, 15%, 40%"}%
+| *URL Variable* | *Foswiki Preference Variable* | *Default Value* | *Example* | *Explanation* |
+| pdfbanner | _BANNER | | Foobar Documentation System | Used to override the banner of a title page. |
+| pdftitle | _TITLE | | Writing Foobars | |
+| pdfsubtitle | _SUBTITLE | | A short guide to creating foobar documents | |
+| pdfheadertopic | _HEADERTOPIC | | !MyHeader | The name of a topic that defines headers and footers using &lt;-- HEADER LEFT "foobar" --&gt; syntax.  See [[Sandbox.GenPDFExampleHeaderFooterTopic][example]] |
+| pdftitletopic | _TITLETOPIC | | !MyTitle | The name of a topic that defines the layout of the title page   See [[Sandbox.GenPDFExampleTitleTopic][example]] |
+| pdftitledoc | _TITLEDOC | | | The name of an attachment if specified ,becomes the title page. Allows images - see htmldoc manual |
+| skin | _SKIN | pattern | nat | Default skin to use for PDF generation |
+| cover | _COVER | print | print.nat | Default cover to use for PDF generation |
+| rev | | | rev=10 | Generate a PDF from a prior topic revision. This disables =pdfrecursive= |
+| pdfrecursive | _RECURSIVE | | on | Include children of the base topic in the PDF |
+| pdfformat | _FORMAT | pdf14 | pdf12 | HTMLDOC output format |
+| pdftoclevels | _TOCLEVELS  | 5 | 3 | Number of levels to include in the PDF table of contents (use 0 to disable the generation of a table of contents). Note that HTMLDOC generates a table of contents based on HTML headers in the page. |
+| pdfpagesize | _PAGESIZE | a4 | letter | The page size for PDF output |
+| pdforientation | _ORIENTATION | portrait | landscape | The page orientation (e.g. landscape or portrait) |
+| pdfwidth | _WIDTH | 860 | 1060 | The pixel width of the browser (used to scale images--images wider than this will be truncated) |
+| pdfheadershift | _HEADERSHIFT | 0 | +3 | Shift all headers up or down (for negative values) by this amount (e.g. H1 would become H3 for a value of 2). Can also be set to =auto= to cause headers to shift according to the depth of recursive rendering |
+| pdfkeywords | _KEYWORDS | %<nop>FORMFIELD<br />{"KeyWords"}% | 'foo, bar, baz, zip' | Used for PDF Keywords META info to help search engines |
+| pdfsubject | _SUBJECT | %<nop>FORMFIELD<br />{"TopicHeadline"}% | 'Foobar document creation' | Used for PDF Subject META info to help search engines |
+| pdftoctitle | _TOCTITLE | | Contents | See http://www.htmldoc.org/ Default is to use the htmldoc provided string "Table of Contents". Note that a current limitation is that strings containing embedded spaces are not passed correctly. |
+| pdftocheader | _TOCHEADER | ... | l.. | See http://www.htmldoc.org/ |
+| pdftocfooter | _TOCFOOTER | ..i | .i. | See http://www.htmldoc.org/ |
+| pdfbodyfont | _BODYFONT | | | Specify font for body of document (Arial, =Courier=, =Helvetica=, =Monospace=, =Sans=, =Serif=, or =Times= |
+| pdfheadingfont | _HEADINGFONT | | | Specify font for headings of document (Arial, =Courier=, =Helvetica=, =Monospace=, =Sans=, =Serif=, or =Times= |
+| pdftextfont | _TEXTFONT | | | Specify font for all text in document (Arial, =Courier=, =Helvetica=, =Monospace=, =Sans=, =Serif=, or =Times= |
+| pdfheader | _HEADER | | .1. | Specify content of header, see http://www.htmldoc.org |
+| pdffooter | _FOOTER | | .1. | Specify content of footer, see http://www.htmldoc.org |
+| pdfheadfootfont | _HEADFOOTFONT | | Helvetica-Bold | Font specification for headers and footers. |
+| pdfheadfootsize | _HEADFOOTSIZE | | 12 | Sets the size of the header and footer text in points (1 point = 1/72nd inch) |
+| pdfbodyimage | _BODYIMAGE | | http://my.server.com/path/to/background.jpeg | The image that will appear tiled in the background of every page |
+| pdflogoimage | _LOGOIMAGE | | http://my.server.com/path/to/logo.jpeg | The logo that will appear in a header or footer if you specify 'l' in the string (see http://www.htmldoc.org) |
+| pdfnumberedtoc | _NUMBEREDTOC | | True | Option flag for getting numbered headings and Table of Contents. Set it to anything for true. |
+| pdfduplex | _DUPLEX | | True | Option flag to set up the document for duplex printing. Headers and footers will swap position on alternating pages. Set it to anything for true. |
+| pdfpermissions | _PERMISSIONS | | print,no-copy | PDF Security permissions to disable print/copy etc. By default the PDF is not protected. |
+| pdfmargins | _MARGINS | | top:0.5in,<br />bottom:2.5cm,<br />left:12pt,<br />right:15mm | Specify the page margins (white space to edge of page) |
+| pdfbodycolor | _BODYCOLOR | | #CCff99 | Specify the background colour of all pages |
+| pdfstruct | _STRUCT | book | webpage | use =book= for structured topics, i.e. when rendering a bunch of topics recursively; use =webpage= when printing a topic without a specific heading structure, i.e. if it is just a normal webpage or if it has got a special VIEW_TEMPLATE |
+| pdfcopyright | _COPYRIGHT | %%NOP%WEBCOPYRIGHT% | Copyright 2009 | Should PDF Metadata include the Foswiki %%NOP%WEBCOPYRIGHT% or another value. If set to 0, copyright is excluded. If set to any other string, the string is included in the metadata. Htmldoc has a bug and appends the copyright to the author metadata, which can break some document management systems that depend on the metadata. Set to =0= to exclude the copyright from the PDF metadata. |
+| pdfdebug | _DEBUG | 0 | 1 | Include debug messages and don't clean up temporary files after execution |
+| pdffirstpage | _FIRSTPAGE | toc | | First page viewer will open: =toc= table of contents; =p1= first page; =c1= first chapter. |
+| pdfdestination | _DESTINATION | view | | Output to browser window or save-as prompt |
+| pdfpagelayout | _PAGELAYOUT | single | | View's initial presentation layout: =single=, =one=, =twoleft=, =tworight= |
+| pdfpagemode | _PAGEMODE | outline | | Viewer's initial presentation mode: =outline=, =document=, =fullscreen= |
+| pdfcompress | _COMPRESS | | 9 | Set compression level of the document. 1=minimum, 9=maximum, =none= to disable compression |
+| pdfjpegquality | _JPEGQUALITY | | 80 | Set JPEG image quality. Lower quality is higher compression. Set to =none= to disable JPEG image compression |
+</small>
+
+If using Foswiki preference variables, copy them to the appropriate web preferences page. This plugin does not read settings from this topic!
+
+%SEARCH{"\|\ [_]" topic="%TOPIC%" type="regex" casesensitive="on" limit="21" nosearch="on" nosummary="on" header="   * Settings for the %SYSTEMWEB%.%TOPIC% Plugin" nototal="on" multiple="on" format="      * #Set GENPDFADDON$pattern(.*(_.*? ).*) = "}%
+
+---+++ Limiting the PDF Generation Region
+
+The add-on allows the user to define the region of the topic that should be included in the PDF generation (much like the Foswiki %<nop>STARTINCLUDE% and %<nop>STOPINCLUDE% variables. In this case, HTML comments are used instead. Everything between these two comments will be included in the PDF generation. The rest of topic will be excluded.
+
+   * Use =&lt;!-- PDFSTART --&gt;= to mark the starting point in the topic for PDF generation.
+   * Use =&lt;!-- PDFSTOP --&gt;= to mark the stopping point in the topic for PDF generation.
+Note that there can be multiple PDFSTART and PDFSTOP comment pairs in a single topic to selectively include/exclude multiple sections of the topic in the PDF document. (If you view this page in =raw= mode or edit it, you'll see an example of multiple PDFSTART/PDFSTOP sections to exclude the Foswiki table of contents). If no PDFSTART/PDFSTOP comment pair appears in the topic, the entire topic text is used. In general, this should not be a problem except for title topics that include forms as the form meta-data will show up in a fairly illegible manner at the end of the document. Therefore, for topics that reference forms, a PDFSTART comment should be placed at the beginning of the topic and a PDFSTOP should be placed at the end.
+
+%T% __NOTE:__ all %META: tags are removed from the base topic. If you want to display form data, you should add %<nop>FORMFIELD{"field"}% tags to the topic or title topic.
+
+---+++ Creating and Configuring a Title Page
+
+The add-on allows the user to use a topic as a title page for PDF generation. Earlier versions of the add-on required that the title page be expressed using pure HTML as the title page topic was not Foswiki rendered. The latest version of add-on, however, does full Foswiki rendering of the title topic page like any other Foswiki topic. In addition, the following variables can be passed with the URL to override their settings elsewhere (e.g. in the web preferences or Foswiki preferences pages).
+
+Also note that the PDFSTART and PDFSTOP HTML comments should be placed at the beginning and end of title topic. An example title page can be found at GenPDFExampleTitleTopic.
+---+++ Creating and Configuring Headers and Footers
+
+The add-on also allows the user to configure header and footer formats for both the main section of the document and the table of contents. Configuring the main header and footer is much like configuring a title page. You can select a Foswiki topic to use for the header and footer. Remember to wrap the HTML comments that HTMLDOC uses for the header and footer between &lt;!-- PDFSTART --&gt; and &lt;!-- PDFSTOP --&gt; tags. The add-on will perform Foswiki common variable substition within the HTMLDOC header/footer HTML comments. This will allow Foswiki variables (such as %<nop>REVINFO{web="%<nop>WEB%" topic="%<nop>BASETOPIC%"}%) to be embedded in the headers and footers.
+
+See the HTMLDOC documentation at http://www.htmldoc.org for details of the format of the header and footers. In addition, the =genpdf= script will perform variable substition for the %<nop>GENPDFADDON _BANNER%, %<nop>GENPDFADDON _TITLE%, and %<nop>GENPDFADDON _SUBTITLE% variables as it does for the title page. Finally, the PDFSTART and PDFSTOP HTML comments should be placed at the beginning and end of header/footer topic. An example header/footer page can be found at GenPDFExampleHeaderFooterTopic.
+
+Note that HTMLDOC will not generate a page header on any page generated by a Level 1 header (---+ header). This is a known issue in htmldoc through version 1.27. A patch is provided further on in this page.
+
+---+++ Recursive rendering of topics
+
+The add-on can search and recursively render all child topics of the requested topic in the same web. Use the "More topic actions" -&gt; "Set New Topic Parent" menu to establish or modify the parent/child relationships of topics.
+   * The default behavior is to render each topic as a separate chapter. A level 1 heading will be added as required to each topic.
+   * Child topics are sorted into alphabetical order by topic name
+   * If the =pdfheadershift= option is set to =auto=, then the first header in each topic will be set to the absolute depth of the child topic in the tree. In this case the PDF will consist of only a single chapter.
+   * Any topic can be promoted a level in the hierarchy by including the HTML comment ==&lt;!-- TOC PROMOTE --&gt;== anywhere in the topic. 
+      * Promoted Child topics will appear after all other children have been expanded.
+      * The actual parent of the topic is not changed, so topics cannot be promoted more than one level without breaking the topic sort order.
+   * Child topics are not found across web boundarys.
+For example, if you create a !ParentTopic, then create !FirstChild and !SecondChild with !ParentTopic as their parent topic, then create !GrandChildOne with !FirstChild as its parent (and so on), you get a tree as shown below. In addition the PDF TOC layout is shown for the various headershift options: 
+| <nop> *Wiki Structure* | <nop> *Default Rendering* | ==pdfheadershift=auto== | ==pdfheadershift=auto== <br /> <small> ==&lt;!-- TOC PROMOTE --&gt;== </small> in !SecondChild |
+| <verbatim>
+ParentTopic
+   - FirstChild
+      - GrandChildOne
+      - GrandChildTwo
+   - SecondChild
+      - GrandChildThree
+   - ThirdChild
+</verbatim> | <verbatim>
+1 ParentTopic
+2 FirstChild
+3 GrandChildOne
+4 GrandChildTwo
+5 SecondChild
+6 GrandChildThree
+7 ThirdChild
+</verbatim> | <verbatim>
+1 ParentTopic
+ 1.1 FirstChild
+  1.1.1 GrandChildOne
+  1.1.2 GrandChildTwo
+ 1.2 SecondChild
+  1.2.1 GrandChildThree
+ 1.3 ThirdChild
+</verbatim> | <verbatim>
+1 ParentTopic
+ 1.1 FirstChild
+  1.1.1 GrandChildOne
+  1.1.2 GrandChildTwo
+ 1.2 ThirdChild 
+2 SecondChild
+ 2.1 GrandChildThree
+</verbatim> |
+---+++ Generating PDF from a older revision of a topic.
+The latest release of the GenPDFAddOn supports generating a PDF of a previous revision of a topic. Include the =rev=xx= parameter on the URL in the same format that you would view an older topic revision.
+---++++!! Limitations
+   * Specifying a topic revision will disable the recursive option.
+   * The revision is __only__ applied to the primary topic. All other related topics - title pages, includes, attachments, etc. use the current revision.
+   * Any in-topic settings =GEN<nop>PDFADDON_*= will be taken from the curent version and not from the requested topic revision.
+
+---+++ PDF Logos
+
+The following Public Domain PDF Icons can be used to represent PDF files:
+
+   * 32x32 Images <br /> <img width="32" alt="pdf-32.gif" src="%ATTACHURLPATH%/pdf-32.gif" height="32" /> pdf-32.gif <br /> <img width="32" alt="pdf-32.png" src="%ATTACHURLPATH%/pdf-32.png" height="32" /> pdf-32.png
+
+   * 64x64 Images <br /> <img width="64" alt="pdf-64.gif" src="%ATTACHURLPATH%/pdf-64.gif" height="64" /> pdf-64.gif<br /> <img width="64" alt="pdf-64.png" src="%ATTACHURLPATH%/pdf-64.png" height="64" /> pdf-64.png
+
+---++ Frequently Asked Questions
+   $ *How do I stop the table of contents from being generated?*: For some topics, like User topics, it doesn't make any sense to have a table of contents generated so add ='pdftoclevels=0'= as a URL parameter.
+   $ *When I do a recursive PDF of !WebHome it doesn't include all topics*: That's because some topics distributed with !Foswiki don't have a parent association. If you _really_ want to include every topic in the web, you should reparent them all with !WebHome as the parent.
+   $ *Ocassionally no PDF document is generated*: The default structure of =book= requires that headings be present in the topic. Try setting =pdfstruct=webpage=
+---++ Add-On Installation Instructions
+
+__Note:__ In order to view PDF files generated by this Add On, you will need to install a PDF viewer such as Adobe Acrobat in the user's browsers. The following instructions are for the administrator who installs the add-on on the server where Foswiki is running.
+
+---+++ Before you upgrade!
+
+   * %X% This version moves the GenPDFAddOn examples and demo topics from the %System web to the Sandbox web. Old versions of these topics can be removed %from the System web after the upgrade.
+   * The hard-coded =pdftoclevel=0= in the =view.genpdf.tmpl= file has been removed. An alternative approach is to set =GENPDFADDON_TOCLEVELS=0= in Main.SitePreferences
+   * This version ships with a !GenPDFPlugin.  This is a helper plugin which will expand the %<nop>GENPDF% tag, and does not need to be enabled. See GenPDFPlugin for more information
+   * This version renames =lib/Foswiki/Contrib/GenPDF.pm= to =lib/Foswiki/Contrib/GenPDFAddOn.pm=  A shim version of =GenPDF.pm is shipped so that existing configurations will still work without requiring any configuration changes to =lib/LocalSite.cfg=
+
+---+++ Standard installation
+
+   * Install htmldoc from http://www.htmldoc.org/ (optionally use the patch in the Addon's zip file for headers on every page)
+   * Access the =bin/configure= script - Extensions tab, click "Find Extensions", locate GenPDFAddOn in the table and click "Install"
+   * In the =bin/configure= script, visit the GenPDFAddOn settings and optionally set the path to the =htmldoc= command. If this is not set, the plugin will look for =htmldoc= in the default path. 
+      * %X% *You must go through a save cycle in =bin/configure= in order to set the required hidden Switchboard entry even if you have not changed any settings!*
+   * _Windows Users:_ Edit the =bin/genpdf= script and update the "shebang" =#!/bin/perl= to match your system perl location <br /> 
+      * Example: =#!C:\strawberry\perl\bin\perl.exe=
+   * %X% *Important* Security considerations 
+      * The genpdf script should be added to the _AuthScripts_ list in bin/configure
+      * if you use Apache user authentication, be sure to also add =genpdf= to the list of restricted scripts in the apache configuration.
+   * %T% Copy any desired preferences from above and paste them into %USERSWEB%.SitePreferences, or the !WebPreferences topic for a single web.
+   * Test if the installation was successful: 
+      * Try loading [[%SCRIPTURL{genpdf}%/%WEB%/%TOPIC%][this page]] 
+         * If you get a 404 - not found, make sure that a switchboard entry exists in LocalSite.cfg.
+      * If it doesn't work, check your webserver logs for any problems. The most common issue is probably an htmldoc installation problem.
+      * Another test topic is found in Sandbox/GenPDFAddOnDemo
+
+---+++ Alternative installation
+   * Download the =tgz= or =zip= file and the =GenPDFAddOn_installer= file from the Add-on Home (see below)
+   * Run the installer ( =perl GenPDFAddOn _installer= ) or unzip ==%TOPIC%.zip== in your Foswiki installation directory
+   * Adjust the script ownership to match your webserver configuration (e.g. =chown nobody genpdf=) if needed.
+   * Make sure the script is executable (e.g =chmod 755 genpdf=).
+   * *Adjust the perl path in the genpdf script to match your perl installation location.*
+   * Configure the =$Foswiki::cfg{Extensions}{GenPDFAddOn}{htmldocCmd} = "/path/to/htmldoc";= using =configure= (in the =Extensions= section) 
+      * %X% You *must* visit and save the Foswiki configuration at least once after installation to set a hidden variable in the =LocalSite.cfg= file
+      * See the _Configuration file settings_ below.
+| *File:* | *Description:* |
+   | ==bin/genpdf== |  |
+   | ==data/System/GenPDFAddOn.txt== | Add-on topic |
+   | ==data/System/GenPDFAddOnPlugin.txt== | Helper plugin topic |
+   | ==data/System/VarGENPDF.txt== | Defines GENPDF macro |
+   | ==data/Sandbox/GenPDFAddOnDemo.txt== | Demonstration topic |
+   | ==data/Sandbox/GenPDFAddOnDemoChild.txt== | Demo child for recursive rendering |
+   | ==data/Sandbox/GenPDFAddOnDemoChild2.txt== | Demo child for recursive rendering |
+   | ==data/Sandbox/GenPDFAddOnDemoForm.txt== | Document classification form |
+   | ==data/Sandbox/GenPDFExampleHeaderFooterTopic.txt== |  |
+   | ==data/Sandbox/GenPDFExampleTitleTopic.txt== |  |
+   | ==pub/System/GenPDFAddOn/pdf-32.gif== |  |
+   | ==pub/System/GenPDFAddOn/pdf-32.png== |  |
+   | ==pub/System/GenPDFAddOn/pdf-64.gif== |  |
+   | ==pub/System/GenPDFAddOn/pdf-64.png== |  |
+   | ==htmldoc_force_header.patch== |  |
+   | ==lib/Foswiki/Contrib/GenPDF.pm== | Shim module to avoid breaking old installations |
+   | ==lib/Foswiki/Contrib/GenPDFAddOn.pm== | Renamed GenPDF.pm to packaging standards |
+   | ==lib/Foswiki/Contrib/GenPDFAddOn/Config.spec== |  |
+   | ==lib/Foswiki/Plugins/GenPDFAddOnPlugin.pm== |  |
+   | ==templates/view.genpdf.tmpl== |  |
+
+---++ Configuration file settings
+The following settings should be built automatically by bin/configure.
+
+<verbatim>
+$Foswiki::cfg{Extensions}{GenPDFPlugin}{htmldocCmd} = '/usr/bin/htmldoc';
+$Foswiki::cfg{SwitchBoard}{genpdf} = {
+          'function' => 'viewPDF',
+          'context' => {
+                         'view' => 1
+                         'static' => 1
+                       },
+          'package' => 'Foswiki::Contrib::GenPDF'
+        };
+</verbatim>
+
+---++ Known Bugs
+   * *Verbatim text runs off the page.* This is a limitation of HTMLDOC. Preformatted text may run off the edge of the page and be truncated.
+   * *HTMLDOC crashes with segmentation faults.* Eg it fails to generate %SYSTEMWEB%.CompleteDocumentation. I managed to get it to work a few times, but it generally fails. The error returned is =Conversion failed: 'Inappropriate ioctl for device' at /var/www/Foswiki/lib/Foswiki/Contrib/GenPDF.pm line XXX=
+   * *Some pages don't have a header.* HTMLDOC breaks the page for every level 1 heading (Eg. &lt;h1&gt;) but it doesn't write a header for the new page, so topics with lots of level 1 headings and not much content don't seem to have any headers. Therefore I patched htmldoc-1.8.24 to force a header for every new page:
+<verbatim>
+*** htmldoc-1.8.24/htmldoc/ps-pdf.cxx   Sat Oct 30 05:53:59 2004
+--- htmldoc-1.8.24/htmldoc/ps-pdf_force_header.cxx      Tue Jun 13 02:12:28 2005
+***************
+*** 1465,1471 ****
+
+      pspdf_prepare_heading(page, print_page, pages[page].header, top,
+                            page_text, sizeof(page_text),
+!                         page > chapter_starts[chapter] ||
+                              OutputType != OUTPUT_BOOK);
+      pspdf_prepare_heading(page, print_page, pages[page].footer, 0,
+                            page_text, sizeof(page_text));
+--- 1465,1472 ----
+
+      pspdf_prepare_heading(page, print_page, pages[page].header, top,
+                            page_text, sizeof(page_text),
+! /*                      page > chapter_starts[chapter] || */
+!                         1 || /* force heading onto chapter front page */
+                              OutputType != OUTPUT_BOOK);
+      pspdf_prepare_heading(page, print_page, pages[page].footer, 0,
+                            page_text, sizeof(page_text));
+</verbatim>
+
+---++ Add-On Info
+
+|  Add-on Author: | Foswiki:Main/BrianSpinar, Foswiki:Main/WadeTurland, Foswiki:Main/GeorgeClark |
+|  Copyright: | © 2009, Foswiki Contributors |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Release: | 1.2 |
+|  Version: | 7410 (2010-05-14) |
+|  Change History: | |
+|  14 May 2010 | *Release 1.2* Foswikitask:Item9008 - Remove the X-Foswiki headers from the response. |
+|  9 Mar 2010 | *Release 1.1* Foswikitask:Item8586 - resolve packaging issue, Foswikitask:8575 - Add a "static" context to allow other plugins to recognize pdf output, Foswikitask:Item8691: Add support for heading and body fonts |
+|  6 Feb 2010 | Foswikitask:Item559 - Correct handing of embedded images, Foswikitask:Item1599 - Improve compatibility with EditTable, Foswikitask:Item2084 - Add support of topic revisions, Foswikitask:Item2435 - Correct DEPENDENCIES file, Foswikitask:Item2492 - support configurable image compression, Foswikitask:Item2592 - Correct issues with Examples, and handling of missing images, Foswikitask:Item2604 - Improve handling of TOC for recursive rendering, Foswikitask:Item8081 - Support passing %<nop>MACROS% in GENPDF settings, Foswikitask:Item8090 - Remove pdftoclevels from view.genpdf.tmpl, Foswikitask:Item8361 - Add support for TOC Title, and improve handling of HTML arrows.  Foswikitask:Item1174 - Initial release of !GenPDFPlugin helper |
+|  28 Feb 2009 | Added missing Config.spec file Item1161: GenPDFAddOn result in "Not Found" page |
+|  Feb 2009 | Conversion to Foswiki. Better &lt;a and &lt;img tag handling. Rewrote attachment handling to use Func:: API Rewrote recursive mode to use %SEARCH  |
+|  24 Dec 2008 | Added FIRSTPAGE, DESTINATION, TITLEDOC, PAGELAYOUT & PAGEMODE. fixed tag rendering, again. Now accepts either quote. Incorporated body extraction patch; made it work for title pages. removed outdated comment from example title page. Limited testing; use previous version if that makes you nervous. -- Foswiki:Main/TimotheLitt |
+|  02 Jul 2008 | added support for =VIEW_TEMPLATE= and =COVER=; fixed rendering of anchor and img tags; added =pdfstruct= parameter to print unstructured webpages as well; Foswiki:Main.MichaelDaum |
+|  25 Jun 2008 | added =template= activation and Configure script spec file Foswiki:Main.SvenDowideit |
+|  25 Jun 2008 | security and Foswiki 4.2 fixes Foswiki:Main.SvenDowideit |
+|  2 Nov 2007 | Added new header and footer control (Bugs:Item4916) and fixed generation of wrong Foswiki page (Bugs:Item4915) |
+|  23 Oct 2007 | Fixed Bugs:Item4452 & Bugs:Item4885, compatibility with Perl 5.6 and missing images with SSL certificates |
+|  31 Aug 2007 | Fixed Bugs:Item4530, improper rendering of lists |
+|  13196 | Removed =nop= tags before sending to htmldoc, fixed Bugs:Item3549 |
+|  11673 | Foswiki:Main/RickMach updated MIME type to pdf from x-pdf, fixed bug preventing disabling the TOC |
+|  9716 | Foswiki:Main/CrawfordCurrie added content-disposition header to files, so they download using a sensible file name |
+|  9683 | Foswiki:Main/CrawfordCurrie updated for Foswiki-4 |
+|  Version 0.6 (28 Jun 2005) | <ul> <li>Less aggressive regex for removing foswikiNewLink spans so it doesn't break when using the Foswiki:Extensions.SpacedWikiWordPlugin</li> <li>%T% Added 'recursive' preference to include chapters for all descendents of the base topic</li> <li>Use File::Spec-&gt;tmpdir to specify the default directory for temporary files</li> </ul> |
+|  Version 0.5 (16 Jun 2005) | <ul> <li>Redirect to 'oops' URLs if permission denied or topic does not exist.</li> <li>Removed foswikiNewLink spans from title page so they render as normal text (without the blue ? mark).</li> <li>Fully qualify image/href URLs on the title page.</li> <li>Changed temp files to use OO style 'new File::Temp;' for better code portability.</li> </ul>  |
+|  Version 0.4 (13 Jun 2005) | <ul> <li>Better security (now calls =system($Foswiki::htmldocCmd, @htmldocArgs)= )</li> <li>Checks return code of htmldoc and returns an error on failure</li> <li>Validation of preferences</li> <li>%X% Preferences changed to comply with [[%SYSTEMWEB%.Plugins][Plugins]] standard</li> <li>Better HTML3.2 compatibility for htmldoc 1.8.24 (downgrades a few elements)</li> <li>Full integration of PDF META tags (optionally using 2 FORMFIELDs):</li> <li> <ul> <li>==%<nop>FORMFIELD{"Topic<nop>Headine"}%== for PDF Subject field</li> <li>==%<nop>FORMFIELD{"Key<nop>Words"}%== for PDF Keywords field</li> <li>all other PDF fields use topic info</li> </ul></li> <li>More htmldoc options (margins, permissions, numbered TOC, logoimage, headfootfont) using preferences</li> <li>Removed ==%<nop>TOC%== fields so it only uses HTMLDOC's TOC</li> <li>Title topic _and_ header/footer topics are now fully rendered</li> <li>Fixed the heading shifting function</li> <li>Fully qualify links, making the document portable</li> <li>HTMLDOC output goes to a temp file instead of stdout</li> <li>Temp files now use 'GenPDFAddOn' prefix. (Eg. /tmp/GenPDFAddOn1wr3C48ibd.html)</li> </ul> |
+|  Version 0.3 (12 Apr 2005) | <ul> <li>Added full Foswiki rendering to title topic page</li> <li>Added Foswiki common variable expansion to header/footer topic page</li> </ul> |
+|  Version 0.2 (26 Mar 2005) | <ul> <li>Fixed bug with table of contents generation (i.e. it was always generated even if =pdftoclevels= was set to 0)</li> <li>Now allow multiple =PDFSTART/PDFSTOP= pairs within a single page to include/exclude multiple sections of the same page</li> <li>Added Brent Robert's fix to allow operation with latest version (1.8.24) of HTMLDOC</li> </ul> |
+|  Version 0.1 (30 Jan 2005) | <ul> <li>Initial version</li> </ul> |
+|  Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Support: | http://foswiki.org/Support/%TOPIC% |
+|  Dependencies: | <table class="foswikiTable" border="1"><tr><th>Name</th><th>Version</th><th>Description</th></tr><tr><td align="left">CGI</td><td align="left">&gt;=0</td><td align="left">May be required for lib/Foswiki/Contrib/GenPDF.pm</td></tr><tr><td align="left">Data::Dumper</td><td align="left">&gt;=0</td><td align="left">May be required for lib/Foswiki/Contrib/GenPDF.pm</td></tr><tr><td align="left">Error</td><td align="left">&gt;=0</td><td align="left">May be required for lib/Foswiki/Contrib/GenPDF.pm</td></tr><tr><td align="left">File::Temp</td><td align="left">&gt;=0</td><td align="left">May be required for lib/Foswiki/Contrib/GenPDF.pm</td></tr><tr><td align="left">htmldoc</td><td align="left"></td><td align="left">Obtain from http://www.htmldoc.org/software.php</td></tr></table> |
+
+__Related Topics:__  Sandbox.GenPDFAddOnDemo, Sandbox.GenPDFExampleHeaderFooterTopic, Sandbox.GenPDFExampleTitleTopic, Sandbox.GenPDFAddOnDemoChild  Sandbox.GenPDFAddOnDemoChild2 Sandbox.GenPDFAddOnDemoForm
+<!-- PDFSTOP -->
+
+
+-- TWiki:Main/WadeTurland - 28 Jun 2005%BR% -- TWiki:Main/BrianSpinar - 12 Apr 2005
+
+
+%META:FILEATTACHMENT{name="pdf-32.gif" attachment="pdf-32.gif" attr="" comment="32x32 GIF Logo" date="1263000546" path="pdf-32.gif" size="321" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="pdf-32.png" attachment="pdf-32.png" attr="" comment="32x32 PNG Logo" date="1263000566" path="pdf-32.png" size="813" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="pdf-64.gif" attachment="pdf-64.gif" attr="" comment="64x64 GIF Logo" date="1263000587" path="pdf-64.gif" size="3070" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="pdf-64.png" attachment="pdf-64.png" attr="" comment="64x64 PNG Logo" date="1263000606" path="pdf-64.png" size="5425" user="ProjectContributor" version="1"}%

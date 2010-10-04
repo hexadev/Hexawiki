@@ -1,0 +1,1 @@
+jQuery(function(a){a(".jqWikiWord:not(.jqInitedWikiWord)").livequery(function(){var c=a(this),b;c.addClass("jqInitedWikiWord");b=a.extend({},c.metadata());c.wikiword(b.source,b)})});

@@ -1,0 +1,277 @@
+%META:TOPICINFO{author="ProjectContributor" date="1195829708" format="1.1"  version="1"}%
+<!--
+
+   PLEASE DO NOT EDIT THIS TOPIC
+
+   It is automatically generated from the subversion repository, and any changes
+   you make will simply be overwritten the next time a release is generated.
+
+   Instead, you could check your fix in, raise a bug in the Bugs web, or mail the author.
+-->
+---+!! <nop>%TOPIC%
+%TOC%
+---++ Description
+<table style="float:right">
+<tr>
+  <td><img src="%ATTACHURLPATH%/wikiringlogo40x40.png"></td>
+  <td><a href="http://wikiring.com" title="Make your Wiki ring!" style="text-decoration:none">
+      Powered by <br /> <nop>WikiRing Consultants </a>
+  </td>
+</tr>
+</table>
+This plugin will help you to write _readable_ markup (<nop>TopicMarkup, HMTL, ...)
+by allowing tags and arguments to be formatted on multiple lines.
+This is done by removing whitespaces surrounding tilde characters at the
+beginning of a line and recombine consecutive lines again.  Basically, there
+are two ways of glueing and recombining lines by either removing all whitespaces
+between two lines using =%*~~= or 
+by removing all whitespaces and separateing lines with a
+single space using =~~~=.  
+There's a helper character sequence =%~~= that prevents the engine to
+interprete tags before the GluePlugin could reformat the text.
+In addition there's a glue sequence =#~~= to insert comments within a <nop>TopicMarkup
+expression.
+
+While these glue sequences might feel strange at the beginning they help you
+to format and recognize your markup and make it more readable. That way you
+will be able to format a <nop>WikiApplications that looked like this
+
+<verbatim>
+%SEARCH{"..." type="query" header="<table width="100%" border="5px"><thead><tr><th>Name</th><th>Description</th><th>Date</th></tr></thead>" format="<tr><th>$formfield(Name)</th><th>$summary</th><th>$createdate</th></tr>" footer="</table>"}%
+</verbatim>
+
+somewhat like this
+
+<verbatim>
+#~~ #################################
+#~~ # This is my new WikiApplication
+~~~
+%~~ SEARCH{
+#~~ #################################
+#~~ # this is the search expression
+~~~   "..."
+~~~
+~~~   type="query"
+~~~
+#~~ #################################
+#~~ # this is the header of the result table
+~~~ 
+~~~   header="
+~~~      <table
+~~~        width="100%"
+~~~        border="5px"
+~~~      >
+~~~      <thead>
+~~~        <tr>
+~~~          <th>Name</th>
+~~~          <th>Description</th>
+~~~          <th>Date</th>
+~~~        </tr>
+~~~      </thead>"
+#~~ #################################
+#~~ # every row will be formatted like this
+~~~
+~~~   format="
+~~~      <tr>
+~~~        <th>$formfield(Name)</th>
+~~~        <th>$summary</th>
+~~~        <th>$createdate</th>
+~~~      </tr>"
+#~~ #################################
+#~~ # and finally we close this html table
+~~~
+~~~   footer="</table>"
+~~~ }%
+#~~ #################################
+#~~ # sure we could have used 
+#~~ # | WikiTables | as well |
+#~~ # but these aren't robust against newlines
+#~~ # in the $summary field
+#~~ #################################
+</verbatim>
+
+
+---++ Syntax
+| *Line prefix* | *Action* |
+| =~~~&lt;space>= | combine lines by removing all, insert one whitespaces |
+| =*~~&lt;space>= | recombine lines by removing any whitespaces between them |
+| =%~~&lt;space>= | escape tag interpretation |
+| =#~~&lt;space>= | comment line, all chars on the same line are removed |
+
+The &lt;space> is a literal whitespace blank. The =~~~&lt;space>= and 
+=*~~&lt;space>= sequences are recognized only at the beginning of a line, whereas
+the =%~~&lt;space>= escape sequence might appear everywhere. The basic
+anatomy of writing a tag using the GluePlugin is exemplified by
+<verbatim>
+%~~ TAG{
+~~~ key="
+*~~      hello
+~~~      world
+*~~ "
+~~~ }%
+</verbatim>
+which will be recombined to
+<verbatim>
+%<nop>TAG{ key="hello world" }%
+</verbatim>
+
+---++ Examples
+<table class="foswikiTable">
+<tr><th> You type: </th></tr>
+<tr><td>
+<verbatim>
+This is a line
+~~~ glued to another line.
+</verbatim>
+</td></tr>
+<tr><th> You get (faked): </th></tr>
+<tr><td>
+<pre>
+This is a line glued to another line.
+</pre>
+</td></tr>
+<tr><th> You get if installed: </th></tr>
+<tr><td>
+<pre>
+This is a line 
+~~~ glued to another line.
+</pre>
+</td></tr>
+</table>
+
+<table class="foswikiTable">
+<tr><th>You type:</th></tr>
+<tr><td>
+<verbatim>
+Glue
+*~~ Plugin
+</verbatim>
+</td></tr>
+<tr><th>You get (faked):</th></tr>
+<tr><td> GluePlugin </td></tr>
+<tr><th>You get if installed:</th></tr>
+<tr><td>
+Glue
+*~~ Plugin
+</td></tr>
+</table>
+
+<table class="foswikiTable">
+<tr><th>You type:</th></tr>
+<tr><td>
+<verbatim>
+Apples
+
+~~~  
+
+And
+
+~~~
+
+Oranges
+</verbatim>
+</td></tr>
+<tr><th>You get (faked):</th></tr>
+<tr><td> Apples And Oranges </td></tr>
+<tr><th>You get if installed:</th></tr>
+<tr><td>
+Apples
+
+~~~
+
+And 
+
+~~~
+
+Oranges
+</td></tr>
+</table>
+
+<table class="foswikiTable">
+<tr><th>You type:</th></tr>
+<tr><td>
+<verbatim>
+%~~ SEARCH{"GluePlugin"
+~~~        nosearch="on" nosummary="on" nototal="on"
+~~~        separator=", "
+~~~        scope="topic"
+~~~        format="$topic"
+~~~ }%
+</verbatim>
+</td></tr>
+<tr><th>You get (faked):</th></tr>
+<tr><td>
+%SEARCH{"GluePlugin" nosearch="on" nosummary="on" nototal="on" separator=", " scope="topic" format="$topic"}%
+</td></tr>
+<tr><th>You get if installed:</th></tr>
+<tr><td>
+%~~ SEARCH{"GluePlugin"
+~~~        nosearch="on" nosummary="on" nototal="on"
+~~~        separator=", "
+~~~        scope="topic"
+~~~        format="$topic"
+~~~ }%
+</td></tr>
+</table>
+<style type="text/css">
+.foswikiTable {
+   width:100%;
+}
+.foswikiTable th {
+   text-align:left;
+}
+.foswikiTable pre {
+  margin:0px;
+}
+</style>
+
+---++ Plugin Installation Instructions
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+   * Set the plugins evaluation order to put the GluePlugin in first position, e.g. 
+     <verbatim>$Foswiki::cfg{PluginsOrder} = 'GluePlugin,IfDefinedPlugin,SpreadSheetPlugin';</verbatim>
+   * If the plugin is installed correctly then the following two fruits
+     will appear joined on one line: Apples
+
+~~~ and Oranges
+
+
+---++ Plugin Info
+<!-- provided for compatibility only
+   * Set SHORTDESCRIPTION = Enable <nop>TopicMarkup to span multiple lines
+-->
+
+|  Plugin Author: | Michael Daum |
+|  Copyright &copy;: | 2005-2009, Michael Daum http://michaeldaumconsulting.com |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Release: | 2.20 |
+|  Version: | 4420 (2009-07-03) |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  17 Apr 2009: | converted to foswiki |
+|  07 Jan 2009: | certified for foswiki/compat |
+|  23 Nov 2007: | added way to add comments in the middle of a <nop>TopicMarkup expression |
+|  31 Aug 2006: | added NO_PREFS_IN_TOPIC |
+|  28 Jul 2006: | fixed MANIFEST;\
+                  some minor docu updates; \
+                  added =use strict;= |
+|  28 Aug 2005: | changed glue syntax; added glue escape sequence to \
+                  work arround tags been interpreted before lines are \
+                  recombined |
+|  16 Aug 2005: | properly support internal tags; \
+          performance improvements;\
+        fixed use if uninitialized value | 
+|  15 Aug 2005: | Initial version |
+|  Dependency: | $Foswiki::Plugins::VERSION 1.024 |
+|  CPAN Dependencies: | none |
+|  Other Dependencies: | none |
+|  Perl Version: | 5.005 |
+|  Plugin Home: | Foswiki:Extensions/%TOPIC% |
+|  Support: | Foswiki:Support/%TOPIC% |
+
+
+%META:FILEATTACHMENT{name="wikiringlogo40x40.png" attr="h" autoattached="0" comment="" date="1190996093" path="wikiringlogo40x40.png" size="2571" user="ProjectContributor" version="1"}%

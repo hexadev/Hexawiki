@@ -1,0 +1,71 @@
+| 2010-09-23T05:22:24Z info | guest | view | System.WebHome |  Mozilla | 200.116.199.37 |
+| 2010-09-23T05:22:55Z info | admin | view | System.WebHome |  | 200.116.199.37 |
+| 2010-09-23T05:23:02Z info | admin | view | Main.WikiGroups |  | 200.116.199.37 |
+| 2010-09-23T05:23:15Z info | admin | view | Main.AdminUser |  | 200.116.199.37 |
+| 2010-09-23T05:23:26Z info | admin | view | Main.AdminGroup |  | 200.116.199.37 |
+| 2010-09-23T05:23:43Z info | admin | view | System.WebHome |  | 200.116.199.37 |
+| 2010-09-23T05:23:50Z info | admin | view | System.AdminToolsCategory |  | 200.116.199.37 |
+| 2010-09-23T05:23:55Z info | admin | view | System.UserRegistration |  | 200.116.199.37 |
+| 2010-09-23T05:24:27Z info | admin | view | System.UserRegistration |  | 200.116.199.37 |
+| 2010-09-23T05:25:01Z info | admin | save | Main.WikiUsers |  | 200.116.199.37 |
+| 2010-09-23T05:25:01Z info | RegistrationAgent | save | Main.JuanGaviria |  | 200.116.199.37 |
+| 2010-09-23T05:25:03Z info | unknown | register | Main.JuanGaviria | jgaviria@hexasas.com | 200.116.199.37 |
+| 2010-09-23T05:25:41Z info | admin | edit | Main.AdminGroup |  | 200.116.199.37 |
+| 2010-09-23T05:25:53Z info | admin | save | Main.AdminGroup |  | 200.116.199.37 |
+| 2010-09-23T05:25:54Z info | admin | view | Main.AdminGroup |  | 200.116.199.37 |
+| 2010-09-23T05:26:02Z info | admin | view | Main.AdminGroup |  | 200.116.199.37 |
+| 2010-09-23T05:26:08Z info | admin | view | Main.WikiGroups |  | 200.116.199.37 |
+| 2010-09-23T05:26:16Z info | admin | view | Main.JuanGaviria |  | 200.116.199.37 |
+| 2010-09-23T05:26:25Z info | admin | edit | Main.JuanGaviria |  | 200.116.199.37 |
+| 2010-09-23T05:26:51Z info | admin | save | Main.JuanGaviria |  | 200.116.199.37 |
+| 2010-09-23T05:26:52Z info | admin | view | Main.JuanGaviria |  | 200.116.199.37 |
+| 2010-09-23T05:26:57Z info | admin | edit | Main.JuanGaviria |  | 200.116.199.37 |
+| 2010-09-23T05:27:07Z info | admin | view | Main.JuanGaviria |  | 200.116.199.37 |
+| 2010-09-23T05:27:19Z info | admin | view | System.WebHome |  | 200.116.199.37 |
+| 2010-09-23T05:27:25Z info | admin | view | System.Macros |  | 200.116.199.37 |
+| 2010-09-23T05:27:33Z info | admin | view | System.Macros |  | 200.116.199.37 |
+| 2010-09-23T05:27:52Z info | admin | view | System.PreferenceSettings |  | 200.116.199.37 |
+| 2010-09-23T05:29:08Z info | admin | view | System.UsersGuide |  | 200.116.199.37 |
+| 2010-09-23T05:29:43Z info | admin | view | System.GoodStyle |  | 200.116.199.37 |
+| 2010-09-23T05:29:49Z info | admin | view | System.BeginnersStartHere |  | 200.116.199.37 |
+| 2010-09-23T05:31:18Z info | admin | view | System.WysiwygPlugin |  | 200.116.199.37 |
+| 2010-09-23T05:31:32Z info | admin | view | System.WysiwygPlugin |  | 200.116.199.37 |
+| 2010-09-23T05:32:47Z info | admin | view | System.TwentyMinuteTutorial |  | 200.116.199.37 |
+| 2010-09-23T05:33:37Z info | admin | view | System.WikiSyntax |  | 200.116.199.37 |
+| 2010-09-23T05:34:20Z info | admin | view | System.ManagingWebs |  | 200.116.199.37 |
+| 2010-09-23T05:34:32Z info | admin | save | Estructuras.WebPreferences |  | 200.116.199.37 |
+| 2010-09-23T05:34:36Z info | admin | view | Estructuras.WebHome |  | 200.116.199.37 |
+| 2010-09-23T05:34:41Z info | admin | view | Estructuras.WebPreferences |  | 200.116.199.37 |
+| 2010-09-23T05:34:43Z info | admin | edit | Estructuras.WebHome |  | 200.116.199.37 |
+| 2010-09-23T05:34:45Z info | admin | edit | Estructuras.WebPreferences |  | 200.116.199.37 |
+| 2010-09-23T05:35:28Z info | admin | save | Estructuras.WebPreferences | repRev 1 by BaseUserMapping_333 2010/09/23 05:35:28 | 200.116.199.37 |
+| 2010-09-23T05:35:29Z info | admin | view | Estructuras.WebPreferences |  | 200.116.199.37 |
+| 2010-09-23T05:38:56Z info | admin | save | Estructuras.WebHome |  | 200.116.199.37 |
+| 2010-09-23T05:38:57Z info | admin | view | Estructuras.WebHome |  | 200.116.199.37 |
+| 2010-09-23T05:49:11Z info | admin | save | System.VarADDTOZONE |  |  |
+| 2010-09-23T05:49:11Z info | admin | save | System.ZonePlugin |  |  |
+| 2010-09-23T05:49:11Z info | admin | save | System.VarRENDERZONE |  |  |
+| 2010-09-23T06:27:23Z info | admin | view | Estructuras.WebHome |  | 200.116.199.37 |
+| 2010-09-26T17:57:30Z info | admin | view | Estructuras.WebHome |  | 200.116.199.37 |
+| 2010-09-26T17:57:31Z info | admin | view | Estructuras.WebPreferences |  | 200.116.199.37 |
+| 2010-09-30T19:21:28Z info | guest | view | Main.WebHome |  Mozilla | 186.81.73.59 |
+| 2010-09-30T19:30:52Z info | admin | view | Main.WebHome |  | 186.81.73.59 |
+| 2010-09-30T19:38:35Z info | admin | view | Estructuras.WebHome |  | 186.81.73.59 |
+| 2010-09-30T19:38:42Z info | admin | view | Estructuras.WebHome |  raw=on | 186.81.73.59 |
+| 2010-09-30T19:39:25Z info | admin | edit | Estructuras.WebHome |  | 186.81.73.59 |
+| 2010-09-30T19:42:06Z info | admin | save | Estructuras.WebHome | minor | 186.81.73.59 |
+| 2010-09-30T19:42:07Z info | admin | edit | Estructuras.WebHome |  | 186.81.73.59 |
+| 2010-09-30T19:42:12Z info | admin | edit | Estructuras.WebHome |  | 186.81.73.59 |
+| 2010-09-30T19:43:10Z info | admin | edit | Estructuras.FormularioDeProceso | (not exist) | 186.81.73.59 |
+| 2010-09-30T19:43:50Z info | admin | edit | Estructuras.FormularioDeProcedimiento | (not exist) | 186.81.73.59 |
+| 2010-09-30T19:44:13Z info | admin | save | Estructuras.FormularioDeProcedimiento |  | 186.81.73.59 |
+| 2010-09-30T19:44:14Z info | admin | view | Estructuras.FormularioDeProcedimiento |  | 186.81.73.59 |
+| 2010-09-30T19:44:20Z info | admin | save | Estructuras.WebHome | repRev 3 by BaseUserMapping_333 2010/09/30 19:44:20 | 186.81.73.59 |
+| 2010-09-30T19:44:21Z info | admin | view | Estructuras.WebHome |  | 186.81.73.59 |
+| 2010-09-30T19:44:26Z info | admin | edit | Estructuras.WebHome |  | 186.81.73.59 |
+| 2010-09-30T19:46:11Z info | admin | save | Estructuras.WebHome | repRev 3 by BaseUserMapping_333 2010/09/30 19:46:11 | 186.81.73.59 |
+| 2010-09-30T19:46:11Z info | admin | view | Estructuras.WebHome |  | 186.81.73.59 |
+| 2010-09-30T19:46:29Z info | admin | view | System.WebHome |  | 186.81.73.59 |
+| 2010-09-30T19:46:34Z info | admin | view | System.WebTopicList |  | 186.81.73.59 |
+| 2010-09-30T19:46:41Z info | admin | view | System.CommandAndCGIScripts |  | 186.81.73.59 |
+| 2010-09-30T19:46:49Z info | admin | view | System.CommandAndCGIScripts |  | 186.81.73.59 |

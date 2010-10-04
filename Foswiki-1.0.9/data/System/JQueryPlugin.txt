@@ -1,0 +1,186 @@
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1264672217" format="1.1" reprev="1.9" version="1.9"}%
+---+!! %TOPIC%
+<!--
+   * Set SHORTDESCRIPTION = jQuery <nop>JavaScript library for Foswiki
+-->
+%SHORTDESCRIPTION%
+
+%TOC%
+
+---++ Description
+<table style="float:right">
+<tr>
+  <td><img src="%ATTACHURLPATH%/wikiringlogo40x40.png" title="Make your Wiki ring!" alt="WikiRing"></td>
+  <td><a href="http://wikiring.com" title="Make your Wiki ring!" style="text-decoration:none">
+      Powered by <br /> <nop>WikiRing Consultants </a>
+  </td>
+</tr>
+</table>
+
+<blockquote>
+"jQuery is a fast, concise, <nop>JavaScript Library that simplifies how you traverse
+HTML documents, handle events, perform animations, and add Ajax interactions to
+your web pages."
+</blockquote>
+
+---++ Coding Standards
+
+See [[JQuery Coding Standards]]
+This plugin contains the latest version of the [[http://jquery.com][jQuery]]
+<nop>JavaScript library. 
+See also Foswiki:Development.UsingJQueryWithFoswiki for more information on
+using jQuery with Foswiki.
+
+---++ Further references and tutorials
+   * [[http://docs.jquery.com/How_jQuery_Works][Getting the feet wet]]
+   * [[http://docs.jquery.com/Tutorials][Tutorials]]
+   * [[http://docs.jquery.com/Main_Page][Reference API]]
+   * [[http://docs.jquery.com/Using_jQuery_with_Other_Libraries][Using jQuery with other libraries]]
+   * [[http://docs.jquery.com/Plugins][Plugin repository]]
+
+
+---++ Using compressed javascript and css files
+All jQuery plugins are shipped with uncompressed js and css files, as well as minified and gzip compressed.
+For instance the jquery.autocomplete comes with the following set:
+   1 %PUBURLPATH%/%SYSTEMWEB%/JQueryPlugin/plugins/autocomplete/jquery.autocomplete.uncompressed.js
+   1 %PUBURLPATH%/%SYSTEMWEB%/JQueryPlugin/plugins/autocomplete/jquery.autocomplete.js
+   1 %PUBURLPATH%/%SYSTEMWEB%/JQueryPlugin/plugins/autocomplete/jquery.autocomplete.js.gz
+
+There is a Makefile in the =%PUBURLPATH%/%SYSTEMWEB%/JQueryPlugin= root directory that grants all these
+files are up to date. By default all files in the !JQueryPlugin package are up to date. So you only have to
+issue a =make= in the root directory if you wish to
+modify one of the files underneath. This will update
+all minified and gzipped files as needed. Enable the ={JQueryPlugin}{Debug}= flag in =configure=, 
+to use the uncompressed files right away to omit the =make= step during development of further javascript components.
+
+Apache can be configured to automatically use the =.gz= files if present using mod_rewrite as follows:
+<verbatim>
+  <FilesMatch ".*\.(js|css)$">
+    RewriteEngine On
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}.gz -f
+    RewriteRule ^(.*)$ %{REQUEST_URI}.gz [L,QSA]
+  </FilesMatch>
+
+  <Files *.js.gz>
+    AddEncoding gzip .js
+    ForceType application/x-javascript
+  </Files>
+
+  <Files *.css.gz>
+    AddEncoding gzip .css
+    ForceType text/css
+  </Files>
+</verbatim>
+
+So whenever the browser accepts encoding the file as gzip _and_ the file with the =.gz= does exist
+in the filesystem, then trigger an internal redirect while still enforcing the original mine-type.
+The browser on the other side will unzip the css and js files automatically. This will drastically
+reduce bandwidth and speed up interactive performance.
+
+---++ Available jQuery plugins
+%JQPLUGINS{
+  format="<h3> $index. $percntIF{\"istopic '$documentation'\" 
+                  then=\"[[$documentation][$name]]\" 
+                  else=\"<nop>$name\"
+               }$percnt $active
+          </h3>
+          $summary
+  "
+}%
+
+
+---++ Installation Instructions
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+
+---++ Plugin Info
+|  Author(s): | Michael Daum |
+|  Copyright: | 2007-2010 Michael Daum http://michaeldaumconsulting.com |
+|  License: | GPL |
+|  Release: | 3.51 |
+|  Version: | 7299 (2010-04-30) |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  30 Apr 2010: | (3.51) fixed initial classes of click-areas in treeviews |
+|  29 Mar 2010: | (3.42) disable plugin when prerequisites are not met |
+|  28 Mar 2010: | (3.41) fix ZonePlugin listed as optional dependency (not optional for Foswiki 1.0.x installations) |
+|  26 Mar 2010: | (3.40) externalized grid and fullcalendar modules into plugins of their own; upgraded to jquery-ui 1.7.2; only load i18n support matching the current site language |
+|  20 Mar 2010: | (3.31) Minifier CPAN libs removed from plugin. They will be in core CPAN lib in Foswiki 1.1 |
+|  14 Mar 2010: | (3.30) upgraded =validate= to v1.7; added =wikiword= validation method; \
+                  fixed computation of line-height in =fluidfont=; \
+                  fixed height issue in =tabpane= |
+|  03 Mar 2010: | made ZonePlugin an optional dependency |
+|  01 Mar 2010: | improved js and css compression using yuicompressor; \
+                  improved simplemodal integration to foswiki to create modal dialogs with less additional javascript; \
+                  added custom events to textboxlist: <nop>AddValue, <nop>DeleteValue , Reset and Clear |
+|  12 Feb 2010: | added livequery and rewrote all initializers to use it; \
+                  added =rating= formfield type; \
+                  updated jqGrid to latest version; \
+                  improved foswiki integration and documentation of various plugins; \
+                  upgraded jwplayer coming with media plugin; \
+                  using Foswiki:Extensions/ZonePlugin now to optimize page load time |
+|  08 Feb 2010: | added query-object |
+|  28 Jan 2010: | added jquery-1.4.1, corner, fluidfont, fullcalendar, \
+                  localscroll, masonry, scrollto, serialscroll, slimbox; \
+                  deprecated jquery.nifty; disabled JQSCRIPT and JQSTYLE |
+|  11 Nov 2009: | added jqGrid library; reorganized documentation |
+|  07 Nov 2009: | updated Superfish to 1.4.8 and added examples topic, added\
+                  supersubs plugin, moved JQuery examples from Sandbox to System |
+|  29 Oct 2009: | added SCRIPTSUFFIX to foswiki var set (CDot) |
+|  14 Sep 2009: | added perls tubs for jquery.ui, so that you can pull it in via JQREQUIRE now; \
+                  reworked plugin initialization to allow elements to be init'ed when loaded via ajax; \
+                  fixed BUTTON to play nicely with !TwistyPlugin; \
+                  only load ui-theme if you jqrequire the ui library |
+|  20 Aug 2009: | made <nop>JQueryPlugin <nop>SafeWikiPlugin compatible |
+|  02 Jul 2009: | improved parsing of foswiki meta tags in html header; \
+                  fixed jqTreeview initialisation for jquery-1.3.x; \
+                  fixed chili initialisation; \
+                  dropped support for konqueror3 |
+|  23 Jun 2009: | added jquery.focus, jquery.textboxlist, jquery.farbtastic; jquery.gradient; \
+                  added =color= and =textboxlist= formfield types; \
+                  made !JQueryPlugin pluggable itself; \
+                  added animation switching tabs; \
+                  improved automaxexpand feature in tabs |
+|  28 Apr 2009: | added jquery.media, jquery.simplemodal, shell highlightning for chilli |
+|  03 Feb 2009: | fixed tabpane not being rendered using a rest handler; \
+                  added id to tabs that can be used to init the first active one; \
+                  added compressed version of blockUI; \
+                  replaced ICONTOPIC preference variable with ICONSEARCHPATH to search for icons \
+                  in multiple directories (defaults to all of <nop>FamFamFamContrib) |
+|  15 Jan 2009: | fixed click target for relative urls in %<nop>BUTTON{}%; yet another jquery.wikiword fix |
+|  13 Jan 2009: | fixed jquery.wikiword not to depend on outside string libraries; \
+                  added foswiki alias to global javascript variables (Eugen Mayer) |
+|  08 Jan 2009: | certified for foswiki/compat; fixed BUTTON target for non-wikiword topics |
+|  12 Dec 2008: | fixed a series of IE6+IE7 issues |
+|  18 Nov 2008: | added jquery.ifixpng; \
+                  improved BUTTON tag to have submit and clear and reset buttons; \
+                  ie6 fixes for BUTTONs; \
+                  added missing jquery.wikiword plugin |
+|  13 Nov 2008: | added automaxexpand for TABPANES ;\
+                  added jquery.shake plugin; \
+                  reworked BUTTON tag |
+|  15 Oct 2008: | added jquery.autocomplete, jquery.cycle |
+|  20 Jul 2008: | added jquery.form, jquery.maskedinput, jquery.validate |
+|  15 Jul 2008: | updated to ui-1.5.2; added async treeview; added async options to tabpane |
+|  03 Jul 2008: | updated to ui-1.5.1 |
+|  05 Jun 2008: | updated to jquery-1.2.6 and ui-1.5-RC1 |
+|  30 Apr 2008: | repackaged to contain jquery UI |
+|  13 Feb 2008: | upgrade to jquery-1.2.3, as well as most plugins |
+|  17 Jan 2008: | added jquery.metadata plugin; \
+                  implemented a jquery.tabpane plugin; \
+                  updated jquery.dimensions plugin; \
+                  added jquery.empty plugin to ease development of new plugins |
+|  15 Nov 2007: | use skin independent way to add javascript files to header |
+|  10 Oct 2007: | upgraded to jQuery-1.1.4; compressed js and css |
+|  12 Jul 2007: | initial package containing jQuery-1.1.3.1 |
+|  Dependencies: | <table class="foswikiTable" border="1"><tr><th>Name</th><th>Version</th><th>Description</th></tr><tr><td align="left">Foswiki::Plugins::ZonePlugin</td><td align="left">&gt;=2.1</td><td align="left">Required</td></tr></table> |
+|  Home: | Foswiki:Extensions/%TOPIC% |
+|  Support: | Foswiki:Support/%TOPIC% |
+
+
+%META:FILEATTACHMENT{name="wikiringlogo40x40.png" attachment="wikiringlogo40x40.png" attr="h" comment="" date="1189787359" path="wikiringlogo40x40.png" size="2571" stream="wikiringlogo40x40.png" tmpFilename="" user="ProjectContributor" version="1"}%

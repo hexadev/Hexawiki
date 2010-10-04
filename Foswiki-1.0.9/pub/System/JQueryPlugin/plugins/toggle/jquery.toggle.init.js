@@ -1,0 +1,1 @@
+jQuery(function(a){if(foswiki.jquery&&foswiki.jquery.toggle){a.each(foswiki.jquery.toggle,function(){var b=this;var c=a("#"+b.id);c.click(function(){return b.onclick.call(this)})})}});

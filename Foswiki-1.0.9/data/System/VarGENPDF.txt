@@ -1,0 +1,8 @@
+%META:TOPICINFO{author="ProjectContributor" date="1231502400" format="1.1" version="1"}%
+%META:TOPICPARENT{name="Macros"}%
+#VarGENPDF
+---+++ GENPDF -- Insert a link that generated a PDF for the current or identified topic
+   * Syntax: =%<nop>GENPDF%=
+   * Expands to: =%GENPDF%=
+   * Example: To link to an alternate topic, write %<nop>GENPDF{"AnotherTopic"}%  or write %<nop>GENPDF{"AnotherTopic" link="pdf version"}% to override the link text.
+   * Related: Installed as part of GenPDFAddOn 

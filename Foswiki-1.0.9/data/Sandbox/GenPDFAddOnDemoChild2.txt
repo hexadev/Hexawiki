@@ -1,0 +1,19 @@
+%META:TOPICINFO{author="ProjectContributor" date="1262812293" format="1.1" %%reprev="1.5" version="1.5"}%
+%META:TOPICPARENT{name="GenPDFAddOnDemoChild"}%
+---+ GenPDFAddOn Child Topic 2
+---++ Header Level 2
+
+This topic is a 2nd level child and will have it's headings all set to the
+correct depth when recursively included into a PDF.
+
+---+++ Header level 3
+
+Last Paragraph
+
+<h9>Heading 9</h9>
+
+and now for the test
+
+<h10>Heading 10</h10>
+
+-- Main.AdminUser - 12 Dec 2009

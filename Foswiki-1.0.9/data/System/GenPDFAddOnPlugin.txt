@@ -1,0 +1,50 @@
+%META:TOPICINFO{author="ProjectContributor" date="1265477638" format="1.1" version="1.2"}%
+%META:TOPICPARENT{name="Plugins"}%
+---+ GenPDFAddOn Helper plugin
+
+%SHORTDESCRIPTION%
+
+%STARTINCLUDE%
+This version of the GenPDFAddOn ships with a simple GenPDFAddOnPlugin helper
+plugin.  It will render the %<nop>GENPDF% macro as a clickable link to the PDF version of the topic.
+%IF{ "'%BASETOPIC%' = 'GenPDFAddOnPlugin'" then="See GenPDFAddOn for details on generating a PDF from a topic or topic hierarchy"}%
+
+*Write* %<nop>GENPDF% 
+   * *Simulated:* %SCRIPTURL{"genpdf"}%/System/GenPDFAddOn 
+   * *If Installed:* %GENPDF% 
+
+*Write* %<nop>GENPDF{"System.WebHome"}%
+   * *Simulated:* %SCRIPTURL{"genpdf"}%/System/WebHome
+   * *If Installed:* %GENPDF{"System.WebHome"}% 
+
+*Write* %<nop>GENPDF{"System.WebHome" link="WebHome"}% 
+   * *Simulated*: [[%SCRIPTURL{"genpdf"}%/System/WebHome][WebHome]] 
+   * *If Installed*: %GENPDF{"System.WebHome" link="WebHome"}% 
+%STOPINCLUDE%
+
+---++ Plugin Preferences
+
+There are no settings or preferences for this plugin.
+
+<!--
+One line description, required for extensions repository catalog.
+   * Set SHORTDESCRIPTION = Generate a PDF from a Foswiki topic or topic hierarchy
+-->
+
+---++ Installation
+
+This plugin is installed as part of GenPDFAddOn. Enable the GenPDFAddOnPlugin
+in the =bin/configure= interface
+
+---++ Plugin Info
+
+|  Author: | Foswiki:Main.GeorgeClark |
+|  Copyright: | &copy; 2009, Foswiki Contributors |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Release: | 1.2 |
+|  Version: | 7410 (2010-05-14) |
+|  Change&nbsp;History: | <!-- versions below in reverse order -->&nbsp; |
+|  21 Feb 2010 (1.0) | Initial release.   See GenPDFAddOn for further details |
+|  Home: | http://foswiki.org/Extensions/GenPDFAddOn |
+|  Support: | http://foswiki.org/Support/GenPDFAddOn |
+

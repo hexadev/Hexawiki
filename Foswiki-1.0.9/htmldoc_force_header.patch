@@ -1,0 +1,20 @@
+*** ps-pdf.cxx.orig	Sat Oct 30 05:53:59 2004
+--- ps-pdf.cxx	Wed Jun 15 15:54:24 2005
+***************
+*** 1465,1471 ****
+  
+      pspdf_prepare_heading(page, print_page, pages[page].header, top,
+                            page_text, sizeof(page_text),
+! 			  page > chapter_starts[chapter] ||
+  			      OutputType != OUTPUT_BOOK);
+      pspdf_prepare_heading(page, print_page, pages[page].footer, 0,
+                            page_text, sizeof(page_text));
+--- 1465,1472 ----
+  
+      pspdf_prepare_heading(page, print_page, pages[page].header, top,
+                            page_text, sizeof(page_text),
+! 			  /* page > chapter_starts[chapter] || */
+!                           1 || /* force heading onto chapter front page */
+  			      OutputType != OUTPUT_BOOK);
+      pspdf_prepare_heading(page, print_page, pages[page].footer, 0,
+                            page_text, sizeof(page_text));

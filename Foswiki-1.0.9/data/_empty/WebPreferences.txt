@@ -1,4 +1,0 @@
-   * Set ALLOWWEBCHANGE = %USERSWEB%.AdminGroup
-   * Set ALLOWWEBRENAME = %USERSWEB%.AdminGroup
-   * Set ALLOWTOPICCHANGE = %USERSWEB%.AdminGroup
-   * Set ALLOWTOPICRENAME = %USERSWEB%.AdminGroup

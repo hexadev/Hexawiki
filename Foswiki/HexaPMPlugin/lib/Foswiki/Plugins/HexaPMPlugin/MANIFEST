@@ -1,0 +1,12 @@
+# Release manifest for HexaPMPlugin
+data/System/HexaPMPlugin.txt 0644 Documentation
+data/System/HexaPMPluginProjectForm.txt 0644 Documentation
+data/System/HexaPMPluginProjectViewTemplate.txt 0644 Documentation
+data/System/HexaPMPluginProjectEditTemplate.txt 0644 Documentation
+lib/Foswiki/Plugins/HexaPMPlugin.pm 0644 Perl module
+lib/Foswiki/Plugins/HexaPMPlugin/Config.spec 0644 Perl module
+lib/Foswiki/Plugins/HexaPMPlugin/Core.pm 0644 Perl module
+lib/Foswiki/Plugins/HexaPMPlugin/Dashboard.pm 0644 Perl module
+pub/System//HexaPMPlugin/css/dashboard.uncompressed.css 0644
+pub/System//HexaPMPlugin/scripts/dashboard.uncompressed.js 0644
+ 

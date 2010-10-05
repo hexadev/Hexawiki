@@ -1,0 +1,33 @@
+.column { width: 33%; float: left; padding-bottom: 100px; }
+.portlet { margin: 0 1em 1em 0; }
+.portlet-header { margin: 0.3em; padding-bottom: 4px; padding-left: 0.2em; }
+.portlet-header .ui-icon { float: right; }
+.portlet-content { padding: 0.4em; }
+.ui-sortable-placeholder { border: 1px dotted black; visibility: visible !important; height: 50px !important; }
+.ui-sortable-placeholder * { visibility: hidden; }
+.activeProject {
+	font-size: 90%;
+}
+.activeProjectOverflow {
+	overflow-y: scroll;
+	max-height: 265px;
+}
+.activeProjectName {
+	font-weight: bold;	
+}
+.activeProjectDescription {
+	color: #333;
+	font-size: 80%;
+}
+.activeProjectStartDate {
+	color: #333;
+	font-size: 80%;
+}
+.activeProjectManager {
+	color: #333;
+	font-size: 80%;
+}
+.activeProjectLabel{
+	font-weight: bold;
+	font-size: 80%;
+}

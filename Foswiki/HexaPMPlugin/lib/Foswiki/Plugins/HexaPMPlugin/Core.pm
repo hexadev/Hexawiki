@@ -12,16 +12,25 @@ require Foswiki::AccessControlException;
 sub checkAccessControll {
     my $user = $_[0];
     my $action = $_[1] || 'view';
-    my $resource = $_[2] || 'all';
+	my $resourceType = $_[2] || 'all';
+    my $resource = $_[3] || '';
     my $authorization = 0;
     Foswiki::Func::writeWarning("$user - $action - $resource");
     my $allowusers = '';
-    if ($resource eq 'dashboard'){
+    if ($resourceType eq 'dashboard'){
     	$allowusers = $Foswiki::cfg{Plugins}{HexaPMPlugin}{AllowViewDashboard} || $Foswiki::cfg{Plugins}{HexaPMPlugin}{ProjectManagementGroup} ||$Foswiki::cfg{SuperAdminGroup};
     	Foswiki::Func::writeWarning("$allowusers");
-    }elsif ($resource eq 'projects') {
+    }elsif ($resourceType eq 'projects') {
     	$allowusers = $Foswiki::cfg{Plugins}{HexaPMPlugin}{AllowViewDashboard} || $Foswiki::cfg{Plugins}{HexaPMPlugin}{ProjectManagementGroup} || $Foswiki::cfg{SuperAdminGroup};
-    }elsif ($resource eq 'project') {
+    }elsif ($resourceType eq 'project'){
+		### TODO ###
+		#Se debe validar crear un campo que le pueda dar un estado de privadasidad al proyecto para que solo los integrantes tenga el acceso.
+		#
+		unless ($resource ne '') { return 0;}
+		my ($projectWeb, $projectTopic) = Foswiki::Func::normalizeWebTopicName('', $resource);
+		if ($action eq 'view'){
+    		$allowusers = $Foswiki::cfg{Plugins}{HexaPMPlugin}{AllowViewDashboard} || $Foswiki::cfg{Plugins}{HexaPMPlugin}{ProjectManagementGroup} || $Foswiki::cfg{SuperAdminGroup};
+		}
 	return 1;
     }else{
 	return 0;	
@@ -183,7 +192,11 @@ sub getProjectList {
 								last;
 							}
 					}
-					$projectValues{$projectField->{'name'}} = $projectField->{'value'};
+					if(length($projectField->{'value'}) > 48){
+						$projectValues{$projectField->{'name'}} = substr($projectField->{'value'},0,46) . '...';
+					}else{
+						$projectValues{$projectField->{'name'}} = $projectField->{'value'};
+					}
 				}
 			}
 			if (($filterResult == 1 && $discartResult == 0) || ($filterResult == 0 && $discartResult == 0)){
@@ -198,5 +211,44 @@ sub getProjectList {
 		return $projectsJson->encode(\@projectsName);
 	}
 }
+
+sub loadObjects {
+    my ($web, $topic, $query) = @_;
+    my $qweb = $query->param('web') || 'Main';
+    my @attr = $query->param();
+    my $sort = $query->param('sort') || '';
+    $query->delete('_');
+    my $qattrs = '';
+    foreach my $param (@attr){
+        unless ($param eq 'asobject' || $param eq 'sort'){
+            $qattrs = $qattrs . "$param=\"" . $query->param($param) . "\" ";
+        }
+    }
+    my $attrs = new Foswiki::Attrs($qattrs);
+    my $objects = new Foswiki::Plugins::ObjectPlugin::ObjectSet();
+    my $sortObjects = new Foswiki::Plugins::ObjectPlugin::ObjectSet();
+    my @topics = ('ProjectMilestones','ProjectActivities','ProjectTodolist');
+    foreach my $topic ( @topics ) {
+        next unless Foswiki::Func::topicExists( $qweb, $topic );
+        my ($meta,$text) = Foswiki::Func::readTopic($qweb, $topic);
+        next unless Foswiki::Func::checkAccessPermission(
+            'VIEW', Foswiki::Func::getWikiName(), $text, $topic, $qweb, $meta);
+        my $tobjs = Foswiki::Plugins::ObjectPlugin::ObjectSet::load(
+            $qweb, $topic, $text, undef, 0 );
+        $tobjs = $tobjs->search( $attrs );
+        $objects->concat( $tobjs );
+    }
+    Foswiki::Func::writeDebug($objects->{OBJECTS}[0]);
+    my @sortobject = sort bywhen @{$objects->{OBJECTS}};
+    foreach my $object (@sortobject){
+        $sortObjects->add($object);
+    }
+    return $sortObjects;	
+}
+
+sub bywhen {
+    Foswiki::Time::parseTime($$b{edited}) <=> Foswiki::Time::parseTime($$a{edited});
+}
+
 
 1;

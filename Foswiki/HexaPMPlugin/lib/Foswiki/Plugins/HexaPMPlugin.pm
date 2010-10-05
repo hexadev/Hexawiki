@@ -100,11 +100,13 @@ sub initPlugin {
     # This will be called whenever %EXAMPLETAG% or %EXAMPLETAG{...}% is
     # seen in the topic text.
     Foswiki::Func::registerTagHandler( 'HEXAPMDASHBOARD', \&_renderDashboard );
+    Foswiki::Func::registerTagHandler( 'PROJECTOVERVIEW', \&_renderProjectOverview );
 
     # Allow a sub to be called from the REST interface 
     # using the provided alias
     Foswiki::Func::registerRESTHandler('createProject', \&restCreateProject);
     Foswiki::Func::registerRESTHandler('getProjectList', \&restProjectList);
+    Foswiki::Func::registerRESTHandler('objects', \&restObjectList);
 
     # Plugin correctly initialized
     return 1;
@@ -132,10 +134,22 @@ sub _renderDashboard {
 #    # $params->{sideorder} will be 'onions'
 	require Foswiki::Plugins::HexaPMPlugin::Core;
 	require Foswiki::Plugins::HexaPMPlugin::Dashboard;
-	unless (Foswiki::Plugins::HexaPMPlugin::Core::checkAccessControll(Foswiki::Func::getWikiName(), 'view','dashboard')){ 
+	unless (Foswiki::Plugins::HexaPMPlugin::Core::checkAccessControll(Foswiki::Func::getWikiName(), 'view','dashboard', '')){ 
 		return "<div class='foswikiHelp'><h1>WARNING!</h1><p>Access Dennied to view the project managemente Dashboard</p></div>"
 	}
 	return Foswiki::Plugins::HexaPMPlugin::Dashboard::renderDashboard();
+}
+
+sub _renderProjectOverview {
+	my($session, $params, $theTopic, $theWeb) = @_;
+	my $project = $params->{project} || $params->{_DEFAULT};
+    require Foswiki::Plugins::HexaPMPlugin::Core;
+    require Foswiki::Plugins::HexaPMPlugin::Overview;
+    unless (Foswiki::Plugins::HexaPMPlugin::Core::checkAccessControll(Foswiki::Func::getWikiName(), 'view','project', $project)){
+        return "<div class='foswikiHelp'><h1>WARNING!</h1><p>Access Dennied to view the project managemente Dashboard</p></div>"
+    }
+    return Foswiki::Plugins::HexaPMPlugin::Dashboard::renderDashboard();
+
 }
 
 =begin TML
@@ -763,7 +777,7 @@ sub restCreateProject {
 	my $description = $query->param('description');
 	my $startDate = $query->param('startDate');
 	my $projectManager = $query->param('projectManager');
-	unless (Foswiki::Plugins::HexaPMPlugin::Core::checkAccessControll(Foswiki::Func::getWikiName(), 'create','project')){
+	unless (Foswiki::Plugins::HexaPMPlugin::Core::checkAccessControll(Foswiki::Func::getWikiName(), 'create','project', '')){
 		return '[{"error": "permision denied"}]'
 	}
 	$name = Foswiki::Sandbox::untaintUnchecked($name);
@@ -780,12 +794,23 @@ sub restProjectList {
         my $name = $query->param('name');
         my $description = $query->param('description');
         my $startDate = $query->param('startDate');
-        if (Foswiki::Plugins::HexaPMPlugin::Core::checkAccessControll(Foswiki::Func::getWikiName(), 'view','projects')){
+        if (Foswiki::Plugins::HexaPMPlugin::Core::checkAccessControll(Foswiki::Func::getWikiName(), 'view','projects','')){
 	 	return Foswiki::Plugins::HexaPMPlugin::Core::getProjectList($query);
 	}
         return "This is an example of a REST invocation\n\n";
 }
 
+
+sub restObjectList {
+    my( $session ) = @_;
+    return Foswiki::Plugins::ObjectPlugin::objectResponse($session,\&_objectSearch);
+}
+
+sub _objectSearch {
+    require Foswiki::Plugins::HexaPMPlugin::Core;
+    my ($web, $topic, $query) = @_;
+	return Foswiki::Plugins::HexaPMPlugin::Core::loadObjects($web, $topic, $query);
+}
 
 1;
 __END__

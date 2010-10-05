@@ -1,6 +1,7 @@
 $(function() {
 	    $(".column").sortable({
-			connectWith: '.column'
+			connectWith: '.column',
+			handle: '.portlet-header'
 		});
 		$(".portlet").addClass("ui-widget ui-widget-content ui-helper-clearfix ui-corner-all")
 			.find(".portlet-header")
@@ -24,16 +25,33 @@ $(function() {
              dataType: "json", 
              data: {
                     skin: 'text',
+					State: '(New|Inprocess|Active)'
              },
              success: function (json) {                    
-					for(var i; i< json.length;i++){
-						var project = $('<div>');
-						project.addClass('activeProject');
-						project.html("<div class='activeProjectName'><span>" + json[i].name + "</span></div><div class='activeProjectDescription'><span>" + json[i].description + "</span></div><div class='activeProjectStartDate'><span>" + json[i].startDate + "</span></div><div class='activeProjectManager'>" + json[i].manager + "</span></div>" );
+					if(json.length > 4){
+						$('#hexapm-projects').addClass('activeProjectOverflow');
+					}	
+					for(var i = 0; i< json.length;i++){
+						var projectDiv = $('<div>');
+						var projectHome = checkJsonKeys(json[i], 'home');
+						var projectName = checkJsonKeys(json[i], 'Name');
+						var projectDescription = checkJsonKeys(json[i], 'Description');
+						var projectStartDate = checkJsonKeys(json[i], 'StartDate');
+						var projectManager = checkJsonKeys(json[i], 'ProjectManager');
+						projectDiv.addClass('activeProject');
+						projectDiv.html("<table class='projectTable'><tr><td valign='top' align='left'><div class='activeProjectName'><span><a href='" + foswiki.scriptUrl + "/view/" + projectHome + "'>" + projectName + "</a></span></div></td></tr><tr><td valign='top' align='left'><span class='activeProjectLabel'>Manager: </span><span class='activeProjectManager'>" + projectManager + " </span><span class='activeProjectLabel'>Start: </span><span class='activeProjectStartDate'>" + projectStartDate + "</span></td></tr><tr><td valign='top' align='left'><div class='activeProjectDescription'><span>" + projectDescription + " <a href='" + foswiki.scriptUrl + "/view/" + projectHome + "'>more</a></span></div></td></tr></table><hr />" );
+						$('#hexapm-projects').append(projectDiv);
 					}	
              },
              error: function (e) {
-                    alert('dano');
+                    $('#hexapm-projects').html('An error occurred during loading projects');
              }					
 		});
 });
+function checkJsonKeys(obj, key) {
+  if (obj[key] == null){
+    return 'not defined';
+  }
+  obj = obj[key];
+  return obj;
+}

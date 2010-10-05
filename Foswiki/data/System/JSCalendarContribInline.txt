@@ -1,0 +1,17 @@
+%META:TOPICPARENT{name="JSCalendarContrib"}%
+Inline include of JSCalendarContrib HTML for use in forms.
+%STARTINCLUDE%
+%ADDTOZONE{
+   "head"
+   id="JSCalendarContrib/calendar-blue"
+   text="
+<style type='text/css' media='all'>
+   @import url('%PUBURLPATH%/%SYSTEMWEB%/JSCalendarContrib/calendar-blue.css');
+   .calendar {z-index:2000;}
+</style>"
+}%
+%TMPL:P{"LIBJS" id="JSCalendarContrib/calendar" requires=""}%
+%TMPL:P{"LIBJS" id="JSCalendarContrib/lang/calendar-en" requires="JSCalendarContrib/calendar"}%
+%TMPL:P{"LIBJS" id="JSCalendarContrib/calendar-setup" requires="JSCalendarContrib/lang/calendar-en"}%
+%TMPL:P{"LIBJS" id="JSCalendarContrib/foswiki" requires="JSCalendarContrib/calendar-setup"}%
+%STOPINCLUDE%

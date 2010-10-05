@@ -1,0 +1,1 @@
+jQuery(function(a){a(".jqCorner:not(.jqInitedCorner)").livequery(function(){var b=a(this);b.addClass("jqInitedCorner").corner()})});

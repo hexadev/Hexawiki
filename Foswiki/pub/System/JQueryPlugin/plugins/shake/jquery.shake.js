@@ -1,0 +1,1 @@
+(function(a){a.fn.shake=function(b,d,c){this.each(function(){a(this).css({position:"relative"});for(var e=1;e<=b;e++){a(this).animate({left:(d*-1)},(((c/b)/4))).animate({left:d},((c/b)/2)).animate({left:0},(((c/b)/4)))}});return this}})(jQuery);

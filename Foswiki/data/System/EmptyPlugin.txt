@@ -1,0 +1,48 @@
+%META:TOPICPARENT{name="Plugins"}%
+---+ Empty Plugin
+
+%SHORTDESCRIPTION%
+
+Learn how to create your own plugin in %SYSTEMWEB%.DevelopingPlugins.
+
+---++ Plugin Preferences
+
+Plugin preferences should be set using =configure=, as described in
+%SYSTEMWEB%.DevelopingPlugins. You can also use
+[[%SYSTEMWEB%.PreferenceSettings][preference settings]] to define any
+user-controllable configuration. You are strongly advised
+to use the name of the plugin as a prefix, to avoid the risk of namespace
+clashes with other extensions that may try to use the same name.
+
+*BAD*
+   * Set EXAMPLE = Example setting
+   * Set FORMAT  = %d-%m-%y
+*Good*
+   * Set EMPTYPLUGIN_EXAMPLE = Example setting
+   * Set EMPTYPLUGIN_FORMAT  = %d-%m-%y
+
+<!--
+One line description, required for extensions repository catalog.
+   * Set SHORTDESCRIPTION = Empty Plugin used as a template for new Plugins
+-->
+
+---++ Installation
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+---++ Plugin Info
+
+|  Author: | Foswiki:Main.PluginAuthor |
+|  Copyright: | &copy; 2009, Foswiki Contributors |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Release: | 1.1.1 |
+|  Version: | 8536 (2010-08-18) |
+|  Change&nbsp;History: | <!-- versions below in reverse order -->&nbsp; |
+|  XX Mmm 20XX (1.0) | Description of change |
+|  Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Support: | http://foswiki.org/Support/%TOPIC% |
+

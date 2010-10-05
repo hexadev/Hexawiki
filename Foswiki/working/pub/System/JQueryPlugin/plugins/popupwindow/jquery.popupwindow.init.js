@@ -1,0 +1,1 @@
+var profiles={foswiki:{width:600,height:480,status:1}};jQuery(function(a){a(".foswikiPopUp:not(.jqInitedPopUpWindow),.jqPopUpWindow:not(.jqInitedPopUpWindow)").livequery(function(){var b=a(this);b.addClass("jqInitedPopUpWindow");if(!b.attr("rel")){b.attr("rel","foswiki")}b.popupwindow(profiles)})});

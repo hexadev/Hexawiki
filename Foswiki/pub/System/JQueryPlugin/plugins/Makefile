@@ -1,0 +1,44 @@
+SUBDIRS=\
+  masonry \
+  autocomplete \
+  bgiframe \
+  blockui \
+  button \
+  chili \
+  cookie \
+  corner \
+  cycle \
+  debug \
+  easing \
+  farbtastic \
+  fluidfont \
+  focus \
+  form \
+  foswiki \
+  gradient \
+  hoverintent \
+  innerfade \
+  localscroll \
+  maskedinput \
+  media \
+  metadata \
+  nifty \
+  rating \
+  scrollto \
+  serialscroll \
+  shake \
+  shrinkurls \
+  simplemodal \
+  slimbox \
+  superfish \
+  supersubs \
+  tabpane \
+  textboxlist \
+  tooltip \
+  treeview \
+  validate \
+  queryobject \
+  livequery \
+  wikiword 
+
+-include ../Makefile.include

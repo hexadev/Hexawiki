@@ -1,0 +1,756 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head><title>InstallationGuide</title></head>
+<body class=""><div class="foswikiPage">
+<a name="PageTop"></a> 
+<h1><a name="Installation_Guide"></a>  Installation Guide </h1>
+<p />
+<strong>This guide describes the steps for manually installing Foswiki, with specific steps for installations on Linux with the Apache web server.</strong> If you are using a different web server or operating system, in addition to reviewing this document, check any additional information specific to your platform at <a class="interwikiLink" href="http://foswiki.org/Support.SupplementalDocuments" title="'Support.SupplementalDocuments' on foswiki.org">Foswiki:Support.SupplementalDocuments</a>. <a class="interwikiLink" href="http://foswiki.org/Support.SupplementalDocuments" title="'Support.SupplementalDocuments' on foswiki.org">Foswiki:Support.SupplementalDocuments</a> also has information for other scenarios, such as shared web hosting environments.
+<p />
+These installation instructions are also available online at <a class="interwikiLink" href="http://foswiki.org/System.InstallationGuide" title="'System.InstallationGuide' on foswiki.org">Foswiki:System.InstallationGuide</a>, and are available within your Foswiki installation at <code>System.InstallationGuide</code> (the InstallationGuide topic in the System web).
+<p />
+<strong>For information on upgrades</strong>, please also refer to <a class="interwikiLink" href="http://foswiki.org/System.UpgradeGuide" title="'System.UpgradeGuide' on foswiki.org">Foswiki:System.UpgradeGuide</a>. A static HTML version of this document, <code>UpgradeGuide.html</code>, is included in the root of your Foswiki distribution.
+<p />
+<a name="foswikiTOC"></a><div class="foswikiToc"><span class="foswikiTocTitle">On this page:</span> <ul>
+<li> <a href="#System_Requirements"> System Requirements </a>
+</li> <li> <a href="#Preparing_to_install"> Preparing to install </a>
+</li> <li> <a href="#Basic_installation:_getting_Foswiki_up_and_running"> Basic installation: getting Foswiki up and running </a> <ul>
+<li> <a href="#Download_and_unpack_the_Foswiki_distribution"> Download and unpack the Foswiki distribution </a>
+</li> <li> <a href="#Set_the_file_and_directory_permissions_for_the_installation"> Set the file and directory permissions for the installation </a>
+</li> <li> <a href="#Configure_the_locations_of_the_Perl_executable_and_the_Foswiki_modules"> Configure the locations of the Perl executable and the Foswiki modules </a>
+</li> <li> <a href="#Configure_the_web_server"> Configure the web server </a>
+</li> <li> <a href="#Configure_Foswiki"> Configure Foswiki </a>
+</li> <li> <a href="#Authentication"> Authentication </a> <ul>
+<li> <a href="#Template_Login_authentication"> Template Login authentication </a>
+</li> <li> <a href="#Enabling_Template_Login"> Enabling Template Login </a>
+</li> <li> <a href="#Custom_registration_page"> Custom registration page </a>
+</li> <li> <a href="#Apache_Login_authentication"> Apache Login authentication </a>
+</li></ul> 
+</li> <li> <a href="#Choose_an_appropriate_search_algorithm_for_your_Operating_System"> Choose an appropriate search algorithm for your Operating System </a>
+</li> <li> <a href="#Define_the_administrator_user_40s_41"> Define the administrator user(s) </a>
+</li> <li> <a href="#Congratulations_33"> Congratulations! </a>
+</li></ul> 
+</li> <li> <a href="#Beyond_the_basic_installation"> Beyond the basic installation </a> <ul>
+<li> <a href="#Site_configuration_and_maintenance"> Site configuration and maintenance </a> <ul>
+<li> <a href="#Set_Foswiki_Preferences"> Set Foswiki Preferences </a>
+</li> <li> <a href="#Select_the_desired_security_level"> Select the desired security level </a>
+</li> <li> <a href="#Enable_Email_Notification"> Enable Email Notification </a>
+</li> <li> <a href="#Automate_removal_of_expired_sessions_and_lease_files"> Automate removal of expired sessions and lease files </a>
+</li> <li> <a href="#Enable_WebStatistics"> Enable WebStatistics </a>
+</li> <li> <a href="#Enable_Localisation"> Enable Localisation </a>
+</li></ul> 
+</li> <li> <a href="#Customizing_your_site"> Customizing your site </a> <ul>
+<li> <a href="#Customize_pages_for_managing_personal_information"> Customize pages for managing personal information </a>
+</li> <li> <a href="#Customize_the_user_topic_for_new_users"> Customize the user topic for new users </a>
+</li> <li> <a href="#Customize_the_appearance_of_your_Foswiki_site"> Customize the appearance of your Foswiki site </a> <ul>
+<li> <a href="#Left_44_Top_and_Bottom_Bars_with_PatternSkin"> Left, Top and Bottom Bars with PatternSkin </a>
+</li> <li> <a href="#Copyright_44_License_and_Classification_Statements"> Copyright, License and Classification Statements </a>
+</li></ul> 
+</li> <li> <a href="#WYSIWYG_vs_Raw_Edit"> WYSIWYG vs Raw Edit </a>
+</li></ul> 
+</li> <li> <a href="#Extensions"> Extensions </a> <ul>
+<li> <a href="#Installing_extensions"> Installing extensions </a>
+</li> <li> <a href="#Removing_40uninstalling_41_extensions"> Removing (uninstalling) extensions </a>
+</li> <li> <a href="#Restoring_a_removed_44_or_previous_version_of_an_extension"> Restoring a removed, or previous version of an extension </a>
+</li></ul> 
+</li> <li> <a href="#TWiki_Compatibility"> TWiki Compatibility </a>
+</li></ul> 
+</li> <li> <a href="#Troubleshooting"> Troubleshooting </a>
+</li> <li> <a href="#Foswiki_system_requirements"> Foswiki system requirements </a> <ul>
+<li> <a href="#Server_requirements"> Server requirements </a>
+</li> <li> <a href="#CPAN_modules"> CPAN modules </a>
+</li> <li> <a href="#Client_requirements"> Client requirements </a>
+</li></ul> 
+</li> <li> <a href="#Uploading_the_Foswiki_distribution_to_your_web_server_host"> Uploading the Foswiki distribution to your web server host </a>
+</li> <li> <a href="#Configuring_Foswiki_manually_40without_using_the_61configure_61_page_41"> Configuring Foswiki manually (without using the configure page) </a>
+</li></ul> 
+</div>
+<p />
+<h2><a name="System_Requirements"></a>  System Requirements </h2>
+<p />
+Please see the section "<a href="#SystemRequirements" class="foswikiCurrentTopicLink">Foswiki system requirements</a>" for the server and client requirements to run Foswiki, including the Perl modules required on the server. If you need to install any Perl libraries from CPAN for use by Foswiki, see <a class="interwikiLink" href="http://foswiki.org/Support.HowToInstallCpanModules" title="'Support.HowToInstallCpanModules' on foswiki.org">Foswiki:Support.HowToInstallCpanModules</a> for more information.
+<p />
+<h2><a name="Preparing_to_install"></a>  Preparing to install </h2>
+<p />
+Before attempting to install Foswiki, you are encouraged to review the <a class="interwikiLink" href="http://foswiki.org/System.AdminSkillsAssumptions" title="'System.AdminSkillsAssumptions' on foswiki.org">Foswiki:System.AdminSkillsAssumptions</a>. This guide assumes the person installing Foswiki has a basic knowledge of server administration on the system on which Foswiki is to be installed. While it is possible to install Foswiki with FTP access alone (for example, on a hosted site), it is tricky and may require additional support from your hosting service (for example, in setting file ownership and installing missing perl CPAN libraries).
+<p />
+<strong>If you are upgrading from a previous Foswiki version or from a TWiki installation</strong>, please refer to <a class="interwikiLink" href="http://foswiki.org/System.UpgradeGuide" title="'System.UpgradeGuide' on foswiki.org">Foswiki:System.UpgradeGuide</a>. A static HTML version of this document, <code>UpgradeGuide.html</code>, is included in the root of your Foswiki distribution.
+<p />
+<!-- to be included once the supplemental document is available
+<strong>If you are upgrading from an old TWiki version such as Cairo (TWiki 3)</strong>, refer to <a class="interwikiLink" href="http://foswiki.org/Support.UpgradingFromOlderTWikiReleases" title="'Support.UpgradingFromOlderTWikiReleases' on foswiki.org">Foswiki:Support.UpgradingFromOlderTWikiReleases</a> to ensure a safe upgrade without accidentally overwriting your site customizations and data.
+-->
+<p />
+Verify that your server meets the <a href="#SystemRequirements" class="foswikiCurrentTopicLink">Foswiki system requirements</a>, including having the minimum required Perl version and all required Perl modules installed. If you need to install any Perl libraries from CPAN for use by Foswiki, see <a class="interwikiLink" href="http://foswiki.org/Support.HowToInstallCpanModules" title="'Support.HowToInstallCpanModules' on foswiki.org">Foswiki:Support.HowToInstallCpanModules</a> for more information.
+<p />
+If you need help, feel free to ask a question in the <a class="interwikiLink" href="http://foswiki.org/Support" title="'Support' on foswiki.org">Foswiki:Support</a> web or on <a class="interwikiLink" href="http://foswiki.org/Community.InternetRelayChat" title="'Community.InternetRelayChat' on foswiki.org">Foswiki:Community.InternetRelayChat</a> (irc.freenode.net, channel #foswiki).
+<p />
+<a name="StandardInstallation"></a>
+<h2><a name="Basic_installation:_getting_Foswiki_up_and_running"></a>  Basic installation: getting Foswiki up and running </h2>
+<p />
+To install Foswiki, complete the following steps:
+<p /> <ol>
+<li> <strong>Download</strong> and <strong>unpack</strong> the Foswiki distribution.
+</li> <li> <strong>Set the file and directory permissions</strong> for the installation.
+</li> <li> <strong>Configure</strong> the <strong>locations of the Perl executable</strong> and the <strong>Foswiki modules</strong>.
+</li> <li> <strong>Configure the web server</strong>.
+</li> <li> <strong>Configure Foswiki</strong>.
+</li> <li> <strong>Enable authentication of users</strong> (if desired).
+</li> <li> <strong>Define the administrator users</strong>.
+</li></ol> 
+<p />
+<h3><a name="Download_and_unpack_the_Foswiki_distribution"></a>  Download and unpack the Foswiki distribution </h3>
+<p />
+<strong>Download</strong> the Foswiki distribution from <a href="http://foswiki.org/Download" target="_top">http://foswiki.org/Download</a>
+<p />
+<strong>Unpack the distribution file:</strong> Change to the directory where you want to place the Foswiki directory. Unzip or untar and gunzip the distribution; a new subdirectory called Foswiki-VERSION will be created. You can rename this subdirectory to a shorter name. For the rest of this document, this subdirectory is assumed to be at <code>/path/to/foswiki</code>. <ul>
+<li> <strong>Note:</strong> Foswiki does not support directory paths that contain spaces, so ensure that all of its directory paths do not contain any spaces (particularly on Windows).
+</li></ul> 
+<p />
+If you do not have shell access to your web server host, see the section "<a href="#UploadingFoswikiDistribution" class="foswikiCurrentTopicLink">Uploading the Foswiki distribution to your web server host</a>".
+<p />
+<h3><a name="Set_the_file_and_directory_permissions_for_the_installation"></a>  Set the file and directory permissions for the installation </h3>
+<p />
+<strong>Set up access file and directory rights</strong>, as well as file ownership, as required by your web server configuration so that the web server user (the user used by the web server to run CGI programs) can read and write within the <code>foswiki</code> directory tree.
+<p />
+Note: for more information on the appropriate permissions to ensure security for your Foswiki data, see <a class="interwikiLink" href="http://foswiki.org/Support.SecuringYourSite" title="'Support.SecuringYourSite' on foswiki.org">Foswiki:Support.SecuringYourSite</a>.
+<p />
+The default file and directory access permissions as set by the distribution define a reasonable security level that will work for many types of installations, including shared hosting. Nonetheless, you should verify that the web server user has read access to all files and directories beneath the <code>foswiki</code> directory, and execute access for all directories. Also verify that the <code>data</code> and <code>pub</code> directories and all the subdirectories and files beneath them allow write access for the web server user. <ul>
+<li> <strong>Warning:</strong> Do not just run a <code>chmod -R 770 foswiki</code>. Providing execute access to all files is potentially dangerous. This is a common mistake made by Foswiki installers. See <a class="interwikiLink" href="http://foswiki.org/Support.SettingFileAccessRightsLinuxUnix" title="'Support.SettingFileAccessRightsLinuxUnix' on foswiki.org">Foswiki:Support.SettingFileAccessRightsLinuxUnix</a> for a sample set of Unix commands to set the file and directory permissions.
+</li></ul> 
+<p />
+It is possible to define tighter access permissions than the default ones; how tight they should be depends on your web server environment and local needs. Typically you should limit all access from others if the web server machine has login access for users other than root and the web server administrator. For a dedicated web server that just runs Foswiki and has limited login access, the default access permissions have a good safety level.
+<p />
+<em>If you have root user permissions</em>, then for additional security, you can change the ownership of the <code>foswiki</code> directory tree to the web server user, using the command <code>chown -R user:group /path/to/foswiki</code>. The web server username varies in different installations; here are some sample commands for various Linux distributions: <ul>
+<li> RedHat, Fedora, CentOS, Gentoo, Mandriva : <code>chown -R apache:apache /path/to/foswiki</code>
+</li> <li> debian/Ubuntu/Kubuntu : <code>chown -R www-data:www-data /path/to/foswiki</code>
+</li> <li> Suse : <code>chown -R wwwrun:www /path/to/foswiki</code>
+</li></ul> 
+<p />
+If Foswiki stops working after you applied a change in access permissions and you wish to restore the original permissions, run the Unix commands located at <a class="interwikiLink" href="http://foswiki.org/Support.SettingFileAccessRightsLinuxUnix" title="'Support.SettingFileAccessRightsLinuxUnix' on foswiki.org">Foswiki:Support.SettingFileAccessRightsLinuxUnix</a>.
+<p />
+<h3><a name="Configure_the_locations_of_the_Perl_executable_and_the_Foswiki_modules"></a>  Configure the locations of the Perl executable and the Foswiki modules </h3>
+<p />
+<strong>Make sure the Foswiki scripts can be executed by the web server.</strong> The default location of Perl is <code>/usr/bin/perl</code>. <strong>If it's somewhere else</strong>, change the path to Perl in the first line of each script (you may have to give yourself write permission first) in the <code>bin</code> and <code>tools</code> directories. You can use the <code>tools/rewriteshbang.pl</code> script to do this; for example:
+<pre class="bash">
+cd /path/to/foswiki/bin
+/path/to/perl ../tools/rewriteshbang.pl
+# At the prompt, enter the full path to the perl executable, including
+# the full filename of the executable. You will be prompted twice for
+# this information in order to confirm it.
+cd /path/to/foswiki/tools
+/path/to/perl rewriteshbang.pl
+</pre>
+<p />
+Some web servers require a special extension on perl script files (e.g. <code>.cgi</code> or <code>.pl</code>). This is not normally required with the Apache web server, though some hosted web servers are configured to require it. If the documentation for your web server indicates that a special extension is necessary, rename all the executable scripts in <code>bin</code>; that is, rename <code>bin/view</code> to <code>bin/view.pl</code>, and so on. When configuring Foswiki (see the section "<a href="#ConfigureFoswiki" class="foswikiCurrentTopicLink">Configure Foswiki</a>"), set the <code>ScriptSuffix</code> option to the special extension.
+<p />
+<strong>Create the file LocalLib.cfg</strong> located at <code>bin/LocalLib.cfg</code> <ul>
+<li> In the <code>bin</code> directory, copy the template file <code>LocalLib.cfg.txt</code> to <code>LocalLib.cfg</code>. Make sure the ownership and access rights of the copy are the same as LocalLib.cfg.txt.
+</li> <li> Edit <code>bin/LocalLib.cfg</code> so that <code>$foswikiLibPath</code> is set to the absolute file path of your <code>lib</code> directory. For example: <code>/path/to/foswiki/lib</code>.
+</li> <li> If you need to install additional <a href="http://cpan.perl.org/" target="_top">CPAN</a> modules, but can't update the main Perl installation files on the server, you can set <code>$CPANBASE</code> to point to your personal <a href="http://cpan.perl.org/" target="_top">CPAN</a> install. Don't forget that the web server user has to be able to read those files as well.
+</li></ul> 
+<p />
+<h3><a name="Configure_the_web_server"></a>  Configure the web server </h3>
+<p />
+First choose the best configuration method for your web server. With Apache, there are two ways to configure it: a config file included from httpd.conf or .htaccess files.  <ul>
+<li> <strong>Apache config file:</strong> The recommended method is using a config file. With a config file you can put the entire Foswiki configuration in ONE file (typically named <code>foswiki.conf</code>). Performance is much better with a config file, and one file gives the best overview and ensures that you get a safe installation . However to use a config file you need root or sudo access to stop and start Apache. The Foswiki apache config file is included from the main Apache config file http.conf. Most distributions have a directory from which any file that ends with <code>.conf</code> gets included when you restart Apache (Example RedHat/Fedora/Centos: <code>/etc/httpd/conf.d</code> ). If you use a virtual host setup in Apache you should include the <code>foswiki.conf</code> file from inside the desired virtual host config in your Apache configuration.
+</li> <li> <strong>.htaccess files:</strong> This method should only be used when you cannot use a config file. Performance is slower as Apache must search through <em>all</em> applicable directories for any <code>.htaccess</code> files on each page access. Normally this is the only way to control Apache in a shared host environment where you have no root or sudo privileges.
+</li></ul> 
+<p />
+<strong>If you are using a config file</strong>:  <ul>
+<li> The easiest and best way is to use the <a class="interwikiLink" href="http://foswiki.org/Support.ApacheConfigGenerator" title="'Support.ApacheConfigGenerator' on foswiki.org">Foswiki:Support.ApacheConfigGenerator</a> tool to generate a safe, working config file for your Foswiki installation, based on the options you choose in the tool.
+</li> <li> If you can't use the online configuration generator, a sample config file called <code>foswiki_httpd_conf.txt</code> can be found in the root of the foswiki installation.
+</li> <li> Ensure that web access is denied to all Foswiki subdirectories other than <code>bin</code> and <code>pub</code>. The <a class="interwikiLink" href="http://foswiki.org/Support.ApacheConfigGenerator" title="'Support.ApacheConfigGenerator' on foswiki.org">Foswiki:Support.ApacheConfigGenerator</a> tool will generate the appropriate settings; the <code>foswiki_httpd_conf.txt</code> file also has examples of configuring Apache appropriately.
+</li> <li> Ensure there is either a <code>ScriptAlias</code> directive for the <code>bin</code> subdirectory, or an <code>Alias</code> directive with <code>SetHandler cgi-script</code> and <code>Options ExecCGI</code> directives for the <code>bin</code> subdirectory, so that the <code>bin</code> scripts will be executed by Apache.
+</li> <li> <strong>Note:</strong> you must restart Apache after making changes to your config files for the changes to take effect.
+</li></ul> 
+<p />
+<strong>If you are using a .htaccess file:</strong>  <ul>
+<li> In the root of the foswiki installation and in the <code>bin</code> directory, there are sample <code>.htaccess</code> files for various subdirectories in your installation. Each file has help text explaining how to modify it for your configuration. For more information, see <a class="interwikiLink" href="http://foswiki.org/Support.SupplementalDocuments" title="'Support.SupplementalDocuments' on foswiki.org">Foswiki:Support.SupplementalDocuments</a>.        <table class="foswikiTable" rules="none" border="1">   	<thead>		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">			<th class="foswikiTableCol0 foswikiFirstCol"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=0;table=1;up=0#sorted_table" title="Sort by this column">location and name of sample .htaccess file</a> </th>			<th class="foswikiTableCol1 foswikiLastCol"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=1;table=1;up=0#sorted_table" title="Sort by this column">copy sample file to the following location</a> </th>		</tr>	</thead>   	<tbody>		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki/root-htaccess.txt</code> </td>			<td class="foswikiTableCol1 foswikiLastCol"> <code>foswiki/.htaccess</code> </td>		</tr>		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki/bin/.htaccess.txt</code> </td>			<td class="foswikiTableCol1 foswikiLastCol"> <code>foswiki/bin/.htaccess</code> </td>		</tr>		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki/pub-htaccess.txt</code> </td>			<td class="foswikiTableCol1 foswikiLastCol"> <code>foswiki/pub/.htaccess</code> </td>		</tr>		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">			<td class="foswikiTableCol0 foswikiFirstCol foswikiLast"> <code>foswiki/subdir-htaccess.txt</code> </td>			<td class="foswikiTableCol1 foswikiLastCol foswikiLast"> <code>.htaccess</code> in all other subdirectories below <code>foswiki</code> </td>		</tr>	</tbody>   </table>
+</li> <li> Ensure that web access is denied to all Foswiki subdirectories other than <code>bin</code> and <code>pub</code>. The sample <code>.htaccess</code> files show how to configure Apache appropriately.
+</li> <li> Ensure that the <code>foswiki/bin/.htaccess</code> files contains the line <code>SetHandler cgi-script</code> so that all scripts in the <code>bin</code> directory will be executed by Apache.
+</li></ul> 
+<p />
+<strong>Turn off any kind of PHP, Perl, Python, Server Side Includes, or other software execution mechanisms supported by your web server in the <code>pub</code> directory.</strong> For example, most Linux distributions have a default Apache installation with PHP and server side include (SSI) enabled. This would allow PHP scripts uploaded as attachments to be executed, which is a security risk, so it should be disabled in the Apache configuration with <code>php_admin_flag engine off</code>.
+<p />
+Different script execution mechanisms are disabled in different ways; see your web server configuration and documentation for more details.
+<p />
+<a name="ProtectConfigure"></a>
+<strong>Protect the configure script:</strong> You should never leave the <code>configure</code> script open to the public. Limit access to the <code>bin/configure</code> script to either localhost, an IP address or a specific user using basic Apache authentication. The <a class="interwikiLink" href="http://foswiki.org/Support.ApacheConfigGenerator" title="'Support.ApacheConfigGenerator' on foswiki.org">Foswiki:Support.ApacheConfigGenerator</a> lets you setup who has access to the <code>configure</code> script. Also see the <code>foswiki-httpd-conf.txt</code> or <code>bin/.htaccess.txt</code> file for an example of the setting required to protect the <code>configure</code> script.
+<p />
+To limit access to a particular user, set up a <code>.htpasswd</code> file that contains the user name and password that Apache will use to authenticate the user: <ul>
+<li> Change to the <code>foswiki/data</code> directory.
+</li> <li> Issue the command <code>htpasswd -c .htpasswd &lt;username&gt;</code>, where &lt;username&gt; is the name of the user you will use to access the <code>configure</code> script. <em>Choose the username with care:</em> the username cannot be an existing login name for your Foswiki installation, nor can it be used later on to register in Foswiki. Enter a password when prompted.
+</li></ul> 
+<p />
+The <a class="interwikiLink" href="http://foswiki.org/Support.ApacheConfigGenerator" title="'Support.ApacheConfigGenerator' on foswiki.org">Foswiki:Support.ApacheConfigGenerator</a> tool and the sample config files and .htaccess files show how to configure Apache so that the <code>configure</code> web page will be protected using the user and password held in the <code>data/.htpasswd</code> file. The Apache config file or .htaccess file will have a <code>Require user &lt;username&gt;</code> directive to restrict access to the <code>configure</code> script. Ensure the user specified in the directive matches the &lt;username&gt; you used when creating the .htpasswd file.
+<p />
+<strong>Note:</strong> In addition to any web server security protection that you have set up, when saving any configuration settings for the first time on the <code>configure</code> web page, you will be prompted to set a configuration password. This password must be entered on all subsequent configuration changes, and is also used to log in via the internal admin link (see the section "<a href="#DefineAdminUser" class="foswikiCurrentTopicLink">Define the administrator user(s)</a>"). Even after a <code>configure</code> password has been set, access to the <code>configure</code> page should still be restricted by the web server, in order to avoid revealing internal information to potential attackers.
+<p />
+For more information, refer to <a class="interwikiLink" href="http://foswiki.org/Support.ProtectingYourConfiguration" title="'Support.ProtectingYourConfiguration' on foswiki.org">Foswiki:Support.ProtectingYourConfiguration</a>.
+<p />
+<a name="ConfigureFoswiki"></a>
+<h3><a name="Configure_Foswiki"></a>  Configure Foswiki </h3>
+<p />
+<strong>Run the <a href="http://merlin.lavrsen.dk/foswiki11/bin/configure" target="_top">configure</a> script</strong> from your browser: enter <code>http://yourdomain/url/to/foswiki/bin/configure</code> into your browser address bar. <ul>
+<li> When you access the <code>configure</code> web page for the first time, you can only edit the section <code>General Path Settings</code>. Make any required changes, and save the settings, whether or not you needed to make any changes. You will be prompted to set a password for the <code>configure</code> page: this password must be entered for all subsequent configuration changes, and is also used to log in via the internal admin link (see the section "<a href="#DefineAdminUser" class="foswikiCurrentTopicLink">Define the administrator user(s)</a>").   <blockquote class="foswikiHelp">  <strong>Note:</strong> The <code>configure</code> password is remembered by <code>configure</code>, separate to web server access controls mentioned in "<a href="#ProtectConfigure" class="foswikiCurrentTopicLink">Protect the configure script</a>".</blockquote>
+</li> <li> After saving the <code>General Path Settings</code>, continue configuring Foswiki. Configuration items which may require further attention will be highlighted.
+</li> <li> If the Foswiki installation can be accessed by more than one protocol://domain, ensure the additional alternative URLs are set in <code>{PermittedRedirectHostUrls}</code>.   <blockquote class="foswikiHelp">  <strong>Example:</strong> if <code>{DefaultUrlHost}</code> is set to <code>https://wiki.company.com</code>, an example <code>{PermittedRedirectHostUrls}</code> might contain: <pre class="html">https://company.com, http://111.222.123.234</pre></blockquote>
+</li> <li> Setup the <code>Mail and Proxies</code> section. The <code>{WebMasterEmail}</code> and <code>{SMTP}{MAILHOST}</code> settings must be defined so Foswiki can send registration emails. Many ISPs have introduced authentication when sending emails to fight spam so you may also have to set <code>{SMTP}{Username}</code> and <code>{SMTP}{Password}</code>. If you do not want to enable sending registration emails or want to enable it later you can uncheck <code>{EnableEmail}</code>.     If your server is behind a firewall with a proxy, and you wish to install extensions via <code>configure</code>, you may have to set <code>{PROXY}{HOST}</code> and <code>{PROXY}{PORT}</code>.     <blockquote class="foswikiHelp"> <strong>Note:</strong> A standard Foswiki installation will not allow any new registrations unless there is a working SMTP configuration</blockquote>
+</li></ul> 
+<p />
+If there is a problem with your setup that prevents you from accessing the <code>configure</code> page, you can <a href="#ConfiguringFoswikiManually" class="foswikiCurrentTopicLink">configure Foswiki manually</a>.
+<p />
+<a name="AuthenticationOfUsers"></a>
+<h3><a name="Authentication"></a>  Authentication </h3>
+<p />
+Authentication of users means their activity can be tracked, and access to your site can be controlled. <strong>This is particularly important for sites that are publicly accessible on the web.</strong>  You are strongly encouraged to read <a href="http://foswiki.org/System/UserAuthentication">System.UserAuthentication</a> and <a class="interwikiLink" href="http://foswiki.org/Support.UserAuthenticationSupplement" title="'Support.UserAuthenticationSupplement' on foswiki.org">Foswiki:Support.UserAuthenticationSupplement</a> for further information about managing users and access controls for your Foswiki site.
+<p />
+The most common authentication methods used for public Foswiki installations are Template Login and Apache Login. They have the following relative advantages: <ul>
+<li> Template Login can be set up without any web server configuration, and users can log off without restarting the browser. As the login page is just a Wiki page, you can customize it to suit your needs.
+</li> <li> Apache Login allows you to use any Apache-module based authentication scheme, such as <code>mod_auth_ldap</code> or <code>mod_auth_mysql</code>. However, as your browser is caching your login, you must restart the browser to log out.
+</li></ul> 
+<p />
+Note that the password databases for both of these authentication mechanisms are compatible, so you can switch between them at a later date. 
+<p />
+To make it easier to follow the instructions in this section, you can view this installation guide using your Foswiki site by entering <code>System.InstallationGuide</code> into the "Jump" text box. By doing this instead of using the <code>INSTALL.html</code> file from the distribution, you will be able to use the embedded hyperlinks to jump directly to the referenced pages.
+<p />
+<h4><a name="Template_Login_authentication"></a>  Template Login authentication </h4>
+Template Login asks for a username and password in a web page, and processes them using whatever Password Manager you choose. Users can log in and log out. Client Sessions are used to remember users. Users can choose to have their session remembered so they will automatically be logged in the next time they start their browser.
+<p />
+<h4><a name="Enabling_Template_Login"></a>  Enabling Template Login </h4>
+<blockquote class="foswikiHelp"> By default, your Foswiki installation is probably already using TemplateLogin, HtPasswdUser and <a href="http://foswiki.org/System/TopicUserMappingContrib">TopicUserMappingContrib</a> as the default <code>Login</code>, <code>Password</code> and <code>user mapping</code> options.</blockquote> <ol>
+<li> Using <a href="http://merlin.lavrsen.dk/foswiki11/bin/configure#SecurityAndAuthentication" target="_top">configure</a>: <ol>
+<li> Navigate to the <code>Login</code> tab on the <code>Security and Authentication</code> panel. Select the <code>Foswiki::LoginManager::TemplateLogin</code> login manager.
+</li> <li> Navigate to the <code>Passwords</code> tab. Select the appropriate <code>PasswordManager</code> for your system - the default is <code>Foswiki::Users::HtPasswdUser</code>.      <blockquote class="foswikiHelp"> There is also an EXPERT configure setting <code>{TemplateLogin}{PreventBrowserRememberingPassword}</code> that you can set to prevent Browsers from remembering username and passwords if you are concerned about public terminal usage.</blockquote>
+</li></ol> 
+</li> <li> Verify that registration works by registering yourself with the <a href="http://foswiki.org/System/UserRegistration">System.UserRegistration</a> topic. If there are problems, try these troubleshooting tips:  <ol>
+<li> If you are reading this from the INSTALL.html file, you can enter <a href="http://foswiki.org/System/UserRegistration">System.UserRegistration</a> into the 'Jump' box in the top right of any Foswiki page.
+</li> <li> <strong>Note:</strong> A standard Foswiki installation will not allow any new registrations unless there is a working SMTP configuration
+</li> <li> If your PasswordManager is <code>HtPasswdUser</code> (the default), check the <code>.htpasswd</code> file is being updated correctly with a new entry. If not, check <code>{Htpasswd}{FileName}</code> is correct (under <code>Security and Authentication</code> on the <code>Password</code> tab in <code>configure</code>), and that the webserver user has write permission.
+</li></ol> 
+</li> <li> Create a new topic (in <a href="http://foswiki.org/Sandbox/WebHome">Sandbox</a> web for example) to confirm that authentication works.
+</li> <li> <strong>Add users to the Main.AdminGroup</strong>. Edit the Main.AdminGroup topic in the Main web to include users that should have administrator status. Read <a href="#DefineAdminUser" class="foswikiCurrentTopicLink">defining adminstrator user(s)</a> for more information.   <blockquote class="foswikiHelp">  <strong>This is a very important step</strong>, as users in this group can access <em>all</em> topics, independent of Foswiki access controls.</blockquote>
+</li></ol> 
+<p />
+AccessControl has more information on setting up access controls.
+<p />
+<blockquote class="foswikiHelp">
+ Foswiki AccessControls do not protect topic attachments unless the web server has been configured to do so using the <code>viewfile</code> script. Visit <a class="interwikiLink" href="http://foswiki.org/Support.ApacheConfigGenerator" title="'Support.ApacheConfigGenerator' on foswiki.org">Foswiki:Support.ApacheConfigGenerator</a> for examples using Apache.
+<p />
+ As Template Login uses a wiki page for its login prompt, there is a great deal of flexibility in customizing the login page for your purposes.
+<p />
+ The default new user template page is in <a href="http://foswiki.org/System/NewUserTemplate">System.NewUserTemplate</a>. The same macros get expanded as in the <a href="http://foswiki.org/System/TemplateTopics">template topics</a>. You can create a custom new user topic by creating the NewUserTemplate topic in Main web, which will then override the default in System web. See System.UserForm for copy instructions.</blockquote>
+<p />
+<a name="UserRegistrationPage"></a>
+<h4><a name="Custom_registration_page"></a>  Custom registration page </h4>
+You can customize the default <a href="http://foswiki.org/System/UserRegistration">System.UserRegistration</a> topic by first copying <a href="http://foswiki.org/System/DefaultUserRegistration">System.DefaultUserRegistration</a> to UserRegistration in Main web. This will ensure that your changes will remain intact next time you upgrade.
+<p />
+A couple of common fields are hidden from normal view to make the registration page as lean as possible. You can unhide those fields on the page by removing <code>EXCLUDED_</code> from the <code>INCLUDE</code> tags) or add new ones.
+<p />
+New fields may also be added. The <code>name=""</code> parameter of the <code>&lt;input&gt;</code> tags must start with: <code>"Twk0..."</code> (if this is an optional entry), or <code>"Twk1..."</code> (if this is a required entry). This ensures that the fields are carried over into the user home page correctly.
+<p />
+<p />
+<h4><a name="Apache_Login_authentication"></a>  Apache Login authentication </h4>
+With Apache Login enabled, when Foswiki needs to authenticate the user, the standard HTTP authentication mechanism is used: the browser itself will prompt for a user name and password.
+<p />
+The advantage of this scheme is that if you have an existing website authentication scheme using Apache modules such as <code>mod_auth_ldap</code> or <code>mod_auth_mysql</code> you can just plug in to them directly.
+<p />
+The disadvantage is that because the user identity is cached in the browser, you can log in, but you can't log out again unless you restart the browser.
+<p />
+Foswiki maps the <code>REMOTE_USER</code> that was used to log in to the webserver to a WikiName using the table in Main.WikiUsers. This table is updated whenever a user registers, so users can choose not to register (in which case their webserver login name is used for their signature) or register (in which case that login name is mapped to their WikiName).
+<p />
+The same private <code>.htpasswd</code> file used in Foswiki Template Login can be used to authenticate Apache users, using the Apache Basic Authentication support.
+<p />
+<blockquote class="foswikiHelp"> Do <strong>not</strong> use the Apache <code>htpasswd</code> program with <code>.htpasswd</code> files generated by Foswiki! <code>htpasswd</code> wipes out email addresses that Foswiki plants in the info fields of this file.
+<p />
+ Apache Login is required for Apache-based login methods such as mod_ldap
+<p />
+ You can use any Apache authentication module that sets the <code>REMOTE_USER</code> environment variable.
+</blockquote>
+<p />
+To setup Apache Login, perform the following steps:
+<p /> <ol>
+<li> <strong>Configure Apache Login.</strong> Under the <code>Security and Authentication</code> pane on the <code>Login</code> tab in <code>configure</code>: <ol>
+<li> Select <code>Foswiki::LoginManager::ApacheLogin</code> for <code>{LoginManager}</code>.
+</li> <li> Select <code>Foswiki::Users::HtPasswdUser</code> for <code>{PasswordManager}</code>.
+</li> <li> Select <code>Foswiki::Users::TopicUserMapping</code> for <code>{UserMappingManager}</code>.
+</li> <li> Save your settings.
+</li> <li> Configure your Apache settings for HTTP authentication. Use the <a class="interwikiLink" href="http://foswiki.org/Support.ApacheConfigGenerator" title="'Support.ApacheConfigGenerator' on foswiki.org">Foswiki:Support.ApacheConfigGenerator</a> tool or the <code>foswiki/bin/.htaccess</code> file to set the following Apache directives on the <code>bin</code> scripts:      <pre>
+ &#60;FilesMatch &#34;(attach&#124;edit&#124;manage&#124;rename&#124;save&#124;upload&#124;mail&#124;logon&#124;rest&#124;.&#42;auth).&#42;&#34;&#62;
+ require valid-user
+ &#60;/FilesMatch&#62;</pre>      You can also refer to the sample <code>foswiki_httpd_conf.txt</code> and <code>bin/.htaccess.txt</code> files to see how the appropriate Apache directives are specified.
+</li></ol> 
+</li> <li> Verify that registration works by registering yourself with the <a href="http://foswiki.org/System/UserRegistration">System.UserRegistration</a> topic. If there are problems, try these troubleshooting tips:  <ol>
+<li> If you are reading this from the INSTALL.html file, you can enter <a href="http://foswiki.org/System/UserRegistration">System.UserRegistration</a> into the 'Jump' box in the top right of any Foswiki page.
+</li> <li> <strong>Note:</strong> A standard Foswiki installation will not allow any new registrations unless there is a working SMTP configuration
+</li> <li> If your PasswordManager is <code>HtPasswdUser</code> (the default), check the <code>.htpasswd</code> file is being updated correctly with a new entry. If not, check <code>{Htpasswd}{FileName}</code> is correct (under <code>Security and Authentication</code> on the <code>Password</code> tab in <code>configure</code>), and that the webserver user has write permission.
+</li></ol> 
+</li> <li> Create a new topic (in <a href="http://foswiki.org/Sandbox/WebHome">Sandbox</a> web for example) to confirm that authentication works.
+</li> <li> <strong>Add users to the Main.AdminGroup</strong>. Edit the Main.AdminGroup topic in the Main web to include users that should have administrator status. Read <a href="#DefineAdminUser" class="foswikiCurrentTopicLink">defining adminstrator user(s)</a> for more information.   <blockquote class="foswikiHelp">  <strong>This is a very important step</strong>, as users in this group can access <em>all</em> topics, independent of Foswiki access controls.</blockquote>
+</li></ol> 
+<p />
+<a name="SearchAlgorithm"></a>
+<h3><a name="Choose_an_appropriate_search_algorithm_for_your_Operating_System"></a>  Choose an appropriate search algorithm for your Operating System </h3>
+<p />
+On the <code>Store</code> pane in <code>configure</code> you will find the setting <code>{RCS}{SearchAlgorithm}</code>.
+<p />
+By default it is set to <code>Foswiki::Store::SearchAlgorithms::Forking</code> which is what you should keep if you install Foswiki in Linux or any other Unix type operating system.
+<p />
+If you install Foswiki on a Windows server, using an external grep program can create problems because of limitations in the length of command lines. You may be able to run with Forking in Windows if your directory path to Foswiki is kept short (short directory names and few levels), however the recommended (safe) setting for Windows is <code>Foswiki::Store::SearchAlgorithms::PurePerl</code>. 
+<p />
+<a name="DefineAdminUser"></a>
+<h3><a name="Define_the_administrator_user_40s_41"></a>  Define the administrator user(s) </h3>
+<p />
+Administrators have read and write access to any topic, regardless of any access controls that have been applied to the topic or its web. After installing Foswiki, you should register a user that you will use to administer Foswiki. To make this user an administrator, add the WikiName for the user to the <code>AdminGroup</code>, defined in the <code><a href="http://foswiki.org/Main/AdminGroup">Main.AdminGroup</a></code> topic in your Foswiki installation.
+<p />
+To make it easier to follow the instructions in this section, you can view this installation guide using your Foswiki site by entering <code>System.InstallationGuide</code> into the "Jump" text box. By doing this instead of using the <code>INSTALL.html</code> file from the distribution, you will be able to use the embedded hyperlinks to jump directly to the referenced pages.
+<p />
+To add an initial administrator to the <code>AdminGroup</code>, perform the following steps:
+<p /> <ul>
+<li> If you are not already logged in with your WikiName, then login.
+</li> <li> Go to the <code><a href="http://foswiki.org/Main/AdminGroup">Main.AdminGroup</a></code> topic and select the "internal admin login" link. Login using the password you set on the <code>configure</code> page.
+</li> <li> After logging as the internal admin, edit the <code>Main.AdminGroup</code> topic. Follow the instructions on the page carefully and add your WikiName to the group.
+</li> <li> Test that you have been added successfully: On the <code><a href="http://foswiki.org/Main/AdminGroup">Main.AdminGroup</a></code> page, select the "Logout link" and logout from being the internal admin. Select the "Edit" link for the <code><a href="http://foswiki.org/Main/AdminGroup">Main.AdminGroup</a></code> page. If you successfully added yourself as an admin user, you should see the edit page.
+</li></ul> 
+<p />
+Once the <code>AdminGroup</code> is no longer empty, then any member of the group can add subsequent members &mdash; you do not have to use the internal admin login.
+<p />
+To more easily debug access control issues, you may want to have a regular Foswiki user account for daily use, and a special one that belongs to the <code>AdminGroup</code> that you use only for administering your Foswiki site. See <a href="http://foswiki.org/System/AccessControl">System.AccessControls</a> for more information on access controls and user groups.
+<p />
+<h3><a name="Congratulations_33"></a>  Congratulations! </h3>
+<p />
+You now have a basic installation running. At this point you can just point your Web browser at <code>http://yourdomain.com/url/to/foswiki/bin/view</code> and start using your Foswiki site.
+<p />
+In order to keep your user, group, and site configuration information separate from the actual content of your site, it is recommended that you create a new web in which your site's pages will reside. See <a href="http://foswiki.org/System/ManagingWebs">System.ManagingWebs</a> for more information on Wiki webs and how to create one.
+<p />
+<h2><a name="Beyond_the_basic_installation"></a>  Beyond the basic installation </h2>
+<p />
+Once you have Foswiki installed and running, you can perform one or more of the following steps to tailor your installation to your needs. Many of the references in this section refer to topics within your Foswiki installation. For example, <code><a href="http://foswiki.org/System/Skins">System.Skins</a></code> refers to the <code>Skins</code> topic in your System web. To go directly to a topic, enter the full topic name, such as <code>System.Skins</code>, into the "Jump" text box at the top right of any Foswiki page.
+<p />
+To make it easier to follow the instructions in this section, you can view this installation guide using your Foswiki site by entering <code>System.InstallationGuide</code> into the "Jump" text box. By doing this instead of using the <code>INSTALL.html</code> file from the distribution, you will be able to use the embedded hyperlinks to jump directly to the referenced pages.
+<p />
+All of the Foswiki documentation can also be found online in the <a href="http://foswiki.org/System/WebHome" class="foswikiCurrentWebHomeLink">Foswiki documentation section</a> (the "System" web) of the Foswiki web site.
+<p />
+Note the <code>configure</code> page mentioned in this section is accessed by visiting <code>http://yourdomain/foswiki/bin/configure</code> your web browser.
+<p />
+<h3><a name="Site_configuration_and_maintenance"></a>  Site configuration and maintenance </h3>
+<p />
+<a name="SetPreferences"></a> 
+<h4><a name="Set_Foswiki_Preferences"></a>  Set Foswiki Preferences </h4>
+<p />
+Preferences for customizing many aspects of Foswiki are set by editing <code>Main.SitePreferences</code>. If a given preference is not set in <code>Main.SitePreferences</code>, then a default value is picked up from <code><a href="http://foswiki.org/System/DefaultPreferences">System.DefaultPreferences</a></code>, if present, or, for extensions, from the extension topics.
+<p />
+To simplify your upgrades, do not modify <code>System.DefaultPreferences</code>. Instead, copy any settings you want to change from <code>System.DefaultPreferences</code> to <code>Main.SitePreferences</code>.
+<p />
+To see the available preferences that can be set, look through <code><a href="http://foswiki.org/System/DefaultPreferences">System.DefaultPreferences</a></code>.
+<p />
+If, for some reason, you wish to pick up default preferences from a different topic, you can set the location in the <code>Miscellaneous settings</code> pane of the <code>configure</code> page, in the <code>{SitePrefsTopicName}</code> setting (visible when Expert mode is enabled). It is recommended that you leave this setting to its default value, <code>DefaultPreferences</code>.
+<p />
+<h4><a name="Select_the_desired_security_level"></a>  Select the desired security level </h4>
+<p />
+Foswiki has a many security features that can be enabled/disabled and adjusted to suit your needs.
+<p />
+In many cases enabling a security feature prevents other features. It is a balance that the administrator has to choose depending on the purpose of the Foswiki installation (confidential vs public knowledge), the type of installation (intranet vs internet), and your type of business.
+<p />
+A new administrator is encouraged to read <a class="interwikiLink" href="http://foswiki.org/Support.SecurityFeatures" title="'Support.SecurityFeatures' on foswiki.org">Foswiki:Support.SecurityFeatures</a> which gives a walkthrough of the different security aspects and how to set the appropriate configuration settings. Note that that some security settings are only visible in configure in "expert mode" which you enter by clicking the "Yes, I've read all the documentation" button at the top of the configure screen.
+<p />
+<h4><a name="Enable_Email_Notification"></a>  Enable Email Notification </h4>
+<p />
+Each web has an automatic email notification service that sends you an email with links to all of the topics modified since the last alert. To enable this service: <ol>
+<li> Confirm the Mail and Proxies settings on the <code>configure</code> page.
+</li> <li> Setup a cron job (or equivalent) to call the <code>tools/mailnotify</code> script, as described in the <a href="http://foswiki.org/System/MailerContrib">System.MailerContrib</a> topic.
+</li></ol> 
+<p />
+<h4><a name="Automate_removal_of_expired_sessions_and_lease_files"></a>  Automate removal of expired sessions and lease files </h4>
+<p />
+By default Foswiki cleans out expired session and lease files each time any topic is viewed, but this has a performance cost. Instead you may wish to schedule a cron job (or equivalent) to run the <code>tools/tick_foswiki.pl</code> script, and set a negative value on the <code>configure</code> page for <code>{Sessions}{ExpireAfter}</code>. For more details, read <a href="http://foswiki.org/System/CommandAndCGIScripts#tick_foswiki_pl">System.CommandAndCGIScripts#tick_foswiki_pl</a>.
+<p />
+<h4><a name="Enable_WebStatistics"></a>  Enable WebStatistics </h4>
+<p />
+You can manually or automatically generate a listing of the most popular pages for each web, based on number of visits. For information on setting up this feature, see the <a href="http://foswiki.org/System/SiteTools">System.SiteTools</a> topic.
+<p />
+<h4><a name="Enable_Localisation"></a>  Enable Localisation </h4>
+<p />
+Foswiki supports displaying national (non-ASCII) characters, and using different languages for its basic interface elements. To configure localisation, modify the <code>Localisation</code> section of the <code>configure</code> page. For more information, see <a class="interwikiLink" href="http://foswiki.org/Support.InternationalizationSupplement" title="'Support.InternationalizationSupplement' on foswiki.org">Foswiki:Support.InternationalizationSupplement</a>.
+<p />
+<h3><a name="Customizing_your_site"></a>  Customizing your site </h3>
+<p />
+<h4><a name="Customize_pages_for_managing_personal_information"></a>  Customize pages for managing personal information </h4>
+<p />
+If you are not using Foswiki to manage your users' passwords or email addresses, or would just like to enhance the default pages, then modify the following topics accordingly with information appropriate for your site:
+<p /> <ul>
+<li> <a href="http://foswiki.org/System/ChangePassword">System.ChangePassword</a>
+</li> <li> <a href="http://foswiki.org/System/ResetPassword">System.ResetPassword</a>
+</li> <li> <a href="http://foswiki.org/System/ChangeEmailAddress">System.ChangeEmailAddress</a>
+</li></ul> 
+<p />
+<a name="TailorUsersTopic"></a>
+<h4><a name="Customize_the_user_topic_for_new_users"></a>  Customize the user topic for new users </h4>
+<p />
+When a new user registers on your Foswiki site, a topic with a name corresponding to the user's WikiName is created in the Main web: this topic is the user's user topic. The user topic is based on the <span class="foswikiNewLink">Main.NewUserTemplate<a href="http://merlin.lavrsen.dk/foswiki11/bin/edit/Main/NewUserTemplate?topicparent=System.InstallationGuide" rel="nofollow" title="Create this topic">?</a></span> topic; if it is not present, then <a href="http://foswiki.org/System/NewUserTemplate">System.NewUserTemplate</a> (and its associated <a href="http://foswiki.org/System/UserForm">System.UserForm</a>) is used as a default. If you want to customize the user topic for your users, copy <a href="http://foswiki.org/System/NewUserTemplate">System.NewUserTemplate</a> to <span class="foswikiNewLink">Main.NewUserTemplate<a href="http://merlin.lavrsen.dk/foswiki11/bin/edit/Main/NewUserTemplate?topicparent=System.InstallationGuide" rel="nofollow" title="Create this topic">?</a></span>, and <a href="http://foswiki.org/System/UserForm">System.UserForm</a> to <span class="foswikiNewLink">Main.UserForm<a href="http://merlin.lavrsen.dk/foswiki11/bin/edit/Main/UserForm?topicparent=System.InstallationGuide" rel="nofollow" title="Create this topic">?</a></span>, and make your changes to <span class="foswikiNewLink">Main.NewUserTemplate<a href="http://merlin.lavrsen.dk/foswiki11/bin/edit/Main/NewUserTemplate?topicparent=System.InstallationGuide" rel="nofollow" title="Create this topic">?</a></span> and <span class="foswikiNewLink">Main.UserForm<a href="http://merlin.lavrsen.dk/foswiki11/bin/edit/Main/UserForm?topicparent=System.InstallationGuide" rel="nofollow" title="Create this topic">?</a></span>. (See <a class="interwikiLink" href="http://foswiki.org/System.ManagingTopics#CopyTopic" title="'System.ManagingTopics#CopyTopic' on foswiki.org">Foswiki:System.ManagingTopics#CopyTopic</a> for instructions on copying a topic.)
+<p />
+You can edit these topics to suit your needs, such as the following: <ul>
+<li> Customize the user topic for your site.
+</li> <li> Add an <code>ALLOWTOPICCHANGE</code> preference setting to <span class="foswikiNewLink">Main.NewUserTemplate<a href="http://merlin.lavrsen.dk/foswiki11/bin/edit/Main/NewUserTemplate?topicparent=System.InstallationGuide" rel="nofollow" title="Create this topic">?</a></span> so only the user can edit their own user topic. In particular, on a public Foswiki site, restricting edit access will avoid vandalism and spam.
+</li> <li> Add and remove fields defined in the <span class="foswikiNewLink">Main.UserForm<a href="http://merlin.lavrsen.dk/foswiki11/bin/edit/Main/UserForm?topicparent=System.InstallationGuide" rel="nofollow" title="Create this topic">?</a></span>.
+</li></ul> 
+<p />
+If you added or removed fields from the user form you may also need to tailor <span class="foswikiNewLink">Main.UserRegistration<a href="http://merlin.lavrsen.dk/foswiki11/bin/edit/Main/UserRegistration?topicparent=System.InstallationGuide" rel="nofollow" title="Create this topic">?</a></span> to match (copy over the contents from <a href="http://foswiki.org/System/UserRegistration">System.UserRegistration</a> to <span class="foswikiNewLink">Main.UserRegistration<a href="http://merlin.lavrsen.dk/foswiki11/bin/edit/Main/UserRegistration?topicparent=System.InstallationGuide" rel="nofollow" title="Create this topic">?</a></span> when creating it).
+<p />
+<a name="CustomizeAppearance"></a>
+<h4><a name="Customize_the_appearance_of_your_Foswiki_site"></a>  Customize the appearance of your Foswiki site </h4>
+<p />
+The real power of Foswiki lies in its flexibility to be customized to meet your needs. To change the look of the default skin, PatternSkin, please refer to <a href="http://foswiki.org/System/PatternSkin">System.PatternSkin</a> and <a href="http://foswiki.org/System/PatternSkinCustomization">System.PatternSkinCustomization</a>.
+<p />
+At the <a href="http://foswiki.org/" target="_top">Foswiki website</a> you can find more resources. A good place to start exploring is <a class="interwikiLink" href="http://foswiki.org/Support.BestPracticeTips" title="'Support.BestPracticeTips' on foswiki.org">Foswiki:Support.BestPracticeTips</a> and <a class="interwikiLink" href="http://foswiki.org/Support.FAQ" title="'Support.FAQ' on foswiki.org">Foswiki:Support.FAQ</a> which offer tips and tricks for customizing your Foswiki site. Many of these are best done before any content has been added to your site, so immediately after installation is a good time to consider the possibilities.
+<p />
+<h5><a name="Left_44_Top_and_Bottom_Bars_with_PatternSkin"></a>  Left, Top and Bottom Bars with PatternSkin </h5>
+<p />
+The top bar and bottom bar are common across all webs.
+<p />
+To customize the top bar, copy <a href="http://foswiki.org/System/WebTopBarExample">System.WebTopBarExample</a> to System.WebTopBar, and make your desired changes to System.WebTopBar.
+<p />
+To customize the bottom bar, copy <a href="http://foswiki.org/System/WebBottomBarExample">System.WebBottomBarExample</a> to System.WebBottomBar, and make your desired changes to System.WebBottomBar.
+<p />
+The side bar can be customized on a per web basis. To customize the side bar, copy the WebLeftBarExample topic in the given web to WebLeftBar, and make your desired changes to WebLeftBar. If you would like to move the side bar to the right of the page, see <a href="http://foswiki.org/System/PatternSkin">System.PatternSkin</a> for more details.
+<p />
+<h5><a name="Copyright_44_License_and_Classification_Statements"></a>  Copyright, License and Classification Statements </h5>
+<p />
+At the bottom of each topic, there is a copyright statement that is set in the <code>WEBCOPYRIGHT</code> preference. Its default is the following: <code>Copyright © by the contributing authors. All material on this collaboration platform is the property of the contributing authors.</code>
+<p />
+If your Foswiki site is used in an environment without public access you should replace this with your normal copyright notice. You should also consider adding a security classification (e.g., For Internal Use Only) so people do not have to add this manually to every new topic.
+<p />
+If your Foswiki site is publicly accessible, you need to decide which copyright and license you wish to apply to all contributions. For open source applications, licenses such as <a href="http://www.gnu.org/licenses/fdl.html">the GNU Free Documentation License</a>, <a href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>, and one of the various <a href="http://creativecommons.org/licenses/">Creative Commons licenses</a> are possible licenses to consider. Remember that once people have started contributing, you cannot retroactively change the license (unless it has a provision for this).
+<p />
+To change the copyright statement, perform the following steps:
+<p /> <ul>
+<li> Copy the <code>WEBCOPYRIGHT</code> preference setting from <a href="http://foswiki.org/System/DefaultPreferences">System.DefaultPreferences</a> to <code>Main.SitePreferences</code>. Change the value to your desired text. This value will be your new default across all webs.
+</li> <li> You can create a unique message for a specific web by setting the <code>WEBCOPYRIGHT</code> preference in the <code>WebPreferences</code> topic for the given web. For example, you could add a confidential classification to a web that has restricted access.
+</li> <li> The <code>WEBCOPYRIGHT</code> preference setting in <a href="http://foswiki.org/System/WebPreferences">System.WebPreferences</a> covers the documentation that comes with Foswiki, and should not be changed.
+</li></ul> 
+<p />
+<h4><a name="WYSIWYG_vs_Raw_Edit"></a>  WYSIWYG vs Raw Edit </h4>
+<p />
+In Foswiki, the WYSIWYG editor is used by default in edit mode. An <em>Edit Raw</em> link is available for those who prefer to edit the raw topic text.
+<p />
+If you prefer to use the raw text editor by default and have a separate WYSIWYG button, as in TWiki 4.1, then you can modify the templates that define the edit screen as described in <a class="interwikiLink" href="http://foswiki.org/Support.FaqHowToMakeRawEditDefault" title="'Support.FaqHowToMakeRawEditDefault' on foswiki.org">Foswiki:Support.FaqHowToMakeRawEditDefault</a>.
+<p />
+<h3><a name="Extensions"></a>  Extensions </h3>
+<p />
+<a class="interwikiLink" href="http://foswiki.org/Extensions" title="'Extensions' on foswiki.org">Foswiki:Extensions</a> is an extensive library of <a href="http://foswiki.org/System/Plugins">plugins</a> for Foswiki that enhance functionality in a huge number of ways. A few plugins are pre-installed in the Foswiki distribution.  There are several types of Extensions available: <ul>
+<li> <a href="http://foswiki.org/System/Plugins">Plugins</a> extend Foswiki functionality without altering the core code.
+</li> <li> <a href="http://foswiki.org/System/Skins">Skins</a> Skins overlay regular templates to give different looks and feels to Foswiki screens.
+</li> <li> <a href="http://foswiki.org/System/Contribs">Contribs</a> and <a href="http://foswiki.org/System/ContributedAddOns">AddOns</a> are any other Extension that provides added functionality beyond Plugins and Skins
+</li></ul> 
+<p />
+<h4><a name="Installing_extensions"></a>  Installing extensions </h4>
+In the <em>Extensions</em> section of the <code>configure</code> page, you can select the <em>Find More Extensions</em> button to download and install additional plugins from the foswiki.org website. If you are behind a firewall or your server has no access to the Internet, you can also install plugins manually. Installation instructions for each plugin are located in its corresponding topic on <a href="http://foswiki.org/" target="_top">http://foswiki.org/</a>. Additional documentation on Foswiki plugins can be found at <a class="interwikiLink" href="http://foswiki.org/Support.PluginsSupplement" title="'Support.PluginsSupplement' on foswiki.org">Foswiki:Support.PluginsSupplement</a>.
+<p />
+When installing an extension from the <code>configure</code> interface: <ul>
+<li> Even if available, local Extension installers and archives are not used
+</li> <li> The extension is downloaded from the configured archive <ul>
+<li> The latest version of the Extension is always downloaded.  There is no automatic means of downloading older versions.
+</li></ul> 
+</li> <li> If the extension is already installed, a backup is taken to the <code>working/configure/backup</code> directory
+</li> <li> Dependencies on other Extensions are automatically resolved and installed <ul>
+<li> Dependencies are downloaded from the <em>same archive</em> where the Extension was found.  No additional searching is performed.
+</li></ul> 
+</li> <li> The Extension is installed. <ul>
+<li> By default, unless a collsion occurrs with an existing file, the Extension's topics will not be <em>checked in</em> to the revision control system.
+</li> <li> If previous topics or attachments are found, then the topic will be <em>checked in</em> under the Administrators user id.
+</li> <li> If the topics or attachments are flagged as <code>!noci</code>, disabling checkin, they will still be checked in if existing revision control files are found, suggesting that local modifications have occurred.
+</li></ul> 
+</li> <li> CPAN dependencies and other external packages are <strong>not</strong> resolved and should be resolved manually
+</li> <li> After installation, the Extension <code>_installer</code> module is saved in <code>working/configure/pkgdata</code>
+</li></ul> 
+<p />
+When installing extensions from the command line: <ul>
+<li> The <code>_installer</code> package must be run from the root directory of the Foswiki installation. 
+</li> <li> The Extension <code>_installer</code> module must be downloaded from the Extension repository. The extension archive will be downloaded if required.
+</li> <li> When the <code>_installer</code> is run, it will install the Extension and dependencies similar to the <code>configure</code> interface except: <ul>
+<li> You will be given the option to use local archives if available in the root of the Foswiki installation
+</li> <li> You will be given the option to resolve CPAN dependencies after the Extensions and dependencies are installed.
+</li> <li> Any other dependencies still need to be manually resolved.
+</li></ul> 
+</li></ul> 
+<p />
+Plugins are activated in the <em>Plugins</em> section of the <code>configure</code> page. In addition, some plugins are also configured in this section.
+<p />
+<h4><a name="Removing_40uninstalling_41_extensions"></a>  Removing (uninstalling) extensions </h4>
+<p />
+<blockquote class="foswikiHelp">  <strong>Caution:</strong>  When removing an extension, no dependency checking is performed. <ul>
+<li> Dependencies are not removed
+</li> <li> Other Extensions dependent on the removed extension may become non-operational.
+</li></ul> 
+</blockquote>
+The web and command line interfaces can also be used to uninstall extensions.  When an extension is remove, the following occurs: <ul>
+<li> The <code>_installer</code> package is used to recover the manifest.  If it cannot be found locally, it will be downloaded from the configured extension repository
+</li> <li> A backup of the previously installed files per the manifest will be taken to the <code>configure/working/backup</code> directory <ul>
+<li> Note: If download of the <code>_uninstaller</code> was required, the backup will be made per the <em>current</em> installer's manifest.  It is preferable to always save the <code>_installer</code> modules.
+</li></ul> 
+</li> <li> The Extension files along with any <code>,v</code> revision control files will be removed, including the <code>_installer</code>.  <ul>
+<li> Any additional files saved locally are not removed.
+</li></ul> 
+</li> <li> Plugin modules <strong><em>are not disabled in the configuration</em></strong> - they must be disabled manually.
+</li></ul> 
+<p />
+<h4><a name="Restoring_a_removed_44_or_previous_version_of_an_extension"></a>  Restoring a removed, or previous version of an extension </h4>
+<p />
+The backup can be extracted from the root directory of the Foswiki installation.  The archive is taken "relative" to the root of the installation, so an <code>unzip</code> or <code>tar -xzf</code> of the backup file should be all that is required:
+<!----><pre class="bash">cd /root/of/foswiki
+tar -zxvf &#42; working/configure/backup/&#91;Extension}-backup-&#91;yyyymmdd]-&#91;hhmmss].tgz
+# or
+unzip working/configure/backup/&#91;Extension}-backup-&#91;yyyymmdd]-&#91;hhmmss].zip
+</pre>
+<h3><a name="TWiki_Compatibility"></a>  TWiki Compatibility </h3>
+<p />
+Foswiki is 100% backwards compatible with TWiki<sup>&reg;</sup> markup up to and including TWiki 4.2.4. Existing TWiki webs, topics and attachments can be used with Foswiki without requiring any changes.
+<p />
+To support a seamless upgrade from TWiki, Foswiki ships with a plugin called <code>TWikiCompatibilityPlugin</code>. This plugin enables most TWiki extensions to work with Foswiki, without modifications. It also maps requests for legacy TWiki web topics to their Foswiki equivalents, as defined in <a class="interwikiLink" href="http://foswiki.org/Development.TopicNameMappingTable" title="'Development.TopicNameMappingTable' on foswiki.org">Foswiki:Development.TopicNameMappingTable</a>. The <code>TWIKIWEB</code> and <code>MAINWEB</code> TWiki variables are also mapped to the new Foswiki macros <code>SYSTEMWEB</code> and <code>USERSWEB</code>.
+<p />
+If you are not upgrading an existing TWiki installation and do not plan to install plugins from the TWiki web site, it is recommended that you disable the TWikiCompatibilityPlugin in the <em>Plugins</em> Section on the <code>configure</code> page.
+<p />
+If a plugin exists both in a TWiki version and a Foswiki version, it is strongly recommended that you use the Foswiki version, as this is coded to work optimally with Foswiki. As part of the Foswiki project, the Foswiki community is evaluating all of the extensions that are available for TWiki, and porting them over to the Foswiki name space. Many of them are being enhanced through the removal of bugs and security vulnerabilities, resulting in better, more functional extensions for Foswiki.
+<p />
+<h2><a name="Troubleshooting"></a>  Troubleshooting </h2>
+<p /> <ul>
+<li> Re-run the <code>configure</code> script and make sure you have resolved all errors and are satisfied that you understand any warnings.
+</li> <li> Follow the steps detailed in <a href="http://foswiki.org/System/FAQTroubleshootingExtensions">FAQTroubleshootingExtensions</a>
+</li> <li> Failing that, consult the topics at <a class="interwikiLink" href="http://foswiki.org/Support.SupplementalDocuments" title="'Support.SupplementalDocuments' on foswiki.org">Foswiki:Support.SupplementalDocuments</a> and <a class="interwikiLink" href="http://foswiki.org/Support.AskedQuestions" title="'Support.AskedQuestions' on foswiki.org">Foswiki:Support.AskedQuestions</a>.
+</li> <li> If you need help, ask a question in the <a class="interwikiLink" href="http://foswiki.org/Support" title="'Support' on foswiki.org">Foswiki:Support</a> web or on <a class="interwikiLink" href="http://foswiki.org/Community.InternetRelayChat" title="'Community.InternetRelayChat' on foswiki.org">Foswiki:Community.InternetRelayChat</a> (irc.freenode.net, channel #foswiki).
+</li></ul> 
+<p />
+<a name="SystemRequirements"></a>
+<h2><a name="Foswiki_system_requirements"></a>  Foswiki system requirements </h2>
+<p />
+Foswiki is capable of running on a variety of operating systems and supporting a wide range of browsers, due to its minimal client and server requirements.
+<p />
+<h3><a name="Server_requirements"></a>  Server requirements </h3>
+<p />
+Foswiki is written in Perl 5, which is supported on Microsoft Windows as well as Unix and Unix-like systems (including Linux and OSX), on which it uses a number of shell commands and <a href="http://www.gnu.org/software/rcs/rcs.html" rel="nofollow" target="_top">RCS (Revision Control System)</a>, a GNU Free Software package. It should be able to run on any server platform that meets the following requirements.
+<p />
+<table class="foswikiTable" rules="none" border="1">
+	<thead>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<th class="foswikiTableCol0 foswikiFirstCol"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=0;table=2;up=0#sorted_table" title="Sort by this column">Resource</a> </th>
+			<th class="foswikiTableCol1 foswikiLastCol"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=1;table=2;up=0#sorted_table" title="Sort by this column">Required Server Environment</a> </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td class="foswikiTableCol0 foswikiFirstCol"> Perl </td>
+			<td class="foswikiTableCol1 foswikiLastCol"> 5.8.8 or higher is recommended and it will run with Perl &gt;=5.8.4 and &lt;5.8.8 but this is untested. It also runs in Perl 5.6.1 but only with Wysiwyg editor disabled. Wysiwyg requires Unicode support which is provided by perl 5.8.1 onwards. </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td class="foswikiTableCol0 foswikiFirstCol"> RCS </td>
+			<td class="foswikiTableCol1 foswikiLastCol"> 5.7 or higher (including GNU <code>diff</code>) <br /> Optional. Foswiki includes a pure Perl implementation of RCS (RcsLite) that can be used instead, at the cost of performance </td>
+		</tr>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td class="foswikiTableCol0 foswikiFirstCol"> GNU diff </td>
+			<td class="foswikiTableCol1 foswikiLastCol"> GNU diff 2.7 or higher is required when not using the all-Perl RcsLite. <br /> Install within the PATH if not included with RCS (check version with <code>diff -v</code>) <br /> Must be the version used by RCS, to avoid problems with binary attachments - RCS may have hard-coded path to <code>diff</code> </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td class="foswikiTableCol0 foswikiFirstCol"> Other external programs </td>
+			<td class="foswikiTableCol1 foswikiLastCol"> <code>fgrep, egrep</code> </td>
+		</tr>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td class="foswikiTableCol0 foswikiFirstCol"> Cron/scheduler </td>
+			<td class="foswikiTableCol1 foswikiLastCol"> &bull; Unix: <code>cron</code> <br />&bull; Windows: <code>cron</code> equivalents <!-- SMELL: Macintosh version? --> </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td class="foswikiTableCol0 foswikiFirstCol foswikiLast"> Web server </td>
+			<td class="foswikiTableCol1 foswikiLastCol foswikiLast"> Apache is well supported; for information on other servers, see <a class="interwikiLink" href="http://foswiki.org/Support.InstallingOnSpecificPlatforms" title="'Support.InstallingOnSpecificPlatforms' on foswiki.org">Foswiki:Support.InstallingOnSpecificPlatforms</a>. </td>
+		</tr>
+	</tbody></table>
+<p />
+<h3><a name="CPAN_modules"></a>  CPAN modules </h3>
+<p />
+Most of the <a href="http://cpan.perl.org/" rel="nofollow" target="_top">CPAN</a> libraries used by Foswiki are part of a standard Perl installation &gt;=5.8.8 (recommended). A version &gt;=5.8.4 and &lt;5.8.8 will also work although untested. Please see <a class="interwikiLink" href="http://foswiki.org/Support.HowToInstallCpanModules" title="'Support.HowToInstallCpanModules' on foswiki.org">Foswiki:Support.HowToInstallCpanModules</a> for detailed information on how to install any CPAN libraries not yet present in your installation.
+<p />
+A more complete module status is listed in Foswiki <a href="http://merlin.lavrsen.dk/foswiki11/bin/configure" target="_top">configure</a> (Foswiki 1.0.x: <em>CGI Setup</em>, 1.1.x: <em>Web Server Environment &gt; Perl modules</em>). It should be easier to deal with CPAN modules from this perspective.
+<p />
+The following CPAN modules are shipped with Foswiki, require a comment or may optionally be needed. In case the standard Foswiki will be enhanced with <a class="interwikiLink" href="http://foswiki.org/Extensions" title="'Extensions' on foswiki.org">Foswiki:Extensions</a>, please look at the related extension page for dependencies which may require additional modules.
+<p />
+<table id="tableInstallationGuide3" class="foswikiTable" rules="none" border="1">
+	<thead>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<th class="foswikiTableCol0 foswikiFirstCol"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=0;table=3;up=0#sorted_table" title="Sort by this column">Module</a> </th>
+			<th class="foswikiTableCol1"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=1;table=3;up=0#sorted_table" title="Sort by this column">Preferred version</a> </th>
+			<th class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=2;table=3;up=2#sorted_table" title="Sort by this column">Required/Optional</a><span class="tableSortIcon tableSortDown"></span> </th>
+			<th class="foswikiTableCol3 foswikiLastCol"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=3;table=3;up=0#sorted_table" title="Sort by this column">Description</a> </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Algorithm::Diff </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> <font color="#ff6600">Required</font> </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> <strong>Included</strong> with Foswiki </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> CGI </td>
+			<td rowspan="1" class="foswikiTableCol1"> Versions 2.89, 3.37, 3.43, and 3.47 must be avoided. Most versions from 3.15 and onwards should work. </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> <font color="#ff6600">Required</font> </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> <strong>Included</strong> with Perl core since Perl 5.4 </td>
+		</tr>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Error </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> <font color="#ff6600">Required</font> </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> <strong>Included</strong> with Foswiki </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Text::Diff </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> <font color="#ff6600">Required</font> </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> <strong>Included</strong> with Foswiki </td>
+		</tr>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Apache::Htpasswd </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> May be required for ApacheHtpasswd password manager </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Archive::Tar </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> May be required by the Extensions Installer in configure if command line tar or unzip is not available, since Perl 5.9.3 part of core. </td>
+		</tr>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Archive::Zip </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> Alternative to Archive::Tar, used by the Extensions Installer if Archive::Tar also unavailable </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> CGI::Session </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> Required for Sessions support, available from the CPAN archive </td>
+		</tr>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Digest::SHA </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> May be required for password encryption, since Perl 5.9.3 part of core </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Digest::SHA1 </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> &nbsp; </td>
+		</tr>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Encode::compat </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> May be required for international characters </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> HTML::Entities </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> Required for <a class="interwikiLink" href="http://foswiki.org/Extensions.WysiwygPlugin" title="'Extensions.WysiwygPlugin' on foswiki.org">Foswiki:Extensions.WysiwygPlugin</a> </td>
+		</tr>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> HTML::Parser </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> Required for <a class="interwikiLink" href="http://foswiki.org/Extensions.WysiwygPlugin" title="'Extensions.WysiwygPlugin' on foswiki.org">Foswiki:Extensions.WysiwygPlugin</a> </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Lingua::EN::Sentence </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> May be required for generating new language files </td>
+		</tr>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> Locale::Maketext::Lexicon </td>
+			<td rowspan="1" class="foswikiTableCol1"> &gt;=0 </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> Used for I18N support </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> LWP </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> Required for the Configure Extensions Installer, and for external URL based INCLUDEs </td>
+		</tr>
+		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol"> URI </td>
+			<td rowspan="1" class="foswikiTableCol1"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol"> Required by the <a href="http://merlin.lavrsen.dk/foswiki11/bin/configure" target="_top">configure</a> script </td>
+		</tr>
+		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">
+			<td rowspan="1" class="foswikiTableCol0 foswikiFirstCol foswikiLast"> Win32::Console </td>
+			<td rowspan="1" class="foswikiTableCol1 foswikiLast"> &nbsp; </td>
+			<td rowspan="1" class="foswikiTableCol2 foswikiSortedDescendingCol foswikiSortedCol foswikiLast"> Optional </td>
+			<td rowspan="1" class="foswikiTableCol3 foswikiLastCol foswikiLast"> May be required for Windows </td>
+		</tr>
+	</tbody></table>
+<p />
+You can check version numbers with the <a href="http://merlin.lavrsen.dk/foswiki11/bin/configure" target="_top">configure</a> script, or if you're still trying to get to that point, check from the command line (replace "ModuleName" with the name of the module):
+<p />
+<pre class="bash">perl -le &#39;use ModuleName; print &#34;ModuleName&#34;-&#62;VERSION&#39; </pre>
+<p />
+<a name="ClientRequirements"></a>
+<h3><a name="Client_requirements"></a>  Client requirements </h3>
+<p />
+Browser clients must support the following capabilities:
+<p /> <ul>
+<li> HTML 3.2
+</li> <li> Cookie support enabled, if persistent sessions are required
+</li></ul> 
+<p />
+Most skins also require CSS and Javascript support. There is a low-fat skin (<a href="http://foswiki.org/System/PlainSkin">Plain</a>) that minimises these requirements. Some skins require newer browser version. The default skin (<a href="http://foswiki.org/System/PatternSkin">Pattern</a>) is tested on IE 6, Safari, and Mozilla 5.0 based browsers (such as Firefox).
+<p />
+You can easily select a balance of browser capability versus look and feel. Try the installed skins in the <a href="http://foswiki.org/System/SkinBrowser">skin browser</a> and more at <a class="interwikiLink" href="http://foswiki.org/Extensions.SkinPackage" title="'Extensions.SkinPackage' on foswiki.org">Foswiki:Extensions.SkinPackage</a>.
+<p />
+<a name="UploadingFoswikiDistribution"></a>
+<h2><a name="Uploading_the_Foswiki_distribution_to_your_web_server_host"></a>  Uploading the Foswiki distribution to your web server host </h2>
+<p />
+If you cannot unpack the Foswiki distribution directly in your installation directory, you can unpack the distribution on your local computer, manually create the directory structure on your host server and upload the files as follows:  <ul>
+<li> Using the table below, create a directory structure on your host server
+</li> <li> Upload the Foswiki files by FTP (transfer as text except for the image files in <code>pub</code> directory.)
+</li> <li> <strong>Note:</strong> Don't worry if you are not able to put the <code>lib</code> directory at the same level as the <code>bin</code> directory. You can create this directory elsewhere and configure the <code>bin/setlib.cfg</code> file.             <table class="foswikiTable" rules="none" border="1">   	<thead>		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">			<th class="foswikiTableCol0 foswikiFirstCol"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=0;table=4;up=0#sorted_table" title="Sort by this column">Foswiki dir:</a> </th>			<th class="foswikiTableCol1"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=1;table=4;up=0#sorted_table" title="Sort by this column">What it is:</a> </th>			<th class="foswikiTableCol2"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=2;table=4;up=0#sorted_table" title="Sort by this column">Where to copy:</a> </th>			<th class="foswikiTableCol3 foswikiLastCol"> <a rel="nofollow" href="/foswiki11/bin/view?topic=System.InstallationGuide;skin=plain;sortcol=3;table=4;up=0#sorted_table" title="Sort by this column">Example:</a> </th>		</tr>	</thead>   	<tbody>		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki</code> </td>			<td class="foswikiTableCol1"> start-up pages </td>			<td class="foswikiTableCol2"> root Foswiki dir </td>			<td class="foswikiTableCol3 foswikiLastCol"> <code>/home/smith/public_html/foswiki/</code> </td>		</tr>		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki/bin</code> </td>			<td class="foswikiTableCol1"> CGI bin </td>			<td class="foswikiTableCol2"> CGI-enabled dir </td>			<td class="foswikiTableCol3 foswikiLastCol"> <code>/home/smith/public_html/foswiki/bin</code> </td>		</tr>		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki/lib</code> </td>			<td class="foswikiTableCol1"> library files </td>			<td class="foswikiTableCol2"> same level as <code>bin</code> </td>			<td class="foswikiTableCol3 foswikiLastCol"> <code>/home/smith/public_html/foswiki/lib</code> </td>		</tr>		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki/locale</code> </td>			<td class="foswikiTableCol1"> language files </td>			<td class="foswikiTableCol2"> dir secure from public access </td>			<td class="foswikiTableCol3 foswikiLastCol"> <code>/home/smith/public_html/foswiki/locale</code> </td>		</tr>		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki/pub</code> </td>			<td class="foswikiTableCol1"> public files </td>			<td class="foswikiTableCol2"> htdoc enabled dir </td>			<td class="foswikiTableCol3 foswikiLastCol"> <code>/home/smith/public_html/foswiki/pub</code> </td>		</tr>		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki/data</code> </td>			<td class="foswikiTableCol1"> topic data </td>			<td class="foswikiTableCol2"> dir secure from public access </td>			<td class="foswikiTableCol3 foswikiLastCol"> <code>/home/smith/public_html/foswiki/data</code> </td>		</tr>		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki/templates</code> </td>			<td class="foswikiTableCol1"> web templates </td>			<td class="foswikiTableCol2"> dir secure from public access </td>			<td class="foswikiTableCol3 foswikiLastCol"> <code>/home/smith/public_html/foswiki/templates</code> </td>		</tr>		<tr class="foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1">			<td class="foswikiTableCol0 foswikiFirstCol"> <code>foswiki/tools</code> </td>			<td class="foswikiTableCol1"> Foswiki utlilities </td>			<td class="foswikiTableCol2"> dir secure from public access </td>			<td class="foswikiTableCol3 foswikiLastCol"> <code>/home/smith/public_html/foswiki/tools</code> </td>		</tr>		<tr class="foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0">			<td class="foswikiTableCol0 foswikiFirstCol foswikiLast"> <code>foswiki/working</code> </td>			<td class="foswikiTableCol1 foswikiLast"> Temporary and internal files </td>			<td class="foswikiTableCol2 foswikiLast"> dir secure from public access </td>			<td class="foswikiTableCol3 foswikiLastCol foswikiLast"> <code>/home/smith/public_html/foswiki/working</code> </td>		</tr>	</tbody>   </table>
+</li></ul> 
+<p />
+<a name="ConfiguringFoswikiManually"></a>
+<h2><a name="Configuring_Foswiki_manually_40without_using_the_61configure_61_page_41"></a>  Configuring Foswiki manually (without using the <code>configure</code> page) </h2>
+<p />
+It is highly recommended that you configure Foswiki by using your browser to access the <code>configure</code> page. However, if you are unable to get the <code>configure</code> page to display (for example, if a dependency is missing), or for some reason you do not wish to use the <code>configure</code> page, then you can configure Foswiki manually
+<p />
+Perform the following steps to manually configure Foswiki: <ul>
+<li> Copy the file <code>lib/Foswiki.spec</code> to <code>lib/LocalSite.cfg</code>
+</li> <li> Remove the # in front of the following settings, and ensure that they are set to the correct values:<pre class="perl">
+   $Foswiki::cfg{DefaultUrlHost}
+   $Foswiki::cfg{ScriptUrlPath}
+   $Foswiki::cfg{PubUrlPath}
+   $Foswiki::cfg{PubDir}
+   $Foswiki::cfg{TemplateDir}
+   $Foswiki::cfg{DataDir}
+   $Foswiki::cfg{LocalesDir}
+   $Foswiki::cfg{OS}</pre>
+</li> <li> Make sure the following settings are defined:<pre class="perl">
+   $Foswiki::cfg{LoginManager}
+   $Foswiki::cfg{WebMasterEmail}
+   $Foswiki::cfg{SMTP}{MAILHOST}
+   $Foswiki::cfg{SMTP}{SENDERHOST}</pre>
+</li></ul> 
+<p />
+<p />
+<hr />
+ <strong>Related Topics:</strong> <a href="http://foswiki.org/System/AdminDocumentationCategory">AdminDocumentationCategory</a>, <a class="interwikiLink" href="http://foswiki.org/Support.SupplementalDocuments" title="'Support.SupplementalDocuments' on foswiki.org">Foswiki:Support.SupplementalDocuments</a>
+<p />
+TWiki is a registered trademark of Peter Thoeny.
+<!--  -->
+
+<a name="TopicEnd"></a>
+<p />
+<p />
+<p />
+<p />
+</div>
+</body></html>

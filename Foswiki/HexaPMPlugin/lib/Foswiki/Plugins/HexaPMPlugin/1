@@ -1,0 +1,45 @@
+package Foswiki::Plugins::HexaPMPlugin::Core;
+
+use strict;
+use CGI (':all');
+
+sub checkAccessControl {
+    my $user = $_[0];
+    my $action = $_[1] || 'view';
+    my $resource = $_[2] || 'all';
+    my $authorization = 0;
+    Foswiki::Func::writeWarning("$user - $action - $resource");
+    my $allowusers = '';
+    if ($resource eq 'dashboard'){
+    	$allowusers = $Foswiki::cfg{Plugins}{HexaPMPlugin}{AllowViewDashboard} || $Foswiki::cfg{SuperAdminGroup};
+    	Foswiki::Func::writeWarning("$allowusers");
+    }elsif ($action eq 'all') {
+
+    }elsif ($action eq 'create') {
+	return 1;
+    }else{
+	return 0;	
+    }
+    if ($allowusers) {
+        my @userorgroup = split(',', $allowusers);
+        foreach my $val (@userorgroup) {
+            if ($val =~ /.*Group$/)
+            {
+                if (Foswiki::Func::isGroupMember( $val, $user )){
+                    $authorization = 1;
+                }
+            }else{
+                if( $user eq $val || Foswiki::Func::wikiToUserName($user) eq Foswiki::Func::wikiToUserName($val) || Foswiki::Func::userToWikiName($user) eq Foswiki::Func::userToWikiName($val)){
+                    $authorization = 1;
+                }
+            }
+        }
+    }
+    if ($authorization){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
+1;

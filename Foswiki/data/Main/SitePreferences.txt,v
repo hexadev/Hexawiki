@@ -1,4 +1,32 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286381449" format="1.1" reprev="2" version="2"}%
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2010.10.06.16.10.49;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.10.06.16.03.21;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.2
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286381449" format="1.1" reprev="2" version="2"}%
 ---+!! %TOPIC%
 
 %ICON{"help"}% 
@@ -49,3 +77,20 @@ Customize your top bar background image and color
 -->
 
 %META:FILEATTACHMENT{name="logo_trans_small.png" attachment="logo_trans_small.png" attr="" comment="" date="1286381449" path="logo_trans_small.png" size="4232" user="BaseUserMapping_333" version="2"}%
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="ProjectContributor" date="1269269181" format="1.1" version="1"}%
+d22 2
+a23 2
+   * Set WIKILOGOIMG = %PUBURL%/%SYSTEMWEB%/ProjectLogos/foswiki-logo.gif
+   * Set WIKILOGOALT = Powered by Foswiki, The Free and Open Source Wiki
+d50 2
+@

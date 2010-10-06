@@ -1,0 +1,171 @@
+%META:TOPICINFO{author="ProjectContributor" date="1194966209" format="1.1" reprev="1.2" version="1"}%
+---+ <nop>%TOPIC%
+
+%SHORTDESCRIPTION%
+
+%IF{"context 'AutoViewTemplatePluginEnabled' and context 'AutoTemplatePluginEnabled'"
+  then="<div class='foswikiAlert'>
+    <strong>WARNING: %BR%
+    You have enabled both AutoTemplatePlugin _and_ AutoViewTemplatePlugin. %BR%
+    Please uninstall one or the other.
+    </strong></div>"
+}%
+
+
+%TOC%
+
+---++ Description
+
+This plugin sets the VIEW_TEMPLATE and EDIT_TEMPLATE variables according to a
+corresponding form or rule. For example, when you attach a new form to a topic, this
+plugin will enable the corresponding view/edit template automatically.  This
+comes in very handy for applications where users create new topics
+without the help of a topic creator wizard, e.g. creating a new topic for a yet
+non-existing <nop>WikiWord. Together with the appropriate application
+settings, this plugin will then assure that the data the user enters is handled
+appropriately during view and edit.
+
+Another use case is to apply a VIEW_TEMPLATE to a set of topics whose name matches
+a given pattern rule.
+
+There are three base strategies on how the name of the template is derived:
+   1 =exist= 
+   1 =section=
+   1 =rules=
+
+These can be combined in a priorized list defaulting to =rules, exist=.
+This will try each strategy in the given order until a matching view template
+is found.
+
+%T% Note: this is a fork of the Foswiki:Extensions.AutoViewTemplatePlugin by Oliver Kr&uuml;ger.
+The difference between both is that <nop>%TOPIC% adds a rule-based strategy to 
+derive VIEW_ and EDIT_TEMPLATEs as well as replacing the fixed selection which
+strategy to use with a priority of modes (see below).
+
+%T% If you decide to install <nop>%TOPIC% then please disable the 
+<nop>AutoViewTemplatePlugin. Do not use both in parallel.
+
+---+++ Mode "exist"
+
+A topic that has a =MyForm= <nop>WikiForm attached to it, will be displayed
+using the view template =MyView= and editted using the =MyEdit=
+if they exist. The template name is derived by stripping off the suffix
+=...Form= from the form name and appending =...View=. The Wiki engine will
+then use the template name =MyView= to search for the correct template along
+the template search path, for example using a topic =MyView=.
+
+Examples:
+
+You have a form called =PurchaseRequestForm=. The plugin will now search for 
+=PurchaseRequestViewTemplate=, and =PurchaseRequestEditTemplate=.
+
+---+++ Mode "section"
+
+A topic with a =MyForm= will be displayed/editted using the template name
+stored in the named section =viewtemplate/edittemplate= . For example given the
+=MyForm= form definition topic contains a section =viewtemplate= whose only
+content is =MyOtherView=, then this will be used to view the topic. Likewise,
+the content of the =edittemplate= section in =MyForm= will read to find the
+edit template.
+
+By default existing values for VIEW_TEMPLATE and EDIT_TEMPLATE have priority.
+You can change this behaviour in =configure= so that the form defined templates
+have priority.
+
+Examples:
+
+We have a form called =PurchaseRequestForm= which contains the usual table that defined the form fields.
+
+We want this form to define that the topics are viewed with =ViewFormAtTopTemplate= and edited with =EditPurchaseRequestTemplate=.
+
+Below this we place the two sections that defines the templates to be used. Note that you must ommit the ...Template from the template names.
+
+<verbatim>
+%STARTSECTION{"viewtemplate"}%ViewFormAtTopTemplate%ENDSECTION{"edittemplate"}%
+
+%STARTSECTION{"edittemplate"}%EditPurchaseRequest%ENDSECTION{"edittemplate"}% 
+</verbatim>
+
+
+---+++ Mode "rules"
+
+For both view and edit, a set of rules can be specified in =configure= where each rule has got the format
+<verbatim>
+   '<pattern>' => '<template name>'
+</verbatim>
+
+A topic's name will be matched against the regular expression in =&lt;pattern>= to decide on the template name
+to be used for the current template. A pattern can either cover the full qualified topic name (web.topic) or just
+the topic name. Rules are checked against the FQTN first.
+
+Examples:
+
+<verbatim>
+$Foswiki::cfg{Plugins}{AutoTemplatePlugin}{ViewTemplateRules} = {
+  'WebTopicList' => 'WebTopicListView',
+  'Tasks\.Item.*' => 'Tasks.ItemView',
+  'Item.*' => 'Applications.TaskApp.ItemView',
+  'WebSearch.*' => 'KinoSearchView',
+};
+</verbatim>
+
+This will apply the =<nop>WebTopicListViewTemplate= to the WebTopicList topic in all webs, the
+=<nop>KinoSearchViewTemplate= to all WebSearch and WebSearchAdvanced topics in all webs and
+the =<nop>Tasks.ItemViewTemplate= to all Item topics in the Tasks web. Other Item topics 
+will be displayed using the =<nop>Applications.TaskApp.ItemViewTemplate= 
+
+---++ Configuration Settings
+
+The following settings can be defined in configure
+
+| *Setting* | *Description* | *Default* |
+| {Plugins}{AutoTemplatePlugin}{Debug} | Turn on debugging by turning this on | Default: On |
+| {Plugins}{AutoTemplatePlugin}{Override} | Form defined templates override VIEW_TEMPLATE and EDIT_TEMPLATE settings | Default: Off |
+| {Plugins}{AutoTemplatePlugin}{Mode} | A priority list of strategies the plugin uses for defining templates. <br /> \
+                                           =exist= for deriving the template name from the form name <br /> \
+                                           =section= for defining the template in a section of the form definition topic <br /> \
+                                           =rules= for defining the template using the two rule sets below | Default: =rules, exist= | 
+| {Plugins}{AutoTemplatePlugin}{ViewTemplateRules} | hash of =&lt;pattern>= => '&lt;template name>' rules to be used for =view= | |
+| {Plugins}{AutoTemplatePlugin}{EditTemplateRules} | hash of =&lt;pattern>= => '&lt;template name>' rules to be used for =edit= | |
+
+---++ Plugin Installation Instructions
+
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+
+---++ Plugin Info
+
+<!--
+   * Set SHORTDESCRIPTION = Automatically sets VIEW_TEMPLATE and EDIT_TEMPLATE
+-->
+|  Plugin Author: | Foswiki:Main.MichaelDaum |
+|  Copyright: | &copy; 2008-2010, Oliver Kr&uuml;ger, Michael Daum |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Release: | 1.1 |
+|  Version: | 6286 (2010-02-12) |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  12 Feb 2010: | fixed order rules are matched against the web.topic name |
+|  15 Dec 2009: | forked Foswiki:Extensions.AutoViewTemplatePlugin as rule-based feature was rejected. See Foswiki:Development.RulebasedViewTemplates |
+|  03 Nov 2009: | added rule-based strategy; made =mode= a priority list (MD) |
+|  06 Oct 2009: | Item2213: Plugin got better documentation. No change in behaviour. |
+|  20 Aug 2009: | Item8248: added forward-compatibility for newer Foswikis (MD) |
+|  27 Dec 2008: | Item196: moved to Foswiki namespace |
+|  15 Nov 2008: | Item196: minor doc changes |
+|  11 Jul 2008: | Item5770: try to derive the EDIT_TEMPLATE of a new topic using the <nop>WebTopicEditTemplate (MD) |
+|  03 Jul 2008: | Item5747: fixed normalizing web part of form names (MD) |
+|  13 Nov 2007: | added EDIT_TEMPLATE, speed improvements, docu (MD) |
+|  29 Oct 2007: | Item4904: made specification of view template skin agnostic, \
+                  fixed view templates in subwebs (MD) |
+|  04 Sep 2007: | Added build script and installer, minor doc changes |
+|  05 Jun 2007: | Initial version |
+|  Foswiki Dependency: | $Foswiki::Plugins::VERSION 1.026 |
+|  CPAN Dependencies: | none |
+|  Other Dependencies: | none |
+|  Home: | Foswiki:Extensions/%TOPIC% |
+|  Support: | Foswiki:Extensions/%TOPIC% |
+

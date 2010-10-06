@@ -1,0 +1,40 @@
+.ecpHeading {
+  position:relative;
+  padding-right:16px;
+}
+.ecpHeading a {
+  display:inline !important;
+}
+.ecpEdit {
+  padding:0px !important;
+  border:0px !important;
+  visibility:hidden;
+}
+.ecpEdit:hover {
+  background:transparent !important;
+  padding:0px !important;
+  border:0px !important;
+}
+.ecpEdit img {
+  padding:0px;
+  border:0px;
+  position:absolute;
+  right:0px;
+  bottom:0.25em;
+}
+/* some foswiki fixes */
+.foswikiToc .ecpHeading img {
+  display:none;
+}
+.foswikiToc .ecpHeading {
+  display:inline;
+  padding-right:0px;
+}
+/* debugging */
+.ecpChapter {
+  border:1px solid red;
+  padding:5px;
+}
+.ecpChapterHover {
+  border:1px solid blue;
+}

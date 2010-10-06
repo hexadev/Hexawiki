@@ -1,0 +1,189 @@
+%META:TOPICINFO{author="ProjectContributor" date="1246522359" format="1.1" reprev="1.2" version="1.2"}%
+---+!! %TOPIC%
+
+Reusable code that caches Foswiki topics, and provides fast
+searches of the content.
+
+%TOC%
+
+---++ Summary of Contents
+
+This module supports fast structured queries over topics in an
+arbitrarily-sized web. It uses a database to cache topic data to
+deliver much more scaleable search performance. Different back-end
+techologies can be used to implement the cache, to allow simple
+tradeoffs between scaling and raw performance.
+
+Historically this module was designed to be used with a
+companion plugin, such as Foswiki:Extensions.FormQueryPlugin or
+Foswiki:Extensions.DBCachePlugin, which support queries and the display of
+query results. When used this way, the %TOPIC% supports queries made using
+a simple [[%TOPIC%#QueryLanguage][query language]].
+
+The module can also be used in "standard schema mode" to support plugins
+that accelerate core functions, such as the !QueryAcceleratorPlugin.
+
+---++ Features
+   * Perform efficient structured queries on data in forms
+
+---++ Using the built-in query language
+The query language supported by !DBCacheContrib is very similar to the query language used with %SEARCH, which was derived from it. The contrib can be used in two modes; compatible schema mode (as used by FormQueryPlugin and DBCachePlugin) and standard schema mode (as described in QuerySearch).
+
+In standard schema mode the schema of the DB is as described in QuerySearch.
+In compatible schema mode, the underlying schema is somewhat different, to
+support the extended requirements of the plugins that use it.
+
+---+++ The Compatible Schema
+You can think of the database as an map of all the topics in a web. Each
+entry is itself a map (or hash, in perl terms) that maps a set of field
+names to values.
+
+Each topic in the web automatically gets a number of standard fields, generated
+by reading the metadata from the topic (see %SYSTEMWEB%.MetaData)
+	* =name=        - name of the topic
+	* =parent=      - *name* of parent topic
+	* =_up=         - _reference_ to the Map of the parent topic, if it exists
+	* =attachments= - array of Maps, each of which contains:
+		* =_up= - _reference_ to the Map for the topic
+		* =name= - attachment name
+		* =attr= - e.g hidden
+		* =comment= - attachment comment
+		* =path= - client path used to upload attachment
+		* =size= - size in Kb
+		* =user= - who uploaded the attachment
+		* =version= - e.g. 1.3
+	* =info= - Map containing:
+		* =_up= - reference to the Map for the topic
+		* =author= - most recent author
+		* =date= - date of last change
+		* =format= - topic format version
+		* =version= - topic version number
+	* =moved= - Map containing:
+		* =_up= - reference to the Map for the topic
+		* =by= - who moved it
+		* =date= - when they moved it
+		* =from= - where they moved it from
+		* =to= - where they moved it to
+	* =form= - form type
+	*  _form name_ - e.g. if a "My<nop>Form" is attached, this will be
+          =My<nop>Form=. This is a reference to a Map containing a key for each
+          field in the form. Each key maps to the value in the form data for
+          that key. The Map will also have an =_up= reference to the Map for
+          the topic.
+	* =text= - raw text of the topic)
+
+The sub-maps created for =info=, _form name_, =moved=, and each row in
+=attachments= also have a _reference_ back to the topic Map, called  =_up=.
+
+Other fields may be added by subclasses. Refer to the documentation for the
+plugin that is using the DBCache for more details.
+
+---++ Query operators
+%STARTSECTION{"searchoperators"}%
+Fields are given by name, and values by strings or numbers. Strings should always be surrounded by 'single-quotes'. Strings which are regular expressions (RHS of <nop>=, !<nop>= <nop>=~ operators) use 'perl' regular expression syntax (google for =perlre= for help). Numbers can be signed integers or decimals. Single quotes in values may be escaped using backslash (\).
+
+The following operators are available:
+| *Operator* | *Result* | *Meaning* |
+| <code>=</code> | Boolean | LHS exactly matches the regular expression on the RHS. The expression must match the whole string. |
+| <code>!=</code> | Boolean | Inverse of = |
+| <code>=~</code> | Boolean | LHS contains RHS i.e. the RHS is found somewhere in the field value. |
+| <code>&lt;</code> | Boolean | Numeric < |
+| <code>&gt;</code> | Boolean | Numeric > |
+| <code>&gt;=</code> | Boolean | Numeric >= |
+| <code>&lt;=</code> | Boolean | Numeric <= |
+| =lc= | String | Unary lower case |
+| =uc= | String | Unary UPPER CASE |
+| =IS_DATE= | Boolean | Compare two dates e.g. '1 Apr 2003' IS_DATE '1 Apr 2004' |
+| =EARLIER_THAN= | Boolean | Date is earlier than the given date |
+| =EARLIER_THAN_OR_ON= | Boolean | Date is earlier than, or on, the given date |
+| =LATER_THAN= | Boolean | LHS is later than the given date |
+| =LATER_THAN_OR_ON= | Boolean | LHS is later than the given date |
+| =WITHIN_DAYS= | Boolean | Date (which must be in the future) is within n _working_ days of todays date |
+| <code>!</code> | Boolean | Unary NOT |
+| =AND= | Boolean | AND |
+| =OR= | Boolean | OR |
+| <code>()</code> | any | Bracketed subexpression |
+
+Dates for the date operators (=IS_DATE=, =EARLIER_THAN= etc) must be dates in the format expected by =Time::ParseDate= (like the [[Foswiki:Extensions/ActionTrackerPlugin][ActionTrackerPlugin]]). =WITHIN_DAYS= works out the number of _working_ days assuming a 5 day week (i.e. excluding Saturday and Sunday). Apologies in advance if your weekend is offset &plusmn; a day! Integers will automatically be converted to dates, by assuming they represent a number of seconds since midnight GMT on 1st January 1970. You can also use the =d2n= operator to convert a date string to such an integer.
+
+%ENDSECTION{"searchoperators"}%
+
+---++ The cache
+To achieve best perfomance the plugin caches the data read from topics in a
+database. The database is stored in the work area for the DBCacheContrib (see
+={WorkAreaDir}= in =configure=). If any topic changes in the web, this
+cache is automatically rebuilt (subject to configuration options). The cache
+can be deleted at any point with no ill effects.
+
+---++ Detailed Documentation
+Clients use the DBCache by defining a subclass of the
+=Foswiki::Contrib::DBCacheContrib= class. Implementors are stongly recommended to read the POD documentation in the code:
+
+<!--
+	* Set SHORTDESCRIPTION = Reusable code that treats forms as if they were table rows in a database
+-->
+
+---++ Installation Instructions
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+---++ Contrib Info
+|  Author: | Foswiki:Main/CrawfordCurrie http://c-dot.co.uk |
+|  Copyright &copy;: | This code is based on an original development of Motorola Inc. and is protected by the following copyrights: <br>Copyright @copy 2002-2003 Motorola Inc. All Rights Reserved. <br>Portions copyright &copy; 2004. Crawford Currie http://www.c-dot.co.uk |
+|  License: | GPL |
+|  Release: | 17 Nov 2009 |
+|  Version: | 5538 (2009-11-17) |
+|  Change History: | |
+|  17 Nov 2009 | Foswikitask:Item8327: series of robustness fixes (MD) |
+|  30 Jun 2009 | Foswikitask:Item8153: make dirs for path to cache; Foswikitask:Item8194: incoporated patch from Foswiki:Main.MichaelDaum Foswikitask:Item8195: extract and cache permissions settings |
+|  18 Jun 2009 | Foswikitask:Item8183: fixed problem with Scalar::Util::weaken that was causing !DBCachePlugin problems |
+|  6 Jun 2009 | Foswikitask:Item1691: changes to support Foswiki:Extensions.QueryAcceleratorPlugin |
+|  7 Apr 2009 | Foswikitask:Item5440: fixed negative values in SUMFIELD Foswikitask:Item8106: add back in the Map methods to the main class, as they are used by subclasses Foswikitask:Item8063: fix the accidental encoding of field values in the cache |
+|  28 Jan 2009 | Foswikitask:Item453: Foswiki version; added Berkeley DB support, dropped plain-file support. Added Michael Daum's EARLIER_THAN_OR_ON and LATER_THAN_OR_ON ops. Fixed a number of bugs. |
+|  12346 | fixing uptodate() for Andrew File Systems; fixed memory leak on persistent perl |   
+|  16347 | remove META data from text hash; include META data in all hash. Foswiki:Main.MichaelDaum |
+|  16346 | caching all topic elements to an =all= field to allow th search in all of the text and the formfields like \
+           the normal grep-based SEARCH does. Foswiki:Main.MichaelDaum |
+|  15868 | fixed WITHIN_DAYS and EARLIER_THAN. Foswiki:Main.MichaelDaum |
+|  15583 | made query parser pluggable so that other plugins can implement their own predicates. Foswiki:Main.MichaelDaum |
+|  15019 | added {DBCache}{AlwaysUpdateCache} to remove the updateCache from every operation. Foswiki:Main.SvenDowideit |
+|  13562 | Bugs:Item3985 - fixed failures with hierarchical webs |
+|  13527 | Moved the cache into the extensions work areas, instead of the web directory |
+|  12943 | Bugs:Item3659: added automatic conversion of integers to dates |
+|  12923 | added REF operator; \
+           added link to web object to hashes; \
+	   fixed parent relation to end in WebHome; \
+	   added "web" property to topic hashes; \
+           caching META:PREFERENCES now |
+|  11537 | Added lc and uc operators for case-insensitive searches |
+|  9303 | TWikibug:Item1844 - don't die on broken symlinks |
+|  8682 | TWikibug:Item1580 - one-char fix that makes the difference |
+|  8110 | TWikibug:Item663 - formatting and text fixes |
+|  7552 | TWikibug:Item997 - test update |
+|  7274 | TWikibug:Item719 - onReload() is not a static method. |
+|  7262 | TWikibug:Item719 - Foswiki:Main.MichaelDaum's patch (almost) to correct parameters to onReload |
+|  7260 | TWikibug:Item727 - made it clean the form name using normaliseWebTopicName |
+|  6353 | TWikibug:Item380 - do as the man says; make all $/ local |
+|  5720 | Updated tests |
+|  5719 | Fix for correct handling of parent relations |
+|  5229 | Small improvement to the way it handles errors from Storable and Archive |
+|  5223 | Documentation fixes, adding gifs. |
+|  5048 | Cairo readiness |
+|  5036 | Split from <nop>SharedCode |
+|  5031 | Moving to new name |
+|  5030 | About to rename |
+|  5019 | Improved topic data model, cleaned up tests |
+|  5008 | Added extended access syntax, [?], [*] etc. |
+|  5006 | Doc fixes |
+|  5005 | Poddified documentation |
+|  5003 | Initial version |
+|  8 Jul 2004 | Initial version, split out from <nop>FormQueryPlugin |
+|  Dependencies: | <table class="foswikiTable" border="1"><tr><th>Name</th><th>Version</th><th>Description</th></tr><tr><td align="left">Time::ParseDate</td><td align="left">&gt;=2003.0211</td><td align="left">Required. Available from [[http://cpan.uwinnipeg.ca/dist/Time-modules][CPAN]].</td></tr><tr><td align="left">Storable</td><td align="left">&gt;=2.07</td><td align="left">Required. available from [[http://cpan.uwinnipeg.ca/dist/Storable][CPAN]]</td></tr><tr><td align="left">BerkeleyDB</td><td align="left">&gt;=0</td><td align="left">Recommended for sites with many topics. Available from [[http://cpan.uwinnipeg.ca/dist/BerkeleyDB][CPAN]]</td></tr></table> |
+|  Perl Version: | 5.0 |
+|  Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Support: | http://foswiki.org/Support/%TOPIC% |
+

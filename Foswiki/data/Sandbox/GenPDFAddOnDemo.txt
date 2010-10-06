@@ -1,0 +1,169 @@
+%META:TOPICINFO{author="ProjectContributor" date="1234067891" format="1.1" version="1.5"}%
+%META:TOPICPARENT{name="System.GenPDFAddOn"}%
+%TOC%
+=&lt;!-- PDFSTART --&gt;  inserted here to avoid a blank page for the Foswiki TOC=
+<!-- PDFSTART --> 
+---+ GenPDFAddOnDemo (L1 Heading)
+
+This is a sample document to show what can be achieved with the GenPDFAddOn Plugin.
+
+   * [[%SCRIPTURL{genpdf}%/%WEB%/%TOPIC%][Generate a PDF of this page]]
+   * [[%SCRIPTURL{genpdf}%/%WEB%/%TOPIC%?pdfrecursive=1][Generate a PDF of this page and child topics]].  _Note that each L1 heading and each Child topic is a separate chapter in the PDF._
+   * [[%SCRIPTURL{genpdf}%/%WEB%/%TOPIC%?pdfrecursive=1;pdfheadershift=auto][Generate a PDF with auto header shifting]] _Only L1 headings become chapters.  Child topics are properly indented._
+      * Note that the GenPDFAddOnDemoForm topic will start a new chapter - it contains the =&lt;!-- TOC PROMOTE --&gt;= comment.
+
+Here are some headings - note that &lt;h1&gt; level 1 headers always appear on
+a new page and is treated as a new chapter in the PDF.  So the Level 1 heading
+is not included to avoid the extra chapter.
+
+---++ Level 2 Heading
+---+++ Level 3 Heading
+---++++ Level 4 Heading
+---+++++ Level 5 Heading
+---++++++ Level 6 Heading
+Foswiki only goes this far :-( HTMLDOC goes to level 15 :-) %BR%
+<h7>Level 7 Heading</h7>%BR%
+<h8>Level 8 Heading</h8>%BR%
+<h9>Level 9 Heading</h9>%BR%
+<h10>Level 10 Heading</h10>%BR%
+<h11>Level 11 Heading</h11>%BR%
+<h12>Level 12 Heading</h12>%BR%
+<h13>Level 13 Heading</h13>%BR%
+<h14>Level 14 Heading</h14>%BR%
+<h15>Level 15 Heading</h15>%BR% 
+
+---++ Features
+Some of the cool features are:
+   * Title topic is a fully rendered Foswiki topic, editable from within Foswiki's normal edit mechanism.
+   * Headers/Footers are fully rendered Foswiki variables embedded in HTMLDOC special comments, but defined in a normal Foswiki topic.
+   * Images are included
+   * Margins can be defined
+   * PDF permissions can be restricted (this has 'print,no-copy' so you can't copy and paste the text)
+   * Recursive rendering of child topics, such as GenPDFAddOnDemoChild
+
+---++ Limitations
+There are a few limitations, like
+<verbatim>
+Really long lines of text in verbatim blocks will run off the edge of the page unless you break them. This is a limitation of htmldoc, not the plugin, so don't complain to me. There is nothing I can do about it but complain to the authors of htmldoc, which you could do anyway. Then again - how would you fix it?
+</verbatim>
+
+%TABLE{cellpadding="3" columnwidths="50%, 50%"}%
+| *Overflowing tables* ||
+| Tables_can_overflow_if_you_have_long_words_in_the_cells | If_you_generate_a_page_for_the_GenPDFAddOn_topic,_you_will_see_that_text_will_overflow_off_the_page,_similar_to_verbatim_text_above. |
+
+---++ Settings for this topic
+This topic includes the following settings:
+
+---+++ Title Topic
+<verbatim>
+<p>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/></p>
+<img src="%PUBURL%/%WEB%/ProjectLogos/FoswikiRobot121x54a.gif"
+alt="Powered by Foswiki" width="121" height="54" align="left" />
+<img src="%PUBURL%/%WEB%/ProjectLogos/FoswikiRobot81x119.gif"
+alt="Powered by Foswiki" width="81" height="119" align="right" /><br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+<font size="7"><i>%GENPDFADDON_BANNER%</i></font><br/>
+&nbsp;<br/>
+&nbsp;<br/>
+<hr size="5" noshade>
+<font size="7">%WEB%.%GENPDFADDON_TITLE%</font><br/>
+&nbsp;<br/>
+<i>%FORMFIELD{"TopicHeadline" topic="%WEB%.%BASETOPIC%"}%</i><br/>
+&nbsp;<br/>
+<font size="3">%GENPDFADDON_SUBTITLE%</font>
+<hr noshade>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+| *DocumentClassification* | %FORMFIELD{"DocumentClassification" topic="%WEB%.%BASETOPIC%"}% |
+| *DocumentType* | %FORMFIELD{"DocumentType" topic="%WEB%.%BASETOPIC%"}% |
+&nbsp;<br/>
+&nbsp;<br/>
+&nbsp;<br/>
+Copyright &copy; %DISPLAYTIME{"$year"}% Your Company<br/>
+All rights reserved
+
+This document contains Proprietary and Confidential information of Your Company,
+and is protected by copyright, trade secret and other state and federal
+laws. Its receipt or possession does not convey any rights to reproduce, disclose
+its contents, or to manufacture, use or sell anything it may describe. Reproduction,
+disclosure or use without specific written authorization of Your Company
+is strictly prohibited.
+&nbsp;<br/>
+Generated: %DISPLAYTIME%
+</verbatim>
+
+---+++ Headers/Footers Topic
+<verbatim>
+<!-- HEADER LEFT "%BASETOPIC%" -->
+<!-- HEADER CENTER "%FORMFIELD{"DocumentClassification" topic="%WEB%.%BASETOPIC%"}%" -->
+<!-- HEADER RIGHT "&copy; Your Company %WEB%" -->
+<!-- FOOTER LEFT "%REVINFO{"r1.$rev &shy; $date &shy; $wikiusername" web="%WEB%" topic="%BASETOPIC%"}%" -->
+<!-- FOOTER CENTER "" -->
+<!-- FOOTER RIGHT "$PAGE(1)" -->
+</verbatim>
+
+---+++ Preferences
+<verbatim>
+   * Foswiki.GenPDFAddOn Settings
+      * Set GENPDFADDON_BANNER = Our Slogan %ORANGE%Rocks!!!%ENDCOLOR%
+      * Set GENPDFADDON_TITLE = %BASETOPIC%
+      * Set GENPDFADDON_SUBTITLE = %REVINFO{web="%WEB%" topic="%BASETOPIC%"}%
+      * Set GENPDFADDON_TITLETOPIC = GenPDFExampleTitleTopic
+      * Set GENPDFADDON_HEADERTOPIC = GenPDFExampleHeaderFooterTopic
+      * Set GENPDFADDON_HEADFOOTFONT = helvetica-bold
+      * Set GENPDFADDON_LOGOIMAGE = %ICON{pdf}%
+      * Set GENPDFADDON_FORMAT = pdf14
+      * Set GENPDFADDON_PERMISSIONS = print,no-copy
+      * Set GENPDFADDON_ORIENTATION = portrait
+      * Set GENPDFADDON_PAGESIZE = a4
+      * Set GENPDFADDON_SKIN = print.pattern
+      * Set GENPDFADDON_TOCHEADER = l..
+      * Set GENPDFADDON_TOCFOOTER = ..i
+      * Set GENPDFADDON_NUMBEREDTOC = True
+      * Set GENPDFADDON_TOCLEVELS = 5
+      * Set GENPDFADDON_HEADERSHIFT = 0
+      * Set GENPDFADDON_MARGINS = top:20mm,left:80pt,right:1in,bottom:5cm
+      * Set GENPDFADDON_WIDTH = 1060
+</verbatim>
+
+---+++ Form fields
+<verbatim>
+% META:FORM{name="GenPDFAddOnDemoForm"}%
+% META:FIELD{name="DocumentClassification" title="DocumentClassification" value="CompanyConfidential"}%
+% META:FIELD{name="DocumentType" title="DocumentType" value="HowTo"}%
+% META:FIELD{name="TopicHeadline" title="TopicHeadline" value="A look at what the GenPDFAddOn plugin can do"}%
+% META:FIELD{name="KeyWords" title="KeyWords" value="PDF, plugin, acrobat"}%
+</verbatim>
+
+---+ Child Topics (L1 Heading)
+If a PDF of this topic is generated using the pdfrecursive option with
+pdfheadershift set to auto, then the child topics will appear after this
+header.
+
+<!-- PDFSTOP -->
+=&lt;!-- PDFSTOP --&gt;  inserted here to stop before the signature=
+
+-- Main.WadeTurland - 14 Jun 2005
+
+%META:FORM{name="GenPDFAddOnDemoForm"}%
+%META:FIELD{name="DocumentClassification" attributes="" title="DocumentClassification" value="GeneralAvailabilty"}%
+%META:FIELD{name="DocumentType" attributes="" title="DocumentType" value="FAQ"}%
+%META:FIELD{name="TopicHeadline" attributes="" title="TopicHeadline" value="A look at what the GenPDFAddOn plugin can do"}%
+%META:FIELD{name="KeyWords" attributes="" title="KeyWords" value="PDF, plugin, acrobat"}%

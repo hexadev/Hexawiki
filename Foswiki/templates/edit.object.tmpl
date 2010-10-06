@@ -1,0 +1,31 @@
+%TMPL:INCLUDE{"edit"}%
+
+%TMPL:DEF{"formtop"}%
+<style type="text/css">
+tr.noload { display:none; }
+</style>
+%TMPL:P{"form"}%%TMPL:END%
+%TMPL:DEF{"formbottom"}%%TMPL:END%
+
+%TMPL:DEF{"formstart"}%<div class="foswikiFormHolder" id="formHolder">
+<form id="editObject%UID%" name="main" action="%SCRIPTURLPATH{rest}%/ObjectPlugin/save" method="post" onsubmit="return validateTWikiMandatoryFields(event)">%TMPL:END%
+
+%TMPL:DEF{"formparameters:edit"}%<input type="hidden" name="redirectto" value="%SCRIPTURL{view}%/%OWEB%/%OTOPIC%#ObjecT%UID%" />
+<input type="hidden" name="topic" value="%OWEB%.%OTOPIC%" />
+<input type="hidden" name="uid" value="%UID%" />
+<input type="hidden" name="type" value="%TYPE%" />
+<input type="hidden" name="nowysiwyg" value="1" />%TMPL:END%
+
+%TMPL:DEF{"sig"}%%TMPL:END%
+
+%TMPL:DEF{"topicinfo"}%<div class="patternTopicActions"><div class="patternTopicAction"><div class="patternActionButtons">%TMPL:P{"action_buttons"}%</div><!--/patternActionButtons-->
+%{TMPL:P{"saveoptions"}%</div><!--/patternTopicAction--></div><!--/patternTopicActions-->%TMPL:END%
+
+%TMPL:DEF{"button_cancel"}%<a id="cancel%UID%" class="nohijax" href="%SCRIPTURL{view}%/%WEB%/%TOPIC%#ObjecT%UID%"><button type="button" class="foswikiButton foswikiButtonCancel" title="Cancel and return to viewing">Cancel</button></a>%TMPL:END%
+
+%TMPL:DEF{"action_buttons"}%%TMPL:P{"button_save"}% %MAKETEXT{"or"}% %TMPL:P{"button_cancel"}%%TMPL:END%
+
+%TMPL:DEF{"textarea"}%<textarea class="foswikiTextarea foswikiEditboxStyleProportional" id="object%UID%" name="text" rows="%EDITBOXHEIGHT%" cols="%EDITBOXWIDTH%" style='%EDITBOXSTYLE%'>%TEXT%</textarea>
+%TMPL:P{"sig_textareabuttons"}%
+%INCLUDE{"%SYSTEMWEB%.JQueryMarkItUpEditor" target="#object%UID%"}%
+%TMPL:END%

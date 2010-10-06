@@ -1,0 +1,14 @@
+%META:TOPICINFO{author="ProjectContributor" date="1234067891" format="1.1" version="1.5"}%
+%META:TOPICPARENT{name="GenPDFAddOnDemo"}%
+---+ Form Definition for PDF Classification
+<!-- TOC PROMOTE -->  =&lt;!-- TOC PROMOTE --&gt;=
+
+| *Name:* | *Type:* | *Size:* | *Values:* | *Tooltip message:* |
+| | label | | Describe the Security sensitivity of this document For example: <ul> <li> *CompanyConfidential* - Internal use only</li> <li> *GeneralAvailability* - Acceptable for general distribution</li> <li> *CustomerProprietary* - Confidential document of an external customer</li> </ul> | |
+| DocumentClassification | select+multi | 5 | ,CompanyConfidential, GeneralAvailabilty, CustomerProprietary  | Classify the package |
+| | label | | Describe the type of document | |
+| DocumentType | Select+multi | 5 | ,HowTo, General, FAQ, Documentation | Identify the type of document |
+| | label | | A simple description of the document | |
+| TopicHeadline | text | 60 | | This becomes the PDF "Subject" field. |
+| | label | | !KeyWords that identify the document | |
+| KeyWords | text | 60 | | These keywords will be assigned to the PDF. |

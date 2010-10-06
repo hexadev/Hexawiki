@@ -1,0 +1,29 @@
+%{ Templates for ObjectPlugin oops messages. One DEF is selected and inserted at %INSTANTIATE }%
+%TMPL:INCLUDE{"oops"}%
+
+%TMPL:DEF{"webaction"}% *%MAKETEXT{"Attention"}%* %TMPL:END%
+%TMPL:DEF{"topicactionbuttons"}%%TMPL:END%
+
+%TMPL:DEF{"message"}%
+%INSTANTIATE%
+%TMPL:END%
+
+%TMPL:DEF{"error_simple"}%
+Foswiki detected an internal error - please check your Foswiki logs and webserver logs for more information.
+
+=%PARAM1%=
+%TMPL:END%
+
+%TMPL:DEF{"noobjectuid"}%
+An object with the UID %PARAM1% could not be found in %PARAM2%.
+%TMPL:END%
+
+%TMPL:DEF{"unspecified_error"}%
+Sorry, but an unspecified error has occured.
+%TMPL:END%
+
+%TMPL:DEF{"missingobjecttype"}%
+A type descriptor for the object you are trying to create has not been provided. The submitted parameter list is displayed below.
+
+=%PARAM1%=
+%TMPL:END%

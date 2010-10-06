@@ -1,4 +1,32 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1286313467" format="1.1" version="2"}%
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2010.10.05.21.17.47;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.10.05.21.17.47;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.2
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" date="1286313467" format="1.1" version="2"}%
 %META:TOPICPARENT{name="Macros"}%
 #VarRENDERZONE
 ---+++ RENDERZONE
@@ -43,4 +71,22 @@ __Notes:__
      removed from a future version of Foswiki.</blockquote>
 
 See also [[VarADDTOZONE][ADDTOZONE]] for more information on zones.
+<!-- %JQREQUIRE{"chili"}% -->@
+
+
+1.1
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="ProjectContributor" date="1266225040" format="1.1" version="1.1"}%
+d40 2
+a41 2
+     content which requires an =id= that only exists in =script= will be re-ordered 
+     to satisfy this dependency.
+d46 1
+a46 1
 <!-- %JQREQUIRE{"chili"}% -->
+@

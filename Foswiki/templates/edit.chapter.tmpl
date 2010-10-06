@@ -1,0 +1,18 @@
+%TMPL:INCLUDE{"edit"}%<!-- template: edit.chapter.tmpl -->
+%TMPL:INCLUDE{"editjavascript"}%<!-- editjavascript// -->
+%TMPL:DEF{"textarea"}%<!-- textarea -->
+<textarea id="beforetext" name="beforetext" style="display:none" >%EXTRACTCHAPTER{before="%URLPARAM{"from" default="0"}%" encode="on" id="2"}%</textarea>
+<textarea id="topic" name="paragraph" class="foswikiTextarea DISfoswikiWysiwygEdit natEditTextArea natedit {autoMaxExpand:true, minHeight:215}" rows="%EDITBOXHEIGHT%" cols="%EDITBOXWIDTH%" style='%EDITBOXSTYLE%' wrap="virtual">%EXTRACTCHAPTER{from="%URLPARAM{"from" default="0"}%" to="%URLPARAM{"to"}%" encode="on" id="1"}%</textarea>
+<textarea id="aftertext"  name="aftertext" style="display:none">%EXTRACTCHAPTER{after="%URLPARAM{"to"}%" encode="on" id="3"}%</textarea>
+<textarea id="text" name="text" style="display:none" ></textarea>
+<input type="hidden" name="from" value="%URLPARAM{"from" default="0"}%" />
+<input type="hidden" name="to" value="%URLPARAM{"to"}%" />
+%TMPL:P{"javascript"}%<!-- //javascript -->
+<!-- //textarea -->%TMPL:END%
+%TMPL:DEF{"form"}%%TMPL:END%
+%TMPL:DEF{"titleaction"}%(%MAKETEXT{"edit chapter"}%)%TMPL:END%
+%TMPL:DEF{"action_buttons"}%%TMPL:P{"button_save"}%&nbsp;%TMPL:P{"button_quietsave"}% %MAKETEXT{"or"}% %TMPL:P{"button_cancel"}%%TMPL:END%
+%TMPL:DEF{"title"}%%TOPICTITLE% (%MAKETEXT{"edit chapter"}%) - %WIKITOOLNAME%%TMPL:END%
+%TMPL:DEF{"pagetitle"}%[[%WEB%.%TOPIC%]] (%MAKETEXT{"edit chapter"}%)%TMPL:END%
+%TMPL:DEF{"settingstab"}%%TMPL:END%
+%TMPL:DEF{"formfields"}%%TMPL:END%

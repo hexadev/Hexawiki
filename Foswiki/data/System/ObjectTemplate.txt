@@ -1,0 +1,48 @@
+%META:TOPICINFO{author="ProjectContributor" date="1276591390" format="1.1" version="1.1"}%
+%META:TOPICPARENT{name="ObjectPlugin"}%
+---++ Object Templates
+ <verbatim>
+%TMPL:DEF{object}%<noautolink><div id="$uid" class="object-container rounded shadow $creator $type %BG%"></noautolink>
+#ObjecT$uid
+     <div class="object-header rounded">
+			<div class="object-type css-vertical-text">$type</div>
+          <div class="object-drag-handle">
+               <div class="object-title"> %USERSWEB%.$creator - $created </div>
+          </div>
+%TMPL:P{object-controls}%
+	  </div>
+<div class="twikiClear"></div> <!--for IE6-->
+<div class="object-content">
+%TEXT%
+</div>
+</div>%TMPL:END%
+
+%TMPL:DEF{object:deleted}%<noautolink>
+<div id="$uid" class="$creator %BG%"></noautolink>
+
+Deleted by %USERSWEB%.%WHO% on %WHEN%.
+</div>
+   <hr class="divider" />
+%TMPL:END%
+
+%TMPL:DEF{object-controls}%<div class="object-controls" web="%OWEB%" topic="%OTOPIC%">
+   <div class="object-control edit-object">
+		<a href="%SCRIPTURL{rest}%/ObjectPlugin/view?topic=%OWEB%.%OTOPIC%;uid=$uid;cover=object;context=edit"><img src="%ICONURL{pencil}%" title="Edit" alt="[E]" /></a>
+   </div>
+   <div class="object-control delete-object">
+		<img src="%ICONURL{choice-no}%" title="Delete" alt="[x]" />
+   </div>
+   <div class="object-control move-object">
+		<img src="%ICONURL{arrowright}%" title="Move" alt="[&gt;]" />
+   </div>
+   <div class="object-control minimize-object">
+		<img src="%ICONURL{minus}%" title="Collapse" alt="[-]" />
+   </div>
+   <div class="object-control maximize-object">
+		<img src="%ICONURL{plus}%" title="Expand" alt="[+]" />
+   </div>
+</div>%TMPL:END%
+
+%TMPL:INCLUDE{UserObject}%
+
+</verbatim>

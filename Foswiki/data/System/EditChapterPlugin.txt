@@ -1,0 +1,147 @@
+---+!! %TOPIC%
+<!--
+   * Set SHORTDESCRIPTION = An easy section editing facility
+-->
+%SHORTDESCRIPTION%
+
+%TOC%
+---++ Description
+<table style="float:right">
+<tr>
+  <td><img src="%ATTACHURLPATH%/wikiringlogo40x40.png"></td>
+  <td><a href="http://wikiring.com" title="Make your Wiki ring!" style="text-decoration:none">
+      Powered by <br /> <nop>WikiRing Consultants </a>
+  </td>
+</tr>
+</table>
+This plugin implements a simple section editing feature comparable to
+the one available for [[http://en.wikipedia.org/wiki/Help:Section#Section_editing][MediaWiki]].
+It adds link urls to headings so that users can edit the section below. Edit links are
+enabeld only for those users that have edit access. Edit links are hidden unless you hover
+with the mouse pointer over them and then displays an icon, defaulting to a pencil
+<img src="%PUBURLPATH%/%WEB%/%TOPIC%/pencil.png" border="0" />.
+
+Once installed, the plugin automatically enables sectional editing without any further
+provisions. Note, that it will only detect headings created using TML (topic markup language), that is
+writing =---++ heading= and the like. It is not sensitive to normal HTML-markup, so it
+does not add an edit link to normal =&lt;h2>headings&lt;/h2>=.
+
+Sections might be included into the current topic using [[VarINCLUDE][INCLUDE]]. The
+edit link will be adjusted approriately, allowing to edit the correct target topic and
+then redirect back to the current topic it has been included to.
+
+
+---++ Configuration
+There are a couple of preference variables to influence how and which headings are processed:
+| *Name* | *Description* | *Default* |
+| EDITCHAPTERPLUGIN_MINDEPTH | min depth of heading to edit the sections, 1=h1, 2=h2, 3=... | 1 | 
+| EDITCHAPTERPLUGIN_MAXDEPTH | max depth of headings to edit | 6 | 
+| EDITCHAPTERPLUGIN_EDITIMG \
+| icon to be used in the edit link \
+| =&lt;img src="%$nopPUBURLPATH%/%<nop>SYSTEMWEB%/EditChapterPlugin/uweb-g.gif" height="16" width="16" border="0" />= | 
+| EDITCHAPTERPLUGIN_EDITLABELFORMAT \
+| full format string to render the detected heading of a chapter \
+| =&lt;span class="ecpHeading">$anchor&lt;/a>$heading&lt;a class="ecpEdit" href="$url" title="Edit this chapter">$img&lt;/a>&lt;/span>= |
+| EDITCHAPTERPLUGIN_ENABLED \
+| variable to enable/disable the EditChapterPlugin \
+| on |
+
+
+---++ Syntax
+
+---+++ ENABLEEDITCHAPTER, DISABLEEDITCHAPTER
+In addition to enable/disable the plugin using the =EDITCHAPTERPLUGIN_ENABLE=
+preference variable, it can also be enabled disabled using the =%<nop>ENABLEEDITCHAPTER%= / =%<nop>DISABLEEDITCHAPTER%=
+tags.
+
+---+++ EXTRACTCHAPTER
+Dedicated chapters of a topic can be extracted using the =%<nop>EXTRACTCHAPTER{}%= tag.
+it takes the following parameters:
+
+| *Name* | *Description* | *Default* |
+| topic | target topic name to extract the chapter from | =%<nop>BASETOPIC%= |
+| web | target web name | =%<nop>BASEWEB%= |
+| nr | specify a single chapter to be extracted |  |
+| from | specify first chapter to be extracted, use =to= to specify the last chapter | 0 |
+| to | specify last chapter to be extracted, mostly used together with =from= | 9999999 |
+| before | specify to extract all chapters before the given one | |
+| after | specify to extract all chapters after the given one | |
+| encode | enable/disable entity encoding, used when embeding into an HTML input element | on |
+
+Example:
+<verbatim>
+<textarea style="display:none">
+  %EXTRACTCHAPTER{before="1"}%
+</textarea>
+<textarea>
+  %EXTRACTCHAPTER{nr="1" encode="on"}%
+</textarea>
+<textarea style="display:none">
+  %EXTRACTCHAPTER{after="1}%
+</textarea>
+</verbatim>
+
+See the =edit.chapter.tmpl= for a real-world example, used as a cover to the standard edit
+templates, thus hooking in section editing into the standard editing process.
+
+
+---++ Limitations
+For the purpose of simplicity a couple of shortcomings have to be accepted.
+
+   1 parametrized includes: 
+     the plugin does not know anything about parametrized includes, that is it won't work as
+     expected if a topic includes text from a _named section_ of another topic using
+     =%<nop>INCLUDE{"TargetTopic" section="onlythis"}%=. 
+   1 wysiwyg editor:
+     it currently does not work work together with Foswiki:Extensions/WysiwygPlugin
+   1 explicit sectioning: 
+     users can't specify any other section to be editable in isolation (e.g. using some
+     =&lt;section> ... &lt;/section>= markup) other than by giving the respective section
+     a heading.
+   1 jQuery: the <nop>EditChapterPlugin depends on the JQueryPlugin, used
+     to hook into the edit interface. You may be facing an increased javascript download overhead in 
+     your html pages as you are already using Foswiki:Extensions/BehavourContrib, Foswiki:Extensions/TwistyContrib
+     and Foswiki:Extensions/TwistyPlugin. Consider uninstalling these three and replace them with
+     Foswiki:Extensions/JQueryTwistyPlugin. You should have installed JQueryPlugin anyway already.
+     Last not least you get less javascript but more features.
+
+---++ Installation Instructions
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+---++ Plugin Info
+
+Many thanks to the following sponsors for supporting this work:
+   * [[http://www.tecdoc.de][TecDoc Informations System <nop>GmbH]]
+
+|  Plugin Author(s): | Michael Daum |
+|  Copyright &copy;: | 2008-2010, Michael Daum http://michaeldaumconsulting.com |
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Release: | 2.12 |
+|  Version: | 6337 (2010-02-15) |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  15 Feb 2010: | fixing breakage with latest Foswiki:Extensions/JQueryPlugin |
+|  12 Feb 2010: | minify and compress css and js; forward compatibility for newer foswikis |
+|  16 Nov 2009: | disabling wysiwyg during sectional edits |
+|  02 Jul 2009: | fixing javascript order and TOC links |
+|  17 Apr 2009: | working towards a pure foswiki plugin |
+|  08 Jan 2009: | certified for foswiki/compat |
+|  26 Nov 2008: | replaced the uggly universal edit button with a nice pencil |
+|  26 Jun 2008: | new universal edit button |
+|  29 Apr 2008: | removed "literal" hack again; removed check for body_text context; \
+                  only the icon is clickable - was all of the heading before |
+|  13 Mar 2008: | add &lt;literal> ... &lt;/literal> for TWiki engines before 4.2 |
+|  14 Feb 2008: | have a little space in the default heading format to let <nop>TopicMarkup do its job; \
+                  added support for legacy heading markup like =--------#####= |
+|  05 Feb 2008: | compatibility with old <nop>PatternSkin versions |
+|  03 Jan 2008: | initial release |
+|  Dependencies: | <table class="foswikiTable" border="1"><tr><th>Name</th><th>Version</th><th>Description</th></tr><tr><td align="left">Foswiki::Plugins::JQueryPlugin</td><td align="left">&gt;=0.4</td><td align="left">Required.</td></tr><tr><td align="left">Foswiki::Plugins::ZonePlugin</td><td align="left">&gt;=1.0</td><td align="left">Required.</td></tr></table> |
+|  Plugin Home: | Foswiki:Extensions/EditChapterPlugin |
+|  Support: | Foswiki:Support/EditChapterPlugin |
+
+
+%META:FILEATTACHMENT{name="wikiringlogo40x40.png" attr="h" autoattached="0" comment="" date="1198066989" path="wikiringlogo40x40.png" size="2571" version=""}%

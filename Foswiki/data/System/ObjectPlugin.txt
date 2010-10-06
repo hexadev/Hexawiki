@@ -1,0 +1,51 @@
+%META:TOPICINFO{author="ProjectContributor" date="1276070380" format="1.1" reprev="1.1" version="1.1"}%
+---+!! !ObjectPlugin
+<!--
+One line description, required for extensions repository catalog.
+BuildContrib will fill in the SHORTDESCRIPTION with the value of
+$SHORTDESCRIPTION from the .pm module, or you can redefine it here if you
+prefer.
+   * Set SHORTDESCRIPTION = Use a topic as an object store.
+-->
+%SHORTDESCRIPTION%
+
+%TOC%
+
+The object is to use foswiki topics to store lots of objects (chunks of structured data) that can be searched, filtered and manipulated. The intention is to avoid the creation of thousands of topics with minimal content and offer an object management service to other plugins.
+
+In the future, the plugin will additionally manage the objects in a DBCacheContrib database for the object type thus offering the search functions of the DBCachePlugin. And there will be the possibility to define an object type as meta data (so the created object is added to the topic as =%META:OBJECT= ) thus offering an 'easy' way of adding structural elements to a topic without having to extend the attached form. This data will be added to the topic entry in the DBCacheContrib database of the web.
+
+---++!! Acknowledgements
+
+I see this plugin as a generalised version of the ActionTrackerPlugin and, indeed, started development with lots of find/replacing.
+
+---++ What is an !ObjectPlugin object
+An object is like a topic with a DataForm and a =VIEW_TEMPLATE= . An object has default parameters (creator, created, uid, type and text). Additional parameters can be defined using an Object Form which is just a DataForm (see the EventObject from the FullCalendarPlugin for an example). An additional =noload= form type is introduced for 'support' parameters that are default for an object type and so are not intended to be stored with individual objects in the topic.
+
+---++ (Lots) More docco to follow
+The code is stable and full featured but this early release without completed documentation is for the benefit of the FullCalendarPlugin.
+
+---+ Plugin Installation Instructions
+
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+---++ Info
+
+|  Plugin Author: | Foswiki:Main/DavidPatterson |
+|  Copyright: | &copy; |
+|  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
+|  Release: | 1.01 |
+|  Version: | 8478 (2010-08-12) |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  12 Aug 2010 | Foswiki:Tasks/Item9465 fix permanent expanding of macros when updating an object |
+|  06 Aug 2010 | first release |
+|  Dependencies: | <table class="foswikiTable" border="1"><tr><th>Name</th><th>Version</th><th>Description</th></tr><tr><td align="left">Time::ParseDate</td><td align="left">&gt;=2003.0211</td><td align="left">Required.</td></tr><tr><td align="left">JSON</td><td align="left">&gt;=2.21</td><td align="left">Required.</td></tr><tr><td align="left">JSON::XS</td><td align="left">&gt;=2.29</td><td align="left">Recommended for performance.</td></tr><tr><td align="left">Foswiki::Plugins::HijaxPlugin</td><td align="left">&gt;=1.1</td><td align="left">Required.</td></tr><tr><td align="left">Foswiki::Plugins::FlexWebListPlugin</td><td align="left">&gt;=1.51</td><td align="left">Required, see ObjectModules.</td></tr></table> |
+|  Home page: | http://foswiki.org/bin/view/Extensions/ObjectPlugin |
+|  Support: | http://foswiki.org/bin/view/Support/ObjectPlugin |
+
+<!-- Do _not_ attempt to edit this topic; it is auto-generated. -->

@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1285875971" format="1.1" reprev="1.3" version="1.3"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286487424" format="1.1" reprev="4" version="4"}%
 ---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
 
 %TABPANE%
@@ -40,6 +40,18 @@
 %ENDTAB%
 %TAB{Template web Proceso}%
    * _PlantillaDeProceso.WebHome
+%ENDTAB%
+%TAB{Vistas}%
+%~~ DBQUERY{
+~~~ "name =~ '^VistaDe'"
+~~~ format="   * $web.$topic"
+~~~ }%
+%ENDTAB%
+%TAB{Listados}%
+%~~ DBQUERY{
+~~~ "name =~ '^ListadoDe'"
+~~~ format="   * $web.$topic"
+~~~ }%
 %ENDTAB%
 %ENDTABPANE%
 

@@ -18,3 +18,14 @@
 | Tue Oct  5 21:08:55 2010 |  | 127.0.0.1 | {SMTP}{Username} | foswiki |
 | Tue Oct  5 21:08:55 2010 |  | 127.0.0.1 | {SMTP}{Password} | mandrilenano |
 | Tue Oct  5 21:10:41 2010 |  | 127.0.0.1 | {Register}{AllowLoginName} | 1 |
+| Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{AutoTemplatePlugin}{Module} | Foswiki::Plugins::AutoTemplatePlugin |
+| Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{DBCachePlugin}{Enabled} | 1 |
+| Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{DBCachePlugin}{Module} | Foswiki::Plugins::DBCachePlugin |
+| Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{EditChapterPlugin}{Module} | Foswiki::Plugins::EditChapterPlugin |
+| Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{FlexWebListPlugin}{Module} | Foswiki::Plugins::FlexWebListPlugin |
+| Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{GenPDFAddOnPlugin}{Module} | Foswiki::Plugins::GenPDFAddOnPlugin |
+| Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{GluePlugin}{Module} | Foswiki::Plugins::GluePlugin |
+| Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{HijaxPlugin}{Module} | Foswiki::Plugins::HijaxPlugin |
+| Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{ObjectPlugin}{Module} | Foswiki::Plugins::ObjectPlugin |
+| Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{ZonePlugin}{Module} | Foswiki::Plugins::ZonePlugin |
+| Thu Oct  7 21:24:18 2010 |  | 127.0.0.1 | {Plugins}{GluePlugin}{Enabled} | 1 |

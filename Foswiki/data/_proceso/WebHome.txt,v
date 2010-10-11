@@ -1,10 +1,15 @@
-head	1.1;
+head	1.2;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 expand	@o@;
 
+
+1.2
+date	2010.10.11.21.47.08;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
 date	2010.10.07.22.30.05;	author BaseUserMapping_333;	state Exp;
@@ -17,14 +22,32 @@ desc
 @
 
 
+1.2
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286833628" format="1.1" reprev="2" version="2"}%
+
+
+%META:FORM{name="Estructuras.FormularioDeProceso"}%
+%META:FIELD{name="Codigo" attributes="M" title="Codigo" value="código_del_proceso"}%
+%META:FIELD{name="Nombre" attributes="M" title="Nombre" value="nombre_del_proceso"}%
+%META:FIELD{name="Objetivo" attributes="" title="Objetivo" value=""}%
+@
+
+
 1.1
 log
 @save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" date="1286490605" format="1.1" version="1"}%
+@d1 1
+a1 2
+%META:TOPICINFO{author="BaseUserMapping_333" date="1286490605" format="1.1" version="1"}%
 ---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
-
+d3 5
+a7 12
 ---++ %MAKETEXT{"Available Information"}%
    * ...
    * ...

@@ -1,0 +1,68 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.2
+date	2010.10.11.21.58.37;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.10.11.20.31.05;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.2
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286834317" format="1.1" reprev="2" version="2"}%
+%TMPL:INCLUDE{view}%
+%TMPL:DEF{"form"}%%TMPL:END%
+
+%TMPL:DEF{"encabezado"}%
+---+ Proceso %FORMFIELD{"Nombre" topic="%BASEWEB%/%BASETOPIC%"}%
+%FORMFIELD{"Descripción"}%
+%TMPL:END%
+
+%TMPL:DEF{"documentos"}%
+---++ Documentos del Proceso
+   * [[CaracterizacionDelProceso][Caracterización]]
+   * [[ProcedimientosDelProceso][Procedimientos]]
+   * [[InstructivosDelProceso][Instructivos]]
+   * [[FormatosDelProceso][Formatos]]
+   * [[ManualesDelProceso][Manuales]]
+   * [[DocumentosDeApoyo][Documentos de Apoyo]]
+   * [[DocumentosExternos][Documentos Externos]]
+%TMPL:END%
+
+%TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
+%TMPL:P{"encabezado"}%
+%TMPL:P{"documentos"}%
+---++ Otros
+%TEXT%
+%TMPL:END%
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@d1 26
+a26 2
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286829065" format="1.1" version="1"}%
+Proceso
+@

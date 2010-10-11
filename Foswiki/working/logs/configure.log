@@ -29,3 +29,20 @@
 | Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{ObjectPlugin}{Module} | Foswiki::Plugins::ObjectPlugin |
 | Thu Oct  7 21:23:12 2010 |  | 127.0.0.1 | {Plugins}{ZonePlugin}{Module} | Foswiki::Plugins::ZonePlugin |
 | Thu Oct  7 21:24:18 2010 |  | 127.0.0.1 | {Plugins}{GluePlugin}{Enabled} | 1 |
+| Sun Oct 10 20:17:18 2010 |  | 127.0.0.1 | {Plugins}{AutoTemplatePlugin}{Enabled} | 1 |
+| Sun Oct 10 20:17:18 2010 |  | 127.0.0.1 | {Plugins}{EditChapterPlugin}{Enabled} | 1 |
+| Sun Oct 10 20:17:18 2010 |  | 127.0.0.1 | {Plugins}{FlexWebListPlugin}{Enabled} | 1 |
+| Sun Oct 10 20:17:18 2010 |  | 127.0.0.1 | {Plugins}{GenPDFAddOnPlugin}{Enabled} | 1 |
+| Sun Oct 10 20:17:18 2010 |  | 127.0.0.1 | {Plugins}{ObjectPlugin}{Enabled} | 1 |
+| Sun Oct 10 20:17:19 2010 |  | 127.0.0.1 | {Plugins}{ZonePlugin}{Enabled} | 1 |
+| Mon Oct 11 00:14:22 2010 |  | 127.0.0.1 | {Plugins}{AutoTemplatePlugin}{Override} | 1 |
+| Mon Oct 11 00:14:22 2010 |  | 127.0.0.1 | {Plugins}{AutoTemplatePlugin}{Mode} | section,rules, exist |
+| Mon Oct 11 00:22:38 2010 |  | 127.0.0.1 | {Plugins}{AutoTemplatePlugin}{Override} |  |
+| Mon Oct 11 00:22:38 2010 |  | 127.0.0.1 | {Plugins}{AutoTemplatePlugin}{Mode} | section |
+| Mon Oct 11 00:23:24 2010 |  | 127.0.0.1 | {Plugins}{AutoTemplatePlugin}{Debug} | 1 |
+| Mon Oct 11 00:34:06 2010 |  | 127.0.0.1 | {Plugins}{AutoViewTemplatePlugin}{Enabled} |  |
+| Mon Oct 11 00:35:49 2010 |  | 127.0.0.1 | {Plugins}{AutoTemplatePlugin}{Enabled} |  |
+| Mon Oct 11 00:35:49 2010 |  | 127.0.0.1 | {Plugins}{AutoViewTemplatePlugin}{Enabled} | 1 |
+| Mon Oct 11 00:35:50 2010 |  | 127.0.0.1 | {Plugins}{AutoViewTemplatePlugin}{Override} | 1 |
+| Mon Oct 11 00:35:50 2010 |  | 127.0.0.1 | {Plugins}{AutoViewTemplatePlugin}{Mode} | section |
+| Mon Oct 11 00:37:49 2010 |  | 127.0.0.1 | {Plugins}{ZonePlugin}{Enabled} |  |

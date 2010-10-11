@@ -1,0 +1,13 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286758304" format="1.1" version="1"}%
+%STARTSECTION{formEdit}%
+<form name="nuevo" action="%SCRIPTURL{edit}%/%BASEWEB%/" method="GET">
+     <input type="hidden" name="formtemplate" value="Estructuras.FormularioDeManual" />
+     <input type="hidden" name="templatetopic" value="Estructuras.PlantillaDeManual" />
+     <input type="hidden" name="topicparent" value="%BASEWEB%.WebHome" />
+     <input type="hidden" name="template" value="Estructuras.DocumentoEdit" />
+     <input type="hidden" name="topic" value="ManualId%SERVERTIME{$year$mo$day$hours$minutes$seconds}%" />
+     <input type="hidden" name="onlynewtopic" value="on" />
+     <input type="hidden" name="onlywikiname" value="on" />
+     %BUTTON{"%MAKETEXT{"Crear Manual"}%" icon="add" onclick="document.nuevo.submit()"}%
+</form>
+%ENDSECTION{formEdit}%

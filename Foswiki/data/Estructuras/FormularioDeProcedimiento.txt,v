@@ -1,13 +1,17 @@
-head	1.1;
+head	1.2;
 access;
 symbols;
 locks; strict;
 comment	@# @;
-expand	@o@;
 
+
+1.2
+date	2010.10.11.00.39.50;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
-date	2010.09.30.19.44.13;	author BaseUserMapping_333;	state Exp;
+date	2010.10.10.20.02.13;	author BaseUserMapping_333;	state Exp;
 branches;
 next	;
 
@@ -17,13 +21,32 @@ desc
 @
 
 
-1.1
+1.2
 log
-@none
+@reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" date="1285875853" format="1.1" version="1.1"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286757590" format="1.1" reprev="2" version="2"}%
+| Name | Type | Size | Values | Tooltip message | Attributes |
+| Nombre | text | 40 | | Nombre del procedimiento | M |
+| Numero | text | 10 | | Numero del procedimiento | M |
+| [[Estructuras.ListadoDeCargos][Responsable]] | select+values | 1 | | Cargo Responsable | M |
+| Version | text | 20 | | Version del Procedimiento | M |
 
+%STARTSECTION{"viewtemplate"}%DocumentoView%ENDSECTION{"viewtemplate"}%
+%STARTSECTION{"edittemplate"}%DocumentoEdit%ENDSECTION{"edittemplate"}% 
 
 %META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.1
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="none" date="1286740933" format="1.1" reprev="1" version="1"}%
+d8 3
 @

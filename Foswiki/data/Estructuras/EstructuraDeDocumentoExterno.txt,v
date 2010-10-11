@@ -1,0 +1,38 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.10.10.23.14.53;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286752493" format="1.1" version="1"}%
+---+ Documento Externo: %FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
+
+| *Información* | |
+| *Fecha Expedición*: |%FORMFIELD{"FechaExpedicion" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Fuente*: |%FORMFIELD{"Fuente" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Responsable*: |%FORMFIELD{"Responsable" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Proceso*: |%FORMFIELD{"Proceso" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Fecha Caducidad*: |%FORMFIELD{"FechaCaducidad" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Estado*: |%FORMFIELD{"Estado" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Items Obsoletos*: |%FORMFIELD{"ItemsObsoletos" topic="%BASEWEB%.%BASETOPIC%"}% | 
+| *Descripción*: |%FORMFIELD{"Descripcion" topic="%BASEWEB%.%BASETOPIC%"}% |
+
+@

@@ -1,0 +1,17 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286749771" format="1.1" version="1"}%
+%INCLUDE{"Estructuras.EstructuraDeProcedimiento"}%
+
+---++ Objetivo
+
+---++ Alcance
+
+---++ Campo de aplicación
+
+---++ Responsables
+
+---++ Términos y definiciones
+
+---++ Contenido
+
+---++ Anexos
+

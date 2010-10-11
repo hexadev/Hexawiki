@@ -1,0 +1,14 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286754110" format="1.1" reprev="1" version="1"}%
+%~~ SEARCH{
+~~~ "^\|[^\|]*\| *option *\|"
+~~~ web="Estructuras"
+~~~ topic="ListadoDeCargos"
+~~~ type="regex"
+~~~ nonoise="on"
+~~~ nototal="on"
+~~~ separator=" "
+~~~ multiple="on"
+~~~ newline="%BR%"
+~~~ nofinalnewline="on" 
+~~~ format="<option>$pattern(^\|*(.*?) *\|.*)</option>"
+~~~ }%

@@ -1,0 +1,29 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.10.10.22.53.45;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286751225" format="1.1" version="1"}%
+---+ Manual: MA-%FORMFIELD{"Sigla" topic="%BASEWEB%.WebHome"}%-%FORMFIELD{"Numero" topic="%BASEWEB%.%BASETOPIC%"}%-%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
+
+%INCLUDE{"Estructuras.EstructuraDeProcedimiento" section="controlcambios"}%
+@

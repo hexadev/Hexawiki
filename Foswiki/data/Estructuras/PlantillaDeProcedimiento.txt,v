@@ -1,0 +1,42 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.10.10.22.29.31;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286749771" format="1.1" version="1"}%
+%INCLUDE{"Estructuras.EstructuraDeProcedimiento"}%
+
+---++ Objetivo
+
+---++ Alcance
+
+---++ Campo de aplicación
+
+---++ Responsables
+
+---++ Términos y definiciones
+
+---++ Contenido
+
+---++ Anexos
+
+@

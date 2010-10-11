@@ -1,0 +1,10 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286742784" format="1.1" version="1"}%
+%META:TOPICPARENT{name="FormularioDeProcedimiento"}%
+---+ Listado de Cargos
+
+Para agregar cargos se debe editar la tabla, agregar un "row", ingresar los datos y guardar. Se requiere eliminar un elemento de la tabla se recomienda buscar todos los documentos que tienen este valor cambiarlo en los documentos y luego eliminarlo.
+
+%EDITTABLE{format="| text, 60 | label, 0, option | text, 60 |"}%
+| *Name* | *Type* | *Tooltip message* |
+| - | option | nulo |
+

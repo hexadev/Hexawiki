@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286487424" format="1.1" reprev="4" version="4"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286754823" format="1.1" reprev="5" version="5"}%
 ---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
 
 %TABPANE%
@@ -28,7 +28,7 @@
 %ENDTAB%
 %TAB{Template edit}%
 %~~ DBQUERY{
-~~~ "name =~ '^EditTemplate'"
+~~~ "name =~ 'EditTemplate$'"
 ~~~ format="   * $web.$topic"
 ~~~ }%
 %ENDTAB%
@@ -50,6 +50,12 @@
 %TAB{Listados}%
 %~~ DBQUERY{
 ~~~ "name =~ '^ListadoDe'"
+~~~ format="   * $web.$topic"
+~~~ }%
+%ENDTAB%
+%TAB{Creacion de registros}%
+%~~ DBQUERY{
+~~~ "name =~ '^Crear'"
 ~~~ format="   * $web.$topic"
 ~~~ }%
 %ENDTAB%

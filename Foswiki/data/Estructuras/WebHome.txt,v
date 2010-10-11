@@ -1,9 +1,14 @@
-head	1.4;
+head	1.5;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.5
+date	2010.10.10.23.53.43;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.4;
 
 1.4
 date	2010.10.07.21.37.04;	author BaseUserMapping_333;	state Exp;
@@ -31,12 +36,12 @@ desc
 @
 
 
-1.4
+1.5
 log
 @reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286487424" format="1.1" reprev="4" version="4"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286754823" format="1.1" reprev="5" version="5"}%
 ---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
 
 %TABPANE%
@@ -66,7 +71,7 @@ text
 %ENDTAB%
 %TAB{Template edit}%
 %~~ DBQUERY{
-~~~ "name =~ '^EditTemplate'"
+~~~ "name =~ 'EditTemplate$'"
 ~~~ format="   * $web.$topic"
 ~~~ }%
 %ENDTAB%
@@ -91,9 +96,30 @@ text
 ~~~ format="   * $web.$topic"
 ~~~ }%
 %ENDTAB%
+%TAB{Creacion de registros}%
+%~~ DBQUERY{
+~~~ "name =~ '^Crear'"
+~~~ format="   * $web.$topic"
+~~~ }%
+%ENDTAB%
 %ENDTABPANE%
 
 %META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="3" t_1="1285875726"}%
+@
+
+
+1.4
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286487424" format="1.1" reprev="4" version="4"}%
+d31 1
+a31 1
+~~~ "name =~ '^EditTemplate'"
+d56 6
 @
 
 

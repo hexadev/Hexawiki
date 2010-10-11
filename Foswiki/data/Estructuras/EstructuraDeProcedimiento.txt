@@ -1,0 +1,7 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286750801" format="1.1" version="1"}%
+---+ Procedimiento: PR-%FORMFIELD{"Sigla" topic="%BASEWEB%.WebHome"}%-%FORMFIELD{"Numero" topic="%BASEWEB%.%BASETOPIC%"}%-%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
+
+%STARTSECTION{"controlcambios"}%
+| *Versión* | %FORMFIELD{"Version" topic="%BASEWEB%.%BASETOPIC%"}% |
+TODO
+%ENDSECTION{"controlcambios"}%

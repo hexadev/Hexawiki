@@ -1,0 +1,38 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.10.10.23.41.50;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286754110" format="1.1" reprev="1" version="1"}%
+%~~ SEARCH{
+~~~ "^\|[^\|]*\| *option *\|"
+~~~ web="Estructuras"
+~~~ topic="ListadoDeCargos"
+~~~ type="regex"
+~~~ nonoise="on"
+~~~ nototal="on"
+~~~ separator=" "
+~~~ multiple="on"
+~~~ newline="%BR%"
+~~~ nofinalnewline="on" 
+~~~ format="<option>$pattern(^\|*(.*?) *\|.*)</option>"
+~~~ }%
+@

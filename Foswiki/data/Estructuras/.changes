@@ -29,3 +29,74 @@ VistaDeMapaDeProcesos	BaseUserMapping_333	1286489081	1	minor, reprev
 VistaDeMapaDeProcesos	BaseUserMapping_333	1286489144	2	
 VistaDeMapaDeProcesos	BaseUserMapping_333	1286489144	1	minor, reprev
 VistaDeMapaDeProcesos	BaseUserMapping_333	1286489186	1	minor, reprev
+FormularioDeProcedimiento	BaseUserMapping_333	1286740933	1	minor, reprev
+ListadoDeCargos	BaseUserMapping_333	1286742784	1	
+FormularioDeInstructivo	BaseUserMapping_333	1286742903	1	
+FormularioDeInstructivo	BaseUserMapping_333	1286742927	1	minor, reprev
+FormularioDeFormato	BaseUserMapping_333	1286742974	1	
+FormularioDeManual	BaseUserMapping_333	1286743023	1	
+FormularioDeDocumentoDeApoyo	BaseUserMapping_333	1286743084	1	
+FormularioDeDocumentoExterno	BaseUserMapping_333	1286744664	1	
+ListadoDeProcesos	BaseUserMapping_333	1286749223	1	
+ListadoDeProcesos	BaseUserMapping_333	1286749266	1	minor, reprev
+ListadoDeProcesos	BaseUserMapping_333	1286749361	1	minor, reprev
+ListadoDeProcesos	BaseUserMapping_333	1286749485	1	minor, reprev
+PlantillaDeProcedimiento	BaseUserMapping_333	1286749771	1	
+EstructuraDeProcedimiento	BaseUserMapping_333	1286750801	1	
+EstructuraDeInstructivo	BaseUserMapping_333	1286750944	1	
+EstructuraDeFormato	BaseUserMapping_333	1286751052	1	
+EstructuraDeManual	BaseUserMapping_333	1286751225	1	
+PlantillaDeInstructivo	BaseUserMapping_333	1286751264	1	
+PlantillaDeManual	BaseUserMapping_333	1286751289	1	
+PlantillaDeFormato	BaseUserMapping_333	1286751841	1	
+PlantillaDeFormato	BaseUserMapping_333	1286751870	1	minor, reprev
+PlantillaDeDocumentoDeApoyo	BaseUserMapping_333	1286751940	1	
+EstructuraDeDocumentoDeApoyo	BaseUserMapping_333	1286751993	1	
+PlantillaDeDocumentoExterno	BaseUserMapping_333	1286752086	1	
+EstructuraDeDocumentoExterno	BaseUserMapping_333	1286752493	1	
+ProcedimientoViewTemplate	BaseUserMapping_333	1286752755	1	
+ProcedimientoViewTemplate	BaseUserMapping_333	1286752816	1	minor, reprev
+DocumentoViewTemplate	BaseUserMapping_333	1286752816	1	
+DocumentoViewTemplate	BaseUserMapping_333	1286752816	1	minor, reprev
+ListadoDeCargosSelectOptions	BaseUserMapping_333	1286753861	1	
+DocumentoEditTemplate	BaseUserMapping_333	1286754080	1	
+ListadoDeCargosSelectOptions	BaseUserMapping_333	1286754110	1	minor, reprev
+DocumentoEditTemplate	BaseUserMapping_333	1286754149	1	minor, reprev
+DocumentoEditTemplate	BaseUserMapping_333	1286754190	1	minor, reprev
+WebHome	BaseUserMapping_333	1286754388	5	
+WebHome	BaseUserMapping_333	1286754823	5	minor, reprev
+CrearProcedimiento	BaseUserMapping_333	1286755144	1	
+ProcedimientoId20101010185904	BaseUserMapping_333	1286755286	1	
+DocumentoEditTemplate	BaseUserMapping_333	1286755611	1	minor, reprev
+ProcedimientoId20101010185904	BaseUserMapping_333	1286755631	1	minor, reprev
+ProcedimientoId20101010185904	BaseUserMapping_333	1286755631	1	
+DocumentoEditTemplate	BaseUserMapping_333	1286755733	1	minor, reprev
+DocumentoEditTemplate	BaseUserMapping_333	1286755742	1	minor, reprev
+DocumentoEditTemplate	BaseUserMapping_333	1286755781	1	minor, reprev
+DocumentoEditTemplate	BaseUserMapping_333	1286755808	1	minor, reprev
+DocumentoEditTemplate	BaseUserMapping_333	1286755886	1	minor, reprev
+ProcedimientoId20101010190717	BaseUserMapping_333	1286755920	1	
+FormularioDeProcedimiento	BaseUserMapping_333	1286756008	2	
+DocumentoViewTemplate	BaseUserMapping_333	1286756123	1	minor, reprev
+DocumentoViewTemplate	BaseUserMapping_333	1286756189	1	minor, reprev
+FormularioDeProcedimiento	BaseUserMapping_333	1286756511	2	minor, reprev
+FormularioDeProcedimiento	BaseUserMapping_333	1286757527	2	minor, reprev
+FormularioDeProcedimiento	BaseUserMapping_333	1286757590	2	minor, reprev
+DocumentoViewTemplate	BaseUserMapping_333	1286757609	1	minor, reprev
+ProcedimientoId20101010190717	BaseUserMapping_333	1286757665	1	minor, reprev
+DocumentoEditTemplate	BaseUserMapping_333	1286758006	1	minor, reprev
+ProcedimientoId20101010190717	BaseUserMapping_333	1286758020	1	minor, reprev
+DocumentoEditTemplate	BaseUserMapping_333	1286758067	1	minor, reprev
+ProcedimientoId20101010190717	BaseUserMapping_333	1286758116	1	minor, reprev
+ProcedimientoId20101010190717	BaseUserMapping_333	1286758116	1	
+CrearInstructivo	BaseUserMapping_333	1286758166	1	
+InstructivoId20101010194926	BaseUserMapping_333	1286758184	1	
+FormularioDeInstructivo	BaseUserMapping_333	1286758214	2	
+InstructivoId20101010194926	BaseUserMapping_333	1286758247	1	minor, reprev
+InstructivoId20101010194926	BaseUserMapping_333	1286758248	1	
+CrearManual	BaseUserMapping_333	1286758304	1	
+CrearFormato	BaseUserMapping_333	1286758345	1	
+CrearDocumentoDeApoyo	BaseUserMapping_333	1286758409	1	
+FormularioDeDocumentoDeApoyo	BaseUserMapping_333	1286758485	2	
+FormularioDeFormato	BaseUserMapping_333	1286758493	2	
+FormularioDeManual	BaseUserMapping_333	1286758502	2	

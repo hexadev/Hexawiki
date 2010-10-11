@@ -1,9 +1,9 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286757590" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286758214" format="1.1" reprev="1" version="2"}%
 | Name | Type | Size | Values | Tooltip message | Attributes |
-| Nombre | text | 40 | | Nombre del procedimiento | M |
-| Numero | text | 10 | | Numero del procedimiento | M |
+| Nombre | text | 40 | | Nombre del instructivo | M |
+| Numero | text | 10 | | Numero del instructivo | M |
 | [[Estructuras.ListadoDeCargos][Responsable]] | select+values | 1 | | Cargo Responsable | M |
-| Version | text | 20 | | Version del Procedimiento | M |
+| Version | text | 20 | | Version del instructivo | M |
 
 %STARTSECTION{"viewtemplate"}%DocumentoView%ENDSECTION{"viewtemplate"}%
 %STARTSECTION{"edittemplate"}%DocumentoEdit%ENDSECTION{"edittemplate"}% 

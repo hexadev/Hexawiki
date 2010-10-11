@@ -1,0 +1,84 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.10.11.00.47.47;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286758067" format="1.1" reprev="1" version="1"}%
+%TMPL:INCLUDE{"foswiki"}% 
+%TMPL:INCLUDE{"edit"}% 
+%TMPL:DEF{"form"}%%TMPL:END% 
+%TMPL:DEF{"formtop"}%%TMPL:END% 
+%TMPL:DEF{"formbottom"}%%TMPL:END% 
+%TMPL:DEF{"formparameters"}%%TMPL:END% 
+%TMPL:DEF{"titleactionchapter"}%(%MAKETEXT{"edit chapter"}%)%TMPL:END% 
+%TMPL:DEF{"action_buttonschapter"}%%TMPL:P{"button_save"}% %TMPL:P{"button_quietsave"}% %MAKETEXT{"or"}% %TMPL:P{"button_cancel"}%%TMPL:END% 
+%TMPL:DEF{"titlechapter"}%%TOPICTITLE% (%MAKETEXT{"edit chapter"}%) - %WIKITOOLNAME%%TMPL:END% 
+%TMPL:DEF{"pagetitlechapter"}%[[%WEB%.%TOPIC%]] (%MAKETEXT{"edit chapter"}%)%TMPL:END% 
+%TMPL:DEF{"settingstabchapter"}%%TMPL:END% 
+%TMPL:DEF{"chaptertemplate"}% 
+%TMPL:P{"formstart"}% 
+%TMPL:P{"textarea"}% 
+%TMPL:P{"sig"}% 
+%TMPL:P{"topicinfo"}% 
+%TMPL:P{"formbottom"}% 
+%TMPL:END%
+
+%TMPL:DEF{"content"}%
+%TMPL:P{"toolbar"}%
+%TMPL:P{"fullContent"}% 
+%TMPL:END%
+
+%TMPL:DEF{"fullContent"}% 
+%TMPL:P{"formstart"}%
+<input type="hidden" name="refresh" value="on"/>
+%IF{"'%URLPARAM{"formtemplate"}%'='' and '%QUERY{"form.name"}%'!=''" then="<input type='hidden' name='formtemplate' value='%QUERY{"form.name"}%'/>" else="<input type='hidden' name='formtemplate' value='%URLPARAM{"formtemplate"}%'/>"}%
+%TABPANE% 
+%TAB{"Contenido"}%
+%TMPL:P{textarea}% <span><span style="color: red;">**</span></span> <span style="font-size: 0.7em; color: #999999;">Texto del Documento.</span>
+%ENDTAB% 
+%TAB{"Propiedades"}% 
+| *Nombre*: | <input  type="text" name="Nombre" size="60" class="foswikiInputField" id="nombre" value=""/> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Nombre del Documento.</span> |
+| *Numero*: | <input  type="text" name="Numero" size="60" class="foswikiInputField" id="numero" value=""/> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Nombre del Documento.</span> |
+| *Responsable*:  | <select name="Responsable">%INCLUDE{"Estructuras.ListadoDeCargosSelectOptions"}%</select> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Responsable del documento.</span>  |
+| *Varsion*: | <input  type="text" name="Version" size="20" class="foswikiInputField" id="version" value=""/> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Numero de Versión del Documento.</span> |
+%ENDTAB% 
+%ENDTABPANE% 
+%TMPL:P{"topicinfo"}%
+%TMPL:P{"formend"}% 
+<script type="text/javascript">
+var Nombre;
+var Numero;
+var Responsable;
+var Version;
+$(function (){
+       Nombre = "%ENCODE{"%FORMFIELD{Nombre}%" type="quotes"}%";
+       Numero = "%ENCODE{"%FORMFIELD{Numero}%" type="quotes"}%";
+       Responsable = "%ENCODE{"%FORMFIELD{Responsable}%" type="quotes"}%";
+       Version = "%ENCODE{"%FORMFIELD{Version}%" type="quotes"}%";
+       $('[name=Nombre]').val(Nombre);
+       $('[name=Numero]').val(Numero);
+       $('[name=Responsable]').val(Responsable);
+       $('[name=Version]').val(Version);
+});
+</script>
+%TMPL:END%
+
+@

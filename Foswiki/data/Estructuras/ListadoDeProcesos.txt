@@ -1,0 +1,15 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286749485" format="1.1" reprev="1" version="1"}%
+%META:TOPICPARENT{name="FormularioDeDocumentoExterno"}%
+---+ Listado de procesos
+
+| *Name* | *Type* | *Tooltip message* |
+| - | option | nulo |
+%~~ SEARCH{
+~~~ "form.name ~ 'FormularioDeProceso'" 
+~~~ type="query"
+~~~ recurse="on" 
+~~~ nonoise="on" 
+~~~ nototal="on"
+~~~ web="Procesos"
+~~~ format="| $formfield(Nombre)=$web.$topic | option | - |"
+~~~ }%

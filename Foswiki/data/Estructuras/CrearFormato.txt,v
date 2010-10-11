@@ -1,0 +1,38 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.10.11.00.52.25;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286758345" format="1.1" version="1"}%
+%STARTSECTION{formEdit}%
+<form name="nuevo" action="%SCRIPTURL{edit}%/%BASEWEB%/" method="GET">
+     <input type="hidden" name="formtemplate" value="Estructuras.FormularioDeFormato" />
+     <input type="hidden" name="templatetopic" value="Estructuras.PlantillaDeFormato" />
+     <input type="hidden" name="topicparent" value="%BASEWEB%.WebHome" />
+     <input type="hidden" name="template" value="Estructuras.DocumentoEdit" />
+     <input type="hidden" name="topic" value="FormatoId%SERVERTIME{$year$mo$day$hours$minutes$seconds}%" />
+     <input type="hidden" name="onlynewtopic" value="on" />
+     <input type="hidden" name="onlywikiname" value="on" />
+     %BUTTON{"%MAKETEXT{"Crear Formato"}%" icon="add" onclick="document.nuevo.submit()"}%
+</form>
+%ENDSECTION{formEdit}%
+@

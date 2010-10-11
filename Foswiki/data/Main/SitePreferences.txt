@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286381449" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286827534" format="1.1" reprev="3" version="3"}%
 ---+!! %TOPIC%
 
 %ICON{"help"}% 
@@ -19,7 +19,7 @@
 
 Customize logo and tooltip texts:
 
-   * Set WIKILOGOIMG = %PUBURL%/%USERSWEB%/SitePreferences/logo_trans_small.png
+   * Set WIKILOGOIMG = %PUBURL%/%USERSWEB%/SitePreferences/logo-trans-small.png
    * Set WIKILOGOALT = Frigorífico del Cauca S.A.S.
    * Set WIKILOGOURL = %SCRIPTURL{"view"}%/%USERSWEB%/%HOMETOPIC%
 
@@ -35,6 +35,8 @@ Customize your top bar background image and color
    * Set WEBHEADERART = %PUBURLPATH%/%SYSTEMWEB%/PatternSkin/header5.gif
    * Set WEBHEADERBGCOLOR = #ffffff
       
+Customize copyright
+   * Set WEBCOPYRIGHT = &copy; 2010 Todos los derechos reservados. Frigorífico del Cauca S.A.S.
       
 ---++ Finalisation
 =FINALPREFERENCES= locks site-level preferences that are *not* allowed to be overridden by [[%WEBPREFSTOPIC%]] or user preferences:
@@ -49,3 +51,4 @@ Customize your top bar background image and color
 -->
 
 %META:FILEATTACHMENT{name="logo_trans_small.png" attachment="logo_trans_small.png" attr="" comment="" date="1286381449" path="logo_trans_small.png" size="4232" user="BaseUserMapping_333" version="2"}%
+%META:FILEATTACHMENT{name="logo-trans-small.png" attachment="logo-trans-small.png" attr="" comment="" date="1286826659" path="logo-trans-small.png" size="18758" user="BaseUserMapping_333" version="1"}%

@@ -1,10 +1,20 @@
-head	1.1;
+head	1.3;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 expand	@o@;
 
+
+1.3
+date	2010.10.15.22.21.30;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.10.12.02.44.07;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
 date	2010.10.10.21.04.24;	author BaseUserMapping_333;	state Exp;
@@ -17,22 +27,52 @@ desc
 @
 
 
+1.3
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287181290" format="1.1" reprev="2" version="3"}%
+| Name | Type | Size | Values | Tooltip message | Attributes |
+| Nombre | text | 80 | |Nombre del documento externo | M |
+| Descripcion | textarea | 80x5 | |Descripción del documento externo | M |
+| Fecha Expedicion | date | 0 | |Fecha de expedición del documento externo |  |
+| Fuente | text | 80 | |Organización que expide el documento | M |
+| [[Estructuras.ListadoDeCargos][Responsable]] | select+values | 1 | |Cargo Responsable | M |
+| Estado | select | 1 | Vigente, Obsoleto-parcial, Obsoleto-total | Estado del documento externo | M |  
+| Fecha Caducidad | date | 0 | | Fecha en la que caduca el codumento externo | |
+| Items Obsoletos | textarea | 80x5 | | Listado de los capitulos, numerales, etc que se enceuntren obsoletos en caso de estar en estado Obsoleto-parcial | |
+
+%STARTSECTION{"viewtemplate"}%DocumentoView%ENDSECTION{"viewtemplate"}%
+%STARTSECTION{"edittemplate"}%DocumentoExternoEdit%ENDSECTION{"edittemplate"}% 
+
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.2
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286851447" format="1.1" reprev="2" version="2"}%
+a7 1
+| [[Estructuras.ListadoDeProcesos][Proceso]] | select+values | 1 | |Proceso asociado | M |
+@
+
+
 1.1
 log
 @save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286744664" format="1.1" version="1"}%
-| Name | Type | Size | Values | Tooltip message | Attributes |
-| Nombre | text | 80 | |Nombre del documento externo | M |
-| Descripcion | textarea | 80x5 | |Descripción del documento externo | M |
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286744664" format="1.1" version="1"}%
+d5 1
+a5 1
 | Fecha Expedicion | date | 0 | |Fecha de expedición del documento externo | M |
-| Fuente | text | 80 | |Organización que expide el documento | M |
-| [[Estructuras.ListadoDeCargos][Responsable]] | select+values | 1 | |Cargo Responsable | M |
-| [[Estructuras.ListadoDeProcesos][Proceso]] | select+values | 1 | |Proceso asociado | M |
-| Estado | select | 1 | Vigente, Obsoleto-parcial, Obsoleto-total | Estado del documento externo | M |  
-| Fecha Caducidad | date | 0 | | Fecha en la que caduca el codumento externo | |
-| Items Obsoletos | textarea | 80x5 | | Listado de los capitulos, numerales, etc que se enceuntren obsoletos en caso de estar en estado Obsoleto-parcial | |
-
-%META:REVCOMMENT{ncomments="0"}%
+d13 3
 @

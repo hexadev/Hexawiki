@@ -1,0 +1,23 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287162146" format="1.1" version="1"}%
+%INCLUDE{"Estructuras.EstructuraDeInstructivo"}%
+
+---++ Objetivo
+
+---++ Alcance
+
+---++ Campo de aplicación
+
+---++ Responsables
+
+---++ Términos y definiciones
+
+---++ Contenido
+
+---++ Anexos
+
+%META:FORM{name="Estructuras.FormularioDeInstructivo"}%
+%META:FIELD{name="Nombre" attributes="M" title="Nombre" value="instructivo"}%
+%META:FIELD{name="Descripcion" attributes="M" title="Descripcion" value="adsasd"}%
+%META:FIELD{name="Numero" attributes="M" title="Numero" value="01"}%
+%META:FIELD{name="Responsable" attributes="M" title="[[Estructuras.ListadoDeCargos][Responsable]]" value="-"}%
+%META:FIELD{name="Version" attributes="M" title="Version" value="1"}%

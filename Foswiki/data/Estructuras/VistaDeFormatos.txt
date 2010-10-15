@@ -1,0 +1,19 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287000746" format="1.1" reprev="1" version="2"}%
+---+ Formatos del Proceso: %FORMFIELD{"Nombre" topic="%BASEWEB%.WebHome"}%
+---++ Crear formato
+
+%INCLUDE{Estructuras.CrearFormato}%
+
+---++ Listado de Formatos
+
+%~~ SEARCH{
+~~~ "form.name ~ '*FormularioDeFormato'"
+~~~ type="query"
+~~~ nonoise="on"
+~~~ order="formfield(Numero)"
+~~~ zeroresults="*No se encontraron Formatos.*"
+~~~ newline="%BR%"
+~~~ header="| *Nombre* | *Descripción* | *Responsable* | *Versión* |"
+~~~ format="|[[$web.$topic][FO-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-$formfield(Numero)-$formfield(Nombre)]] |$formfield(Descripcion)|$formfield(Responsable) |$formfield(Version) |"
+~~~ web="%BASEWEB%"
+~~~ }%

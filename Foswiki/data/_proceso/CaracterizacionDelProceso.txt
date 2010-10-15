@@ -1,3 +1,21 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286834477" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287182568" format="1.1" reprev="1" version="3"}%
 %META:TOPICPARENT{name="WebHome"}%
-::TODO::jgaviria::Crear vista genérica de Caracterización
+%INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
+
+---++ Objetivo
+
+---++ Alcance
+
+---++ Requisitos Aplicables
+---+++ ISO-9000
+
+---+++ HACCP
+
+---++ Proceso
+---+++ Planear
+
+---+++ Hacer
+
+---+++ Verificar
+
+---+++ Actuar

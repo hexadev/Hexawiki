@@ -1,0 +1,9 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286856076" format="1.1" version="1"}%
+---+ Caracterización: PR-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-%FORMFIELD{"Numero" topic="%BASEWEB%.%BASETOPIC%"}%-%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
+
+%STARTSECTION{"controlcambios"}%
+| *Proceso* | %FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Responsable* |
+%ENDSECTION{"controlcambios"}%
+
+::TODO::jgaviria::terminar esta cosa con manuel

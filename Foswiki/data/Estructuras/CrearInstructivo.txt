@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286758166" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286857525" format="1.1" version="2"}%
 %STARTSECTION{formEdit}%
 <form name="nuevo" action="%SCRIPTURL{edit}%/%BASEWEB%/" method="GET">
      <input type="hidden" name="formtemplate" value="Estructuras.FormularioDeInstructivo" />
@@ -8,6 +8,6 @@
      <input type="hidden" name="topic" value="InstructivoId%SERVERTIME{$year$mo$day$hours$minutes$seconds}%" />
      <input type="hidden" name="onlynewtopic" value="on" />
      <input type="hidden" name="onlywikiname" value="on" />
-     %BUTTON{"%MAKETEXT{"Crear Instructivo"}%" icon="add" onclick="document.nuevo.submit()"}%
+     %BUTTON{"%MAKETEXT{"Crear Instructivo"}%" icon="add" onclick="document.nuevo.submit()"}% %CLEAR%
 </form>
 %ENDSECTION{formEdit}%

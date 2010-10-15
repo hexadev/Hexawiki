@@ -6,7 +6,7 @@ comment	@# @;
 
 
 1.1
-date	2010.10.11.21.41.39;	author BaseUserMapping_333;	state Exp;
+date	2010.10.12.02.09.40;	author BaseUserMapping_333;	state Exp;
 branches;
 next	;
 
@@ -21,11 +21,11 @@ log
 @reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286833299" format="1.1" reprev="1" version="1"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286849380" format="1.1" reprev="1" version="1"}%
 | *Name* | *Type* | *Size* | *Values* | *Tooltip message* | *Attributes* | 
-| Codigo | text |  |  | Código del Proceso | M | 
-| Nombre | text |  |  | Nombre del Proceso | M | 
-| Objetivo | textarea |  | | Objetivo del Proceso | |
+| Codigo | text | 10  |  | Código del Proceso | M | 
+| Nombre | text | 80 |  | Nombre del Proceso | M | 
+| Objetivo | textarea | 80x5 | | Objetivo del Proceso | |
 
 %STARTSECTION{"viewtemplate"}%ProcesoView%ENDSECTION{"viewtemplate"}%
 %STARTSECTION{"edittemplate"}%ProcesoEdit%ENDSECTION{"edittemplate"}% 

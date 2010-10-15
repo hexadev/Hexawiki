@@ -1,6 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286758502" format="1.1" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286923210" format="1.1" version="3"}%
 | Name | Type | Size | Values | Tooltip message | Attributes |
 | Nombre | text | 40 | | Nombre del manual | M |
+| Descripcion | textarea | 80x5 | | Descripción del documento | M |
 | Numero | text | 10 | | Numero del manual | M |
 | [[Estructuras.ListadoDeCargos][Responsable]] | select+values | 1 | | Cargo Responsable | M |
 | Version | text | 20 | | Versión del manual | M |

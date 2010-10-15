@@ -1,9 +1,14 @@
-head	1.1;
+head	1.2;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.2
+date	2010.10.15.17.15.28;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
 date	2010.10.10.22.24.45;	author BaseUserMapping_333;	state Exp;
@@ -16,19 +21,18 @@ desc
 @
 
 
-1.1
+1.2
 log
 @reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286749485" format="1.1" reprev="1" version="1"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287162928" format="1.1" reprev="2" version="2"}%
 %META:TOPICPARENT{name="FormularioDeDocumentoExterno"}%
 ---+ Listado de procesos
 
 | *Name* | *Type* | *Tooltip message* |
-| - | option | nulo |
 %~~ SEARCH{
-~~~ "form.name ~ 'FormularioDeProceso'" 
+~~~ "form.name ~ '*FormularioDeProceso'" 
 ~~~ type="query"
 ~~~ recurse="on" 
 ~~~ nonoise="on" 
@@ -36,4 +40,20 @@ text
 ~~~ web="Procesos"
 ~~~ format="| $formfield(Nombre)=$web.$topic | option | - |"
 ~~~ }%
+@
+
+
+1.1
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286749485" format="1.1" reprev="1" version="1"}%
+a5 1
+| - | option | nulo |
+d7 1
+a7 1
+~~~ "form.name ~ 'FormularioDeProceso'" 
 @

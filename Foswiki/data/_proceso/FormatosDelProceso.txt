@@ -1,3 +1,3 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286834504" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286915877" format="1.1" reprev="1" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
-::TODO::jgaviria::Crear vista genérica de Listado de Formatos
+%INCLUDE{"Estructuras.VistaDeFormatos"}%

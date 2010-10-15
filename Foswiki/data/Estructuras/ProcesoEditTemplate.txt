@@ -1,2 +1,53 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286833865" format="1.1" reprev="1" version="1"}%
-::TODO::jgaviria::Crear edit template
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286853869" format="1.1" reprev="1" version="2"}%
+%TMPL:INCLUDE{"foswiki"}% 
+%TMPL:INCLUDE{"edit"}% 
+%TMPL:DEF{"form"}%%TMPL:END% 
+%TMPL:DEF{"formtop"}%%TMPL:END% 
+%TMPL:DEF{"formbottom"}%%TMPL:END% 
+%TMPL:DEF{"formparameters"}%%TMPL:END% 
+%TMPL:DEF{"titleactionchapter"}%(%MAKETEXT{"edit chapter"}%)%TMPL:END% 
+%TMPL:DEF{"action_buttonschapter"}%%TMPL:P{"button_save"}% %TMPL:P{"button_quietsave"}% %MAKETEXT{"or"}% %TMPL:P{"button_cancel"}%%TMPL:END% 
+%TMPL:DEF{"titlechapter"}%%TOPICTITLE% (%MAKETEXT{"edit chapter"}%) - %WIKITOOLNAME%%TMPL:END% 
+%TMPL:DEF{"pagetitlechapter"}%[[%WEB%.%TOPIC%]] (%MAKETEXT{"edit chapter"}%)%TMPL:END% 
+%TMPL:DEF{"settingstabchapter"}%%TMPL:END% 
+%TMPL:DEF{"chaptertemplate"}% 
+%TMPL:P{"formstart"}% 
+%TMPL:P{"textarea"}% 
+%TMPL:P{"sig"}% 
+%TMPL:P{"topicinfo"}% 
+%TMPL:P{"formbottom"}% 
+%TMPL:END%
+
+%TMPL:DEF{"content"}%
+%TMPL:P{"toolbar"}%
+%TMPL:P{"fullContent"}% 
+%TMPL:END%
+
+%TMPL:DEF{"fullContent"}% 
+%TMPL:P{"formstart"}%
+<input type="hidden" name="refresh" value="on"/>
+%IF{"'%URLPARAM{"formtemplate"}%'='' and '%QUERY{"form.name"}%'!=''" then="<input type='hidden' name='formtemplate' value='%QUERY{"form.name"}%'/>" else="<input type='hidden' name='formtemplate' value='%URLPARAM{"formtemplate"}%'/>"}%
+%TABPANE% 
+%TAB{"Contenido"}%
+%TMPL:P{textarea}% <span><span style="color: red;">**</span></span> <span style="font-size: 0.7em; color: #999999;">Texto del Documento.</span>
+%ENDTAB% 
+%TAB{"Propiedades"}% 
+| *Nombre*: | <input  type="text" name="Nombre" size="60" class="foswikiInputField" id="nombre" value=""/> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Nombre completo del proceso.</span> |
+| *Codigo*: | <input  type="text" name="Codigo" size="10" class="foswikiInputField" id="codigo" value=""/> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Siglas del nombre del proceso.</span> |
+| *Descripción*: | <textarea name="Descripcion" cols="80" rows="5" class="foswikiInputField" id="descripcion">%FORMFIELD{Descripcion}%</textarea> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Descripción del proceso.</span> |
+%ENDTAB% 
+%ENDTABPANE% 
+%TMPL:P{"topicinfo"}%
+%TMPL:P{"formend"}% 
+<script type="text/javascript">
+var Nombre;
+var Codigo;
+$(function (){
+       Nombre = "%ENCODE{"%FORMFIELD{Nombre}%" type="quotes"}%";
+       Codigo = "%ENCODE{"%FORMFIELD{Codigo}%" type="quotes"}%";
+       $('[name=Nombre]').val(Nombre);
+       $('[name=Codigo]').val(Codigo);
+
+});
+</script>
+%TMPL:END%

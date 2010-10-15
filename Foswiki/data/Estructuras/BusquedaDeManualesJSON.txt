@@ -1,0 +1,15 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287180858" format="1.1" reprev="1" version="1"}%
+[%SEARCH{
+"form.name~'*FormularioDeManual*' AND (fields[name='Nombre' AND lc(value)~lc('*%URLPARAM{nombre}%*')] AND fields[name='Descripcion' AND lc(value)~lc('*%URLPARAM{descripcion}%*')] AND fields[name='Version' AND value~'*%URLPARAM{version}%*'])" 
+type="query" 
+nosearch="on"
+nototal="on" 
+casesensitive="off" 
+order="topic" 
+reverse="off" 
+separator=", " 
+nonoise="on" 
+format="{topic: '[[$web.$topic][MA-$formfield(Numero)-$formfield(Nombre)]]',  descripcion: '$formfield(Descripcion)' , version: '$formfield(Version)', proceso: '$web'}" 
+web="%URLPARAM{"proceso" default="Procesos"}%" 
+recurse="on"
+}%]

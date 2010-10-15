@@ -1,8 +1,8 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286488527" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287179534" format="1.1" reprev="3" version="3"}%
 <script src="%PUBURL%/System/JQueryPlugin/jquery-1.3.2.js" type="text/javascript"></script>
 <style>.resultados {display: none;}</style>
 <script type="text/javascript">
-foswiki.web = 'Metodologia';
+foswiki.web = 'Procesos';
 foswiki.topic = 'BusquedaDeDocumentos';
 function buscarproyecto() {
      $(".resultados").hide();
@@ -27,9 +27,9 @@ function buscarproyecto() {
                           $("#totalinstructivos").html("Se encontraron " + json.length + " instructivos - ")
                           for (var i = 0; i < json.length; i++) {
                               if(i % 2 == 0 ){
-                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff">' + json[i].proceso + '</td></tr>';
+                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
                              }else{
-                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].proceso + '</td></tr>';
+                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
                              }
                           }
                           $("tbody#instructivossearchresult").html(rows);
@@ -55,9 +55,9 @@ if ($("#cbplantillas:checked").val() == "plantillas") {
                           $("#totalplantillas").html("Se encontraron " + json.length + " plantillas - ")
                           for (var i = 0; i < json.length; i++) {
                               if(i % 2 == 0 ){
-                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff">' + json[i].proceso + '</td></tr>';
+                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
                              }else{
-                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].proceso + '</td></tr>';
+                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
                              }
                           }
                           $("tbody#plantillassearchresults").html(rows);
@@ -82,9 +82,9 @@ if ($("#cbapoyo:checked").val() == "apoyo") {
                           $("#totalapoyo").html("Se encontraron " + json.length + " documentos de apoyo - ")
                           for (var i = 0; i < json.length; i++) {
                               if(i % 2 == 0 ){
-                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff">' + json[i].proceso + '</td></tr>';
+                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
                              }else{
-                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].proceso + '</td></tr>';
+                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
                              }
                           }
                           $("tbody#apoyosearchresults").html(rows);
@@ -97,21 +97,22 @@ if ($("#cbapoyo:checked").val() == "apoyo") {
 }     
 if ($("#cbexternos:checked").val() == "externos") {
       $("#tablaexternos").show();          
+      var parametrosDocExt = { skin: 'text', nombre: $('[name=nombre]').val().replace(cleanStringregExp, '?'), descripcion: $('[name=descripcion]').val().replace(cleanStringregExp, '?'), proceso: $('[name=proceso]').val()};
       $("tbody#externossearchresults").html("");
       $.ajax({
       async: true,
       url: "%SCRIPTURLPATH{"view"}%/Estructuras/BusquedaDeDocumentosExternosJSON",
       type: 'get', 
-      data: parametros,
+      data: parametrosDocExt,
       dataType: "json",
       success: function (json) {
                        var rows = '';
                           $("#totalexternos").html("Se encontraron " + json.length + " documentos de externos - ")
                           for (var i = 0; i < json.length; i++) {
                               if(i % 2 == 0 ){
-                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff">' + json[i].proceso + '</td></tr>';
+                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].fuente + '</td><td valign="top" bgcolor="#ffffff"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
                              }else{
-                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].proceso + '</td></tr>';
+                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].fuente + '</td><td valign="top" bgcolor="#edf4f9"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
                              }
                           }
                           $("tbody#externossearchresults").html(rows);
@@ -136,9 +137,9 @@ if ($("#cbprocedimientos:checked").val() == "procedimientos") {
                           $("#totalprocedimientos").html("Se encontraron " + json.length + " procedimientos - ")
                           for (var i = 0; i < json.length; i++) {
                               if(i % 2 == 0 ){
-                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff">' + json[i].proceso + '</td></tr>';
+                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
                              }else{
-                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].proceso + '</td></tr>';
+                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
                              }
                           }
                           $("tbody#procedimientossearchresults").html(rows);
@@ -146,6 +147,60 @@ if ($("#cbprocedimientos:checked").val() == "procedimientos") {
                  },
      error: function (data){
                         $('tbody#procedimientossearchresults').html("Error al ejecutar el search");                      
+            }
+  });
+}     
+if ($("#cbformatos:checked").val() == "formatos") {
+      $("#tablaformatos").show();          
+      $("tbody#formatossearchresults").html("");
+      $.ajax({
+      async: true,
+      url: "%SCRIPTURLPATH{"view"}%/Estructuras/BusquedaDeFormatosJSON",
+      type: 'get', 
+      data: parametros,
+      dataType: "json",
+      success: function (json) {
+                       var rows = '';
+                          $("#totalformatos").html("Se encontraron " + json.length + " formatos - ")
+                          for (var i = 0; i < json.length; i++) {
+                              if(i % 2 == 0 ){
+                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
+                             }else{
+                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
+                             }
+                          }
+                          $("tbody#formatossearchresults").html(rows);
+                          $('#loading').html("");
+                 },
+     error: function (data){
+                        $('tbody#formatossearchresults').html("Error al ejecutar el search");                      
+            }
+  });
+}     
+if ($("#cbmanuales:checked").val() == "manuales") {
+      $("#tablamanuales").show();          
+      $("tbody#manualessearchresults").html("");
+      $.ajax({
+      async: true,
+      url: "%SCRIPTURLPATH{"view"}%/Estructuras/BusquedaDeManualesJSON",
+      type: 'get', 
+      data: parametros,
+      dataType: "json",
+      success: function (json) {
+                       var rows = '';
+                          $("#totalmanuales").html("Se encontraron " + json.length + " manuales - ")
+                          for (var i = 0; i < json.length; i++) {
+                              if(i % 2 == 0 ){
+                                  rows += "<tr class='foswikiTableEven foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0'><td valign='top' bgcolor='#ffffff'>" + json[i].topic + "</td><td valign='top' bgcolor='#ffffff'>" + json[i].descripcion  + '</td><td valign="top" bgcolor="#ffffff">' + json[i].version + '</td><td valign="top" bgcolor="#ffffff"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
+                             }else{
+                                 rows += "<tr class='foswikiTableOdd foswikiTableRowdataBgSorted1 foswikiTableRowdataBg1'><td valign='top' bgcolor='#edf4f9'>" + json[i].topic + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].descripcion  + '</td><td valign="top" bgcolor="#edf4f9">' + json[i].version + '</td><td valign="top" bgcolor="#edf4f9"><a href="' + foswiki.scriptUrl + '/view/' + json[i].proceso + ".WebHome'>" + json[i].proceso + '</a></td></tr>';
+                             }
+                          }
+                          $("tbody#manualessearchresults").html(rows);
+                          $('#loading').html("");
+                 },
+     error: function (data){
+                        $('tbody#manualessearchresults').html("Error al ejecutar el search");                      
             }
   });
 }     
@@ -161,9 +216,9 @@ function limpiar() {
 </script>
 ---+ Búsqueda de Documentos
 
-|  <label>Nombre</label>| <input type="text" name="nombre" id="nombre" value="" /> |  <label>Versión</label>| <input type="text" name="version" id="version" value="" /> |
-|  <label>Responsable</label>| <select name="responsable"><option value="(.*)">Todos</option>%INCLUDE{"Estructuras.ListadoDeResponsablesSelectOptions" warn="off"}%</select> |  <label>Proceso</label>| <select name="proceso" id="proceso"><option value="Metodologia">Todos</option>%INCLUDE{"Estructuras.ListadoDeProcesosSelectOptions" warn="off"}%</select> |
-|  <label>Buscar en</label>| <input id="cbinstructivos" type="checkbox" name="buscaren" value="instructivos" checked>Instructivos<br /><input id="cbformatos" type="checkbox" name="buscaren" value="manuales" checked>Formatos<br /> |<input id="cbapoyo" type="checkbox" name="buscaren" value="apoyo" checked>Documentos de Apoyo<br /><input id="cbexternos" type="checkbox" name="buscaren" value="externos" checked>Documentos Externos<br />|<input id="cbprocedimientos" type="checkbox" name="buscaren" value="procedimientos" checked>Procedimientos<br /><input id="cbmanuales" type="checkbox" name="buscaren" value="manuales" checked>Manuales |
+|  <label>Nombre</label>| <input type="text" name="nombre" id="nombre" value="" /> | <label>Descripción</label> <input type="text" name="descripcion" id="descripcion" value="" /> | <label>Versión</label> <input type="text" name="version" id="version" value="" /> |
+|  <label>Responsable</label>| <select name="responsable"><option value="(.*)">Todos</option>%INCLUDE{"Estructuras.ListadoDeResponsablesSelectOptions" warn="off"}%</select> |  <label>Proceso</label>  <select name="proceso" id="proceso"><option value="Procesos">Todos</option>%INCLUDE{"Estructuras.ListadoDeProcesosSelectOptions" warn="off"}%</select> | |
+|  <label>Buscar en</label>| <input id="cbinstructivos" type="checkbox" name="buscaren" value="instructivos" checked>Instructivos<br /><input id="cbformatos" type="checkbox" name="buscaren" value="formatos" checked>Formatos<br /> |<input id="cbapoyo" type="checkbox" name="buscaren" value="apoyo" checked>Documentos de Apoyo<br /><input id="cbexternos" type="checkbox" name="buscaren" value="externos" checked>Documentos Externos<br />|<input id="cbprocedimientos" type="checkbox" name="buscaren" value="procedimientos" checked>Procedimientos<br /><input id="cbmanuales" type="checkbox" name="buscaren" value="manuales" checked>Manuales |
 |<img src="%PUBURL%/System/DocumentGraphics/refreshtopic.gif" onclick="buscarproyecto()" alt="Recargar búsqueda"/><a href="javascript:buscarproyecto()"> Buscar</a> |<a href="javascript:marcar()">Marcar Todos</a>  |<a href="javascript:limpiar()">Limpiar Todos</a> | |
 <br /><br />
 ---+ Resultados
@@ -246,7 +301,6 @@ hidelink="Esconder"
 </div>
 
 
-
 <div class="resultados" id="tablaexternos">
 ---++ Documentos Externos
 <span class="totales" id="totalexternos"></span> 
@@ -261,7 +315,7 @@ hidelink="Esconder"
 <tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0"> 
 <th valign="top" bgcolor="#687684" class="foswikiTableCol0 foswikiFirstCol"><font color="#ffffff">Nombre</font></th>
 <th valign="top" bgcolor="#687684" class="foswikiTableCol1"><font color="#ffffff">Descripción</font></th>
-<th valign="top" bgcolor="#687684" class="foswikiTableCol2 foswikiLastCol"><font color="#ffffff">Versión</font></th>
+<th valign="top" bgcolor="#687684" class="foswikiTableCol2 foswikiLastCol"><font color="#ffffff">Fuente</font></th>
 <th valign="top" bgcolor="#687684" class="foswikiTableCol2 foswikiLastCol"><font color="#ffffff">Proceso</font></th>
 </tr>
 </THEAD>
@@ -271,7 +325,6 @@ hidelink="Esconder"
 </div>
 %ENDTWISTY%
 </div>
-
 
 
 <div class="resultados" id="tablaprocedimientos">
@@ -287,12 +340,63 @@ hidelink="Esconder"
 <THEAD>
 <tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0"> 
 <th valign="top" bgcolor="#687684" class="foswikiTableCol0 foswikiFirstCol"><font color="#ffffff">Nombre</font></th>
-<th valign="top" bgcolor="#687684" class="foswikiTableCol1"><font color="#ffffff">Objetivo</font></th>
+<th valign="top" bgcolor="#687684" class="foswikiTableCol1"><font color="#ffffff">Descripción</font></th>
 <th valign="top" bgcolor="#687684" class="foswikiTableCol2 foswikiLastCol"><font color="#ffffff">Versión</font></th>
 <th valign="top" bgcolor="#687684" class="foswikiTableCol2 foswikiLastCol"><font color="#ffffff">Proceso</font></th>
 </tr>
 </THEAD>
 <tbody id="procedimientossearchresults">
+</tbody>
+</table>
+</div>
+%ENDTWISTY%
+</div>
+
+
+<div class="resultados" id="tablaformatos">
+---++ Formatos
+<span class="totales" id="totalformatos"></span> 
+%TWISTY{
+mode="div"
+showlink="Mostrar resultados"
+hidelink="Esconder"
+}%
+<div>
+<table rules="rows" cellspacing="0" cellpadding="0" border="1" class="foswikiTable">
+<THEAD>
+<tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0"> 
+<th valign="top" bgcolor="#687684" class="foswikiTableCol0 foswikiFirstCol"><font color="#ffffff">Nombre</font></th>
+<th valign="top" bgcolor="#687684" class="foswikiTableCol1"><font color="#ffffff">Descripción</font></th>
+<th valign="top" bgcolor="#687684" class="foswikiTableCol2 foswikiLastCol"><font color="#ffffff">Versión</font></th>
+<th valign="top" bgcolor="#687684" class="foswikiTableCol2 foswikiLastCol"><font color="#ffffff">Proceso</font></th>
+</tr>
+</THEAD>
+<tbody id="formatossearchresults">
+</tbody>
+</table>
+</div>
+%ENDTWISTY%
+</div>
+
+<div class="resultados" id="tablamanuales">
+---++ Manuales
+<span class="totales" id="totalmanuales"></span> 
+%TWISTY{
+mode="div"
+showlink="Mostrar resultados"
+hidelink="Esconder"
+}%
+<div>
+<table rules="rows" cellspacing="0" cellpadding="0" border="1" class="foswikiTable">
+<THEAD>
+<tr class="foswikiTableOdd foswikiTableRowdataBgSorted0 foswikiTableRowdataBg0"> 
+<th valign="top" bgcolor="#687684" class="foswikiTableCol0 foswikiFirstCol"><font color="#ffffff">Nombre</font></th>
+<th valign="top" bgcolor="#687684" class="foswikiTableCol1"><font color="#ffffff">Descripción</font></th>
+<th valign="top" bgcolor="#687684" class="foswikiTableCol2 foswikiLastCol"><font color="#ffffff">Versión</font></th>
+<th valign="top" bgcolor="#687684" class="foswikiTableCol2 foswikiLastCol"><font color="#ffffff">Proceso</font></th>
+</tr>
+</THEAD>
+<tbody id="manualessearchresults">
 </tbody>
 </table>
 </div>

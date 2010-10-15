@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286750944" format="1.1" version="1"}%
----+ Instructivo: IN-%FORMFIELD{"Sigla" topic="%BASEWEB%.WebHome"}%-%FORMFIELD{"Numero" topic="%BASEWEB%.%BASETOPIC%"}%-%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286855463" format="1.1" version="2"}%
+---+ Instructivo: IN-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-%FORMFIELD{"Numero" topic="%BASEWEB%.%BASETOPIC%"}%-%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
 
 %INCLUDE{"Estructuras.EstructuraDeProcedimiento" section="controlcambios"}%

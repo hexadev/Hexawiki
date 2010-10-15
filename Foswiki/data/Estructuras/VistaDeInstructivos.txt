@@ -1,0 +1,19 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287000776" format="1.1" version="2"}%
+---+ Instructivos del Proceso: %FORMFIELD{"Nombre" topic="%BASEWEB%.WebHome"}%
+---++ Crear Instructivo
+
+%INCLUDE{Estructuras.CrearInstructivo}%
+
+---++ Listado de Instructivos
+
+%~~ SEARCH{
+~~~ "form.name ~ '*FormularioDeInstructivo'"
+~~~ type="query"
+~~~ nonoise="on"
+~~~ order="formfield(Numero)"
+~~~ zeroresults="*No se encontraron Instructivos.*"
+~~~ newline="%BR%"
+~~~ header="| *Nombre* | *Descripción* | *Responsable* | *Versión* |"
+~~~ format="|[[$web.$topic][IN-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-$formfield(Numero)-$formfield(Nombre)]] |$formfield(Descripcion)|$formfield(Responsable) |$formfield(Version) |"
+~~~ web="%BASEWEB%"
+~~~ }%

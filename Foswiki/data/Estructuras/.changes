@@ -143,3 +143,144 @@ ProcedimientosDelProceso	BaseUserMapping_333	1286834279	1	minor, reprev
 ProcedimientosDelProceso	BaseUserMapping_333	1286834279	1	
 ProcesoViewTemplate	BaseUserMapping_333	1286834280	2	minor, reprev
 ProcesoViewTemplate	BaseUserMapping_333	1286834318	2	minor, reprev
+FormularioDeProceso	BaseUserMapping_333	1286849380	1	minor, reprev
+FormularioDeDocumentoExterno	BaseUserMapping_333	1286850415	2	
+FormularioDeDocumentoExterno	BaseUserMapping_333	1286850502	2	minor, reprev
+ListadoDeProcesosSelectOptions	BaseUserMapping_333	1286850856	2	
+ListadoDeProcesosSelectOptions	BaseUserMapping_333	1286850866	2	minor, reprev
+FormularioDeDocumentoExterno	BaseUserMapping_333	1286851447	2	minor, reprev
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286851667	1	
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286852303	1	minor, reprev
+CrearDocumentoDeExterno	BaseUserMapping_333	1286852374	1	
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286852595	1	minor, reprev
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286852689	1	minor, reprev
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286852793	1	minor, reprev
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286852839	1	minor, reprev
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286852921	1	minor, reprev
+ListadoDeProcesosSelectOptions	BaseUserMapping_333	1286853095	2	minor, reprev
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286853137	1	minor, reprev
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286853195	1	minor, reprev
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286853242	1	minor, reprev
+DocumentoExternoId20101011215935	BaseUserMapping_333	1286853293	1	
+DocumentoExternoId20101011215935	BaseUserMapping_333	1286853424	1	minor, reprev
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286853499	1	minor, reprev
+DocumentoExternoId20101011215935	BaseUserMapping_333	1286853522	1	minor, reprev
+EstructuraDeDocumentoExterno	BaseUserMapping_333	1286853550	2	minor
+EstructuraDeDocumentoExterno	BaseUserMapping_333	1286853598	2	minor, reprev
+DocumentoExternoEditTemplate	BaseUserMapping_333	1286853636	1	minor, reprev
+DocumentoExternoId20101011215935	BaseUserMapping_333	1286853670	1	minor, reprev
+DocumentoExternoId20101011215935	BaseUserMapping_333	1286853670	1	
+ProcesoEditTemplate	BaseUserMapping_333	1286853869	2	
+EstructuraDeDocumentoExterno	BaseUserMapping_333	1286853920	2	minor, reprev
+EstructuraDeDocumentoDeApoyo	BaseUserMapping_333	1286855429	2	
+EstructuraDeFormato	BaseUserMapping_333	1286855451	2	
+EstructuraDeInstructivo	BaseUserMapping_333	1286855463	2	
+EstructuraDeManual	BaseUserMapping_333	1286855475	2	
+EstructuraDeCaracterizacion	BaseUserMapping_333	1286856076	1	
+VistaDeProcedimientos	BaseUserMapping_333	1286856163	1	
+VistaDeProcedimientos	BaseUserMapping_333	1286856272	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286857155	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286857175	1	minor, reprev
+CrearProcedimiento	BaseUserMapping_333	1286857474	2	
+CrearDocumentoDeApoyo	BaseUserMapping_333	1286857505	2	
+CrearDocumentoDeExterno	BaseUserMapping_333	1286857511	2	
+CrearFormato	BaseUserMapping_333	1286857518	2	
+CrearInstructivo	BaseUserMapping_333	1286857525	2	
+CrearManual	BaseUserMapping_333	1286857532	2	
+VistaDeProcedimientos	BaseUserMapping_333	1286857801	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286857831	1	minor, reprev
+DocumentoEditTemplate	BaseUserMapping_333	1286857963	2	
+DocumentoEditTemplate	BaseUserMapping_333	1286858019	2	minor, reprev
+ProcedimientoId20101011233032	BaseUserMapping_333	1286858059	1	minor
+VistaDeProcedimientos	BaseUserMapping_333	1286858111	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286858206	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286858226	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286858299	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286858312	1	minor, reprev
+ProcedimientoId20101011233840	BaseUserMapping_333	1286858334	1	
+VistaDeProcedimientos	BaseUserMapping_333	1286858379	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286858432	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286858474	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286858543	1	minor, reprev
+ProcedimientoId20101011233840	BaseUserMapping_333	1286858563	1	minor, reprev
+ProcedimientoId20101011233840	BaseUserMapping_333	1286858563	1	
+ProcedimientoId20101011233032	BaseUserMapping_333	1286858591	1	minor, reprev
+ProcedimientoId20101011233032	BaseUserMapping_333	1286858591	1	
+VistaDeProcedimientos	BaseUserMapping_333	1286858733	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286858746	1	minor, reprev
+VistaDeProcedimientos	BaseUserMapping_333	1286858841	1	minor, reprev
+ProcedimientoId20101011234725	BaseUserMapping_333	1286858857	1	
+WebHome	BaseUserMapping_333	1286914508	6	
+ProcedimientoId20101011234725	BaseUserMapping_333	1286915664	2	
+ProcedimientoId20101011234725	BaseUserMapping_333	1286915664	2	
+VistaDeFormatos	BaseUserMapping_333	1286915758	1	
+VistaDeProcedimientos	BaseUserMapping_333	1286915839	2	
+VistaDeFormatos	BaseUserMapping_333	1286915965	1	minor, reprev
+VistaDeManuales	BaseUserMapping_333	1286916025	1	
+VistaDeInstructivos	BaseUserMapping_333	1286916591	1	
+DocumentoEditTemplate	BaseUserMapping_333	1286916685	3	
+VistaDeDocumentosDeApoyo	BaseUserMapping_333	1286917431	1	
+VistaDeDocumentosExternos	BaseUserMapping_333	1286919549	1	
+CrearDocumentoDeExterno	BaseUserMapping_333	1286919636	3	
+VistaDeMapaDeProcesos	BaseUserMapping_333	1286921601	2	
+VistaDeMapaDeProcesos	BaseUserMapping_333	1286921640	2	minor, reprev
+VistaDeMapaDeProcesos	BaseUserMapping_333	1286921655	2	minor, reprev
+VistaDeMapaDeProcesos	BaseUserMapping_333	1286921670	2	minor, reprev
+VistaDeMapaDeProcesos	BaseUserMapping_333	1286921720	2	minor, reprev
+VistaDeMapaDeProcesos	BaseUserMapping_333	1286921738	2	minor, reprev
+VistaDeMapaDeProcesos	BaseUserMapping_333	1286921756	2	minor, reprev
+VistaDeMapaDeProcesos	BaseUserMapping_333	1286921769	2	minor, reprev
+WebHome	BaseUserMapping_333	1286922488	7	
+BusquedaDeInstructivosJSON	BaseUserMapping_333	1286923096	1	
+FormularioDeDocumentoDeApoyo	BaseUserMapping_333	1286923172	3	
+FormularioDeFormato	BaseUserMapping_333	1286923187	3	
+FormularioDeInstructivo	BaseUserMapping_333	1286923200	3	
+FormularioDeManual	BaseUserMapping_333	1286923210	3	
+FormularioDeProcedimiento	BaseUserMapping_333	1286923219	3	
+DocumentoEditTemplate	BaseUserMapping_333	1286923390	4	
+VistaDeDocumentosDeApoyo	BaseUserMapping_333	1286923663	2	
+VistaDeFormatos	BaseUserMapping_333	1287000746	2	
+VistaDeInstructivos	BaseUserMapping_333	1287000776	2	
+VistaDeManuales	BaseUserMapping_333	1287000803	2	
+VistaDeProcedimientos	BaseUserMapping_333	1287000837	3	
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287000979	1	
+BusquedaDeDocumentosExternosJSON	BaseUserMapping_333	1287001074	1	
+BusquedaDeDocumentosDeApoyoJSON	BaseUserMapping_333	1287001112	1	
+DocumentoEditTemplate	BaseUserMapping_333	1287162183	5	
+VistaDeBusquedaDeDocumentos	BaseUserMapping_333	1287162710	2	minor
+ListadoDeProcesosSelectOptions	BaseUserMapping_333	1287162839	3	
+ListadoDeProcesosSelectOptions	BaseUserMapping_333	1287162853	3	minor, reprev
+ListadoDeProcesos	BaseUserMapping_333	1287162878	2	
+VistaDeBusquedaDeDocumentos	BaseUserMapping_333	1287162898	2	minor, reprev
+ListadoDeProcesos	BaseUserMapping_333	1287162928	2	minor, reprev
+ListadoDeProcesosSelectOptions	BaseUserMapping_333	1287162945	3	minor, reprev
+BusquedaDeFormatosJSON	BaseUserMapping_333	1287169838	1	
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287169880	2	minor
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287169910	2	minor, reprev
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287170070	2	minor, reprev
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287170127	2	minor, reprev
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287170151	2	minor, reprev
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287175586	3	
+VistaDeBusquedaDeDocumentos	BaseUserMapping_333	1287176136	3	minor
+VistaDeBusquedaDeDocumentos	BaseUserMapping_333	1287176682	3	minor, reprev
+VistaDeBusquedaDeDocumentos	BaseUserMapping_333	1287177596	3	minor, reprev
+BusquedaDeDocumentosExternosJSON	BaseUserMapping_333	1287177689	2	
+BusquedaDeDocumentosExternosJSON	BaseUserMapping_333	1287177703	2	minor, reprev
+BusquedaDeDocumentosExternosJSON	BaseUserMapping_333	1287178699	2	minor, reprev
+BusquedaDeDocumentosExternosJSON	BaseUserMapping_333	1287178802	2	minor, reprev
+VistaDeBusquedaDeDocumentos	BaseUserMapping_333	1287178895	3	minor, reprev
+BusquedaDeManualesJSON	BaseUserMapping_333	1287178947	1	
+VistaDeBusquedaDeDocumentos	BaseUserMapping_333	1287179154	3	minor, reprev
+VistaDeBusquedaDeDocumentos	BaseUserMapping_333	1287179307	3	minor, reprev
+VistaDeBusquedaDeDocumentos	BaseUserMapping_333	1287179534	3	minor, reprev
+BusquedaDeManualesJSON	BaseUserMapping_333	1287180253	1	minor, reprev
+BusquedaDeManualesJSON	BaseUserMapping_333	1287180758	1	minor, reprev
+BusquedaDeDocumentosDeApoyoJSON	BaseUserMapping_333	1287180839	2	
+BusquedaDeManualesJSON	BaseUserMapping_333	1287180859	1	minor, reprev
+BusquedaDeFormatosJSON	BaseUserMapping_333	1287180885	2	
+BusquedaDeInstructivosJSON	BaseUserMapping_333	1287180900	2	
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287180916	4	
+ListadoDeProcesosSelectOptions	BaseUserMapping_333	1287181115	4	
+DocumentoExternoEditTemplate	BaseUserMapping_333	1287181238	2	
+EstructuraDeDocumentoExterno	BaseUserMapping_333	1287181276	3	
+FormularioDeDocumentoExterno	BaseUserMapping_333	1287181290	3	

@@ -1,9 +1,19 @@
-head	1.1;
+head	1.3;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.3
+date	2010.10.15.22.42.48;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.10.12.04.00.28;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
 date	2010.10.11.22.01.17;	author BaseUserMapping_333;	state Exp;
@@ -16,12 +26,58 @@ desc
 @
 
 
+1.3
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287182568" format="1.1" reprev="1" version="3"}%
+%META:TOPICPARENT{name="WebHome"}%
+%INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
+
+---++ Objetivo
+
+---++ Alcance
+
+---++ Requisitos Aplicables
+---+++ ISO-9000
+
+---+++ HACCP
+
+---++ Proceso
+---+++ Planear
+
+---+++ Hacer
+
+---+++ Verificar
+
+---+++ Actuar
+@
+
+
+1.2
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286856028" format="1.1" reprev="1" version="2"}%
+d14 8
+a21 1
+::TODO::jgaviria::TErminar esta plantilla que esta complicada
+@
+
+
 1.1
 log
 @reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286834477" format="1.1" reprev="1" version="1"}%
-%META:TOPICPARENT{name="WebHome"}%
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286834477" format="1.1" reprev="1" version="1"}%
+d3 12
+a14 1
 ::TODO::jgaviria::Crear vista genérica de Caracterización
 @

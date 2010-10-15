@@ -1,0 +1,82 @@
+head	1.3;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.3
+date	2010.10.13.20.13.57;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.10.12.20.37.19;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.10.12.04.47.21;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.3
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287000837" format="1.1" reprev="1" version="3"}%
+---+ Procedimientos del Proceso: %FORMFIELD{"Nombre" topic="%BASEWEB%.WebHome"}%
+---++ Crear procedimiento
+
+%INCLUDE{Estructuras.CrearProcedimiento}%
+
+---++ Listado de Procedimientos
+
+%~~ SEARCH{
+~~~ "form.name ~ '*FormularioDeProcedimiento'"
+~~~ type="query"
+~~~ nonoise="on"
+~~~ order="formfield(Numero)"
+~~~ zeroresults="*No se encontraron Procedimientos.*"
+~~~ newline="%BR%"
+~~~ header="| *Nombre* | *Descripción* | *Responsable* | *Versión* |"
+~~~ format="|[[$web.$topic][PR-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-$formfield(Numero)-$formfield(Nombre)]]|$formfield(Descripcion) |$formfield(Responsable) |$formfield(Version) |"
+~~~ web="%BASEWEB%"
+~~~ }%
+@
+
+
+1.2
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286915839" format="1.1" reprev="1" version="2"}%
+d15 3
+a17 2
+~~~ header="| *Nombre* | *Responsable* | *Versión* |"
+~~~ format="|[[$web.$topic][PR-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-$formfield(Numero)-$formfield(Nombre)]] |$formfield(Responsable) |$formfield(Version) |"
+@
+
+
+1.1
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286858841" format="1.1" reprev="1" version="1"}%
+d16 1
+a16 1
+~~~ format="|[[$web.$topic][FO-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-$formfield(Numero)-$formfield(Nombre)]] |$formfield(Responsable) |$formfield(Version) |"
+@

@@ -1,0 +1,64 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.2
+date	2010.10.12.22.47.42;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.10.12.21.03.51;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.2
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286923662" format="1.1" version="2"}%
+---+ Documentos de Apoyo del Proceso: %FORMFIELD{"Nombre" topic="%BASEWEB%.WebHome"}%
+---++ Crear Documentos de Apoyo
+
+%INCLUDE{Estructuras.CrearDocumentoDeApoyo}%
+
+---++ Listado de Documentos de Apoyo
+
+%~~ SEARCH{
+~~~ "form.name ~ '*FormularioDeDocumentoDeApoyo'"
+~~~ type="query"
+~~~ nonoise="on"
+~~~ order="formfield(Numero)"
+~~~ zeroresults="*No se encontraron Documentos de Apoyo.*"
+~~~ newline="%BR%"
+~~~ header="| *Nombre* | *Descripción* | *Responsable* | *Versión* |"
+~~~ format="|[[$web.$topic][DA-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-$formfield(Numero)-$formfield(Nombre)]] |$formfield(Descripcion)|$formfield(Responsable) |$formfield(Version) |"
+~~~ web="%BASEWEB%"
+~~~ }%
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286917431" format="1.1" version="1"}%
+d15 3
+a17 2
+~~~ header="| *Nombre* | *Responsable* | *Versión* |"
+~~~ format="|[[$web.$topic][DA-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-$formfield(Numero)-$formfield(Nombre)]] |$formfield(Responsable) |$formfield(Version) |"
+@

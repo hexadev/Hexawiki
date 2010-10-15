@@ -1,0 +1,19 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286919549" format="1.1" version="1"}%
+---+ Documentos Externos del Proceso: %FORMFIELD{"Nombre" topic="%BASEWEB%.WebHome"}%
+---++ Crear Documentos Externos
+
+%INCLUDE{Estructuras.CrearDocumentoDeExterno}%
+
+---++ Listado de Documentos Externos
+
+%~~ SEARCH{
+~~~ "form.name ~ '*FormularioDeDocumentoExterno'"
+~~~ type="query"
+~~~ nonoise="on"
+~~~ order="formfield(Numero)"
+~~~ zeroresults="*No se encontraron Documentos Externos.*"
+~~~ newline="%BR%"
+~~~ header="| *Nombre* | *Descripción* | *Fuente* | *Responsable* | *Fecha Expedición* | *Fechas Caducidad* | *Estado* | *Items Obsoletos*|"
+~~~ format="|[[$web.$topic][$formfield(Nombre)]]|$formfield(Descripcion)|$formfield(Fuente)|$formfield(Responsable)| $formfield(FechaExpedicion)| $formfield(FechaCaducidad)| $formfield(Estado)|$formfield(ItemsObsoletos) |"
+~~~ web="%BASEWEB%"
+~~~ }%

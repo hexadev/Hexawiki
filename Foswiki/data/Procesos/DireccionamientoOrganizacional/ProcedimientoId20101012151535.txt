@@ -1,0 +1,23 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287175572" format="1.1" version="2"}%
+%INCLUDE{"Estructuras.EstructuraDeProcedimiento"}%
+
+---++ Objetivo
+
+---++ Alcance
+
+---++ Campo de aplicación
+
+---++ Responsables
+
+---++ Términos y definiciones
+
+---++ Contenido
+
+---++ Anexos
+
+%META:FORM{name="Estructuras.FormularioDeProcedimiento"}%
+%META:FIELD{name="Nombre" attributes="M" title="Nombre" value="wqe"}%
+%META:FIELD{name="Descripcion" attributes="M" title="Descripcion" value="asd"}%
+%META:FIELD{name="Numero" attributes="M" title="Numero" value="09"}%
+%META:FIELD{name="Responsable" attributes="M" title="[[Estructuras.ListadoDeCargos][Responsable]]" value="-"}%
+%META:FIELD{name="Version" attributes="M" title="Version" value="123"}%

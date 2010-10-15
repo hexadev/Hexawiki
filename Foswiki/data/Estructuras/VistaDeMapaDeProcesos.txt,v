@@ -1,9 +1,14 @@
-head	1.1;
+head	1.2;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.2
+date	2010.10.12.22.16.09;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
 date	2010.10.07.22.06.26;	author BaseUserMapping_333;	state Exp;
@@ -16,17 +21,36 @@ desc
 @
 
 
+1.2
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286921769" format="1.1" reprev="2" version="2"}%
+---+ Procesos
+<div class="foswikiHelp" style="width:20%;float: right;">
+   * [[%BASEWEB%.BusquedaDeDocumentos][%ICON{searchtopic}% Buscar Documentos]]
+</div>
+Utilice el mapa de procesos para acceder a la información de cada uno de ellos. Haga click en el proceso deseado.
+
+<img src="%PUBURL%/Estructuras/VistaDeMapaDeProcesos/mapa_de_procesos.png" width="70%" />
+
+%META:FILEATTACHMENT{name="mapa_de_procesos.png" attachment="mapa_de_procesos.png" attr="" comment="" date="1286489144" path="mapa_de_procesos.png" size="66188" user="BaseUserMapping_333" version="2"}%
+@
+
+
 1.1
 log
 @reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286489186" format="1.1" reprev="1" version="1"}%
----+ Procesos
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286489186" format="1.1" reprev="1" version="1"}%
+d3 3
+a5 1
 
-Utilice el mapa de procesos para acceder a la información de cada uno de ellos. Haga click en el proceso deseado.
-
+d8 1
+a8 1
 <center><img src="%PUBURL%/Estructuras/VistaDeMapaDeProcesos/mapa_de_procesos.png" width="600" /></center>
-
-%META:FILEATTACHMENT{name="mapa_de_procesos.png" attachment="mapa_de_procesos.png" attr="" comment="" date="1286489144" path="mapa_de_procesos.png" size="66188" user="BaseUserMapping_333" version="2"}%
 @

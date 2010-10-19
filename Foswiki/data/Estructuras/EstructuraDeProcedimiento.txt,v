@@ -1,10 +1,20 @@
-head	1.1;
+head	1.3;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 expand	@o@;
 
+
+1.3
+date	2010.10.18.21.34.16;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.10.17.21.12.13;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
 date	2010.10.10.22.46.41;	author BaseUserMapping_333;	state Exp;
@@ -17,16 +27,60 @@ desc
 @
 
 
+1.3
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287437656" format="1.1" reprev="2" version="3"}%
+---+ Procedimiento: PR-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-%FORMFIELD{"Numero" topic="%BASEWEB%.%BASETOPIC%"}%-%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
+
+%TOC%
+
+%STARTSECTION{"controlcambios"}%
+---++ Identificación
+
+| Nombre  | %FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%  |
+| Descripción  | %ENCODE{"%FORMFIELD{"Descripcion" topic="%BASEWEB%.%BASETOPIC%"}%" type="html"}%  |
+| Responsable  | %FORMFIELD{"Responsable" topic="%BASEWEB%.%BASETOPIC%"}%  |
+| Versión  | %FORMFIELD{"Version" topic="%BASEWEB%.%BASETOPIC%"}%  |
+
+---++ Control del Documento 
+
+| *Workflow* ||
+| Estado Actual | %WORKFLOWSTATE{"%BASETOPIC%" web="%BASEWEB%"}% |
+| Transición | %WORKFLOWTRANSITION{"%BASETOPIC%" web="%BASEWEB%"}% |
+| Mensaje de Estado | %WORKFLOWSTATEMESSAGE% |
+---+++ Historial
+%WORKFLOWHISTORY{"%BASETOPIC%" web="%BASEWEB%"}%
+
+%ENDSECTION{"controlcambios"}%
+@
+
+
+1.2
+log
+@reprev
+@
+text
+@d1 2
+a2 2
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287349933" format="1.1" reprev="2" version="2"}%
+---+ Procedimiento: PR-%FORMFIELD{"Sigla" topic="%BASEWEB%.WebHome"}%-%FORMFIELD{"Numero" topic="%BASEWEB%.%BASETOPIC%"}%-%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
+@
+
+
 1.1
 log
 @save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286750801" format="1.1" version="1"}%
----+ Procedimiento: PR-%FORMFIELD{"Sigla" topic="%BASEWEB%.WebHome"}%-%FORMFIELD{"Numero" topic="%BASEWEB%.%BASETOPIC%"}%-%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
-
-%STARTSECTION{"controlcambios"}%
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286750801" format="1.1" version="1"}%
+d4 2
+d7 16
+a22 2
 | *Versión* | %FORMFIELD{"Version" topic="%BASEWEB%.%BASETOPIC%"}% |
 TODO
-%ENDSECTION{"controlcambios"}%
 @

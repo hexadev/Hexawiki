@@ -1,4 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287175572" format="1.1" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287442042" format="1.1" version="5"}%
+<!--
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+-->
 %INCLUDE{"Estructuras.EstructuraDeProcedimiento"}%
 
 ---++ Objetivo
@@ -21,3 +24,6 @@
 %META:FIELD{name="Numero" attributes="M" title="Numero" value="09"}%
 %META:FIELD{name="Responsable" attributes="M" title="[[Estructuras.ListadoDeCargos][Responsable]]" value="-"}%
 %META:FIELD{name="Version" attributes="M" title="Version" value="123"}%
+%META:REVCOMMENT{ncomments="0"}%
+%META:WORKFLOWHISTORY{value="%0a| MODIFICADO | Main.AdminUser | 18 Oct 2010 - 17:32 |%0a| ENREVISION | Main.AdminUser | 18 Oct 2010 - 17:47 |"}%
+%META:WORKFLOW{name="ENREVISION" LASTTIME_ENREVISION="18 Oct 2010 - 17:47" LASTTIME_MODIFICADO="18 Oct 2010 - 17:32" LASTVERSION_ENREVISION="4" LASTVERSION_MODIFICADO="3"}%

@@ -8,3 +8,14 @@ SitePreferences	BaseUserMapping_333	1286826659	3
 SitePreferences	BaseUserMapping_333	1286826683	3	minor, reprev
 SitePreferences	BaseUserMapping_333	1286827495	3	minor, reprev
 SitePreferences	BaseUserMapping_333	1286827534	3	minor, reprev
+WorkflowEnRevisionGroup	BaseUserMapping_333	1287185825	1	
+WorkflowAprobarGroup	BaseUserMapping_333	1287185914	1	
+SitePreferences	BaseUserMapping_333	1287349047	4	
+SitePreferences	BaseUserMapping_333	1287426565	5	
+SitePreferences	BaseUserMapping_333	1287428963	5	minor, reprev
+WorkflowChangeGroup	BaseUserMapping_333	1287442803	1	
+WikiUsers	BaseUserMapping_333	1287443273	1	
+HexaPreubas	BaseUserMapping_222	1287443273	1	
+WorkflowAprobarGroup	BaseUserMapping_333	1287443559	2	
+WorkflowChangeGroup	BaseUserMapping_333	1287444088	2	minor
+WorkflowEnRevisionGroup	BaseUserMapping_333	1287444138	2	

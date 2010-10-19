@@ -1,0 +1,9 @@
+%META:TOPICINFO{author="BaseUserMapping_333" date="1287444088" format="1.1" version="2"}%
+%META:TOPICPARENT{name="WikiGroups"}%
+
+Edit this topic to add a description to the !WorkflowChangeGroup
+
+%META:REVCOMMENT{ncomments="0"}%
+%META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="WorkflowChangeGroup"}%
+%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="AdminUser, WorkflowAprobarGroup, WorkflowEnRevisionGroup"}%
+%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="GroupView"}%

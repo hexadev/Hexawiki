@@ -1,0 +1,61 @@
+
+    CH.ifa.draw.standard.StandardDrawing "no_attributes" 21 
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 0 255 0 21 306 102 53 8 8  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 2 "observed.figure" "Storable" REF 1 "FillColor" "Color" 255 199 158 43 325 "APPROVED" "Helvetica" 0 12 0 REF 1 
+            CH.ifa.draw.standard.OffsetLocator 2 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 175 175 16 117 118 40 8 8  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 2 "observed.figure" "Storable" REF 5 "FillColor" "Color" 255 199 158 29 130 "WAITINGFORQM" "Helvetica" 0 12 0 REF 5 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 255 255 "FillColor" "Color" 112 219 147 3 217 135 45 8 8  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 2 "observed.figure" "Storable" REF 9 "FillColor" "Color" 255 199 158 22 232 "WAITINGFORCEO" "Helvetica" 0 12 0 REF 9 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 0 0 19 37 113 41 8 8  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 3 "observed.figure" "Storable" REF 13 "TextColor" "Color" 255 255 255 "FillColor" "Color" 255 199 158 28 50 "UNDERREVISION" "Helvetica" 0 12 0 REF 13 
+            CH.ifa.draw.standard.OffsetLocator 0 0 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 75 78 75 117 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 13  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 5   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 74 157 74 217 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 5  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 9   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 71 262 71 306 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 9  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 1   
+        CH.ifa.draw.figures.RoundRectangleFigure "attributes" "attributes" 2 "FrameColor" "Color" 255 199 158 "FillColor" "Color" 255 199 158 240 128 34 36 8 8  
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 2 "observed.figure" "Storable" REF 29 "FillColor" "Color" 255 199 158 245 141 "Reject" "Helvetica" 0 12 0 REF 29 
+            CH.ifa.draw.standard.OffsetLocator 6 2 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 134 142 240 142 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 5  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 29   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 138 221 240 159 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 9  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 29   
+        CH.ifa.draw.figures.LineConnection "no_attributes" 2 240 132 132 73 NULL 
+            CH.ifa.draw.figures.ArrowTip  0 0 0 
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 29  
+            CH.ifa.draw.figures.ShortestDistanceConnector REF 13   
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 2 "observed.figure" "Storable" REF 17 "FillColor" "Color" 255 199 158 79 83 "QualityGroup" "Helvetica" 0 12 0 REF 17 
+            CH.ifa.draw.standard.OffsetLocator 41 -7 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 2 "observed.figure" "Storable" REF 21 "FillColor" "Color" 255 199 158 79 163 "QualityManager" "Helvetica" 0 12 0 REF 21 
+            CH.ifa.draw.standard.OffsetLocator 49 -17 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 2 "observed.figure" "Storable" REF 33 "FillColor" "Color" 255 199 158 136 125 "QualityManager" "Helvetica" 0 12 0 REF 33 
+            CH.ifa.draw.standard.OffsetLocator -7 -10 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 2 "observed.figure" "Storable" REF 25 "FillColor" "Color" 255 199 158 75 267 "TechnicalDirector" "Helvetica" 0 12 0 REF 25 
+            CH.ifa.draw.standard.OffsetLocator 54 -10 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5    
+        CH.ifa.draw.figures.TextFigure "attributes" "attributes" 2 "observed.figure" "Storable" REF 37 "FillColor" "Color" 255 199 158 139 223 "TechnicalDirector" "Helvetica" 0 12 0 REF 37 
+            CH.ifa.draw.standard.OffsetLocator 0 40 
+                CH.ifa.draw.standard.RelativeLocator 0.5 0.5     

@@ -284,3 +284,39 @@ ListadoDeProcesosSelectOptions	BaseUserMapping_333	1287181115	4
 DocumentoExternoEditTemplate	BaseUserMapping_333	1287181238	2	
 EstructuraDeDocumentoExterno	BaseUserMapping_333	1287181276	3	
 FormularioDeDocumentoExterno	BaseUserMapping_333	1287181290	3	
+WorkflowDeDocumentos	BaseUserMapping_333	1287183322	1	
+WorkflowDeDocumentos	BaseUserMapping_333	1287185644	1	minor, reprev
+PlantillaDeProcedimiento	BaseUserMapping_333	1287348442	2	
+EstructuraDeProcedimiento	BaseUserMapping_333	1287349758	2	minor
+EstructuraDeProcedimiento	BaseUserMapping_333	1287349809	2	minor, reprev
+EstructuraDeProcedimiento	BaseUserMapping_333	1287349933	2	minor, reprev
+PlantillaDeManual	BaseUserMapping_333	1287352925	2	
+PlantillaDeInstructivo	BaseUserMapping_333	1287352938	2	
+PlantillaDeFormato	BaseUserMapping_333	1287352955	2	
+PlantillaDeDocumentoDeApoyo	BaseUserMapping_333	1287352973	2	
+PlantillaDeDocumentoExterno	BaseUserMapping_333	1287352987	2	
+EstructuraDeDocumentoExterno	BaseUserMapping_333	1287353029	4	
+EstructuraDeCaracterizacion	BaseUserMapping_333	1287357623	2	
+EstructuraDeCaracterizacion	BaseUserMapping_333	1287360940	2	minor, reprev
+EstructuraDeCaracterizacion	BaseUserMapping_333	1287364630	3	
+EstructuraDeCaracterizacion	BaseUserMapping_333	1287364700	3	minor, reprev
+EstructuraDeCaracterizacion	BaseUserMapping_333	1287425135	4	
+EstructuraDeCaracterizacion	BaseUserMapping_333	1287425220	4	minor, reprev
+WebLeftBar	BaseUserMapping_333	1287437471	3	
+PlantillaDeProcedimiento	BaseUserMapping_333	1287437557	3	
+PlantillaDeProcedimiento	BaseUserMapping_333	1287437569	4	minor
+EstructuraDeProcedimiento	BaseUserMapping_333	1287437656	3	
+PlantillaDeProcedimiento	BaseUserMapping_333	1287437717	5	minor
+PlantillaDeProcedimiento	BaseUserMapping_333	1287437745	5	minor, reprev
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287438242	5	
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287438776	5	minor, reprev
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287438990	5	minor, reprev
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287439106	5	minor, reprev
+BusquedaDeProcedimientosJSON	BaseUserMapping_333	1287440125	5	minor, reprev
+VistaDeControlDeDocumentos	BaseUserMapping_333	1287440274	1	
+VistaDeControlDeDocumentos	BaseUserMapping_333	1287440318	1	minor, reprev
+VistaDeControlDeDocumentos	BaseUserMapping_333	1287440556	1	minor, reprev
+VistaDeControlDeDocumentos	BaseUserMapping_333	1287440978	1	minor, reprev
+VistaDeControlDeDocumentos	BaseUserMapping_333	1287441045	1	minor, reprev
+VistaDeControlDeDocumentos	BaseUserMapping_333	1287441120	1	minor, reprev
+VistaDeControlDeDocumentos	BaseUserMapping_333	1287442105	1	minor, reprev

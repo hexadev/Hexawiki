@@ -1,4 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286751870" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287352955" format="1.1" reprev="1" version="2"}%
+<!--
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+-->
 %INCLUDE{"Estructuras.EstructuraDeFormato"}%
 
 

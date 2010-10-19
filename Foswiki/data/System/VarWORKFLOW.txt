@@ -1,0 +1,59 @@
+#VarWEB
+---+++ WORKFLOW* -- macros associated with WorkflowPlugin
+| *Controlling topics in the workflow* ||
+| =%<nop>WORKATTACHTOPIC%= | Expands to a link that lets you attach to the topic (if the user is not able to modify the topic, either in the workflow sense or according to the standard access controls, the link will be <strike>struck out</strike>).|
+| =%<nop>WORKEDITTOPIC%= | Expands to a link that lets you edit the topic (if the user is not able to modify the topic, either in the workflow sense or according to the standard access controls, the link will be <strike>struck out</strike>).|
+| =%<nop>WORKFLOWFORK{...}%= | Expands to a button that will create a copy of the _current_ topic (see below for more details) |
+| =%<nop>WORKFLOWTRANSITION%= | Expands to either (a) a pull-down menu if the user can perform more than one transition, (b) a button if the current user can only perform one transition, or (c) empty space if the current user is not allowed to perform any action. You can change the format of the button using a CSS class (see WORKFLOWTRANSITIONCSSCLASS below) |
+| *Querying the workflow* ||
+| =%<nop>WORKFLOWHISTORY%= | Expands to the history of state transitions the topic has undergone. The format of the history is dictated by the =WORKFLOWHISTORYFORMAT= (described below). |
+| =%<nop>WORKFLOWLASTREV_State%= | Expands to the version number when the document was last in the state _State_. |
+| =%<nop>WORKFLOWLASTTIME_State%= | Expands to the timestamp when the document was last in the _State_ last state. For example, =%<nop>WORKFLOWLASTTIME_APPROVED%= would be replaced by the timestamp when the document was last in the =APPROVED= state. |
+| =%<nop>WORKFLOWLASTVERSION_State%= | Expands to a link to the version of the document when it was last in the state _State_. |
+| =%<nop>WORKFLOWSTATE%= | Expands to the current state of the document. It can also be given a =topic= parameter (default), in which case the state of that topic is returned. |
+| =%<nop>WORKFLOWSTATEMESSAGE%= | Expands to the corresponding message in the state table. |
+
+(All the macros accept an optional default parameter, which is the name of a topic, and a =web= parameter. If these are omitted, they will default to the current topic.)
+
+Furthermore, the plugin replaces any macro starting with =WORKFLOW= that is defined in the workflow description file.
+
+If the topic is *not* controlled, then any references to =WORKFLOW= macros are simply removed (you can use this behaviour to place these tags in the header or footer in your skin templates. They appear only if the currently displayed document is controlled. Otherwise, they are just removed and do not disturb the layout).
+
+In addition there are two macros you can define in your topics (or !WebPreferences)
+
+WORKFLOWHISTORYFORMAT tells the plugin how to format each new line added to the WORKFLOWHISTORY. The format is used as a template for each new entry, and should include all the formatting necessary to make the history look nice when it is viewed.
+
+In this example the history is formatted as a table:
+   * Set WORKFLOWHISTORYFORMAT = $n| $state | $wikiusername | $date |
+The leading $n expands to a newline character that separates each line of the history.
+You could also format the history as a bullet list:
+   * Set WORKFLOWHISTORYFORMAT = $n   * $state -- $wikiusername, $date
+The standard [[format tokens]] are supported, as well as the following special tokens:
+| *Token* | *Expands to* |
+| =$wikiusername= | Who triggered the transition |
+| =$state= | The target state of the transition |
+| =$date= | Date of the transition |
+| =$rev= | Version at the transition |
+
+The appearance of the button to change state can be configured by providing a CSS class. For example,
+   * Set WORKFLOWTRANSITIONCSSCLASS = myCSSClass
+The default is =twikiChangeFormButton twikiSubmit=.
+
+The =WORKFLOWFORK= macro is used to generate a button that will create a copy of
+a workflow topic. It accepts the following parameters:
+| *Parameter* | *Meaning* | *Default* |
+| ="TopicName"= | (Optional) name of the topic to fork | current topic |
+| =web= | (Optional) name of the web containing the topic to fork | current web |
+| =newnames="NameOne,NameTwo"= | Comma-separated list of name(s) of the new topic(s) to create, You can use a web specifier on the topic names. | required, no default. |
+| =label="Fork"= | Label to use in the button | ="Fork"= |
+| =lockdown="on"= | Set this if you want the forked topic to be set as uneditable after the fork | =off= |
+This macro is used when you have a topic that has to be split to follow different routes through a workflow - for example, when a requirement is refined to create two new requirements that must follow their own lifecycles; or perhaps a problem report is found to affect two different components of a system, and the resolutions have to be separately tracked. Both the copied topic and the new topic will have workflow history entries added.
+
+For example,
+=%<nop>WORKFLOWFORK{"OriginalTopic" label="Divide and conquer" newnames="ForkPathOne,ForkPathTwo" lockdown="on"}%= will create two copies of =OriginalTopic=, named =ForkPathOne= and =ForkPathTwo= and set the =OriginalTopic= as uneditable (using ALLOWTOPICCHANGE).
+
+The histories in both the fork copies and the original topic record what happened.
+
+The user has to be able to modify the topic (both in the workflow sense and according to the standard access controls) in order to fork.
+
+%X% due to a bug in versions of the plugin prior to Oct 2009, the default "TopicName" parameter was interpreted as the name of the *new* topic to fork to. This has been corrected, but the macro will revert to the old meaning if you omit the =newnames= parameter.

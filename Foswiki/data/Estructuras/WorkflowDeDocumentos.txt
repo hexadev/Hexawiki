@@ -1,0 +1,20 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287185644" format="1.1" reprev="1" version="1"}%
+---++ Tags used in controlled topics
+   * Set WORKFLOWNOTICE = Este topic esta bajo control de documentos. Version aprobada: %WORKFLOWLASTTIME_APROBADO%: %WORKFLOWLASTVERSION_APROBADO%
+   * Set WORKFLOWBUTTON =  <table border="0" cellspacing="0" cellpadding="0"> <tr><td>Usted esta autorizado para cambiar el estado de este documento:</td><td>%WORKFLOWTRANSITION%</TD></tr></table>
+   * Set this to 1 to enable debugging about the workflow
+   * Set WORKFLOWDEBUG = 0
+
+
+---++ States
+| *State*       | *Allow Edit* | *Message* |
+| ENREVISION | %USERSWEB%.WorkflowEnRevisionGroup | Este documento se encuentra en proceso de modificación. |
+| MODIFICADO | nobody | Este documento ha sido modificado. |
+| APROBADO      | nobody | Este documento ha sido aprobado. |
+
+---++ Transitions
+| *State* | *Action* | *Next State*  | *Allowed* | *Form* |
+| APROBADO | Cambiar  | ENREVISION | %USERSWEB%.WorkflowEnRevisionGroup  |   |
+| ENREVISION | Terminar Revisión  | MODIFICADO | %USERSWEB%.WorkflowEnRevisionGroup  |   |
+| MODIFICADO | Aprobar  | APROBADO | %USERSWEB%.WorkflowAprobarGroup |  |
+| MODIFICADO | Rechazar | ENREVISION | %USERSWEB%.WorkflowAprobarGroup |  |

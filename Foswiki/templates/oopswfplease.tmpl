@@ -1,0 +1,20 @@
+%{ Templates for lease conflict messages. One DEF is selected and inserted at %INSTANTIATE }%
+%TMPL:INCLUDE{"oops"}%
+
+%TMPL:DEF{"webaction"}% *%MAKETEXT{"Attention"}%* %TMPL:END%
+
+%TMPL:DEF{"message"}%
+%MAKETEXT{"[_1] is editing [_2], and their lock is still active for another [_3]" args="%PARAM1%, %WEB%.%TOPIC%, %PARAM2%"}%
+
+%MAKETEXT{"You must ask [_1] to close their edit and release their lock before you can change the state of the topic." args="%PARAM1%"}%
+
+<form action="%SCRIPTURLPATH{"rest"}%/WorkflowPlugin/changeState" method="post">
+%MAKETEXT{"In an emergency you can transition the topic anyway, by clicking "}%
+<input type="hidden" name="breaklock" value="on" />
+<input type="hidden" name="topic" value="%WEB%.%TOPIC%" />
+<input type="hidden" name="WORKFLOWSTATE" value="%PARAM3%" />
+<input type="hidden" name="WORKFLOWACTION" value="%PARAM4%" />
+<input type="submit" class="foswikiButton" value='%MAKETEXT{"Force the transition anyway"}%' />
+</form>%TMPL:END%
+
+%TMPL:DEF{"topicactionbuttons"}%%TMPL:END%

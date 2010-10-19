@@ -1,4 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287162305" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287442210" format="1.1" version="2"}%
+<!--
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+-->
 %INCLUDE{"Estructuras.EstructuraDeDocumentoDeApoyo"}%
 
 %META:FORM{name="Estructuras.FormularioDeDocumentoDeApoyo"}%
@@ -7,3 +10,4 @@
 %META:FIELD{name="Numero" attributes="M" title="Numero" value="01"}%
 %META:FIELD{name="Responsable" attributes="M" title="[[Estructuras.ListadoDeCargos][Responsable]]" value="-"}%
 %META:FIELD{name="Version" attributes="M" title="Version" value="1"}%
+%META:REVCOMMENT{ncomments="0"}%

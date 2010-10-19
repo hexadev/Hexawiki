@@ -1,0 +1,163 @@
+---+!! !ApprovalPlugin
+<!--
+One line description, required for extensions repository catalog.
+   * Set SHORTDESCRIPTION = Defines a set of states for one or more topics, with each state requiring approval by one or more users.
+-->
+%SHORTDESCRIPTION%
+
+%TOC%
+
+---++ Introduction
+
+This plugin is a rewrite of the Foswiki:Extensions.WorkflowPlugin by TWiki:Main.ThomasWeigert, which supports much the same functionality except a couple of the macros (=%<nop>WORKFLOWLASTTIME_State%=, =%<nop>WORKFLOWLASTVERSION_State%=) and the use of %SYSTEMWEB%.DataForms in states. However, it does support concurrent reviewing and notifications on state change, which is not supported by the Workflow plugin. It was decided to spin this off seperatly as it is not backwords compatible.
+
+---++ Usage
+
+This plugin only applies if the topic is under approval control. This means the preference setting =APPROVALDEFINITION= must be set. This should point to a topic that describes the approval flow (the approval definition topic).
+
+---+++ The Approval Definition Topic
+
+The approval definition topic must contain one state table and one transition table. The state table must be *before* the transition table. Both tables are described below.
+
+---++++ The State Table
+
+The state table must come *before* the transition table, and has three columns:
+
+| *State* | *Allow Edit* | *Message* |
+| REJECTED | | This document is waiting to be sent to the Stage Reviewers for review. |
+| WAITINGFORREVIEW | Main.<nop>UserTwo, Main.<nop>UserThree | This document is waiting to be reviewed by the Stage Reviewers. |
+| REVIEWED | | This documented has been reviewed. It is now waiting to be sent to the Stage Approvers for approval. |
+| WAITINGFORAPPROVAL | Main.<nop>UserTwo, Main.<nop>UserThree | This document is waiting to be approved by the Stage Approvers. |
+| APPROVED |Main.<nop>UserOne | This document has been approved! No more actions can be carried out on this document. |
+
+Each row in the table defines a state where:
+   * the *State* column specifies a name for the state, 
+   * the *Allow Edit* column specifies who is permitted to edit the topic when it is in the state (can be a =%<nop>SEARCH%=, =%<nop>INCLUDE%=, etc), and 
+   * the *Message* column defines a message which can be displayed on the document page when the document is in this state.
+
+In our example we have defined five states. REJECTED is the default state, as it is first in the table.
+
+Everyone is allowed to edit the topic in the REJECTED or the REVIEWED state. WAITINGFORREVIEW and WAITINGFORAPPROVAL are resricted to Main.<nop>UserTwo and Main.<nop>UserThree, and APPROVED is rescrited to just Main.<nop>UserOne.
+
+__Note:__ Admins will always be able to edit the topic, as with any topic in Foswiki.
+
+---++++ The Transition Table
+
+<div style="float:right">
+<img src="%ATTACHURLPATH%/ApprovalFlow.png" alt="Approval flow"  />
+</div>
+
+The transition table consists of five columns, and an example is shown below:
+
+| *State* | *Action* | *Next State* | *Allowed* | *Notify* | *Sign Off's (%)* |
+| REJECTED | Send For Review | WAITINGFORREVIEW | Main.<nop>UserOne | yes | |
+| WAITINGFORREVIEW | Reviewed | REVIEWED | Main.<nop>UserTwo, Main.<nop>UserThree, Main.<nop>UserFour | | 50% |
+| WAITINGFORREVIEW | Rejected | REJECTED | Main.<nop>UserTwo, Main.<nop>UserThree, Main.<nop>UserFour | | 0% |
+| REVIEWED| Send For Approval | WAITINGFORAPPROVAL | Main.<nop>UserOne | | |
+| WAITINGFORAPPROVAL | Approved | APPROVED | Main.<nop>UserTwo, Main.<nop>UserThree, Main.<nop>UserFour | | 50% |
+| WAITINGFORAPPROVAL | Rejected | REJECTED | Main.<nop>UserTwo, Main.<nop>UserThree, Main.<nop>UserFour | | 0% |
+
+Each row in this table defines a transition from one state to another state:
+   * the *State* column contains the name of a state in the state table, 
+   * the *Action* column describes a possible action when the topic is in this state,
+   * the *Next State* column defines the new state of the document after the specified action is performed, 
+   * the *Allowed* column specifies who is allowed to perform the corresponding action (can be a =%<nop>SEARCH%=, =%<nop>INCLUDE%=, etc),
+   * the *Notify* column specifies whether email notifications should be sent out when this action is performed, and
+   * the *Sign Off's* column defines the percentage of users in the allowed column that are required to perform this action.
+
+The example defines the flow as pictured to the right. When the topic is in either the 'REJECTED' state or the 'REVIEWED' state, only Main.<nop>UserOne can push the topic through to the next state. If the topic is in the state 'WAITINGFORREVIEW', there will be two actions that can be carried out on the topic. The first is 'Reviewed', which pushes the topic into the 'REVIEWED' state. This has a sign off percentage of 50%, which in this case requires two of the users to review this state before the topic can go to the 'REVIEWED' state. The second action is 'Rejected', which only requires one person to push the topic back to the 'REJECTED' state. This is the same situation for 'WAITINGFORAPPROVAL'.
+
+When the state of the topic is changed from 'REJECTED' to 'WAITINGFORREVIEW', an email notification will be sent to Main.<nop>UserTwo, Main.<nop>UserThree and Main.<nop>UserFour, letting them know that the state has changed and that they are next to approve the state. A copy of the email will also be sent to Main.<nop>UserOne, and to anyone listed in the =ADDITIONALNOTIFY= preference (see %TOPIC%#Preferences).
+
+__Note:__ Admins may disable all notifications by setting the =$Foswiki::cfg{Plugins}{ApprovalPlugin}{DisableNotify}= setting to =1=.
+
+---++++ Preferences
+
+The =ADDITIONALNOTIFY= preference can also be set in the definition topic. This can be a comma-seperated list of people who should be notified on each state change (if the 'Notify' column contains a 'yes'). For example:
+   * Set ADDITIONALNOTIFY = Main.<nop>TheProjectManager
+
+You may also set your own preferences in the definition topic, which can be referenced in the controlled topic by using =%<nop>APPROVAL{"pref" name="..."}%=. For example, in the definition topic set:
+   * Set APPROVALNOTICE = This topic is under document control.
+
+You can then use =%<nop>APPROVAL{"pref" name="APPROVALNOTICE"}%= in any topic under control.
+
+---+++ The Controlled Topic
+
+The controlled topic must have the =APPROVALDEFINITION= set to a approval definition topic (see %TOPIC%#The_Approval_Definition_Topic).
+
+---++++ Settings
+
+As well as the =APPROVALDEFINITION= setting, the topic may also contain the =APPROVALHISTORYFORMAT= setting. The defines the format of the history, which is updated after each state change. This may also be set in a WebPreferences topic, or in %LOCALSITEPREFS%. The format will expand the variables =$state=, =$wikiusername=, =$date=, =$quot= and =$n=, with the same meaning as in %SYSTEMWEB%.FormattedSearch. The default setting is:
+   * Set APPROVALHISTORYFORMAT = "$n$state -- $date"
+
+---++++ Tags
+
+The plugin will expand any =%<nop>APPROVAL{"action"}%= tags found in the controlled topic. The tag must have one of the actions listed below:
+
+   | *Parameters* | *Comment* |
+   | ="statemessage"= | This will display the message for the current state, as defined in the [[%TOPIC%#The_State_Table][state table]]. |
+   | ="transition"= | Displays the transition form, which is used to change the state. |
+   | ="history"= | Displays the approval history of the topic. |
+   | ="pref" name="..."= | Displays the named preference set in the approval topic (see %TOPIC%#Preferences). |
+   | ="reviewedby"= | Shows who has already reviewed the current state. |
+
+---++ Examples
+
+There is an example of an approval definition topic and a document under control in the Sandbox web. The links are below:
+   * Sandbox.ApprovalDefinitionExample
+      * Example definition topic
+   * Sandbox.ControlledTopicExample
+      * Example controlled topic
+
+__Note__ The examples will only work if the plugin is installed and enabled.
+
+---++ Notes
+
+   * This plugin should work with groups defined in the transition table, but this is currently *untested*. If you want to use groups, please let us know your findings in Foswiki:Support.ApprovalPlugin.
+
+   * The users in the transition table must have permission to change the controlled topic when they approve a state, otherwise Foswiki will throw an access control exception. There is a message to the user if this is the case.
+
+---++ Installation Instructions
+
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+---++ Plugin Files
+
+   | *File:* | *Description:* |
+   | ==lib/Foswiki/Plugins/ApprovalPlugin.pm== | Perl module |
+   | ==lib/Foswiki/Plugins/ApprovalPlugin/Approval.pm== | Perl Module |
+   | ==lib/Foswiki/Plugins/ApprovalPlugin/State.pm== | Perl Module |
+   | ==lib/Foswiki/Plugins/ApprovalPlugin/Transition.pm== | Perl Module |
+   | ==templates/approvalnotify.tmpl== | Notification template |
+   | ==data/System/ApprovalPlugin.txt== | Documentation |
+   | ==data/Sandbox/ControlledTopicExample.txt== | Example controlled topic |
+   | ==data/Sandbox/ApprovalDefinitionExample.txt== | Example definition topic |
+   | ==pub/System/ApprovalPlugin/ApprovalFlow.png== | Approval flow diagram |
+   | ==tools/convert.pl== | Coverts topics from Foswiki:Extensions.WorkflowPlugin to the ApprovalPlugin (see comments in script) |
+   | ==lib/Foswiki/Plugins/ApprovalPlugin/Config.spec== | Spec file for =configure= |
+
+
+---++ Plugin Info
+
+|  Plugin Author(s): | Foswiki:Main.AndrewJones |
+|  Copyright: | &copy; 2007 - 2009 Foswiki:Main.AndrewJones |
+|  License: | [[http://www.gnu.org/licenses/gpl.html][GPL (Gnu General Public License)]] |
+|  Plugin Release: | 1.0 |
+|  Plugin Version: | 3923 (2009-05-16) |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  01 Apr 2009 | Foswikitask:Item8082 - Ported to Foswiki and released as 1.0 |
+|  03 Feb 2009 | Foswikitask:Item8056 - Small doc changes; tested on Foswiki/Compat |
+|  30 Oct 2008 | Small improvements, better code |
+|  12 Sep 2008 | Initial version |
+|  Dependencies: | None |
+|  Plugin Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Support: | http://foswiki.org/Support/%TOPIC% |
+
+__Related Topics:__ %SYSTEMWEB%.DefaultPreferences, %USERSWEB%.SitePreferences, [[%SYSTEMWEB%.Plugins][Plugins]]
+
+<!-- Do _not_ attempt to edit this topic; it is auto-generated. Please add comments/questions/remarks to the Development topic instead. -->

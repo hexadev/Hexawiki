@@ -1,4 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287181392" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287440358" format="1.1" reprev="2" version="3"}%
+<!--
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+-->
 %INCLUDE{"Estructuras.EstructuraDeDocumentoExterno"}%
 
 %META:FORM{name="Estructuras.FormularioDeDocumentoExterno"}%

@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287180916" format="1.1" reprev="2" version="4"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287440125" format="1.1" reprev="5" version="5"}%
 [%SEARCH{
 "form.name ~ '*FormularioDeProcedimiento' AND (fields[name='Nombre' AND lc(value)~lc('*%URLPARAM{nombre}%*')] AND fields[name='Descripcion' AND lc(value)~lc('*%URLPARAM{descripcion}%*')] AND fields[name='Version' AND value~'*%URLPARAM{version}%*'])" 
 type="query" 

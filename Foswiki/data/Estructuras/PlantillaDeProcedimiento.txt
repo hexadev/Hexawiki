@@ -1,4 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286749771" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287437745" format="1.1" reprev="5" version="5"}%
+<!--
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+-->
 %INCLUDE{"Estructuras.EstructuraDeProcedimiento"}%
 
 ---++ Objetivo

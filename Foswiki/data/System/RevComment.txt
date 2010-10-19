@@ -1,0 +1,12 @@
+%META:TOPICINFO{author="ProjectContributor" date="1144974213" format="1.1" version="1.1"}%
+You can enter a short summary of the changes you have made in this topic.
+This summary can be shown in the revision information on a history page
+or other pages.
+
+If you do several changes within the lock time (normally 60 minutes),
+you can also enter several comments of your changes.
+
+Your comment will be marked as _(minor)_ if you use the "Quiet save" button to save the topic.
+
+For more information, see RevCommentPlugin.
+

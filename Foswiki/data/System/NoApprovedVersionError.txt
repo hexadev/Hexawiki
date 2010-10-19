@@ -1,0 +1,12 @@
+%META:TOPICINFO{author="mzapata" date="1270506703" format="1.1" version="1.5"}%
+%TMPL:INCLUDE{"oops"}%
+%TMPL:DEF{"titleaction"}%%MAKETEXT{"(access denied)"}%%TMPL:END%
+%TMPL:DEF{"webaction"}% *%MAKETEXT{"Attention"}%* %TMPL:END%
+%TMPL:DEF{"heading"}%No Existe Versión Aprobada%TMPL:END%
+%TMPL:DEF{"topicactionbuttons"}%<span>[[%BASEWEB%.%HOMETOPIC%][%MAKETEXT{"OK"}%]]</span>%TMPL:END%
+%TMPL:DEF{"message"}%El topic que esta tratando de visualizar aún no tiene una versión aprobada.%TMPL:END%
+
+
+
+
+%META:REVCOMMENT{ncomments="0"}%

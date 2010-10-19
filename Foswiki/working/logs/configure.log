@@ -46,3 +46,12 @@
 | Mon Oct 11 00:35:50 2010 |  | 127.0.0.1 | {Plugins}{AutoViewTemplatePlugin}{Override} | 1 |
 | Mon Oct 11 00:35:50 2010 |  | 127.0.0.1 | {Plugins}{AutoViewTemplatePlugin}{Mode} | section |
 | Mon Oct 11 00:37:49 2010 |  | 127.0.0.1 | {Plugins}{ZonePlugin}{Enabled} |  |
+| Fri Oct 15 22:50:15 2010 |  | 127.0.0.1 | {Plugins}{ApprovalPlugin}{Enabled} | 1 |
+| Fri Oct 15 22:50:15 2010 |  | 127.0.0.1 | {Plugins}{ApprovalPlugin}{Module} | Foswiki::Plugins::ApprovalPlugin |
+| Fri Oct 15 23:16:03 2010 |  | 127.0.0.1 | {Plugins}{ApprovalPlugin}{Enabled} |  |
+| Fri Oct 15 23:16:03 2010 |  | 127.0.0.1 | {Plugins}{WorkflowPlugin}{Enabled} | 1 |
+| Fri Oct 15 23:16:03 2010 |  | 127.0.0.1 | {Plugins}{WorkflowPlugin}{Module} | Foswiki::Plugins::WorkflowPlugin |
+| Mon Oct 18 22:21:45 2010 |  | 127.0.0.1 | {Plugins}{RevCommentPlugin}{Enabled} | 1 |
+| Mon Oct 18 22:21:45 2010 |  | 127.0.0.1 | {Plugins}{RevCommentPlugin}{Module} | Foswiki::Plugins::RevCommentPlugin |
+| Mon Oct 18 23:05:58 2010 |  | 127.0.0.1 | {Plugins}{WorkflowViewPlugin}{Enabled} | 1 |
+| Mon Oct 18 23:05:58 2010 |  | 127.0.0.1 | {Plugins}{WorkflowViewPlugin}{Module} | Foswiki::Plugins::WorkflowViewPlugin |

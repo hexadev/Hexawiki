@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287181276" format="1.1" reprev="2" version="3"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287353029" format="1.1" reprev="2" version="4"}%
 ---+ Documento Externo: %FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
 
 | *Información* | |
@@ -11,3 +11,11 @@
 | *Items Obsoletos*: |%ENCODE{"%FORMFIELD{"ItemsObsoletos" topic="%BASEWEB%.%BASETOPIC%"}%" type="html"}% | 
 
 
+---++ Control del Documento 
+
+| *Workflow* ||
+| Estado Actual | %WORKFLOWSTATE{"%BASETOPIC%" web="%BASEWEB%"}% |
+| Transición | %WORKFLOWTRANSITION{"%BASETOPIC%" web="%BASEWEB%"}% |
+| Mensaje de Estado | %WORKFLOWSTATEMESSAGE% |
+---+++ Historial
+%WORKFLOWHISTORY{"%BASETOPIC%" web="%BASEWEB%"}%

@@ -1,0 +1,49 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.10.18.22.48.25;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287442105" format="1.1" reprev="1" version="1"}%
+---+!! Control de versiones
+
+%TOC% 
+
+---++ Documentos Creados
+
+| *Nombre del documento* | *Descripción* | *Tipo* | *Versión* | *Fecha* | *Responsable* | *Comentario* |
+%SEARCH{"(form.name~'*FormularioDeProcedimiento' OR form.name~'*FormularioDeInstructivo' OR form.name~'*FormularioDeFormato' OR form.name~'*FormularioDeManual' OR form.name~'*FormularioDeDocumentoExterno' OR form.name~'*FormularioDeDocumentoDeApoyo') AND META:WORKFLOW.name=undefined" type="query" nonoise="on" web="Procesos" recurse="on" format="|[[$web.$topic][$formfield(Nombre)]] | $formfield(Descripcion, 100, ...) | !$percntCALC{$SUBSTITUTE($formname, ^.*FormularioDe, , ,r)}$percnt | $formfield(Version) | $createdate | $createwikiusername  | $percntREVCOMMENT{web=\"$web\" topic=\"$topic\" rev=\"$rev\" }$percnt |"}%
+
+---++ Documentos En Revisión
+
+| *Nombre del documento* | *Descripción* | *Tipo* | *Versión* | *Fecha* | *Responsable* | *Comentario* |
+%SEARCH{"(form.name~'*FormularioDeProcedimiento' OR form.name~'*FormularioDeInstructivo' OR form.name~'*FormularioDeFormato' OR form.name~'*FormularioDeManual' OR form.name~'*FormularioDeDocumentoExterno' OR form.name~'*FormularioDeDocumentoDeApoyo') AND (META:WORKFLOW.name='ENREVISION')" type="query" nonoise="on" web="Procesos" recurse="on" format="|[[$web.$topic][$formfield(Nombre)]] | $formfield(Descripcion, 100, ...) | !$percntCALC{$SUBSTITUTE($formname, ^.*FormularioDe, , ,r)}$percnt | $formfield(Version) | $percntREVINFO{rev=\"\" format=\"$date - $time\" web=\"$web\" topic=\"$topic\"}$percnt | $percntREVINFO{rev=\"\" format=\"$wikiusername\" web=\"$web\" topic=\"$topic\"}$percnt |$percntREVCOMMENT{web=\"$web\" topic=\"$topic\" rev=\"\" }$percnt |"}%
+
+---++ Documentos Modificados
+
+| *Nombre del documento* | *Descripción* | *Tipo* | *Versión* | *Fecha* | *Responsable* | *Comentario* |
+%SEARCH{"(form.name~'*FormularioDeProcedimiento' OR form.name~'*FormularioDeInstructivo' OR form.name~'*FormularioDeFormato' OR form.name~'*FormularioDeManual' OR form.name~'*FormularioDeDocumentoExterno' OR form.name~'*FormularioDeDocumentoDeApoyo') AND (META:WORKFLOW.name='MODIFICADO')" type="query" nonoise="on" web="Procesos" recurse="on" format="|[[$web.$topic][$formfield(Nombre)]] | $formfield(Descripcion, 100, ...) | !$percntCALC{$SUBSTITUTE($formname, ^.*FormularioDe, , ,r)}$percnt | $formfield(Version) | $percntREVINFO{rev=\"\" format=\"$date - $time\" web=\"$web\" topic=\"$topic\"}$percnt | $percntREVINFO{rev=\"\" format=\"$wikiusername\" web=\"$web\" topic=\"$topic\"}$percnt |$percntREVCOMMENT{web=\"$web\" topic=\"$topic\" rev=\"\" }$percnt |"}%
+---++ Documentos Aprobados
+
+| *Nombre del documento* | *Descripción* | *Tipo* | *Versión* | *Fecha* | *Responsable* | *Comentario* |
+%SEARCH{"(form.name~'*FormularioDeProcedimiento' OR form.name~'*FormularioDeInstructivo' OR form.name~'*FormularioDeFormato' OR form.name~'*FormularioDeManual' OR form.name~'*FormularioDeDocumentoExterno' OR form.name~'*FormularioDeDocumentoDeApoyo') AND META:WORKFLOW.name='APROBADO'" type="query" nonoise="on" web="Procesos" recurse="on" format="|[[$web.$topic][$formfield(Nombre)]] | $formfield(Descripcion, 100, ...) | !$percntCALC{$SUBSTITUTE($formname, ^.*FormularioDe, , ,r)}$percnt | $formfield(Version) | $percntREVINFO{rev=\"\" format=\"$date - $time\" web=\"$web\" topic=\"$topic\"}$percnt | $percntREVINFO{rev=\"\" format=\"$wikiusername\" web=\"$web\" topic=\"$topic\"}$percnt |$percntREVCOMMENT{web=\"$web\" topic=\"$topic\" rev=\"\" }$percnt |"}%
+
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="1" t_1="1287441045"}%
+@

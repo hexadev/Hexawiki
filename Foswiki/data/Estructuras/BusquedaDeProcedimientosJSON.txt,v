@@ -1,10 +1,15 @@
-head	1.4;
+head	1.5;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 expand	@o@;
 
+
+1.5
+date	2010.10.18.22.15.25;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.4;
 
 1.4
 date	2010.10.15.22.15.16;	author BaseUserMapping_333;	state Exp;
@@ -32,12 +37,12 @@ desc
 @
 
 
-1.4
+1.5
 log
-@save topic
+@reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287180916" format="1.1" reprev="2" version="4"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287440125" format="1.1" reprev="5" version="5"}%
 [%SEARCH{
 "form.name ~ '*FormularioDeProcedimiento' AND (fields[name='Nombre' AND lc(value)~lc('*%URLPARAM{nombre}%*')] AND fields[name='Descripcion' AND lc(value)~lc('*%URLPARAM{descripcion}%*')] AND fields[name='Version' AND value~'*%URLPARAM{version}%*'])" 
 type="query" 
@@ -52,6 +57,17 @@ format="{topic: '[[$web.$topic][PR-$formfield(Numero)-$formfield(Nombre)]]',  de
 web="%URLPARAM{"proceso" default="Procesos"}%" 
 recurse="on"
 }%]
+@
+
+
+1.4
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287180916" format="1.1" reprev="2" version="4"}%
 @
 
 

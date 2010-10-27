@@ -1,0 +1,32 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.10.20.20.11.57;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" date="1287605517" format="1.1" version="1"}%
+<title>%WIKITOOLNAME%'s <nop>%WEB% web</title>
+<subtitle><literal>%MAKETEXT{"The [_1] web of [_2]." args="<nop>%WEB%,<nop>%WIKITOOLNAME%"}% <nop>%WEBSUMMARY%</literal></subtitle>
+%INCLUDE{"%SYSTEMWEB%.WebAtomBase"}% <!--
+   * Set SKIN = rssatom
+   * Set COVER = rssatom
+-->
+@

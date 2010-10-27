@@ -1,8 +1,10 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286849380" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287585603" format="1.1" reprev="1" version="2"}%
 | *Name* | *Type* | *Size* | *Values* | *Tooltip message* | *Attributes* | 
 | Codigo | text | 10  |  | Código del Proceso | M | 
 | Nombre | text | 80 |  | Nombre del Proceso | M | 
-| Objetivo | textarea | 80x5 | | Objetivo del Proceso | |
+| Descripcion | textarea | 80x5 | | Objetivo del Proceso | |
 
 %STARTSECTION{"viewtemplate"}%ProcesoView%ENDSECTION{"viewtemplate"}%
 %STARTSECTION{"edittemplate"}%ProcesoEdit%ENDSECTION{"edittemplate"}% 
+
+%META:REVCOMMENT{ncomments="0"}%

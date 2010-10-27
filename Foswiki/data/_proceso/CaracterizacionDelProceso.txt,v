@@ -1,9 +1,14 @@
-head	1.4;
+head	1.5;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.5
+date	2010.10.20.20.06.09;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.4;
 
 1.4
 date	2010.10.18.18.16.38;	author BaseUserMapping_333;	state Exp;
@@ -31,12 +36,12 @@ desc
 @
 
 
-1.4
+1.5
 log
-@save topic
+@reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287425798" format="1.1" reprev="1" version="4"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287605169" format="1.1" reprev="5" version="5"}%
 %META:TOPICPARENT{name="WebHome"}%
 %INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
 
@@ -51,7 +56,7 @@ text
                     </td>   
                     <td width="50%">
 %EDITTABLE{format="| label, 0, *Alcance:* | textarea, 5x60, |"}%
-| *Alcance:* | Donec a ipsum massa. Aenean tincidunt sollicitudin porttitor. Duis tempor libero non eros scelerisque cursus! Integer eu massa nec nunc accumsan sollicitudin a non odio. Donec in nisl in libero pellentesque egestas. Mauris arcu lorem; sollicitudin tempor venenatis vel, congue ac diam? Ut nec nullam.<br /> |
+| *Alcance:* | ...<br /> |
                     </td>   
                 </tr>   
                 <tr>
@@ -198,7 +203,7 @@ text
                             <td width="30%">
 %~~ DBQUERY{
 ~~~ "form.name =~ 'FormularioDe(Procedimiento|Instructivo|Manual|Formato)'"
-~~~ web="Procesos.DireccionamientoOrganizacional"
+~~~ web="%WEB%"
 ~~~ format="   * [[$web.$topic][$percntIF{\"'$topic'~'*ProcedimientoId*'\" then=\"PR\"}$percnt$percntIF{\"'$topic'~'*ManualId*'\" then=\"MA\"}$percnt$percntIF{\"'$topic'~'*FormatoId*'\" then=\"FO\"}$percnt$percntIF{\"'$topic'~'*InstructivoId*'\" then=\"IN\"}$percnt-$formfield(Numero)-$formfield(Nombre)]]"
 ~~~ }%
                             </td>
@@ -207,7 +212,7 @@ text
                             <td width="30%">
 %~~ DBQUERY{
 ~~~ "form.name =~ 'FormularioDeDocumentoExterno'"
-~~~ web="Procesos.DireccionamientoOrganizacional"
+~~~ web="%WEB%"
 ~~~ format="   * [[$web.$topic][$formfield(Nombre)]]"
 ~~~ }%
                             </td>
@@ -223,6 +228,29 @@ text
 %EDITTABLE{format="|text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |"}%
 | *Factor critico de éxito* | *Tipo* | *Fórmula* | *Descripción* | *Meta* | *Rango de gestión* | *Frecuencia* | *Responsable* |  
 | | | | | | | | |
+
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.4
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287425798" format="1.1" reprev="1" version="4"}%
+d16 1
+a16 1
+| *Alcance:* | Donec a ipsum massa. Aenean tincidunt sollicitudin porttitor. Duis tempor libero non eros scelerisque cursus! Integer eu massa nec nunc accumsan sollicitudin a non odio. Donec in nisl in libero pellentesque egestas. Mauris arcu lorem; sollicitudin tempor venenatis vel, congue ac diam? Ut nec nullam.<br /> |
+d163 1
+a163 1
+~~~ web="Procesos.DireccionamientoOrganizacional"
+d172 1
+a172 1
+~~~ web="Procesos.DireccionamientoOrganizacional"
+d188 2
 @
 
 

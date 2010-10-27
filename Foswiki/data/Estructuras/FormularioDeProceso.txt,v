@@ -1,9 +1,14 @@
-head	1.1;
+head	1.2;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.2
+date	2010.10.20.14.40.03;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
 date	2010.10.12.02.09.40;	author BaseUserMapping_333;	state Exp;
@@ -16,17 +21,34 @@ desc
 @
 
 
+1.2
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287585603" format="1.1" reprev="1" version="2"}%
+| *Name* | *Type* | *Size* | *Values* | *Tooltip message* | *Attributes* | 
+| Codigo | text | 10  |  | Código del Proceso | M | 
+| Nombre | text | 80 |  | Nombre del Proceso | M | 
+| Descripcion | textarea | 80x5 | | Objetivo del Proceso | |
+
+%STARTSECTION{"viewtemplate"}%ProcesoView%ENDSECTION{"viewtemplate"}%
+%STARTSECTION{"edittemplate"}%ProcesoEdit%ENDSECTION{"edittemplate"}% 
+
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
 1.1
 log
 @reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286849380" format="1.1" reprev="1" version="1"}%
-| *Name* | *Type* | *Size* | *Values* | *Tooltip message* | *Attributes* | 
-| Codigo | text | 10  |  | Código del Proceso | M | 
-| Nombre | text | 80 |  | Nombre del Proceso | M | 
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286849380" format="1.1" reprev="1" version="1"}%
+d5 1
+a5 1
 | Objetivo | textarea | 80x5 | | Objetivo del Proceso | |
-
-%STARTSECTION{"viewtemplate"}%ProcesoView%ENDSECTION{"viewtemplate"}%
-%STARTSECTION{"edittemplate"}%ProcesoEdit%ENDSECTION{"edittemplate"}% 
+d9 2
 @

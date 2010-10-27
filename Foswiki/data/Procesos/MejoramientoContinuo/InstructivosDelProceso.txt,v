@@ -1,0 +1,27 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.10.20.14.42.06;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287585726" format="1.1" reprev="1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+%INCLUDE{"Estructuras.VistaDeInstructivos"}%@

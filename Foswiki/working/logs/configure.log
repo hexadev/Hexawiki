@@ -55,3 +55,6 @@
 | Mon Oct 18 22:21:45 2010 |  | 127.0.0.1 | {Plugins}{RevCommentPlugin}{Module} | Foswiki::Plugins::RevCommentPlugin |
 | Mon Oct 18 23:05:58 2010 |  | 127.0.0.1 | {Plugins}{WorkflowViewPlugin}{Enabled} | 1 |
 | Mon Oct 18 23:05:58 2010 |  | 127.0.0.1 | {Plugins}{WorkflowViewPlugin}{Module} | Foswiki::Plugins::WorkflowViewPlugin |
+| Wed Oct 20 14:31:26 2010 |  | 127.0.0.1 | {JSCalendarContrib}{format} | %Y/%m/%d |
+| Wed Oct 27 21:09:52 2010 |  | 127.0.0.1 | {WebMasterEmail} | foswiki@hexasas.co |
+| Wed Oct 27 21:10:28 2010 |  | 127.0.0.1 | {WebMasterEmail} | foswiki@hexasas.com |

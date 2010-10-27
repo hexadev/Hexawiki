@@ -1,0 +1,189 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287605446" format="1.1" reprev="5" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+%INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
+
+<table width="100%">
+  <tr>
+       <td width="100%">
+             <table width="100%" class="foswikiTable">
+                <tr>
+                    <td width="50%">
+%EDITTABLE{format="| label, 0, *Objetivo:* | textarea, 5x60, |"}%
+| *Objetivo:* | ... |
+                    </td>   
+                    <td width="50%">
+%EDITTABLE{format="| label, 0, *Alcance:* | textarea, 5x60, |"}%
+| *Alcance:* | ...<br /> |
+                    </td>   
+                </tr>   
+                <tr>
+                    <td width="50%">
+%EDITTABLE{format="| label, 0, *Requisitos ISO-9000 Aplicables:* | text, 60, |"}%
+| *Requisitos ISO-9000 Aplicables:* | ... |
+                    </td>   
+                    <td width="50%">
+%EDITTABLE{format="| label, 0, *Requisitos HACCP Aplicables:* | text, 60, |"}%
+| *Requisitos HACCP Aplicables:* | ... |
+                    </td>   
+                </tr>   
+             </table>
+       </td>
+  </tr>
+  <tr> 
+       <td width="100%">
+             <table width="100%"  class="foswikiTable">
+                  <thead>
+                       <tr>
+                           <th >Proveedores</th>
+                           <th  >Entradas</th>
+                           <th  > - </th>
+                           <th  >Actividades</th>
+                           <th  >Salidas</th>
+                           <th  >Clientes</th>
+                       </tr>
+                  </thead>
+                  <tbody>
+                        <tr>             
+                            <td width="20%">
+%EDITTABLE{format="| label, 0, * |text, 60, |"}%
+| ... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td align="center" valign="middle"  width="4%" style="background-color: #ddd;"><strong>P</strong></td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+|... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+|... |
+                            </td>
+                        </tr>
+                        <tr>             
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td align="center" valign="middle"  width="4%" style="background-color: #fff;"><strong>H</strong></td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+|... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+|... |
+                            </td>
+                        </tr>
+                        <tr>             
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td align="center" valign="middle"  width="4%" style="background-color: #ddd;"><strong>V</strong></td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+|... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+|... |
+                            </td>
+                        </tr>
+                        <tr>             
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td align="center" valign="middle"  width="4%" style="background-color: #fff;"><strong>A</strong></td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+| ... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+|... |
+                            </td>
+                            <td width="20%">
+%EDITTABLE{format="|textarea, 5x60, |"}%
+|... |
+                            </td>
+                        </tr>
+                  </tbody>
+             </table>
+       </td>
+  </tr>
+  <tr>
+       <td width="100%">
+             <table width="100%"  class="foswikiTable">
+                  <thead>
+                       <tr>
+                           <th >Recursos</th>
+                           <th  >Documentos Internos</th>
+                           <th  >Documentos Externos</th>
+                       </tr>
+                  </thead>
+                  <tbody>
+                        <tr>             
+                            <td width="30%">
+%EDITTABLE{format="| text, 40, | textarea, 5x60, |"}%
+|*Físicos*: | ... |
+|*Humanos*: | ... |
+|*Ambiente de trabajo*: | ... |
+                            </td>
+                            <td width="30%">
+%~~ DBQUERY{
+~~~ "form.name =~ 'FormularioDe(Procedimiento|Instructivo|Manual|Formato)'"
+~~~ web="%WEB%"
+~~~ format="   * [[$web.$topic][$percntIF{\"'$topic'~'*ProcedimientoId*'\" then=\"PR\"}$percnt$percntIF{\"'$topic'~'*ManualId*'\" then=\"MA\"}$percnt$percntIF{\"'$topic'~'*FormatoId*'\" then=\"FO\"}$percnt$percntIF{\"'$topic'~'*InstructivoId*'\" then=\"IN\"}$percnt-$formfield(Numero)-$formfield(Nombre)]]"
+~~~ }%
+                            </td>
+
+
+                            <td width="30%">
+%~~ DBQUERY{
+~~~ "form.name =~ 'FormularioDeDocumentoExterno'"
+~~~ web="%WEB%"
+~~~ format="   * [[$web.$topic][$formfield(Nombre)]]"
+~~~ }%
+                            </td>
+                       </tr>
+                  </tbody>
+             </table>
+        </td>
+   </tr>
+</table>
+
+---++ Indicadores
+
+%EDITTABLE{format="|text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |"}%
+| *Factor critico de éxito* | *Tipo* | *Fórmula* | *Descripción* | *Meta* | *Rango de gestión* | *Frecuencia* | *Responsable* |  
+| | | | | | | | |
+
+%META:REVCOMMENT{ncomments="0"}%

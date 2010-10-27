@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287364586" format="1.1" reprev="1" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287585839" format="1.1" reprev="1" version="3"}%
 %META:TOPICPARENT{name="WebHome"}%
 %INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
 
@@ -105,7 +105,7 @@
                             </td>
                             <td width="20%">
 %EDITTABLE{format="|textarea, 5x60, |"}%
-|... |
+|... |Procesos.DireccionamientoOrganizacional
                             </td>
                             <td width="20%">
 %EDITTABLE{format="|textarea, 5x60, |"}%
@@ -126,7 +126,7 @@
 %EDITTABLE{format="|textarea, 5x60, |"}%
 | ... |
                             </td>
-                            <td width="20%">
+                            <td width="20%">Procesos.DireccionamientoOrganizacional
 %EDITTABLE{format="|textarea, 5x60, |"}%
 |... |
                             </td>
@@ -160,7 +160,7 @@
                             <td width="30%">
 %~~ DBQUERY{
 ~~~ "form.name =~ 'FormularioDe(Procedimiento|Instructivo|Manual|Formato)'"
-~~~ web="Procesos.DireccionamientoOrganizacional"
+~~~ web="%WEB%"
 ~~~ format="   * [[$web.$topic][$percntIF{\"'$topic'~'*ProcedimientoId*'\" then=\"PR\"}$percnt$percntIF{\"'$topic'~'*ManualId*'\" then=\"MA\"}$percnt$percntIF{\"'$topic'~'*FormatoId*'\" then=\"FO\"}$percnt$percntIF{\"'$topic'~'*InstructivoId*'\" then=\"IN\"}$percnt-$formfield(Numero)-$formfield(Nombre)]]"
 ~~~ }%
                             </td>
@@ -169,7 +169,7 @@
                             <td width="30%">
 %~~ DBQUERY{
 ~~~ "form.name =~ 'FormularioDeDocumentoExterno'"
-~~~ web="Procesos.DireccionamientoOrganizacional"
+~~~ web="%WEB%"
 ~~~ format="   * [[$web.$topic][$formfield(Nombre)]]"
 ~~~ }%
                             </td>
@@ -185,3 +185,5 @@
 %EDITTABLE{format="|text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |"}%
 | *Factor critico de éxito* | *Tipo* | *Fórmula* | *Descripción* | *Meta* | *Rango de gestión* | *Frecuencia* | *Responsable* |  
 | | | | | | | | |
+
+%META:REVCOMMENT{ncomments="0"}%

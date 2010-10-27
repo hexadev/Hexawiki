@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" date="1227589168" format="1.1" reprev="1.1" version="1.1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1287604953" format="1.1" reprev="1" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
 Preferences
    * Set WEBBGCOLOR = #FFD8AA
@@ -8,6 +8,9 @@ Preferences
       * Set SITEMAPLIST = 
       * Set NOSEARCHALL = on
 ---+++ Admin group only
+      * Set DENYWEBVIEW = %USERSWEB%.WikiGuest
       * Set ALLOWWEBCHANGE = %USERSWEB%.AdminGroup
       * Set ALLOWWEBRENAME = %USERSWEB%.AdminGroup
       * Set ALLOWTOPICCHANGE = %USERSWEB%.AdminGroup
+
+%META:REVCOMMENT{ncomments="0"}%

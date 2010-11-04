@@ -1,8 +1,8 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1287443559" format="1.1" version="2"}%
+%META:TOPICINFO{author="pruebas" date="1288738584" format="1.1" version="3"}%
 %META:TOPICPARENT{name="WikiGroups"}%
 
 Edit this topic to add a description to the !WorkflowAprobarGroup
 
 %META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="WorkflowAprobarGroup"}%
-%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="AdminUser, HexaPreubas"}%
+%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="AdminUser"}%
 %META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="GroupView"}%

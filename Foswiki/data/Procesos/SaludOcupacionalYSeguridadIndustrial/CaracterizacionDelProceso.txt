@@ -1,5 +1,9 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287605610" format="1.1" reprev="5" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288890458" format="1.1" reprev="5" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
+<!--
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+-->
+
 %INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
 
 <table width="100%">
@@ -186,4 +190,17 @@
 | *Factor critico de éxito* | *Tipo* | *Fórmula* | *Descripción* | *Meta* | *Rango de gestión* | *Frecuencia* | *Responsable* |  
 | | | | | | | | |
 
+
+
+---++ Cambios
+%EDITTABLE{format="|date,0,|textarea, 4x80, |"}%
+| *Fecha* | *Descripción* |
+|  |  |
+
+%META:FORM{name="Estructuras.FormularioDeFormato"}%
+%META:FIELD{name="Nombre" attributes="M" title="Nombre" value="Caracterización"}%
+%META:FIELD{name="Descripcion" attributes="M" title="Descripcion" value="-"}%
+%META:FIELD{name="Numero" attributes="M" title="Numero" value="-"}%
+%META:FIELD{name="Responsable" attributes="M" title="[[Estructuras.ListadoDeCargos][Responsable]]" value="-"}%
+%META:FIELD{name="Version" attributes="M" title="Version" value="-"}%
 %META:REVCOMMENT{ncomments="0"}%

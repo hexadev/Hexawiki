@@ -1,5 +1,8 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287605680" format="1.1" reprev="5" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1288888878" format="1.1" reprev="3" version="3"}%
 %META:TOPICPARENT{name="WebHome"}%
+<!--
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+-->
 %INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
 
 <table width="100%">
@@ -9,11 +12,11 @@
                 <tr>
                     <td width="50%">
 %EDITTABLE{format="| label, 0, *Objetivo:* | textarea, 5x60, |"}%
-| *Objetivo:* | ... |
+| *Objetivo:* | Ut id porta est. Mauris cursus sem sed lacus tempor rhoncus. Mauris condimentum, mauris non ullamcorper lacinia, ante dolor vehicula lectus, vel interdum magna augue eget orci. Vivamus erat nunc, pretium non sollicitudin sit amet, mattis ut libero. Quisque placerat lectus a tellus convallis posuere.<br /> |
                     </td>   
                     <td width="50%">
 %EDITTABLE{format="| label, 0, *Alcance:* | textarea, 5x60, |"}%
-| *Alcance:* | ...<br /> |
+| *Alcance:* | Ut at tincidunt nulla. Morbi non ipsum tortor. Nullam elit lorem, porta sed varius eget, venenatis id libero. Mauris imperdiet aliquam urna non ullamcorper. Aenean sapien dui, adipiscing vel pharetra sed, suscipit nec est. Etiam orci massa, placerat id malesuada vitae, vulputate eget velit volutpat.<br /> |
                     </td>   
                 </tr>   
                 <tr>
@@ -186,4 +189,15 @@
 | *Factor critico de éxito* | *Tipo* | *Fórmula* | *Descripción* | *Meta* | *Rango de gestión* | *Frecuencia* | *Responsable* |  
 | | | | | | | | |
 
+---++ Cambios 
+%EDITTABLE{format="|date,0,|textarea, 4x80, |"}%
+| *Fecha* | *Descripción* |
+|  |  |
+
+%META:FORM{name="Estructuras.FormularioDeFormato"}%
+%META:FIELD{name="Nombre" attributes="M" title="Nombre" value="Caracterización"}%
+%META:FIELD{name="Descripcion" attributes="M" title="Descripcion" value="-"}%
+%META:FIELD{name="Numero" attributes="M" title="Numero" value="-"}%
+%META:FIELD{name="Responsable" attributes="M" title="[[Estructuras.ListadoDeCargos][Responsable]]" value="-"}%
+%META:FIELD{name="Version" attributes="M" title="Version" value="-"}%
 %META:REVCOMMENT{ncomments="0"}%

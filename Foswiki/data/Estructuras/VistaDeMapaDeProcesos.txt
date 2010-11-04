@@ -1,10 +1,24 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286921769" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1288899319" format="1.1" reprev="2" version="2"}%
 ---+ Procesos
 <div class="foswikiHelp" style="width:20%;float: right;">
    * [[%BASEWEB%.BusquedaDeDocumentos][%ICON{searchtopic}% Buscar Documentos]]
 </div>
 Utilice el mapa de procesos para acceder a la información de cada uno de ellos. Haga click en el proceso deseado.
 
-<img src="%PUBURL%/Estructuras/VistaDeMapaDeProcesos/mapa_de_procesos.png" width="70%" />
+<img src="%PUBURL%/Estructuras/VistaDeMapaDeProcesos/Mapa_de_Procesos.png" usemap="#procesos" />
+
+<map name="procesos">
+  <area shape="rect" href="%SCRIPTURL{view}%/Procesos/SaludOcupacionalYSeguridadIndustrial/WebHome" coords="433,396,599,446" />
+  <area shape="rect" href="%SCRIPTURL{view}%/Procesos/GestionDeLaInfraestructura/WebHome" coords="312,394,424,444" />
+  <area shape="rect" href="%SCRIPTURL{view}%/Procesos/Compras/WebHome" coords="173,395,303,444" />
+  <area shape="rect" href="%SCRIPTURL{view}%/Procesos/GestionHumana/WebHome" coords="66,393,162,444" />
+  <area shape="rect" href="%SCRIPTURL{view}%/Procesos/Produccion/WebHome" coords="361,224,508,305" />
+  <area shape="rect" href="%SCRIPTURL{view}%/Procesos/GestionComercial/WebHome" coords="140,224,287,306" />
+  <area shape="rect" href="%SCRIPTURL{view}%/Procesos/MejoramientoContinuo/WebHome" coords="438,89,582,138" />
+  <area shape="rect" href="%SCRIPTURL{view}%/Procesos/GestionFinanciera/WebHome" coords="264,89,407,140" />
+  <area shape="rect" href="%SCRIPTURL{view}%/Procesos/DireccionamientoOrganizacional/WebHome" coords="88,90,232,139" />
+</map>
 
 %META:FILEATTACHMENT{name="mapa_de_procesos.png" attachment="mapa_de_procesos.png" attr="" comment="" date="1286489144" path="mapa_de_procesos.png" size="66188" user="BaseUserMapping_333" version="2"}%
+%META:FILEATTACHMENT{name="Mapa_de_Procesos.png" attachment="Mapa_de_Procesos.png" attr="" comment="" date="1288898845" path="Mapa de Procesos.png" size="79933" user="BaseUserMapping_333" version="2"}%
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="2" t_1="1288898927"}%

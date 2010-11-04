@@ -1,0 +1,133 @@
+%META:TOPICINFO{author="ProjectContributor" date="1144974136" format="1.1" version="1.1"}%
+---+!! <nop>%TOPIC%
+
+This plugin allows to enter a short summary of changes made to a topic for a new revision.
+This summary can be displayed e.g. in a history page of the topic or on the !WebChanges page
+of a web. Changes may also be marked as "minor" by using the "Quiet save" button.
+
+Since in Foswiki it is possible to make several changes within the edit lock time (normally
+60 minutes) which are accumulated in only one new revision, it is also possible to
+have several comments for one revision.
+
+Furthermore, adding or updating an attachment may also trigger an automatic comment
+for the current revision. This behaviour can be switched on or off with the help
+of  the preference variable ATTACHMENT_COMMENTS (see below).
+
+%TOC%
+
+---++ Syntax Rules
+   
+---+++ Showing existing comments
+   * %<nop>REVCOMMENT{parameters}%
+   * Parameters:%BR%
+| *Name* | *Description* | *Default* |
+| web    | Web where topic exists  | current web  |
+| topic  | Name of topic           | current topic  |
+| rev    | Revision                | latest revision |
+| delimiter | Delimiter between 2 comments for the same revision | &lt;/li&gt;&lt;li&gt;  |  
+| pre    | Text before the first comment | &lt;ul&gt;&lt;li&gt;  |
+| post   | Text after the last comment | &lt;/li&gt;&lt;/ul&gt;  |
+| minor  | Text to print for a minor change | _(minor)_  |
+(The text for the _pre_ and _post_ parameters will only be printed
+if the list of comments is not empty.)
+   * For your convenience, you can use [] instead of {} and '' instead of " 
+     inside other parameters.
+
+---+++ Entering new comments
+   * Add a text input field named =comment= to the edit and preview templates. 
+     (See e.g. the attached templates for the pattern and classic skin) 
+
+---++ Examples
+
+   * %<nop>REVCOMMENT% shows the comments for the current revision.
+   * Using the attached !WebChangesWC (see below), the list of previously updated topics
+     of a web may look like this:
+
+   * Example <nop>WebChanges: <br />
+     <img src="%ATTACHURLPATH%/ExampleWebChanges.png" alt="Screenshot: Example output of !WebChanges"  />
+
+---
+
+   * If you have also the [[Foswiki:Extensions.HistoryPlugin][HistoryPlugin]] installed, 
+     the history of a topic may look like this:
+
+   * Example History: <br />
+     <img src="%ATTACHURLPATH%/ExampleHistory.png" alt="ExampleHistory.png"  />
+
+---++ Plugin Settings
+
+Plugin settings are stored as preferences variables. To reference a plugin setting write ==%<nop>&lt;plugin&gt;_&lt;setting&gt;%==, i.e. ==%<nop>INTERWIKIPLUGIN_SHORTDESCRIPTION%==
+
+   * One line description, is shown in the %SYSTEMWEB%.TextFormattingRules topic:
+      * Set SHORTDESCRIPTION = Allows a short summary of changes to be entered for a new revision.
+
+   * Debug plugin: (See output in =data/debug.txt=)
+      * Set DEBUG = 0
+
+   * List also new or updated attachments:
+      * Set ATTACHMENT_COMMENTS = 1
+
+   * Store comments as RCS log message (not recommended yet)
+      * Set USE_RCS = 0
+
+---++ Plugin Installation Instructions
+
+__Note:__ You do not need to install anything on the browser to use this plugin. The following instructions are for the administrator who installs the plugin on the server where Foswiki is running. 
+
+   * Download the ZIP file from the Plugin web (see below)
+   * Unzip ==%TOPIC%.zip== in your Foswiki installation directory. Content:
+     | *File:* | *Description:* |
+     | ==data/System/%TOPIC%.txt== | Plugin topic |
+     | ==data/System/%TOPIC%.txt,v== | Plugin topic repository |
+     | ==lib/Foswiki/Plugins/%TOPIC%.pm== | Plugin Perl module |
+     | ==data/System/WebChangesWC.txt== | Replacement for ==WebChanges.txt==, see below |
+     | ==data/System/RevComment.txt== | Help text |
+   * Visit =configure= in your Foswiki installation, and enable the plugin in the {Plugins} section.
+
+   * Test if the installation was successful:
+     <ul>
+      <li> Here should be the comment of this topic: %REVCOMMENT%
+      <li> Look at the recent changes to the System web:
+        %SYSTEMWEB%.WebChangesWC
+      <li> If you have also the [[Foswiki:Extensions.HistoryPlugin][HistoryPlugin]] installed,
+        look at the history of this document:
+        %SCRIPTURL%/oops%SCRIPTSUFFIX%/%WEB%/%TOPIC%?template=oopshistory
+      <li> Edit this page and enter a new comment:
+        %SCRIPTURL%/edit%SCRIPTSUFFIX%/%WEB%/%TOPIC%
+     </ul>
+
+   * This distribution contains a topic which can replace an existing
+     one. This file has a WC ("with comments") in the name. You should backup
+     your old file and rename this file:
+   * =data/System/WebChangesWC.txt= --> =data/System/WebChanges.txt=
+   * If [[Foswiki:Extensions.HistoryPlugin][HistoryPlugin]] is installed, the template =oopshistory.tmpl= from this plugin is automatically expanded with revision comments once this plugin is installed
+   * If you are using other skins than the pattern or classical skin, you have to 
+     enter a textfield to =templates/edit.<i>skin</i>.tmpl= and =templates/preview.<i>skin</i>.tmpl= :
+     Enter the line
+     &lt;input class="foswikiEditComment" type="text" size="%<nop>EDITBOXWIDTH%" style="%<nop>EDITBOXSTYLE%" name="comment"&gt;
+     to the template, between the &lt;form&gt; and &lt;/form&gt; tags.
+     
+
+---++ Plugin Info
+
+|  Plugin Author: | Foswiki:Main.KennethLavrsen & Foswiki:Main.SteffenPoulsen |
+|  Copyright &copy;: | 2006, !JChristophFuchs and !Steffen Poulsen; 2008 Kenneth Lavrsen and Foswiki Contributors | 
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Plugin Version: | 22 Jan 2009  |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  22 Jan 2009: | Kenneth Lavrsen - Added the two example images as attachments to the topic so they also get uploaded to foswiki.org. No need to upgrade from 08 Dec 2008 version if you already installed that. |
+|  08 Dec 2008: | Kenneth Lavrsen: Changed the author to myself. !JChristophFuchs is the original author but announced in 2006 that he no longer maintains this plugin. So now I officially take the task as maintainer. Plugin is changed to Foswiki namespace and tested and works under Foswiki 1.0.0. Policy is now feel free to modify but please do not break compatibility. |
+|  14 Apr 2006: | &lt;noautolink&gt; added to default pre/post rendering output of REVCOMMENT tag |
+|  14 Apr 2006: | Minor update for Dakar 4.0.2 |
+|  22 Apr 2005: | Initial version |
+|  Dependency: | $Foswiki::Plugins::VERSION 1.024 |
+|  CPAN Dependencies: | none |
+|  Other Dependencies: | none |
+|  Perl Version: | 5.008 |
+|  Plugin Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Feedback: | http://foswiki.org/Extensions/%TOPIC%Dev |
+
+__Related Topics:__ %SYSTEMWEB%.DefaultPreferences, %USERSWEB%.SitePreferences, [[%SYSTEMWEB%.Plugins][Plugins]]
+
+%META:FILEATTACHMENT{name="ExampleHistory.png" attachment="ExampleHistory.png" attr="h" comment="" date="1232646804" path="ExampleHistory.png" size="25374"   user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="ExampleWebChanges.png" attachment="ExampleWebChanges.png" attr="h" comment="" date="1232646820" path="ExampleWebChanges.png" size="9532"   user="ProjectContributor" version="1"}%

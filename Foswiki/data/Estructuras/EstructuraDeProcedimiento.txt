@@ -1,7 +1,23 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286750801" format="1.1" version="1"}%
----+ Procedimiento: PR-%FORMFIELD{"Sigla" topic="%BASEWEB%.WebHome"}%-%FORMFIELD{"Numero" topic="%BASEWEB%.%BASETOPIC%"}%-%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287437656" format="1.1" reprev="2" version="3"}%
+---+ Procedimiento: PR-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-%FORMFIELD{"Numero" topic="%BASEWEB%.%BASETOPIC%"}%-%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
+
+%TOC%
 
 %STARTSECTION{"controlcambios"}%
-| *Versión* | %FORMFIELD{"Version" topic="%BASEWEB%.%BASETOPIC%"}% |
-TODO
+---++ Identificación
+
+| Nombre  | %FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%  |
+| Descripción  | %ENCODE{"%FORMFIELD{"Descripcion" topic="%BASEWEB%.%BASETOPIC%"}%" type="html"}%  |
+| Responsable  | %FORMFIELD{"Responsable" topic="%BASEWEB%.%BASETOPIC%"}%  |
+| Versión  | %FORMFIELD{"Version" topic="%BASEWEB%.%BASETOPIC%"}%  |
+
+---++ Control del Documento 
+
+| *Workflow* ||
+| Estado Actual | %WORKFLOWSTATE{"%BASETOPIC%" web="%BASEWEB%"}% |
+| Transición | %WORKFLOWTRANSITION{"%BASETOPIC%" web="%BASEWEB%"}% |
+| Mensaje de Estado | %WORKFLOWSTATEMESSAGE% |
+---+++ Historial
+%WORKFLOWHISTORY{"%BASETOPIC%" web="%BASEWEB%"}%
+
 %ENDSECTION{"controlcambios"}%

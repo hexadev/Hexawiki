@@ -1,10 +1,25 @@
-head	1.1;
+head	1.4;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 expand	@o@;
 
+
+1.4
+date	2010.10.17.22.03.49;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2010.10.15.22.21.16;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.10.12.03.25.20;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
 date	2010.10.10.23.14.53;	author BaseUserMapping_333;	state Exp;
@@ -17,22 +32,76 @@ desc
 @
 
 
+1.4
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287353029" format="1.1" reprev="2" version="4"}%
+---+ Documento Externo: %FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
+
+| *Información* | |
+| *Descripción*: |%ENCODE{"%FORMFIELD{"Descripcion" topic="%BASEWEB%.%BASETOPIC%"}%" type="html"}% |
+| *Fuente*: |%FORMFIELD{"Fuente" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Fecha Expedición*: |%FORMFIELD{"FechaExpedicion" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Responsable*: |%FORMFIELD{"Responsable" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Fecha Caducidad*: |%FORMFIELD{"FechaCaducidad" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Estado*: |%FORMFIELD{"Estado" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Items Obsoletos*: |%ENCODE{"%FORMFIELD{"ItemsObsoletos" topic="%BASEWEB%.%BASETOPIC%"}%" type="html"}% | 
+
+
+---++ Control del Documento 
+
+| *Workflow* ||
+| Estado Actual | %WORKFLOWSTATE{"%BASETOPIC%" web="%BASEWEB%"}% |
+| Transición | %WORKFLOWTRANSITION{"%BASETOPIC%" web="%BASEWEB%"}% |
+| Mensaje de Estado | %WORKFLOWSTATEMESSAGE% |
+---+++ Historial
+%WORKFLOWHISTORY{"%BASETOPIC%" web="%BASEWEB%"}%
+@
+
+
+1.3
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287181276" format="1.1" reprev="2" version="3"}%
+d14 8
+@
+
+
+1.2
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286853920" format="1.1" reprev="2" version="2"}%
+a7 1
+| *Proceso*: |%FORMFIELD{"Proceso" topic="%BASEWEB%.%BASETOPIC%"}% |
+@
+
+
 1.1
 log
 @save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286752493" format="1.1" version="1"}%
----+ Documento Externo: %FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
-
-| *Información* | |
-| *Fecha Expedición*: |%FORMFIELD{"FechaExpedicion" topic="%BASEWEB%.%BASETOPIC%"}% |
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286752493" format="1.1" version="1"}%
+d5 2
+d8 1
+a8 1
 | *Fuente*: |%FORMFIELD{"Fuente" topic="%BASEWEB%.%BASETOPIC%"}% |
-| *Responsable*: |%FORMFIELD{"Responsable" topic="%BASEWEB%.%BASETOPIC%"}% |
+a9 1
 | *Proceso*: |%FORMFIELD{"Proceso" topic="%BASEWEB%.%BASETOPIC%"}% |
-| *Fecha Caducidad*: |%FORMFIELD{"FechaCaducidad" topic="%BASEWEB%.%BASETOPIC%"}% |
-| *Estado*: |%FORMFIELD{"Estado" topic="%BASEWEB%.%BASETOPIC%"}% |
+d12 2
+a13 2
 | *Items Obsoletos*: |%FORMFIELD{"ItemsObsoletos" topic="%BASEWEB%.%BASETOPIC%"}% | 
 | *Descripción*: |%FORMFIELD{"Descripcion" topic="%BASEWEB%.%BASETOPIC%"}% |
-
 @

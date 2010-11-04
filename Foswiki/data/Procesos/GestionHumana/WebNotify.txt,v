@@ -1,0 +1,33 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.10.20.20.10.46;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" date="1287605446" format="1.1" version="1"}%
+%MAKETEXT{"This is a subscription service to be automatically notified by e-mail when topics change in this [_1] web. This is a convenient service, so you do not have to come back and check all the time if something has changed. To subscribe, please add a bullet with your [_2] in alphabetical order to this list:" args="*<nop>%WEB%*,[[%SYSTEMWEB%.WikiName][WikiName]]"}%
+
+   * %USERSWEB%.WikiGuest
+   * %USERSWEB%.WikiGuest - example@@your.company
+
+
+%INCLUDE{"%SYSTEMWEB%.WebNotifyHelp"}%
+@

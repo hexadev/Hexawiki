@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="ProjectContributor" date="1231502400" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1287604463" format="1.1" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
 <!-- Don't change the TOPICINFO date otherwise it will break SemiAutomaticTestCaseTests::test_TestCaseAutoFormattedSearchDetails -->
 ---+!! <nop>%WEB% Web Preferences
@@ -36,7 +36,8 @@
 ---++ Access control
 
 Users or groups who are allowed to view, change and rename topics in the <nop>%WEB% web
-
+   * Set DENYWEBVIEW = %USERSWEB%.WikiGuest
+   * Set ALLOWWEBVIEW = 
    * Set ALLOWWEBCHANGE = %USERSWEB%.AdminGroup
    * Set ALLOWWEBRENAME = %USERSWEB%.AdminGroup
 
@@ -46,3 +47,5 @@ Users or groups who are allowed to view, change and rename topics in the <nop>%W
 
 ---
 %INCLUDE{%SYSTEMWEB%.WebPreferencesHelp}%
+
+%META:REVCOMMENT{ncomments="0"}%

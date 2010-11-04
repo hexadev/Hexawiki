@@ -1,0 +1,57 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.2
+date	2010.10.15.22.13.59;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.10.13.20.18.32;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.2
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287180839" format="1.1" version="2"}%
+[%SEARCH{
+"form.name~'*FormularioDeDocumentoDeApoyo*' AND (fields[name='Nombre' AND lc(value)~lc('*%URLPARAM{nombre}%*')] AND fields[name='Descripcion' AND lc(value)~lc('*%URLPARAM{descripcion}%*')] AND fields[name='Version' AND value~'*%URLPARAM{version}%*'])" 
+type="query" 
+nosearch="on"
+nototal="on" 
+casesensitive="off" 
+order="topic" 
+reverse="off" 
+separator=", " 
+nonoise="on" 
+format="{topic: '[[$web.$topic][DA-$formfield(Numero)-$formfield(Nombre)]]',  descripcion: '$formfield(Descripcion)' , version: '$formfield(Version)', proceso: '$web'}" 
+web="%URLPARAM{"proceso" default="Procesos"}%" 
+recurse="on"
+}%]
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@d1 15
+a15 2
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287001112" format="1.1" version="1"}%
+[%SEARCH{"form.name~'*FormularioDeDocumentoDeApoyo*' AND (fields[name='Nombre' AND lc(value)~lc('*%URLPARAM{nombre}%*')] AND fields[name='Descripcion' AND lc(value)~lc('*%URLPARAM{descripcion}%*')] AND fields[name='Version' AND value~'*%URLPARAM{version}%*'])" type="query" nosearch="on" nototal="on" casesensitive="off" order="topic" reverse="off" separator=", " nonoise="on" format="{topic: '[[$web.$topic][$formfield(Nombre)]]',  descripcion: '$formfield(Descripcion)' , version: '$formfield(Version)', proceso: '$web'}" web="%URLPARAM{"proceso" default="Metodologia"}%" recurse="on"}%]
+@

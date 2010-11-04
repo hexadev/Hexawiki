@@ -1,0 +1,190 @@
+---+ %TOPIC%
+<!--
+   * Set SHORTDESCRIPTION = Associate a "state" with a topic and then control the work flow that the topic progresses through as content is added.
+-->
+<div style="float:right">
+%ATTACHURL%/Flow.gif
+</div>
+Foswiki benefits from the fact that every user can modify a topic instantly without restrictions. However sometimes you want to be able to associate a "state" with a topic and then control the work flow that the topic progresses through as content is added. 
+For example,
+   * When writing documents compliant with ISO 9000 (e.g. a quality manual), it is essential that documents are approved by the management before they may be applied by the employees.
+   * In a defect tracking data base, defects typically transition through a series of states from submission to resolution, with different actions available depending on the state of the defect.
+   * In a journal database, papers must be reviewed and approved by several experts in the field before being allowed to be published.
+
+This plugin lets you associate a complex work flow with topics in your wiki.
+
+A workflow can be associated with a single topic, or with an entire web. If a topic is under workflow control, you can define a set of _states_ for this topic (e.g. "under revision", "waiting for approval", "approved") and _transitions_ (e.g. "revise", "approve") between these states. Furthermore, you can define which users/groups are permitted to perform specific transistions. In this way, you can control, for example, who is allowed to "approve" a topic and who is not.
+
+<blockquote class="twikiAlert">
+*Upgrade note* If you are upgrading from a version before 10 Nov 2008 please note that the format of the WORKFLOWHISTORYFORMAT preference has changed slightly, in that:
+   1 enclosing double quotes are no longer removed from the value. This changes has been to bring this preference definition into line with other preference definitions.
+   1 =$n= is interpreted as \n, not &lt;br&gt;, in line with the standard [[%SYSTEMWEB%.FormatTokens][format tokens]]. If you want a &lt;br&gt; in the format string, then enter it as &lt;br&gt; or $percntBR$percnt.
+</blockquote>
+
+---++ Usage
+
+A topic is under document control if the preference variable =WORKFLOW= is set
+in the topic page. =WORKFLOW= must be set to the wiki name of a topic that describes your specific workflow (the _workflow description topic_).
+
+Note: you can hide the setting in a normal view using HTML comments, or better, you can put these settings into the local topic settings, accessible from the "more" screen.
+
+---+++ Settings in the workflow description topic 
+
+The workflow description topic must contain one state table and one transition table. The state table describes the possible states a document may be in (nodes in the flow diagram above), and the transition table describes how documents move between states (arcs in the flow diagram).
+
+This is easiest illustrated using an example (available as Sandbox.DocumentApprovalWorkflow if the plugin is installed).
+
+The state table is a table with three columns:
+
+<verbatim>
+| *State*       | *Allow Edit* | *Message* |
+| UNDERREVISION | QualityGroup | This document is being revised. |
+| APPROVED      | nobody       | This document has been approved for release. |
+| WAITINGFORQM  | nobody       | This document is waiting for approval by the Quality Manager. |
+| WAITINGFORCTO | nobody       | This document is waiting for approval by the CTO.|
+</verbatim>
+
+Each row in the table defines a state where:
+	* the *State* column specifies a name for the state, 
+	* the *Allow Edit* column specifies who is permitted to edit the topic when it is in the state, and 
+	* the *Message* column defines a message which can be displayed on the document page when the document is in this state.
+
+In the example we have defined four states. Members of the
+!QualityGroup are permitted modify documents can make changes to the document
+in UNDERREVISION state. In all other states, nobody is allowed to edit the
+controlled document.
+
+The first state in the table is the initial/default state.
+
+%X% The state table must be defined *before* the transition table!
+
+The transition table consists of four columns, as in this example:
+<verbatim>
+| *State*       | *Action* | *Next State*  | *Allowed*                        |
+| APPROVED      | revise   | UNDERREVISION | QualityGroup                     |
+| UNDERREVISION | complete | WAITINGFORQM  | QualityGroup                     |
+| WAITINGFORQM  | approve  | WAITINGFORCTO | QualityManager                   |
+| WAITINGFORQM  | reject   | UNDERREVISION | QualityManager,QualityGroup      |
+| WAITINGFORCTO | approve  | APPROVED      | TechnicalDirector                |
+| WAITINGFORCTO | reject   | UNDERREVISION | TechnicalDirector,QualityManager |
+</verbatim>
+
+Each row in this table defines a transition from one state to another state:
+	* the *State* column contains the name of a state from the state table, 
+	* the *Action* column describes a possible action when the topic is in
+      this state,
+	* the *Next State* column defines the new state of the document after
+      the specified action has been performed,
+	* the *Allowed* column specifies who is allowed to perform the
+      corresponding action,
+	* an _optional_ *Form* column defines a form that is attached to
+      the topic in this state.
+    * an _optional_ *Notify* column specifies who should be notified when this transition fires
+
+In our example, anyone is allowed to revise the document when it is in =UNDERREVISION= state. After finishing the revision, the document can be transitioned to the =WAITINGFORQM= state by any member of the !QualityGroup. It must then be approved by the !QualityManager, and after that by the !TechnicalDirector. Even though they can't edit the document themselves (see state table above), they _can_ reject the revision and put the document back into the =UNDERREVISION= state. The !TechnicalDirector can transition the document to =APPROVED= state where it rests until a member of the !QualityGroup puts it under revision again.
+
+If a form name is given in the *Form* column, this form will be attached to the topic, and the topic will put in edit mode to allow information to be provided in the form _when that state transition happens_. In the example above, a form of type Approved<nop>Form will be attached to the topic when the CTO transitions the topic into =APPROVED= state.
+   * if there is already a form of a different type attached to the topic, then any fields that have the same name in the _new_ form will be preserved.
+   * If no form is given, the existing form (if any) is left in place.
+A typical usage of the form would be to collect additional information as the topic walks through the work flow, or to make information in the form unchangeable (by setting it to a =label= field) once a given state is reached.
+
+If a *Notify* column is given, that column can contain a comma-separated list of people who are to be notified when the transition is fired. You can specify individual user wiki names, group names, and even individual email addresses.
+
+---+++ Settings in your controlled document/topic
+
+As described above the topic needs to contain a definition for the variable =WORKFLOW= for it to be controlled under the approval workflow. This is best set as a document-specific preference setting in the =More topic actions= screen.
+
+%INCLUDE{VarWORKFLOW}%
+
+If you replace =%<nop>EDITTOPIC%= with =%<nop>WORKFLOWEDITTOPIC%= in your skin templates, then the _Edit_ link is crossed out when the user is not allowed to edit the page in a state.
+
+Similarly, you can use =%<nop>WORKFLOWATTACHTOPIC%= in your skin templates to cross out the _Attach_ link.  
+
+---+++ Content-sensitive workflows
+*Advanced* Flows can be made sensitive to the content of the controlled
+topics. The 'Allow Edit' column in the state table, and the 'Next State'
+and 'Allowed' columns in the transition table, support the use of macros
+which are expanded
+when the topic is viewed. For example, you can use the =[[VarMETA][META]]=
+macro to pick up values for these fields from the form attached to the
+viewed topic:
+
+*State table*
+<verbatim>
+| *State*             | *Allow Edit*                         | *Message* |
+| WAITINGFORAPPROVAL  | %META{"formfield" name="MayModify"}% | This document is waiting for approval |
+</verbatim>
+*Transition Table*
+<verbatim>
+| *State*            | *Action* | *Next State*                             | *Allowed*                        |
+| WAITINGFORAPPROVAL | approve  | %META{"formfield" name="ApprovedState"}% | %META{"formfield" name="MayApprove"}% |
+</verbatim>
+
+You can also define other macros starting with =WORKFLOW= in the workflow
+description topic. These will be expanded to their defined values in any
+topic that uses the workflow. For example:
+	* Set WORKFLOWNOTICE = This topic is under document control.
+will define =WORKFLOWNOTICE= in any topic that uses the workflow.
+
+---++ Reporting
+A common requirement is to report on the status of topics that are in different states in the workflow. You can use the query search to search for topics in a specific state. For example, to search for all topics in state "APPROVED":
+<verbatim>
+%SEARCH{"META:WORKFLOW.name='APPROVED'" type="query"}%
+</verbatim>
+
+---++ History and Acknowledgements
+
+This plugin was motivated by [[Foswiki:Main.ThomasWeigert][Thomas Weigert]]'s [[Foswiki:Extensions.WorkFlowAddOn][WorkFlowAddOn]] and its first version (then called !ApprovalPlugin) was written by Thomas Hartkens, albeit it was focused on document approval and control. [[Foswiki:Main.ThomasWeigert][Thomas Weigert]] then merged the functionality of the [[Foswiki:Extensions.WorkFlowAddOn][WorkFlowAddOn]] into this plugin.
+
+---++ Installation Instructions
+
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+
+__Note:__ The script =[[%ATTACHURL%/convert.pl.txt][convert.pl.txt]]= will convert topics written for the !ApprovalPlugin to the WorkflowPlugin. The script takes a topic at the standard input and outputs the converted topic on standard output. Rename the file from =convert.pl.txt= to =convert.pl=.
+
+Look at the examples in the !Sandbox web.
+
+__Note:__ For strict access control, the plugin should know who is looking at the controlled document/topic at all times.  To enable this, you may want to set up the wiki in such way that users have to log-in *even if they just display a topic*.
+
+---++ Info
+
+|  Author(s): | Thomas Hartkens, Foswiki:Main.ThomasWeigert, Foswiki:Main.CrawfordCurrie |
+|  Version: | 8761 (2010-08-25) |
+|  Release: | 25 Aug 2010 |
+|  Change History: | <!-- versions below in reverse order -->&nbsp; |
+|  25 Aug 2010 | Foswiki:Tasks.Item8908: fix obscure error that caused apparently inexplicable crashes; hint: _never_ use $_ as in iterator control variable in your perl code. |
+|  15 Jun 2010 | Foswiki:Tasks.Item9142: make the access controls checks more thorough |
+|  1 Jun 2010 | Foswiki:Tasks.Item9086: ensure t= is set on all edit links; also validate the workflow name. |
+|  31 May 2010: | Crawford Currie: Foswiki:Tasks.Item9072: add WORKFLOWLASTREV_State to show topic revision number Foswiki:Tasks.Item9081: force new topic revision on each state transition to avoid history loss |
+|  26 May 2010: | Crawford Currie: Foswiki:Tasks.Item2425: allow cancellation of state transitions that involve an edit step. Foswiki:Tasks.Item8321: allow non-wikiword topic names Foswiki:Tasks.Item8320: added $rev to WORKFLOWHISTORYFORMAT Foswiki:Tasks.Item8297: a topic parameter to the view url could bork the transition button Foswiki:Tasks.Item9048: use the =Allow Edit= control to check and limit general saves, such as those done from CommentPlugin |
+|  03 Feb 2010: | Foswiki:Tasks.Item8462: Andrew Jones made some minor doc fixes |
+|  19 Oct 2009: | Foswiki:Tasks.Item2092: Link fork topics mentioned in history Foswiki:Tasks.Item8268: added topic control to WORKFLOWTRANSITION Foswiki:Tasks.Item8306: support fork to multiple topics, changed WORKFLOWFORK parameters for compatibility with other macros |
+|  2 Sep 2009: | Foswiki:Tasks.Item1828: Dean Spicer added support for macro expansion of the next state.  Foswiki:Tasks.Item1828: Crawford Currie documented his work, and added support for topic forking. Foswiki:Tasks.Item1828: fixed the defect example. |
+|  3 Jun 2009: | Foswiki:Tasks.Item8172: Dean Spicer added support for cross-topic state and history queries |
+|  29 Apr 2009: | Foswiki:Tasks.Item8147: fix version recording |
+|  23 Apr 2009: | Foswiki:Tasks.Item1503: fix collection of notify addresses |
+|  9 Apr 2009: | Foswiki:Tasks.Item8107: block transition if topic is being edited by another user |
+|  21 Mar 2009: | Dean Spicer/Crawford Currie: Foswiki:Tasks.Item8080: finish porting to Foswiki and support %WORKFLOWATTACHTOPIC |
+|  20 Mar 2009 | Crawford Currie: Foswiki:Tasks.Item8069: deny attach on a controlled topic Foswiki:Tasks.Item8070: expand macros in Allow and AllowEdit fields |
+|  11 Dec 2008 | Crawford Currie: Foswiki:Tasks.Item8029: support notification of a list of people on state changes |
+|  15 Nov 2008 | Crawford Currie: Foswiki:Tasks.Item6114: Fixed format of history Foswiki:Tasks.Item6119: added !InProcessForm and increased defensiveness in a couple of places |
+|  10 Nov 2008 | Crawford Currie: Heavily refactored to OO style to ease maintenance. Ensure form is saved when state changes. Support use of '. Split off VarWORKFLOW documentation. Removed 'back door' call that was causing issues, Work supported by http://micralyne.com |
+|  23 Apr 2008 | Crawford Currie: Removed last of the core calls, fixed user management. Work supported by http://www.productbox.co.uk/ |
+|  28 Jan 2008: | Kenneth Lavrsen: Fixed his typo in code. Renamed the convert.pl to convert.pl.txt as most installs do not allow .pl as extension and this creates problems when you want to update attachments |
+|  27 Jan 2008: | Markus Ueberall: Fixed for compatibility with TWiki 4.2.0 |
+|  05 Aug 2006: | Crawford Currie: Converted from !ApprovalPlugin to %TOPIC%. |
+|  16 Feb 2005: | Thomas Hartkens: Initial version of !ApprovalPlugin |
+|  05 Feb 2004: | Thomas Weigert Initial version of !WorkFlowAddOn |
+|  Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Support: | http://foswiki.org/Support/%TOPIC% |
+
+<!-- Do _not_ attempt to edit this topic; it is auto-generated. -->
+
+%META:FILEATTACHMENT{name="convert.pl.txt" attr="h" comment="" date="1159057355" path="convert.pl.txt" size="355" user="ProjectContributor" version="1"}%
+%META:FILEATTACHMENT{name="Flow.draw" attr="h" comment="" date="1159056685" path="Flow.draw" size="5504" user="ProjectContributor" version=""}%
+%META:FILEATTACHMENT{name="Flow.gif" attr="h" comment="" date="1159056685" path="Flow.gif" size="3252" user="ProjectContributor" version=""}%

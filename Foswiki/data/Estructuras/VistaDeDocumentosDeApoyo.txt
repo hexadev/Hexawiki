@@ -1,0 +1,19 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286923662" format="1.1" version="2"}%
+---+ Documentos de Apoyo del Proceso: %FORMFIELD{"Nombre" topic="%BASEWEB%.WebHome"}%
+---++ Crear Documentos de Apoyo
+
+%INCLUDE{Estructuras.CrearDocumentoDeApoyo}%
+
+---++ Listado de Documentos de Apoyo
+
+%~~ SEARCH{
+~~~ "form.name ~ '*FormularioDeDocumentoDeApoyo'"
+~~~ type="query"
+~~~ nonoise="on"
+~~~ order="formfield(Numero)"
+~~~ zeroresults="*No se encontraron Documentos de Apoyo.*"
+~~~ newline="%BR%"
+~~~ header="| *Nombre* | *Descripción* | *Responsable* | *Versión* |"
+~~~ format="|[[$web.$topic][DA-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-$formfield(Numero)-$formfield(Nombre)]] |$formfield(Descripcion)|$formfield(Responsable) |$formfield(Version) |"
+~~~ web="%BASEWEB%"
+~~~ }%

@@ -1,5 +1,13 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286749771" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287585138" format="1.1" reprev="6" version="6"}%
+<!--
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+-->
 %INCLUDE{"Estructuras.EstructuraDeProcedimiento"}%
+---+++ Descripción
+
+%EDITTABLE{format="|date,0,|textarea, 4x80, |"}%
+| *Fecha* | *Descripción* |
+|  |  |
 
 ---++ Objetivo
 
@@ -15,3 +23,5 @@
 
 ---++ Anexos
 
+
+%META:REVCOMMENT{ncomments="0"}%

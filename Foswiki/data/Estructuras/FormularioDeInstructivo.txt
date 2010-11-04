@@ -1,6 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286758214" format="1.1" reprev="1" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286923200" format="1.1" reprev="1" version="3"}%
 | Name | Type | Size | Values | Tooltip message | Attributes |
 | Nombre | text | 40 | | Nombre del instructivo | M |
+| Descripcion | textarea | 80x5 | | Descripción del documento | M |
 | Numero | text | 10 | | Numero del instructivo | M |
 | [[Estructuras.ListadoDeCargos][Responsable]] | select+values | 1 | | Cargo Responsable | M |
 | Version | text | 20 | | Version del instructivo | M |

@@ -1,0 +1,19 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287000803" format="1.1" version="2"}%
+---+ Manuales del Proceso: %FORMFIELD{"Nombre" topic="%BASEWEB%.WebHome"}%
+---++ Crear Manual
+
+%INCLUDE{Estructuras.CrearManual}%
+
+---++ Listado de Manuales
+
+%~~ SEARCH{
+~~~ "form.name ~ '*FormularioDeManual'"
+~~~ type="query"
+~~~ nonoise="on"
+~~~ order="formfield(Numero)"
+~~~ zeroresults="*No se encontraron Manuales.*"
+~~~ newline="%BR%"
+~~~ header="| *Nombre* | *Descripción* | *Responsable* | *Versión* |"
+~~~ format="|[[$web.$topic][MA-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-$formfield(Numero)-$formfield(Nombre)]]|$formfield(Descripcion) |$formfield(Responsable) |$formfield(Version) |"
+~~~ web="%BASEWEB%"
+~~~ }%

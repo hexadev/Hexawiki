@@ -1,0 +1,292 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.10.27.21.13.06;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1288213986" format="1.1" reprev="1" version="1"}%
+%META:TOPICPARENT{name="Main.UnprocessedRegistrations"}%
+---+ Report for Bulk Register
+---++ Registering JulianaJaramillo
+	*  JulianaJaramillo has been added to the password and user mapping managers
+	*  Writing topic Main.JulianaJaramillo
+	*  !RegistrationHandler:
+		*  Using Form Fields
+---++ Registering JonathanUparela
+	*  JonathanUparela has been added to the password and user mapping managers
+	*  Writing topic Main.JonathanUparela
+	*  !RegistrationHandler:
+		*  Using Form Fields
+---++ Registering OscarWilliamPiedrahita
+	*  OscarWilliamPiedrahita has been added to the password and user mapping managers
+	*  Writing topic Main.OscarWilliamPiedrahita
+	*  !RegistrationHandler:
+		*  Using Form Fields
+---++ Registering JaimeAlbertoRamirez
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'jramirez' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=jramirez][reset jramirez's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering OsvaldoHernandez
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'ohernandez' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=ohernandez][reset ohernandez's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering MiguelGamez
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'mgamez' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=mgamez][reset mgamez's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering VictorArgumedo
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'vargumedo' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=vargumedo][reset vargumedo's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering ElianaFlorez
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'eflorez' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=eflorez][reset eflorez's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering ClaudiaRendon
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'crendon' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=crendon][reset crendon's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering AuxiliaresProduccion
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'auxproduccion' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=auxproduccion][reset auxproduccion's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering WalterViloria
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'wviloria' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=wviloria][reset wviloria's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering AlexanderRodas
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'arodas' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=arodas][reset arodas's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering JoseGabrielMercado
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'jmercado' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=jmercado][reset jmercado's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering DamianMontenegro
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'dmontenegro' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=dmontenegro][reset dmontenegro's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering BibianaYanethCorrea
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'bcorrea' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=bcorrea][reset bcorrea's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering MilenaCharryz
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'mcharryz' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=mcharryz][reset mcharryz's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering CarlosVelasquez
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'cvelasquez' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=cvelasquez][reset cvelasquez's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering SandraMazo
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'smazo' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=smazo][reset smazo's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering LubysVilladiego
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'lvilladiego' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=lvilladiego][reset lvilladiego's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering IvonneMendoza
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'imendoza' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=imendoza][reset imendoza's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering LuisFernandoEscobar
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'lescobar' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=lescobar][reset lescobar's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+---++ Registering DenisHerrera
+<blockquote>
+---+++ You are already registered
+You cannot register twice, the name 'dherrera' is already registered.
+
+Did you want to [[http://frigo.aws.hexasas.com/bin/view/System.ResetPassword?username=dherrera][reset dherrera's password]]?
+
+Alternatively hit back to go back to System.UserRegistration and choose a different username.
+
+Please contact <a href='mailto:foswiki@@hexasas.com?subject=Foswiki%20Registration%20Question'>foswiki@@hexasas.com</a> if you have any questions.
+</blockquote>
+	*  Failed to add user: New password did not match existing password for this user at /home/jgaviria/hexa/dev/Frigo/Hexawiki/Foswiki/lib/Foswiki/Users/TopicUserMapping.pm line 290.
+
+----
+
+%META:REVCOMMENT{ncomments="0"}%
+@

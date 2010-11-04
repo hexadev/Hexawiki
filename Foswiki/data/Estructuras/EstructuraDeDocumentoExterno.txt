@@ -1,13 +1,21 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286752493" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287353029" format="1.1" reprev="2" version="4"}%
 ---+ Documento Externo: %FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%
 
 | *Información* | |
-| *Fecha Expedición*: |%FORMFIELD{"FechaExpedicion" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Descripción*: |%ENCODE{"%FORMFIELD{"Descripcion" topic="%BASEWEB%.%BASETOPIC%"}%" type="html"}% |
 | *Fuente*: |%FORMFIELD{"Fuente" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Fecha Expedición*: |%FORMFIELD{"FechaExpedicion" topic="%BASEWEB%.%BASETOPIC%"}% |
 | *Responsable*: |%FORMFIELD{"Responsable" topic="%BASEWEB%.%BASETOPIC%"}% |
-| *Proceso*: |%FORMFIELD{"Proceso" topic="%BASEWEB%.%BASETOPIC%"}% |
 | *Fecha Caducidad*: |%FORMFIELD{"FechaCaducidad" topic="%BASEWEB%.%BASETOPIC%"}% |
 | *Estado*: |%FORMFIELD{"Estado" topic="%BASEWEB%.%BASETOPIC%"}% |
-| *Items Obsoletos*: |%FORMFIELD{"ItemsObsoletos" topic="%BASEWEB%.%BASETOPIC%"}% | 
-| *Descripción*: |%FORMFIELD{"Descripcion" topic="%BASEWEB%.%BASETOPIC%"}% |
+| *Items Obsoletos*: |%ENCODE{"%FORMFIELD{"ItemsObsoletos" topic="%BASEWEB%.%BASETOPIC%"}%" type="html"}% | 
 
+
+---++ Control del Documento 
+
+| *Workflow* ||
+| Estado Actual | %WORKFLOWSTATE{"%BASETOPIC%" web="%BASEWEB%"}% |
+| Transición | %WORKFLOWTRANSITION{"%BASETOPIC%" web="%BASEWEB%"}% |
+| Mensaje de Estado | %WORKFLOWSTATEMESSAGE% |
+---+++ Historial
+%WORKFLOWHISTORY{"%BASETOPIC%" web="%BASEWEB%"}%

@@ -7,3 +7,9 @@ log201010.txt
 log201011.txt
 log201012.txt
 *.lease
+ProcedimientoId*
+ManualId*
+FormatoId*
+InstructivoId*
+DocumentoDeApoyoId*
+DocumentoExternoId*

@@ -1,5 +1,14 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286752085" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287585244" format="1.1" version="3"}%
+<!--
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+-->
 %INCLUDE{"Estructuras.EstructuraDeDocumentoExterno"}%
 
+---+++ Descripción
+
+%EDITTABLE{format="|date,0,|textarea, 4x80, |"}%
+| *Fecha* | *Descripción* |
+|  |  |
 
 
+%META:REVCOMMENT{ncomments="0"}%

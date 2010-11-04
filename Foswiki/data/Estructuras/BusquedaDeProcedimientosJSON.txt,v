@@ -1,0 +1,113 @@
+head	1.5;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.5
+date	2010.10.18.22.15.25;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2010.10.15.22.15.16;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2010.10.15.20.46.26;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.10.15.19.15.51;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.10.13.20.16.19;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.5
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287440125" format="1.1" reprev="5" version="5"}%
+[%SEARCH{
+"form.name ~ '*FormularioDeProcedimiento' AND (fields[name='Nombre' AND lc(value)~lc('*%URLPARAM{nombre}%*')] AND fields[name='Descripcion' AND lc(value)~lc('*%URLPARAM{descripcion}%*')] AND fields[name='Version' AND value~'*%URLPARAM{version}%*'])" 
+type="query" 
+nosearch="on"
+nototal="on" 
+casesensitive="off" 
+order="topic" 
+reverse="off" 
+separator=", " 
+nonoise="on" 
+format="{topic: '[[$web.$topic][PR-$formfield(Numero)-$formfield(Nombre)]]',  descripcion: '$formfield(Descripcion)' , version: '$formfield(Version)', proceso: '$web'}" 
+web="%URLPARAM{"proceso" default="Procesos"}%" 
+recurse="on"
+}%]
+@
+
+
+1.4
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287180916" format="1.1" reprev="2" version="4"}%
+@
+
+
+1.3
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287175586" format="1.1" reprev="2" version="3"}%
+d12 1
+a12 1
+format="{topic: '[[$web.$topic][$formfield(Nombre)]]',  descripcion: '$formfield(Descripcion)' , version: '$formfield(Version)', proceso: '$web'}" 
+@
+
+
+1.2
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287170151" format="1.1" reprev="2" version="2"}%
+d13 1
+a13 1
+web="Procesos" 
+a15 1
+web="%URLPARAM{"proceso" default="Procesos"}%" 
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@d1 16
+a16 2
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287000979" format="1.1" version="1"}%
+[%SEARCH{"form.name~'*FormularioDeProcedimiento*' AND (fields[name='Nombre' AND lc(value)~lc('*%URLPARAM{nombre}%*')] AND fields[name='Objetivo' AND lc(value)~lc('*%URLPARAM{descripcion}%*')] AND fields[name='Version' AND value~'*%URLPARAM{version}%*'])" type="query" nosearch="on" nototal="on" casesensitive="off" order="topic" reverse="off" separator=", " nonoise="on" format="{topic: '[[$web.$topic][$formfield(Nombre)]]',  descripcion: '$formfield(Objetivo)' , version: '$formfield(Version)', proceso: '$web'}" web="%URLPARAM{"proceso" default="Metodologia"}%" recurse="on" newline="%BR%"}%]
+@

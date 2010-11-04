@@ -1,9 +1,14 @@
-head	1.1;
+head	1.2;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.2
+date	2010.10.20.19.58.40;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
 date	2010.09.23.05.35.28;	author BaseUserMapping_333;	state Exp;
@@ -16,12 +21,12 @@ desc
 @
 
 
-1.1
+1.2
 log
-@none
+@save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" date="1285220128" format="1.1" reprev="1.1" version="1.1"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" date="1287604720" format="1.1" reprev="1" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
 ---+!! <nop>%WEB% Web Preferences
 
@@ -72,19 +77,46 @@ These settings override the defaults for this web only. See [[%SYSTEMWEB%.Defaul
       * Set WEBFORMS =
 
    * Users or groups who *are not* / *are* allowed to *view* / *change* / *rename* topics in the <nop>%WEB% web: (See [[%SYSTEMWEB%.AccessControl][AccessControl]]).
-      * Set DENYWEBVIEW = WikiGuest
+      * Set DENYWEBVIEW = Main.WikiGuest
       * Set ALLOWWEBVIEW = 
-      * Set DENYWEBCHANGE = WikiGuest
-      * Set ALLOWWEBCHANGE = AdminGroup
+      * Set DENYWEBCHANGE = Main.WikiGuest
+      * Set ALLOWWEBCHANGE = Main.AdminGroup
       * Set DENYWEBRENAME = 
-      * Set ALLOWWEBRENAME = AdminGroup
+      * Set ALLOWWEBRENAME = Main.AdminGroup
 
    * Users or groups allowed to change or rename this <nop>%TOPIC% topic: (e.g., [[%USERSWEB%.AdminGroup][AdminGroup]])
-      * Set ALLOWTOPICCHANGE = AdminGroup
+      * Set ALLOWTOPICCHANGE = Main.AdminGroup
       * Set ALLOWTOPICRENAME = nobody
 
    * Web preferences that are *not* allowed to be overridden by sub-web, user or topic preferences:
       * Set FINALPREFERENCES = NOSEARCHALL, ATTACHFILESIZELIMIT, WIKIWEBMASTER, WEBCOPYRIGHT, WEBTOPICLIST, DENYWEBVIEW, ALLOWWEBVIEW, DENYWEBCHANGE, ALLOWWEBCHANGE, DENYWEBRENAME, ALLOWWEBRENAME
 
 %INCLUDE{%SYSTEMWEB%.WebPreferencesHelp}%
+
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.1
+log
+@none
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" date="1285220128" format="1.1" reprev="1.1" version="1.1"}%
+d52 1
+a52 1
+      * Set DENYWEBVIEW = WikiGuest
+d54 2
+a55 2
+      * Set DENYWEBCHANGE = WikiGuest
+      * Set ALLOWWEBCHANGE = AdminGroup
+d57 1
+a57 1
+      * Set ALLOWWEBRENAME = AdminGroup
+d60 1
+a60 1
+      * Set ALLOWTOPICCHANGE = AdminGroup
+d67 2
 @

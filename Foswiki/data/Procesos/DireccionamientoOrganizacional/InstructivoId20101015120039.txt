@@ -1,0 +1,29 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287442227" format="1.1" version="3"}%
+<!--
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+-->
+%INCLUDE{"Estructuras.EstructuraDeInstructivo"}%
+
+---++ Objetivo
+
+---++ Alcance
+
+---++ Campo de aplicación
+
+---++ Responsables
+
+---++ Términos y definiciones
+
+---++ Contenido
+
+---++ Anexos
+
+%META:FORM{name="Estructuras.FormularioDeInstructivo"}%
+%META:FIELD{name="Nombre" attributes="M" title="Nombre" value="instructivo"}%
+%META:FIELD{name="Descripcion" attributes="M" title="Descripcion" value="adsasd"}%
+%META:FIELD{name="Numero" attributes="M" title="Numero" value="01"}%
+%META:FIELD{name="Responsable" attributes="M" title="[[Estructuras.ListadoDeCargos][Responsable]]" value="-"}%
+%META:FIELD{name="Version" attributes="M" title="Version" value="1"}%
+%META:REVCOMMENT{ncomments="0"}%
+%META:WORKFLOWHISTORY{value="%0a| MODIFICADO | Main.AdminUser | 18 Oct 2010 - 17:50 |"}%
+%META:WORKFLOW{name="MODIFICADO" LASTTIME_MODIFICADO="18 Oct 2010 - 17:50" LASTVERSION_MODIFICADO="2"}%

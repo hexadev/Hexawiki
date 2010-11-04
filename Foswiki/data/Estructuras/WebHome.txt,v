@@ -1,9 +1,19 @@
-head	1.5;
+head	1.7;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.7
+date	2010.10.12.22.28.08;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2010.10.12.20.15.08;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.5;
 
 1.5
 date	2010.10.10.23.53.43;	author BaseUserMapping_333;	state Exp;
@@ -36,12 +46,12 @@ desc
 @
 
 
-1.5
+1.7
 log
-@reprev
+@save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286754823" format="1.1" reprev="5" version="5"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286922488" format="1.1" reprev="5" version="7"}%
 ---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
 
 %TABPANE%
@@ -75,6 +85,12 @@ text
 ~~~ format="   * $web.$topic"
 ~~~ }%
 %ENDTAB%
+%TAB{Workflows}%
+%~~ DBQUERY{
+~~~ "name =~ '^Workflow'"
+~~~ format="   * $web.$topic"
+~~~ }%
+%ENDTAB%
 %TAB{JSON}%
 %~~ DBQUERY{
 ~~~ "name =~ 'JSON$'"
@@ -82,7 +98,7 @@ text
 ~~~ }%
 %ENDTAB%
 %TAB{Template web Proceso}%
-   * _PlantillaDeProceso.WebHome
+   * [[_proceso.WebHome][template de proceso]]
 %ENDTAB%
 %TAB{Vistas}%
 %~~ DBQUERY{
@@ -105,6 +121,32 @@ text
 %ENDTABPANE%
 
 %META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="3" t_1="1285875726"}%
+@
+
+
+1.6
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286914508" format="1.1" reprev="5" version="6"}%
+d35 6
+@
+
+
+1.5
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286754823" format="1.1" reprev="5" version="5"}%
+d42 1
+a42 1
+   * _PlantillaDeProceso.WebHome
 @
 
 

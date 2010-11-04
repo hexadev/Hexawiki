@@ -1,0 +1,74 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2010.11.02.22.17.35;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.11.02.22.11.31;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.2
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288736255" format="1.1" reprev="2" version="2"}%
+---+!! Bienvenid@@ %WIKINAME% al Foswiki del Frigorífico del Cauca
+
+*lasñkjaslkjdaskñljaslkjñ ñlkajsñlkjasdj*
+
+Praesent non aliquet augue. Nulla interdum tincidunt pulvinar. Praesent dapibus, quam non consequat adipiscing, massa risus pharetra justo, ut pellentesque risus neque ut est. Donec a aliquam enim! Suspendisse dignissim libero pretium sapien volutpat venenatis. Aliquam porta lacus in urna suscipit viverra. Nam dapibus nisl in diam congue sed dictum purus rutrum! Sed tincidunt augue auctor purus pharetra faucibus. Quisque aliquet, tellus ut pharetra lobortis, orci dolor facilisis dolor, ac ullamcorper sem risus eget orci. Sed gravida porttitor vehicula. Nunc eros lorem, vehicula vitae ultrices tincidunt, tempus non justo. Suspendisse ultrices, odio eu pretium convallis, eros sem imperdiet odio, ut pulvinar purus risus fermentum massa. Vivamus ante orci, tempus quis convallis et, gravida eget nunc.
+
+Pellentesque accumsan, massa bibendum semper mattis, sem risus dignissim augue, sed porta massa lectus sit amet dui? Etiam consectetur tempus eros, sit amet dictum metus luctus a. Pellentesque ut metus.
+
+---++ <nop>%WEB% Web Utilities
+   * [[%SYSTEMWEB%.WelcomeGuest][WelcomeGuest]] - for first time visitors
+   * [[%SYSTEMWEB%.UserRegistration][Registration]] - become a <nop>%WIKITOOLNAME% user
+   * [[%WIKIUSERSTOPIC%]] - list of users of this <nop>%WIKITOOLNAME% site
+   * [[WikiGroups]] - list of groups used for access control
+   * [[WebTopicList]] - all topics in alphabetical order
+   * [[WebChanges]] - recent topic changes in this web
+   * [[WebNotify]] - subscribe to an e-mail alert sent when topics change
+   * [[WebRss]], [[WebAtom]] - RSS and ATOM news feeds of topic changes
+   * [[WebStatistics]] - listing popular topics and top contributors
+   * [[WebPreferences]] - preferences of this web
+
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@d1 2
+a2 3
+%META:TOPICINFO{author="ProjectContributor" date="1231502400" format="1.1" version="1"}%
+---+!! Welcome to the <nop>%USERSWEB% web 
+Congratulations, you have finished installing Foswiki.
+d4 1
+a4 1
+This site is running Foswiki version *%WIKIVERSION%*, Plugin API version *%PLUGINVERSION{}%*
+d6 3
+a8 4
+To learn more about Foswiki, visit the [[%SYSTEMWEB%.WebHome][%SYSTEMWEB% web]]. Please ensure that the read/write
+permissions for each web on your site match your access control policies (see [[%SYSTEMWEB%.DefaultPreferences]] 
+and [[%USERSWEB%.SitePreferences]]). Replace this text with a description of your new
+%IF{"defined WIKITOOLNAME" then="<nop>%WIKITOOLNAME%" else="Foswiki"}% site. 
+d21 2
+@

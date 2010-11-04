@@ -1,0 +1,8 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287605401" format="1.1" reprev="1" version="1"}%
+
+
+%META:FORM{name="Estructuras.FormularioDeProceso"}%
+%META:FIELD{name="Codigo" attributes="M" title="Codigo" value="PD"}%
+%META:FIELD{name="Nombre" attributes="M" title="Nombre" value="Producción"}%
+%META:FIELD{name="Descripcion" attributes="" title="Descripcion" value="Proceso de producción"}%
+%META:REVCOMMENT{ncomments="0"}%

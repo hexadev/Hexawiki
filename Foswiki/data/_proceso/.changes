@@ -33,3 +33,44 @@ FormatosDelProceso	BaseUserMapping_333	1286834504	1	minor, reprev
 ManualesDelProceso	BaseUserMapping_333	1286834508	1	minor, reprev
 DocumentosDeApoyo	BaseUserMapping_333	1286834516	1	minor, reprev
 DocumentosExternos	BaseUserMapping_333	1286834524	1	minor, reprev
+CaracterizacionDelProceso	BaseUserMapping_333	1286856028	2	
+ProcedimientosDelProceso	BaseUserMapping_333	1286856195	2	
+ProcedimientosDelProceso	BaseUserMapping_333	1286856238	2	minor, reprev
+ProcedimientoId20101011232621	BaseUserMapping_333	1286857605	1	
+ProcedimientosDelProceso	BaseUserMapping_333	1286857658	2	minor, reprev
+ProcedimientoId20101012151535	BaseUserMapping_333	1286914590	1	
+ProcedimientoId20101011232621	BaseUserMapping_333	1286914634	2	
+ProcedimientoId20101011232621	BaseUserMapping_333	1286914634	2	
+FormatosDelProceso	BaseUserMapping_333	1286915877	2	
+FormatoId20101012153758	BaseUserMapping_333	1286915907	1	
+FormatoId20101012153758	BaseUserMapping_333	1286915941	1	minor, reprev
+FormatoId20101012153758	BaseUserMapping_333	1286915941	1	
+ManualesDelProceso	BaseUserMapping_333	1286916052	2	
+ManualId20101012154053	BaseUserMapping_333	1286916065	1	
+ManualId20101012154053	BaseUserMapping_333	1286916099	1	minor, reprev
+ManualId20101012154053	BaseUserMapping_333	1286916099	1	
+InstructivosDelProceso	BaseUserMapping_333	1286916624	2	
+InstructivoId20101012155025	BaseUserMapping_333	1286916706	1	
+InstructivoId20101012155025	BaseUserMapping_333	1286916737	1	minor, reprev
+InstructivoId20101012155025	BaseUserMapping_333	1286916737	1	
+DocumentosDeApoyo	BaseUserMapping_333	1286917457	2	
+DocumentoDeApoyoId20101012160418	BaseUserMapping_333	1286917473	1	
+DocumentoDeApoyoId20101012160418	BaseUserMapping_333	1286917505	1	minor, reprev
+DocumentoDeApoyoId20101012160418	BaseUserMapping_333	1286917505	1	
+DocumentosExternos	BaseUserMapping_333	1286919574	2	
+DocumentoExternoId20101012164052	BaseUserMapping_333	1286919673	1	
+DocumentoExternoId20101012164052	BaseUserMapping_333	1286919685	1	minor, reprev
+DocumentoExternoId20101012164052	BaseUserMapping_333	1286919724	2	
+DocumentoExternoId20101012164052	BaseUserMapping_333	1286919724	1	minor, reprev
+DocumentoExternoId20101012164052	BaseUserMapping_333	1286919745	1	minor, reprev
+DocumentoExternoId20101012164052	BaseUserMapping_333	1286919763	1	minor, reprev
+DocumentoExternoId20101012164052	BaseUserMapping_333	1286919763	1	
+ProcedimientoId20101012151535	BaseUserMapping_333	1287181714	2	
+ProcedimientoId20101012151535	BaseUserMapping_333	1287181714	2	
+CaracterizacionDelProceso	BaseUserMapping_333	1287182568	3	
+CaracterizacionDelProceso	BaseUserMapping_333	1287425798	4	
+CaracterizacionDelProceso	BaseUserMapping_333	1287605043	5	
+CaracterizacionDelProceso	BaseUserMapping_333	1287605169	5	minor, reprev
+CaracterizacionDelProceso	BaseUserMapping_333	1288888755	6	
+CaracterizacionDelProceso	BaseUserMapping_333	1288888777	6	minor, reprev
+CaracterizacionDelProceso	BaseUserMapping_333	1288888932	6	minor, reprev

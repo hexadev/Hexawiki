@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286754823" format="1.1" reprev="5" version="5"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286922488" format="1.1" reprev="5" version="7"}%
 ---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
 
 %TABPANE%
@@ -32,6 +32,12 @@
 ~~~ format="   * $web.$topic"
 ~~~ }%
 %ENDTAB%
+%TAB{Workflows}%
+%~~ DBQUERY{
+~~~ "name =~ '^Workflow'"
+~~~ format="   * $web.$topic"
+~~~ }%
+%ENDTAB%
 %TAB{JSON}%
 %~~ DBQUERY{
 ~~~ "name =~ 'JSON$'"
@@ -39,7 +45,7 @@
 ~~~ }%
 %ENDTAB%
 %TAB{Template web Proceso}%
-   * _PlantillaDeProceso.WebHome
+   * [[_proceso.WebHome][template de proceso]]
 %ENDTAB%
 %TAB{Vistas}%
 %~~ DBQUERY{

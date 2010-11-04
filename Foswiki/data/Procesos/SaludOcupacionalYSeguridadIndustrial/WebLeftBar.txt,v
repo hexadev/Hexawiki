@@ -1,0 +1,39 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.10.20.20.13.30;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" date="1287605610" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+%INCLUDE{"%IF{"context can_login" then="%SYSTEMWEB%.WebLeftBarLogin" else="<nop>"}%" warn="off"}%
+   * *%MAKETEXT{"Toolbox"}%*
+   * [[%SCRIPTURLPATH{"view"}%/%BASEWEB%/WebCreateNewTopic?topicparent=%BASETOPIC%][ %ICON{"newtopic"}% %MAKETEXT{"Create New Topic"}%]]
+   * [[WebTopicList][ %ICON{"index"}% %MAKETEXT{"Index"}%]]
+   * [[%BASEWEB%.WebSearch][ %ICON{"searchtopic"}% %MAKETEXT{"Search"}%]]
+   * [[WebChanges][ %ICON{"changes"}% %MAKETEXT{"Changes"}%]]
+   * [[WebNotify][ %ICON{"notify"}% %MAKETEXT{"Notifications"}%]]
+   * [[WebRss][ %ICON{"feed"}% %MAKETEXT{"RSS Feed"}%]]
+   * [[WebStatistics][ %ICON{"statistics"}% %MAKETEXT{"Statistics"}%]]
+   * [[WebPreferences][ %ICON{"wrench"}% %MAKETEXT{"Preferences"}%]]
+
+---
+%INCLUDE{ "%SYSTEMWEB%.WebLeftBarWebsList" }%@

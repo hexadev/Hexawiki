@@ -1,0 +1,19 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287000837" format="1.1" reprev="1" version="3"}%
+---+ Procedimientos del Proceso: %FORMFIELD{"Nombre" topic="%BASEWEB%.WebHome"}%
+---++ Crear procedimiento
+
+%INCLUDE{Estructuras.CrearProcedimiento}%
+
+---++ Listado de Procedimientos
+
+%~~ SEARCH{
+~~~ "form.name ~ '*FormularioDeProcedimiento'"
+~~~ type="query"
+~~~ nonoise="on"
+~~~ order="formfield(Numero)"
+~~~ zeroresults="*No se encontraron Procedimientos.*"
+~~~ newline="%BR%"
+~~~ header="| *Nombre* | *Descripción* | *Responsable* | *Versión* |"
+~~~ format="|[[$web.$topic][PR-%FORMFIELD{"Codigo" topic="%BASEWEB%.WebHome"}%-$formfield(Numero)-$formfield(Nombre)]]|$formfield(Descripcion) |$formfield(Responsable) |$formfield(Version) |"
+~~~ web="%BASEWEB%"
+~~~ }%

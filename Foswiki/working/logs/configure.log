@@ -58,3 +58,26 @@
 | Wed Oct 20 14:31:26 2010 |  | 127.0.0.1 | {JSCalendarContrib}{format} | %Y/%m/%d |
 | Wed Oct 27 21:09:52 2010 |  | 127.0.0.1 | {WebMasterEmail} | foswiki@hexasas.co |
 | Wed Oct 27 21:10:28 2010 |  | 127.0.0.1 | {WebMasterEmail} | foswiki@hexasas.com |
+| Fri Nov  5 17:03:30 2010 |  | 127.0.0.1 | {Plugins}{EditChapterPlugin}{Enabled} |  |
+| Fri Nov  5 17:03:31 2010 |  | 127.0.0.1 | {PluginsOrder} | TWikiCompatibilityPlugin,SpreadSheetPlugin,WorkflowViewPlugin,WorkflowPlugin |
+| Fri Nov  5 17:05:47 2010 |  | 127.0.0.1 | {PluginsOrder} | TWikiCompatibilityPlugin,SpreadSheetPlugin |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {UserInterfaceInternationalisation} | 1 |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{bg}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{da}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{de}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{cs}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{fi}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{fr}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{ja}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{it}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{ko}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{nl}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{no}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{pl}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{pt}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{ru}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{sv}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{tr}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{'pt-br'}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{'zh-cn'}{Enabled} |  |
+| Mon Nov  8 23:19:53 2010 |  | 127.0.0.1 | {Languages}{'zh-tw'}{Enabled} |  |

@@ -1,9 +1,24 @@
-head	1.5;
+head	1.8;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.8
+date	2010.11.08.22.37.34;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.7;
+
+1.7
+date	2010.11.05.17.19.13;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.6;
+
+1.6
+date	2010.11.04.20.39.55;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.5;
 
 1.5
 date	2010.10.18.19.09.23;	author BaseUserMapping_333;	state Exp;
@@ -36,12 +51,12 @@ desc
 @
 
 
-1.5
+1.8
 log
-@reprev
+@save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287428963" format="1.1" reprev="5" version="5"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289255854" format="1.1" reprev="7" version="8"}%
 ---+!! %TOPIC%
 
 %ICON{"help"}% 
@@ -81,6 +96,9 @@ Customize your top bar background image and color
 Customize copyright
    * Set WEBCOPYRIGHT = &copy; 2010 Todos los derechos reservados. Frigorífico del Cauca S.A.S.
 
+Skin
+   * Set SKIN = genpdf,pattern
+
 ---++ System.WysiwygPlugin
 
    * Set WYSIWYG_EXCLUDE = html,pre
@@ -88,6 +106,46 @@ Customize copyright
 ---++ System.WorkflowPlugin
 
    * Set WORKFLOWHISTORYFORMAT = $n| $state | $wikiusername | $date |
+
+
+---++ !GenPDFAddOn Settings
+
+
+Settings for the GenPDFAddOn Plugin
+
+   * #Set GENPDFADDON_BANNER =
+   * Set GENPDFADDON_TITLE = %TOPIC%
+   * #Set GENPDFADDON_SUBTITLE =
+   * Set GENPDFADDON_HEADERTOPIC = Estructuras.HeaderFooterPDFAddOn
+   * Set GENPDFADDON_TITLETOPIC = Estructuras.TitleTopicPDFAddOn
+   * #Set GENPDFADDON_SKIN =
+   * #Set GENPDFADDON_COVER =
+   * #Set GENPDFADDON_RECURSIVE =
+   * #Set GENPDFADDON_FORMAT =
+   * #Set GENPDFADDON_TOCLEVELS = 
+   * Set GENPDFADDON_PAGESIZE = letter
+   * Set GENPDFADDON_ORIENTATION = portrait
+   * #Set GENPDFADDON_WIDTH =
+   * #Set GENPDFADDON_HEADERSHIFT =
+   * #Set GENPDFADDON_KEYWORDS =
+   * Set GENPDFADDON_SUBJECT = ""
+   * #Set GENPDFADDON_TOCHEADER =
+   * #Set GENPDFADDON_TOCFOOTER =
+   * #Set GENPDFADDON_HEADER =
+   * #Set GENPDFADDON_FOOTER =
+   * #Set GENPDFADDON_HEADFOOTFONT =
+   * Set GENPDFADDON_HEADFOOTSIZE = 4
+   * #Set GENPDFADDON_BODYIMAGE =
+   * Set GENPDFADDON_LOGOIMAGE = http://frigo.aws.hexasas.com/pub/Main/SitePreferences/logo-trans-small.png
+   * #Set GENPDFADDON_NUMBEREDTOC =a
+   * #Set GENPDFADDON_DUPLEX =
+   * #Set GENPDFADDON_PERMISSIONS =
+   * Set GENPDFADDON_MARGINS = top:1.0cm,bottom:-3cm,left:3cm,right:2cm
+   * #Set GENPDFADDON_BODYCOLOR =
+   * Set GENPDFADDON_STRUCT = webpage
+
+
+
 
 ---++ Finalisation
 =FINALPREFERENCES= locks site-level preferences that are *not* allowed to be overridden by [[%WEBPREFSTOPIC%]] or user preferences:
@@ -103,6 +161,52 @@ Customize copyright
 
 %META:FILEATTACHMENT{name="logo_trans_small.png" attachment="logo_trans_small.png" attr="" comment="" date="1286381449" path="logo_trans_small.png" size="4232" user="BaseUserMapping_333" version="2"}%
 %META:FILEATTACHMENT{name="logo-trans-small.png" attachment="logo-trans-small.png" attr="" comment="" date="1286826659" path="logo-trans-small.png" size="18758" user="BaseUserMapping_333" version="1"}%
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="7" t_1="1288976346"}%
+@
+
+
+1.7
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1288977553" format="1.1" reprev="7" version="7"}%
+d41 3
+@
+
+
+1.6
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288903195" format="1.1" reprev="5" version="6"}%
+d78 1
+a78 1
+   * Set GENPDFADDON_LOGOIMAGE = %PUBURL%/%USERSWEB%/SitePreferences/logo-trans-small.png
+d82 1
+a82 1
+   * Set GENPDFADDON_MARGINS = top:3.0cm,bottom:-3cm,left:3cm,right:2cm
+d103 1
+a103 1
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.5
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287428963" format="1.1" reprev="5" version="5"}%
+d49 40
+d103 1
 @
 
 

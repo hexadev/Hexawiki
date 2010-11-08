@@ -1,7 +1,8 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1288899319" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1288899781" format="1.1" reprev="2" version="2"}%
 ---+ Procesos
 <div class="foswikiHelp" style="width:20%;float: right;">
    * [[%BASEWEB%.BusquedaDeDocumentos][%ICON{searchtopic}% Buscar Documentos]]
+   * [[%BASEWEB%.ControlDeDocumentos][%ICON{searchtopic}% Control Documentos]]
 </div>
 Utilice el mapa de procesos para acceder a la información de cada uno de ellos. Haga click en el proceso deseado.
 

@@ -6,7 +6,7 @@ comment	@# @;
 
 
 1.2
-date	2010.11.04.19.35.19;	author BaseUserMapping_333;	state Exp;
+date	2010.11.04.19.43.01;	author BaseUserMapping_333;	state Exp;
 branches;
 next	1.1;
 
@@ -26,10 +26,11 @@ log
 @reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1288899319" format="1.1" reprev="2" version="2"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1288899781" format="1.1" reprev="2" version="2"}%
 ---+ Procesos
 <div class="foswikiHelp" style="width:20%;float: right;">
    * [[%BASEWEB%.BusquedaDeDocumentos][%ICON{searchtopic}% Buscar Documentos]]
+   * [[%BASEWEB%.ControlDeDocumentos][%ICON{searchtopic}% Control Documentos]]
 </div>
 Utilice el mapa de procesos para acceder a la información de cada uno de ellos. Haga click en el proceso deseado.
 
@@ -61,12 +62,12 @@ text
 @d1 1
 a1 1
 %META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286489186" format="1.1" reprev="1" version="1"}%
-d3 4
-d8 1
-a8 1
+d3 5
+d9 1
+a9 1
 Utilice el mapa de procesos para acceder a la información de cada uno de ellos. Haga click en el proceso deseado.
-d10 11
-a20 1
+d11 11
+a21 1
 <center><img src="%PUBURL%/Estructuras/VistaDeMapaDeProcesos/mapa_de_procesos.png" width="600" /></center>
-d23 2
+d24 2
 @

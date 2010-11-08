@@ -1,0 +1,43 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1288904636" format="1.1" version="1"}%
+%META:TOPICPARENT{name="Main.SitePreferences"}%
+<!-- PDFSTART -->
+<!--
+   * Set GENPDFADDON_MARGINS = top:2cm,bottom:1cm,left:3cm,right:2cm 
+-->
+&nbsp;%BR%
+&nbsp;%BR%
+<left>
+<td align="left"><img src="%PUBURL%/Main/SitePreferences/logo-trans-small.png"/>
+</left>
+<div align="left">
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+<font size="7"><b>FRIGORÍFICO DEL CAUCA S.A.S.</b></font>%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+<font size="5">%FORMFIELD{"Nombre" topic="%WEB%.%BASETOPIC%"}%</font>%BR%
+<font size="1">%FORMFIELD{"Descripcion" topic="%WEB%.%BASETOPIC%"}%</font>%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+<font size="3">%FORMFIELD{"FirstName" topic="Main.%WIKINAME%"}%</font>
+<font size="3">%FORMFIELD{"LastName" topic="Main.%WIKINAME%"}%</font>%BR%
+&nbsp;%BR%
+<font size="3">%USERINFO{"%WIKINAME%" format="$emails"}%</font>%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+<font size="3"><i>%GMTIME{"$day $month $year"}%</i></font>%BR%
+&nbsp;%BR%
+<font size="1"></font>%BR%
+</div>
+<!-- PDFSTOP -->
+
+%META:REVCOMMENT{ncomments="0"}%

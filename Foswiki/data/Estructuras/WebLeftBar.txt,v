@@ -1,9 +1,19 @@
-head	1.3;
+head	1.5;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.5
+date	2010.11.08.23.16.52;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2010.11.08.22.03.03;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.3;
 
 1.3
 date	2010.10.18.21.31.11;	author BaseUserMapping_333;	state Exp;
@@ -26,12 +36,12 @@ desc
 @
 
 
-1.3
+1.5
 log
-@save topic
+@reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" date="1287437471" format="1.1" version="3"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289258212" format="1.1" reprev="5" version="5"}%
 %META:TOPICPARENT{name="WebHome"}%
 <noautolink>
    * <form name="jumpForm" action="%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%"><input id="jumpFormField" title="%MAKETEXT{"Jump"}%" type="text" class="foswikiInputField foswikiDefaultText" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="foswikiButton" size="5" name="submit" value="%MAKETEXT{"Jump"}%" />&nbsp;</noscript>
@@ -41,6 +51,63 @@ text
 %IF{"context i18n_enabled" then='   * %INCLUDE{%SYSTEMWEB%.LanguageSelector}%'}%
 </noautolink>
 
+%INCLUDE{"%IF{"context can_login" then="%SYSTEMWEB%.WebLeftBarLogin" else="<nop>"}%" warn="off"}%
+
+%INCLUDE{ "%SYSTEMWEB%.WebLeftBarRootWebsList" }%
+
+   * *%MAKETEXT{"Toolbox"}%*
+   * %IF{"istopic '%USERSWEB%.%WIKIUSERSTOPIC%'" else=" $percentICON{\"person\"}$percent $percentMAKETEXT{\"Users\"}$percent" then="[[$percentUSERSWEB$percent.$percentWIKIUSERSTOPIC$percent][ $percentICON{\"person\"}$percent $percentMAKETEXT{\"Users\"}$percent]]"}%
+   * [[%USERSWEB%.WikiGroups][ %ICON{"group"}% %MAKETEXT{"Groups"}%]]
+   * [[WebTopicList][ %ICON{"index"}% %MAKETEXT{"Index"}%]]
+   * [[%BASEWEB%.WebSearch][ %ICON{"searchtopic"}% %MAKETEXT{"Search"}%]]
+   * [[WebChanges][ %ICON{"changes"}% %MAKETEXT{"Changes"}%]]
+   * [[WebNotify][ %ICON{"notify"}% %MAKETEXT{"Notifications"}%]]
+   * [[WebRss][ %ICON{"feed"}% %MAKETEXT{"RSS Feed"}%]]
+   * [[WebStatistics][ %ICON{"statistics"}% %MAKETEXT{"Statistics"}%]]
+   * [[WebPreferences][ %ICON{"wrench"}% %MAKETEXT{"Preferences"}%]]
+
+%IF{"'%BASEWEB%'='System'" then='$percntINCLUDE{\"System.WebLeftBar\"}$percnt'}%
+
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="5" t_1="1289257908"}%
+@
+
+
+1.4
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" date="1289253783" format="1.1" version="4"}%
+d3 7
+a9 1
+%INCLUDE{"System.WebLeftBar"}%
+d11 18
+a28 1
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.3
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" date="1287437471" format="1.1" version="3"}%
+d3 1
+a3 7
+<noautolink>
+   * <form name="jumpForm" action="%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%"><input id="jumpFormField" title="%MAKETEXT{"Jump"}%" type="text" class="foswikiInputField foswikiDefaultText" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="foswikiButton" size="5" name="submit" value="%MAKETEXT{"Jump"}%" />&nbsp;</noscript>
+   </form>
+   * <form name="quickSearchForm" action="%SCRIPTURLPATH{view}%/%BASEWEB%/WebSearch"><input type="text" class="foswikiInputField foswikiDefaultText" title="%MAKETEXT{"Search"}%" id="quickSearchBox" name="search" value="%URLPARAM{search}%" size="18" /><input type="hidden" name="scope" value="all" /><input type="hidden" name="web" value="%BASEWEB%" /><noscript>&nbsp;<input type="submit" size="5" class="foswikiButton" name="submit" value="%MAKETEXT{"Search"}%" />&nbsp;</noscript>
+   </form>
+%IF{"context i18n_enabled" then='   * %INCLUDE{%SYSTEMWEB%.LanguageSelector}%'}%
+</noautolink>
+d5 1
+a5 13
 %INCLUDE{"%IF{"context can_login" then="%SYSTEMWEB%.WebLeftBarLogin" else="<nop>"}%" warn="off"}%
    * *%MAKETEXT{"Toolbox"}%*
    * [[%SCRIPTURLPATH{"view"}%/%BASEWEB%/WebCreateNewTopic?topicparent=%BASETOPIC%][ %ICON{"newtopic"}% %MAKETEXT{"Create New Topic"}%]]

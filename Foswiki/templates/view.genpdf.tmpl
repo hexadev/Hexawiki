@@ -1,5 +1,5 @@
 %TMPL:INCLUDE{view}%
 
 %TMPL:DEF{"printable"}%<span>
-<a href='%SCRIPTURLPATH{"genpdf"}%/%WEB%/%TOPIC%?skin=%TMPL:P{printskin}%;%QUERYPARAMSTRING%%REVARG%' rel='nofollow' %MAKETEXT{"title='Generate PDF version of this topic' accesskey='p'>Generate &PDF"}%</a>
+<a href='%SCRIPTURLPATH{"genpdf"}%/%WEB%/%TOPIC%?skin=%TMPL:P{printskin}%;t=%GMTIME{$epoch}%;%QUERYPARAMSTRING%%REVARG%' rel='nofollow' %MAKETEXT{"title='Generate PDF version of this topic' accesskey='p'>Generate &PDF"}%</a>
 </span>%TMPL:END%

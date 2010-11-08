@@ -1,14 +1,9 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286754110" format="1.1" reprev="1" version="1"}%
-%~~ SEARCH{
-~~~ "^\|[^\|]*\| *option *\|"
-~~~ web="Estructuras"
-~~~ topic="ListadoDeCargos"
-~~~ type="regex"
-~~~ nonoise="on"
-~~~ nototal="on"
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288902345" format="1.1" reprev="2" version="2"}%
+%~~ DBQUERY{
+~~~ "form.name =~ 'UserForm'"
+~~~ web="Main" 
 ~~~ separator=" "
-~~~ multiple="on"
-~~~ newline="%BR%"
-~~~ nofinalnewline="on" 
-~~~ format="<option>$pattern(^\|*(.*?) *\|.*)</option>"
+~~~ format="<option value='$web.$topic'>$formfield(FirstName) $formfield(LastName)</option>"}%
 ~~~ }%
+
+%META:REVCOMMENT{ncomments="0"}%

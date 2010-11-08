@@ -1,0 +1,16 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289258456" format="1.1" reprev="2" version="2"}%
+   * *%MAKETEXT{"Webs"}%*
+%FLEXWEBLIST{
+     format="$indent   * <span style=\"white-space:nowrap\"><a href=\"%SCRIPTURLPATH{"view"}%/$name/%HOMETOPIC%\"><img src=\"%ICONURL{web-bg}%\" border=\"0\" alt=\"\" width=\"16\" height=\"16\" style=\"background-color:%$markerVAR{\"WEBBGCOLOR\" web=$qname}$marker%\" />&nbsp;$name</a></span>$n"
+     subwebs="none"
+     exclude="(Estructuras|Trash|TWiki|System)"
+}%
+
+   * *Administración*
+%FLEXWEBLIST{
+     format="$indent   * <span style=\"white-space:nowrap\"><a href=\"%SCRIPTURLPATH{"view"}%/$name/%HOMETOPIC%\"><img src=\"%ICONURL{web-bg}%\" border=\"0\" alt=\"\" width=\"16\" height=\"16\" style=\"background-color:%$markerVAR{\"WEBBGCOLOR\" web=$qname}$marker%\" />&nbsp;$name</a></span>$n"
+     subwebs="none"
+     include="(Estructuras|Trash|System)"
+}%
+
+%META:REVCOMMENT{ncomments="0"}%

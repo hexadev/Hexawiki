@@ -1,0 +1,65 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.2
+date	2010.11.08.23.20.56;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.11.08.15.16.21;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.2
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289258456" format="1.1" reprev="2" version="2"}%
+   * *%MAKETEXT{"Webs"}%*
+%FLEXWEBLIST{
+     format="$indent   * <span style=\"white-space:nowrap\"><a href=\"%SCRIPTURLPATH{"view"}%/$name/%HOMETOPIC%\"><img src=\"%ICONURL{web-bg}%\" border=\"0\" alt=\"\" width=\"16\" height=\"16\" style=\"background-color:%$markerVAR{\"WEBBGCOLOR\" web=$qname}$marker%\" />&nbsp;$name</a></span>$n"
+     subwebs="none"
+     exclude="(Estructuras|Trash|TWiki|System)"
+}%
+
+   * *Administración*
+%FLEXWEBLIST{
+     format="$indent   * <span style=\"white-space:nowrap\"><a href=\"%SCRIPTURLPATH{"view"}%/$name/%HOMETOPIC%\"><img src=\"%ICONURL{web-bg}%\" border=\"0\" alt=\"\" width=\"16\" height=\"16\" style=\"background-color:%$markerVAR{\"WEBBGCOLOR\" web=$qname}$marker%\" />&nbsp;$name</a></span>$n"
+     subwebs="none"
+     include="(Estructuras|Trash|System)"
+}%
+
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.1
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289229381" format="1.1" reprev="1" version="1"}%
+d6 1
+a6 1
+     exclude="Estructuras"
+d9 1
+a9 1
+   * *%MAKETEXT{"Administración"}%*
+d13 1
+a13 1
+     include="Estructuras"
+@

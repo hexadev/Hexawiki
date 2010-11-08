@@ -1,17 +1,5 @@
-%META:TOPICINFO{author="ProjectContributor" date="1231502400" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1289229562" format="1.1" version="2"}%
 %META:TOPICPARENT{name="WebHome"}%
-%INCLUDE{"%IF{"context can_login" then="%SYSTEMWEB%.WebLeftBarLogin" else="<nop>"}%" warn="off"}%
+%INCLUDE{"System.WebLeftBar"}%
 
-   * *%MAKETEXT{"Toolbox"}%*
-   * [[%SCRIPTURLPATH{"view"}%/%BASEWEB%/WebCreateNewTopic?topicparent=%BASETOPIC%][ %ICON{"newtopic"}% %MAKETEXT{"Create New Topic"}%]]
-   * [[WebTopicList][ %ICON{"index"}% %MAKETEXT{"Index"}%]]
-   * [[%BASEWEB%.WebSearch][ %ICON{"searchtopic"}% %MAKETEXT{"Search"}%]]
-   * [[WebChanges][ %ICON{"changes"}% %MAKETEXT{"Changes"}%]]
-   * [[WebNotify][ %ICON{"notify"}% %MAKETEXT{"Notifications"}%]]
-   * [[WebRss][ %ICON{"feed"}% %MAKETEXT{"RSS Feed"}%]]
-   * [[WebStatistics][ %ICON{"statistics"}% %MAKETEXT{"Statistics"}%]]
-   * [[WebPreferences][ %ICON{"wrench"}% %MAKETEXT{"Preferences"}%]]
-   * %IF{"istopic '%USERSWEB%.%WIKIUSERSTOPIC%'" else=" $percentICON{\"person\"}$percent $percentMAKETEXT{\"Users\"}$percent" then="[[$percentUSERSWEB$percent.$percentWIKIUSERSTOPIC$percent][ $percentICON{\"person\"}$percent $percentMAKETEXT{\"Users\"}$percent]]"}%
-   * [[%USERSWEB%.WikiGroups][ %ICON{"group"}% %MAKETEXT{"Groups"}%]]
-
-%INCLUDE{ "%SYSTEMWEB%.WebLeftBarWebsList" }%
+%META:REVCOMMENT{ncomments="0"}%

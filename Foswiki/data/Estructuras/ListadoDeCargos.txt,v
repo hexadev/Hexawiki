@@ -1,10 +1,15 @@
-head	1.1;
+head	1.2;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 expand	@o@;
 
+
+1.2
+date	2010.11.04.20.21.55;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
 
 1.1
 date	2010.10.10.20.33.04;	author BaseUserMapping_333;	state Exp;
@@ -17,12 +22,12 @@ desc
 @
 
 
-1.1
+1.2
 log
 @save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286742784" format="1.1" version="1"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1288902115" format="1.1" version="2"}%
 %META:TOPICPARENT{name="FormularioDeProcedimiento"}%
 ---+ Listado de Cargos
 
@@ -31,5 +36,20 @@ Para agregar cargos se debe editar la tabla, agregar un "row", ingresar los dato
 %EDITTABLE{format="| text, 60 | label, 0, option | text, 60 |"}%
 | *Name* | *Type* | *Tooltip message* |
 | - | option | nulo |
+%DBQUERY{"form.name =~ 'UserForm'" web="Main" format="| $formfield(FirstName) $formfield(LastName)=$web.$topic | option | - |"}%
 
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286742784" format="1.1" version="1"}%
+d10 1
+d12 1
 @

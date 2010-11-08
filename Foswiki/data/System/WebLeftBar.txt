@@ -1,0 +1,31 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289258182" format="1.1" reprev="2" version="2"}%
+
+   * <b>%MAKETEXT{"User Reference"}%</b>
+   * BeginnersStartHere
+   * TextFormattingRules
+   * [[%SYSTEMWEB%.Macros][Macros]]
+   * FormattedSearch
+   * QuerySearch
+   * DocumentGraphics
+   * SkinBrowser
+   * InstalledPlugins
+
+   * <b>%MAKETEXT{"Admin Maintenance"}%</b>
+   * [[ReferenceManual][Reference Manual]]
+   * AdminToolsCategory
+   * InterWikis
+   * ManagingWebs
+   * SiteTools
+   * %WIKIPREFSTOPIC%
+   * %WEBPREFSTOPIC%
+
+   * <b>%MAKETEXT{"Categories"}%</b>
+   * [[AdminDocumentationCategory][Admin Documentation]]
+   * [[AdminToolsCategory][Admin Tools]]
+   * [[DeveloperDocumentationCategory][Developer Doc]]
+   * [[UserDocumentationCategory][User Documentation]]
+   * [[UserToolsCategory][User Tools]]
+
+
+
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="2" t_1="1289257799"}%

@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1286742784" format="1.1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1288902115" format="1.1" version="2"}%
 %META:TOPICPARENT{name="FormularioDeProcedimiento"}%
 ---+ Listado de Cargos
 
@@ -7,4 +7,6 @@ Para agregar cargos se debe editar la tabla, agregar un "row", ingresar los dato
 %EDITTABLE{format="| text, 60 | label, 0, option | text, 60 |"}%
 | *Name* | *Type* | *Tooltip message* |
 | - | option | nulo |
+%DBQUERY{"form.name =~ 'UserForm'" web="Main" format="| $formfield(FirstName) $formfield(LastName)=$web.$topic | option | - |"}%
 
+%META:REVCOMMENT{ncomments="0"}%

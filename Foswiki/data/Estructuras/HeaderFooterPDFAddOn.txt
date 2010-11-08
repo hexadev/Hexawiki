@@ -1,0 +1,15 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289257700" format="1.1" reprev="3" version="3"}%
+%META:TOPICPARENT{name="Main.SitePreferences"}%
+<verbatim>
+<!-- PDFSTART -->
+<!-- HEADER LEFT "$LOGOIMAGE" -->
+<!-- HEADER RIGHT "%FORMFIELD{"Nombre"  topic="%BASEWEB%.%BASETOPIC%"}%" -->
+<!-- HEADER CENTER "" -->
+<!-- FOOTER LEFT "Frigorífico del Cauca S.A.S. - %REVINFO{"Revision $rev de $date" topic="%BASEWEB%.%BASETOPIC%"}%" -->
+<!-- FOOTER CENTER "" -->
+<!-- FOOTER RIGHT "$PAGE(1)/$PAGES(1)" -->
+<!-- PDFSTOP -->
+</verbatim>
+
+
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="3" t_1="1289257367"}%

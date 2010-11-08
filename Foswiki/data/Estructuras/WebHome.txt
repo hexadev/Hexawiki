@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286922488" format="1.1" reprev="5" version="7"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288901741" format="1.1" reprev="5" version="8"}%
 ---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
 
 %TABPANE%
@@ -29,6 +29,12 @@
 %TAB{Template edit}%
 %~~ DBQUERY{
 ~~~ "name =~ 'EditTemplate$'"
+~~~ format="   * $web.$topic"
+~~~ }%
+%ENDTAB%
+%TAB{PDF}%
+%~~ DBQUERY{
+~~~ "name =~ 'PDFAddOn$'"
 ~~~ format="   * $web.$topic"
 ~~~ }%
 %ENDTAB%
@@ -67,4 +73,4 @@
 %ENDTAB%
 %ENDTABPANE%
 
-%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="3" t_1="1285875726"}%
+%META:REVCOMMENT{ncomments="0"}%

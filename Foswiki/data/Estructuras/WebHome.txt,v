@@ -1,9 +1,14 @@
-head	1.7;
+head	1.8;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.8
+date	2010.11.04.20.15.41;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.7;
 
 1.7
 date	2010.10.12.22.28.08;	author BaseUserMapping_333;	state Exp;
@@ -46,12 +51,12 @@ desc
 @
 
 
-1.7
+1.8
 log
 @save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286922488" format="1.1" reprev="5" version="7"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288901741" format="1.1" reprev="5" version="8"}%
 ---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
 
 %TABPANE%
@@ -82,6 +87,12 @@ text
 %TAB{Template edit}%
 %~~ DBQUERY{
 ~~~ "name =~ 'EditTemplate$'"
+~~~ format="   * $web.$topic"
+~~~ }%
+%ENDTAB%
+%TAB{PDF}%
+%~~ DBQUERY{
+~~~ "name =~ 'PDFAddOn$'"
 ~~~ format="   * $web.$topic"
 ~~~ }%
 %ENDTAB%
@@ -120,6 +131,21 @@ text
 %ENDTAB%
 %ENDTABPANE%
 
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.7
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1286922488" format="1.1" reprev="5" version="7"}%
+d35 6
+d76 1
+a76 1
 %META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="3" t_1="1285875726"}%
 @
 

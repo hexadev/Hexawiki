@@ -1,0 +1,89 @@
+head	1.2;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.2
+date	2010.11.08.23.16.22;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.11.08.14.33.24;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.2
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289258182" format="1.1" reprev="2" version="2"}%
+
+   * <b>%MAKETEXT{"User Reference"}%</b>
+   * BeginnersStartHere
+   * TextFormattingRules
+   * [[%SYSTEMWEB%.Macros][Macros]]
+   * FormattedSearch
+   * QuerySearch
+   * DocumentGraphics
+   * SkinBrowser
+   * InstalledPlugins
+
+   * <b>%MAKETEXT{"Admin Maintenance"}%</b>
+   * [[ReferenceManual][Reference Manual]]
+   * AdminToolsCategory
+   * InterWikis
+   * ManagingWebs
+   * SiteTools
+   * %WIKIPREFSTOPIC%
+   * %WEBPREFSTOPIC%
+
+   * <b>%MAKETEXT{"Categories"}%</b>
+   * [[AdminDocumentationCategory][Admin Documentation]]
+   * [[AdminToolsCategory][Admin Tools]]
+   * [[DeveloperDocumentationCategory][Developer Doc]]
+   * [[UserDocumentationCategory][User Documentation]]
+   * [[UserToolsCategory][User Tools]]
+
+
+
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="2" t_1="1289257799"}%
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@d1 1
+a1 13
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289226804" format="1.1" version="1"}%
+%INCLUDE{"%IF{"context can_login" then="%SYSTEMWEB%.WebLeftBarLogin" else="<nop>"}%" warn="off"}%
+
+   * *%MAKETEXT{"Toolbox"}%*
+   * %IF{"istopic '%USERSWEB%.%WIKIUSERSTOPIC%'" else=" $percentICON{\"person\"}$percent $percentMAKETEXT{\"Users\"}$percent" then="[[$percentUSERSWEB$percent.$percentWIKIUSERSTOPIC$percent][ $percentICON{\"person\"}$percent $percentMAKETEXT{\"Users\"}$percent]]"}%
+   * [[%USERSWEB%.WikiGroups][ %ICON{"group"}% %MAKETEXT{"Groups"}%]]
+   * [[WebTopicList][ %ICON{"index"}% %MAKETEXT{"Index"}%]]
+   * [[%BASEWEB%.WebSearch][ %ICON{"searchtopic"}% %MAKETEXT{"Search"}%]]
+   * [[WebChanges][ %ICON{"changes"}% %MAKETEXT{"Changes"}%]]
+   * [[WebNotify][ %ICON{"notify"}% %MAKETEXT{"Notifications"}%]]
+   * [[WebRss][ %ICON{"feed"}% %MAKETEXT{"RSS Feed"}%]]
+   * [[WebStatistics][ %ICON{"statistics"}% %MAKETEXT{"Statistics"}%]]
+   * [[WebPreferences][ %ICON{"wrench"}% %MAKETEXT{"Preferences"}%]]
+a28 1
+%INCLUDE{ "%SYSTEMWEB%.WebLeftBarRootWebsList" }%
+d30 2
+a31 1
+%META:REVCOMMENT{ncomments="0"}%
+@

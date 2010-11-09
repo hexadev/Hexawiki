@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287181238" format="1.1" reprev="1" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289261061" format="1.1" reprev="1" version="3"}%
 %TMPL:INCLUDE{"foswiki"}% 
 %TMPL:INCLUDE{"edit"}% 
 %TMPL:DEF{"form"}%%TMPL:END% 
@@ -36,7 +36,7 @@
 | *Descripción*: | <textarea name="Descripcion" cols="80" rows="5" class="foswikiInputField" id="descripcion">%FORMFIELD{Descripcion}%</textarea> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Descripción del Documento.</span> |
 | *Fuente*: | <input  type="text" name="Fuente" size="60" class="foswikiInputField" id="fuente" value=""/> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Organización que emite el Documento.</span> |
 | *Fecha Expedición*: | <input type="text" name="FechaExpedicion" id="fechaexpedicion" value="" size="9" class="jqMaskedInput" mask="9999/99/99"/><input type="image" src="%PUBURL%/%SYSTEMWEB%/JSCalendarContrib/img.gif" onclick="javascript: return showCalendar('fechaexpedicion','%Y/%m/%d');"/> <br /><span style="font-size: 0.7em; color: #999999;">Fecha de expedición del documento. Formato fecha: yyyy/mm/dd</span> |
-| *Responsable*:  | <select name="Responsable">%INCLUDE{"Estructuras.ListadoDeCargosSelectOptions"}%</select> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Responsable del documento.</span>  |
+| *Responsable*:  | <select name="Responsable"><option value="-">-</option>%INCLUDE{"Estructuras.ListadoDeCargosSelectOptions"}%</select> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Responsable del documento.</span>  |
 | *Fecha Caducidad*: | <input type="text" name="FechaCaducidad" id="fechacaducidad" value=""  size="9" class="jqMaskedInput" mask="9999/99/99"/><input type="image" src="%PUBURL%/%SYSTEMWEB%/JSCalendarContrib/img.gif" onclick="javascript: return showCalendar('fechacaducidad','%Y/%m/%d');"/> <br /><span style="font-size: 0.7em; color: #999999;">Fecha de caducidad del documento. Formato fecha: yyyy/mm/dd</span> |
 | *Estado*:  | <select name="Estado" id="estado"><option>Vigente</option><option>Obsoleto-parcial</option><option>Obsoleto-total</option></select> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Estado del documento.</span>  |
 | *Items Obsoletos*: | <textarea name="ItemsObsoletos" cols="80" rows="5" class="foswikiInputField" id="itemsobsoletos">%FORMFIELD{ItemsObsoletos}%</textarea> <br /><span style="font-size: 0.7em; color: #999999;">Capítulos, numerales, etc que se encuentran obsoletos del Documento.</span> |
@@ -86,3 +86,5 @@ function toggleItemObsoletoField (){
 </script>
 %TMPL:END%
 
+
+%META:REVCOMMENT{ncomments="0"}%

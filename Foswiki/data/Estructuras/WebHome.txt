@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288901741" format="1.1" reprev="5" version="8"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289260616" format="1.1" reprev="5" version="9"}%
 ---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
 
 %TABPANE%
@@ -70,6 +70,9 @@
 ~~~ "name =~ '^Crear'"
 ~~~ format="   * $web.$topic"
 ~~~ }%
+%ENDTAB%
+%TAB{Menu}%
+   * WebLeftBar
 %ENDTAB%
 %ENDTABPANE%
 

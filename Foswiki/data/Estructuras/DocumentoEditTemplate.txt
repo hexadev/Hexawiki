@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287162183" format="1.1" reprev="2" version="5"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289261027" format="1.1" reprev="2" version="6"}%
 %TMPL:INCLUDE{"foswiki"}% 
 %TMPL:INCLUDE{"edit"}% 
 %TMPL:DEF{"form"}%%TMPL:END% 
@@ -35,7 +35,7 @@
 | *Nombre*: | <input  type="text" name="Nombre" size="60" class="foswikiInputField" id="nombre" value=""/> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Nombre del Documento.</span> |
 | *Descripción*: | <textarea name="Descripcion" cols="80" rows="5" class="foswikiInputField" id="descripcion">%FORMFIELD{Descripcion}%</textarea> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Descripción del Documento.</span> |
 | *Numero*: | <input  type="text" name="Numero" size="1" class="foswikiInputField" id="numero" value="" class="jqMaskedInput" mask="99"/> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Numero del Documento. El formato es de dos dígitos ej. 01</span> |
-| *Responsable*:  | <select name="Responsable">%INCLUDE{"Estructuras.ListadoDeCargosSelectOptions"}%</select> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Responsable del documento.</span>  |
+| *Responsable*:  | <select name="Responsable"><option value="-">-</option>%INCLUDE{"Estructuras.ListadoDeCargosSelectOptions"}%</select> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Responsable del documento.</span>  |
 | *Versión*: | <input  type="text" name="Version" size="20" class="foswikiInputField" id="version" value=""/> <span><span style="color: red;">**</span></span> <br /><span style="font-size: 0.7em; color: #999999;">Numero de Versión del Documento.</span> |
 %ENDTAB% 
 %ENDTABPANE% 
@@ -60,3 +60,5 @@ $(function (){
 </script>
 %TMPL:END%
 
+
+%META:REVCOMMENT{ncomments="0"}%

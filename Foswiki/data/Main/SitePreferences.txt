@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289255854" format="1.1" reprev="7" version="8"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289408214" format="1.1" reprev="7" version="10"}%
 ---+!! %TOPIC%
 
 %ICON{"help"}% 
@@ -39,7 +39,7 @@ Customize copyright
    * Set WEBCOPYRIGHT = &copy; 2010 Todos los derechos reservados. Frigorífico del Cauca S.A.S.
 
 Skin
-   * Set SKIN = genpdf,pattern
+   * Set SKIN = pattern
 
 ---++ System.WysiwygPlugin
 
@@ -78,7 +78,7 @@ Settings for the GenPDFAddOn Plugin
    * #Set GENPDFADDON_HEADFOOTFONT =
    * Set GENPDFADDON_HEADFOOTSIZE = 4
    * #Set GENPDFADDON_BODYIMAGE =
-   * Set GENPDFADDON_LOGOIMAGE = http://frigo.aws.hexasas.com/pub/Main/SitePreferences/logo-trans-small.png
+   * Set GENPDFADDON_LOGOIMAGE = http://190.109.184.33/pub/Main/SitePreferences/logo-trans-small.png
    * #Set GENPDFADDON_NUMBEREDTOC =a
    * #Set GENPDFADDON_DUPLEX =
    * #Set GENPDFADDON_PERMISSIONS =
@@ -103,4 +103,4 @@ Settings for the GenPDFAddOn Plugin
 
 %META:FILEATTACHMENT{name="logo_trans_small.png" attachment="logo_trans_small.png" attr="" comment="" date="1286381449" path="logo_trans_small.png" size="4232" user="BaseUserMapping_333" version="2"}%
 %META:FILEATTACHMENT{name="logo-trans-small.png" attachment="logo-trans-small.png" attr="" comment="" date="1286826659" path="logo-trans-small.png" size="18758" user="BaseUserMapping_333" version="1"}%
-%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="7" t_1="1288976346"}%
+%META:REVCOMMENT{ncomments="0"}%

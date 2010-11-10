@@ -1,0 +1,23 @@
+%META:TOPICINFO{author="PeterThoeny" date="1093920050" format="1.0" version="1.2"}%
+%META:TOPICPARENT{name="ChartPluginTests"}%
+---+ ChartPlugin Tests with Remote Data
+
+This topic just contains two tables which are referenced from the ChartPluginTests topic.  To distinguish the data on this page from other data, the *actual* values have been increased by 0.51 and 0.52 to denote table 1 and table 2 respectively. 
+
+| *Record Number* | *Time Period* | *Minimum Value* | *Acceptable Value* | *Target Value* | *Exceptional Value* | *Actual Value* | *Comment* |
+| 1 | Start | 0 | 50 | 70 | 90 | 39.51 | initial measure |
+| 2 | FY03-Q1 | 0 | 35 | 75 | 95 | 55.51 |  |
+| 3 | FY03-Q2 | 0 | 35 | 75 | 95 | 36.51 |  |
+| 4 | FY03-Q3 | 0 | 40 | 80 | 100 | 62.51 |  |
+| 5 | FY03-Q4 | 0 | 40 | 80 | 100 | 72.51 |  |
+| 6 | FY04-Q1 | 0 | 40 | 80 | 100 | 68.51 |  |
+
+| *Remote:Record Number* |1|2|3|5|5|6|
+| *Remote:Time Period* | Start | FY03-Q1 | FY03-Q2 | FY03-Q3 | FY03-Q4 | FY04-Q1 |
+| *Remote:Minimum Value* | 0 | 0 | 0 | 0 | 0 | 0 |
+| *Remote:Acceptable Value* | 50 | 35 | 35 | 40 | 40 | 40 |
+| *Remote:Target Value* | 70 | 75 | 75 | 80 | 80 | 80 |
+| *Remote:Exceptional Value* | 90 | 95 | 95 | 100 | 100 | 100 |
+| *Remote:Actual Value* | 39.52 | 55.52 | 36.52 | 62.52 | 72.52 | 68.52 |
+| *Test:Averages* | %CALC{"$EVAL($SUM(xR3:C2..R7:C2)/5)"}% | %CALC{"$AVERAGE(R3:C3..R7:C3)"}%| %CALC{"$AVERAGE(R3:C4..R7:C4)"}%| %CALC{"$AVERAGE(R3:C5..R7:C5)"}%| %CALC{"$AVERAGE(R3:C6..R7:C6)"}%| %CALC{"$AVERAGE(R3:C7..R7:C7)"}%|
+| *Remote:Comment* | initial measure | | | | | |

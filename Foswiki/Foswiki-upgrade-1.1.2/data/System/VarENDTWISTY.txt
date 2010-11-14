@@ -1,0 +1,8 @@
+%META:TOPICINFO{author="ProjectContributor" date="1195487956" format="1.1" version="$Rev$"}%
+%META:TOPICPARENT{name="TwistyPlugin"}%
+
+#VarENDTWISTY
+---+++ ENDTWISTY
+*Twisty closure, complements the opening TWISTY tag.*
+   * Syntax: =%<nop>ENDTWISTY%=
+   * Related: %INCLUDE{"VarTWISTY" section="related" includingtopic="%INCLUDINGTOPIC%"}%

@@ -1,0 +1,1 @@
+jQuery(function(a){a(".jqShrinkUrls").livequery(function(){var c=a(this);var b=a.extend({},c.metadata());c.find("a:not(.jqInitedShrinkUrl)").addClass("jqInitedShrinkUrl").shrinkUrls(b)})});

@@ -1,0 +1,15 @@
+%META:TOPICINFO{author="ProjectContributor" comment="reprev" date="1277983366" format="1.1" reprev="1" version="1"}%
+%META:TOPICPARENT{name="JQueryPlugin"}%
+#VarJQTHEME
+---+++ JQTHEME{"name" ...} -- switch jQuery UI theme
+   * Foswiki's default UI theme is configured in  =$Foswiki::cfg{JQueryPlugin}{JQueryTheme}= and defaults to =base=.
+     Use [[%SCRIPTURLPATH{"configure"}%][configure]] to change this site wide. Use JQTHEME if you decide to use a different
+     theme on the current page. 
+   * Note: some Foswiki skins may come with their own jQuery UI matching the overall user experience of the web design. 
+   * 
+   * Parameters:
+     | *Parameter:* | *Description:* | *Default:* |
+     | "name" | name of theme: !JQueryPlugin knows the following themes =base=, =lightness=, =redmod=, =smoothness=; \
+                additional themes maybe created using the [[http://jqueryui.com/themeroller/][themeroller]] and installed to \
+                =%PUBURLPATH%/System/JQueryPlugin/$name= | base |
+   * Related: JQueryUI

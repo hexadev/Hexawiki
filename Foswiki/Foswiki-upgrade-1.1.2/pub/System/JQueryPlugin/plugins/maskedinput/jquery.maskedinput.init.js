@@ -1,0 +1,1 @@
+jQuery(function(a){a("input[mask]:not(.jqInitedMaskedInput)").livequery(function(){var c=a(this);c.addClass(".jqInitedMaskedInput");var b=a.extend({},c.metadata());c.mask(c.attr("mask"),b)})});

@@ -1,0 +1,104 @@
+/* buttons */
+.jqButton {
+  margin:0px 8px 0px 0px;
+  display:block;
+  float:left;
+  height:23px;
+  padding:0px;
+  color:#000;
+  font-size:13px;
+  white-space:nowrap;
+}
+.jqButton:hover,
+.jqButton {
+  text-decoration:none;
+  cursor:pointer;
+  background-color:transparent;
+  background-image:url(btn_right.gif);
+  background-position:top right;
+  background-repeat:no-repeat;
+}
+
+.jqButton.foswikiRight:hover,
+.jqButton.foswikiRight {
+  float:right;
+  margin:0px 0px 0px 8px;
+}
+
+.jqButtonSimple:hover,
+.jqButton:hover {
+  color:red;
+}
+.foswikiTopic .jqButton:hover,
+.foswikiTopic .jqButton:active { /* pattern skin */
+  color:red;
+}
+
+.jqButton span {
+  background-image:url(btn_left.gif);
+  background-position:top left;
+  background-repeat:no-repeat;
+  cursor:pointer;
+  float:left;
+  height:23px;
+  line-height:23px;
+  padding:0px 5px 0px 8px;
+  margin:0px 3px 0px 0px;
+  font-size:13px;
+  /* ie 6 */
+  _margin:0px 1px 0px 0px;
+}
+.jqButtonSimple {
+  color:inherit;
+}
+.jqButtonSimple span {
+  padding:0px;
+  text-decoration:underline;
+}
+.jqButtonSimple span span {
+  padding:0px 0px 0px 23px;
+}
+.jqButton .jqButtonIcon {
+  background-position:0px 4px;
+  background-repeat:no-repeat;
+  padding:0px 0px 0px 23px;
+  margin:0px;
+}
+.jqButton span .jqButtonNoText {
+  padding:0px;
+  width:1em;
+}
+.jqButtonCyan, .jqButtonCyan:hover { background-image:url(btn_cyan_right.gif); }
+.jqButtonCyan span { background-image:url(btn_cyan_left.gif); }
+.jqButtonRed, .jqButtonRed:hover { background-image:url(btn_red_right.gif); }
+.jqButtonRed span { background-image:url(btn_red_left.gif); }
+.jqButtonGreen, .jqButtonGreen:hover { background-image:url(btn_green_right.gif); }
+.jqButtonGreen span { background-image:url(btn_green_left.gif); }
+.jqButtonSimple,
+.jqButtonSimple span,
+.jqButtonSimple:hover,
+.jqButtonSimple span { background-image:none; }
+.jqButtonRight,
+.jqButtonRight:hover {
+  float:right;
+}
+
+/* rounded cornders */
+.jqRounded div {
+  padding:10px;
+  margin:0px;
+}
+.jqRounded h2 {
+  margin:0px;
+  padding:5px;
+  font-size:130%;
+  text-align:center;
+  border:0px;
+}
+.jqRounded ol,
+.jqRounded ul {
+  margin:0px;
+  padding:0px;
+  padding-left:20px;
+}
+

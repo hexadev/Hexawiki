@@ -1,8 +1,8 @@
-%META:TOPICINFO{author="pruebas" date="1288738572" format="1.1" version="3"}%
+%META:TOPICINFO{author="pruebas" comment="save topic" date="1289505203" format="1.1" reprev="4" version="4"}%
 %META:TOPICPARENT{name="WikiGroups"}%
 
 Edit this topic to add a description to the !WorkflowEnRevisionGroup
 
 %META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="WorkflowEnRevisionGroup"}%
-%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="AdminUser"}%
+%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="AdminUser, JulianaJaramillo, JonathanUparela"}%
 %META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="GroupView"}%

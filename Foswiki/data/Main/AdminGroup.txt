@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288285401" format="1.1" reprev="3" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289495167" format="1.1" reprev="4" version="4"}%
 %META:TOPICPARENT{name="WikiGroups"}%
 
 %INCLUDE{"%USERSWEB%.AdminUser" section="sudo_login"}%
@@ -23,6 +23,6 @@ If you haven't previously set up an administrator, follow these steps:
 
 Edit this topic to add a description to the AdminGroup
 
-%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="DamianMontenegro"}%
+%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="DamianMontenegro, HexaPreubas"}%
 %META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="AdminGroup"}%
 %META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="GroupView"}%

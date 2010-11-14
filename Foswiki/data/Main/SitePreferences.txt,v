@@ -1,9 +1,19 @@
-head	1.10;
+head	1.12;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.12
+date	2010.11.11.19.28.19;	author pruebas;	state Exp;
+branches;
+next	1.11;
+
+1.11
+date	2010.11.11.16.09.06;	author pruebas;	state Exp;
+branches;
+next	1.10;
 
 1.10
 date	2010.11.10.16.56.54;	author BaseUserMapping_333;	state Exp;
@@ -61,12 +71,12 @@ desc
 @
 
 
-1.10
+1.12
 log
 @save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289408214" format="1.1" reprev="7" version="10"}%
+@%META:TOPICINFO{author="pruebas" comment="reprev" date="1289503699" format="1.1" reprev="7" version="12"}%
 ---+!! %TOPIC%
 
 %ICON{"help"}% 
@@ -107,11 +117,11 @@ Customize copyright
    * Set WEBCOPYRIGHT = &copy; 2010 Todos los derechos reservados. Frigorífico del Cauca S.A.S.
 
 Skin
-   * Set SKIN = pattern
+   * Set SKIN = genpdf,pattern
 
 ---++ System.WysiwygPlugin
 
-   * Set WYSIWYG_EXCLUDE = html,pre
+   * #Set WYSIWYG_EXCLUDE = html,pre
 
 ---++ System.WorkflowPlugin
 
@@ -172,6 +182,34 @@ Settings for the GenPDFAddOn Plugin
 %META:FILEATTACHMENT{name="logo_trans_small.png" attachment="logo_trans_small.png" attr="" comment="" date="1286381449" path="logo_trans_small.png" size="4232" user="BaseUserMapping_333" version="2"}%
 %META:FILEATTACHMENT{name="logo-trans-small.png" attachment="logo-trans-small.png" attr="" comment="" date="1286826659" path="logo-trans-small.png" size="18758" user="BaseUserMapping_333" version="1"}%
 %META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.11
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="pruebas" comment="reprev" date="1289491746" format="1.1" reprev="7" version="11"}%
+d42 1
+a42 1
+   * Set SKIN = pattern
+@
+
+
+1.10
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289408214" format="1.1" reprev="7" version="10"}%
+d46 1
+a46 1
+   * Set WYSIWYG_EXCLUDE = html,pre
 @
 
 

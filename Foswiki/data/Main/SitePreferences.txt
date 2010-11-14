@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289408214" format="1.1" reprev="7" version="10"}%
+%META:TOPICINFO{author="pruebas" comment="reprev" date="1289503699" format="1.1" reprev="7" version="12"}%
 ---+!! %TOPIC%
 
 %ICON{"help"}% 
@@ -39,11 +39,11 @@ Customize copyright
    * Set WEBCOPYRIGHT = &copy; 2010 Todos los derechos reservados. Frigorífico del Cauca S.A.S.
 
 Skin
-   * Set SKIN = pattern
+   * Set SKIN = genpdf,pattern
 
 ---++ System.WysiwygPlugin
 
-   * Set WYSIWYG_EXCLUDE = html,pre
+   * #Set WYSIWYG_EXCLUDE = html,pre
 
 ---++ System.WorkflowPlugin
 

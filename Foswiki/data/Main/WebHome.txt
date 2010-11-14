@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288736255" format="1.1" reprev="2" version="2"}%
+%META:TOPICINFO{author="jjaramillo" comment="save topic" date="1289483369" format="1.1" reprev="2" version="3"}%
 ---+!! Bienvenid@ %WIKINAME% al Foswiki del Frigorífico del Cauca
 
 *lasñkjaslkjdaskñljaslkjñ ñlkajsñlkjasdj*
@@ -18,5 +18,8 @@ Pellentesque accumsan, massa bibendum semper mattis, sem risus dignissim augue, 
    * [[WebRss]], [[WebAtom]] - RSS and ATOM news feeds of topic changes
    * [[WebStatistics]] - listing popular topics and top contributors
    * [[WebPreferences]] - preferences of this web
+
+
+
 
 %META:REVCOMMENT{ncomments="0"}%

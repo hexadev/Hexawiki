@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1287585207" format="1.1" version="3"}%
+%META:TOPICINFO{author="pruebas" comment="" date="1289505129" format="1.1" version="5"}%
 <!--
    * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
 -->
@@ -8,20 +8,23 @@
 %EDITTABLE{format="|date,0,|textarea, 4x80, |"}%
 | *Fecha* | *Descripción* |
 |  |  |
+---++ 1. Objetivo
 
----++ Objetivo
+---++ 2. Alcance
 
----++ Alcance
+---++ 3. Campo de aplicación
 
----++ Campo de aplicación
+---++ 4. Responsables
 
----++ Responsables
+---++ 5. Términos y definiciones
 
----++ Términos y definiciones
+---++ 6. Contenido
 
----++ Contenido
+---++ 7. Documentos de Referencia
 
----++ Anexos
+---++ 8. Registros
+
+---++ 9. Anexos
 
 
 %META:REVCOMMENT{ncomments="0"}%

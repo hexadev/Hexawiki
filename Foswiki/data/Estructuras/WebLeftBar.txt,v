@@ -1,9 +1,14 @@
-head	1.6;
+head	1.7;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.7
+date	2010.11.11.22.22.47;	author dmontenegro;	state Exp;
+branches;
+next	1.6;
 
 1.6
 date	2010.11.10.16.08.29;	author BaseUserMapping_333;	state Exp;
@@ -41,12 +46,12 @@ desc
 @
 
 
-1.6
+1.7
 log
-@reprev
+@save topic
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289405309" format="1.1" reprev="6" version="6"}%
+@%META:TOPICINFO{author="dmontenegro" comment="save topic" date="1289514167" format="1.1" reprev="6" version="7"}%
 %META:TOPICPARENT{name="WebHome"}%
 <noautolink>
    * <form name="jumpForm" action="%SCRIPTURLPATH{"view"}%/%BASEWEB%/%BASETOPIC%"><input id="jumpFormField" title="%MAKETEXT{"Jump"}%" type="text" class="foswikiInputField foswikiDefaultText" name="topic" value="" size="18" /><noscript>&nbsp;<input type="submit" class="foswikiButton" size="5" name="submit" value="%MAKETEXT{"Jump"}%" />&nbsp;</noscript>
@@ -66,14 +71,26 @@ text
    * [[%BASEWEB%.WebTopicList][ %ICON{"index"}% %MAKETEXT{"Index"}%]]
    * [[%BASEWEB%.WebSearch][ %ICON{"searchtopic"}% %MAKETEXT{"Search"}%]]
    * [[%BASEWEB%.WebChanges][ %ICON{"changes"}% %MAKETEXT{"Changes"}%]]
-   * [[%BASEWEB%.WebNotify][ %ICON{"notify"}% %MAKETEXT{"Notifications"}%]]
-   * [[%BASEWEB%.WebRss][ %ICON{"feed"}% %MAKETEXT{"RSS Feed"}%]]
-   * [[%BASEWEB%.WebStatistics][ %ICON{"statistics"}% %MAKETEXT{"Statistics"}%]]
    * [[%BASEWEB%.WebPreferences][ %ICON{"wrench"}% %MAKETEXT{"Preferences"}%]]
 
 %IF{"'%BASEWEB%'='System'" then='$percntINCLUDE{\"System.WebLeftBar\"}$percnt'}%
 
 %META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.6
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289405309" format="1.1" reprev="6" version="6"}%
+a20 3
+   * [[%BASEWEB%.WebNotify][ %ICON{"notify"}% %MAKETEXT{"Notifications"}%]]
+   * [[%BASEWEB%.WebRss][ %ICON{"feed"}% %MAKETEXT{"RSS Feed"}%]]
+   * [[%BASEWEB%.WebStatistics][ %ICON{"statistics"}% %MAKETEXT{"Statistics"}%]]
 @
 
 

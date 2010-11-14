@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1288904636" format="1.1" version="1"}%
+%META:TOPICINFO{author="pruebas" comment="" date="1289504422" format="1.1" version="2"}%
 %META:TOPICPARENT{name="Main.SitePreferences"}%
 <!-- PDFSTART -->
 <!--
@@ -16,8 +16,12 @@
 <font size="7"><b>FRIGORÍFICO DEL CAUCA S.A.S.</b></font>%BR%
 &nbsp;%BR%
 &nbsp;%BR%
-<font size="5">%FORMFIELD{"Nombre" topic="%WEB%.%BASETOPIC%"}%</font>%BR%
-<font size="1">%FORMFIELD{"Descripcion" topic="%WEB%.%BASETOPIC%"}%</font>%BR%
+<font size="5">%FORMFIELD{"Nombre" topic="%BASEWEB%.%BASETOPIC%"}%</font>%BR%
+<font size="1">%FORMFIELD{"Descripcion" topic="%BASEWEB%.%BASETOPIC%"}%</font>%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
+&nbsp;%BR%
 &nbsp;%BR%
 &nbsp;%BR%
 &nbsp;%BR%

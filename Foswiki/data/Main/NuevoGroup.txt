@@ -1,8 +1,0 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289407835" format="1.1" reprev="1" version="1"}%
-%META:TOPICPARENT{name="WikiGroups"}%
-
-Edit this topic to add a description to the !NuevoGroup
-
-%META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="NuevoGroup"}%
-%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="AdminUser, DamianMontenegro, AdminUser, JulianaJaramillo, JonathanUparela"}%
-%META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="GroupView"}%

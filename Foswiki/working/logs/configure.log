@@ -90,3 +90,11 @@
 | Wed Nov 10 16:02:17 2010 |  | 190.109.184.33 | {ReplaceIfEditedAgainWithin} | 900 |
 | Wed Nov 10 16:06:14 2010 |  | 190.109.184.33 | {Plugins}{ChartPlugin}{Enabled} | 1 |
 | Wed Nov 10 16:06:14 2010 |  | 190.109.184.33 | {Plugins}{ChartPlugin}{Module} | Foswiki::Plugins::ChartPlugin |
+| Wed Nov 10 20:45:23 2010 |  | 190.109.184.33 | {DefaultUrlHost} | http://sgi.frigorificodelcauca.com |
+| Wed Nov 10 20:45:23 2010 |  | 190.109.184.33 | {SMTP}{MAILHOST} | ASPMX.L.GOOGLE.com. |
+| Wed Nov 10 20:46:29 2010 |  | 190.109.184.33 | {Plugins}{ChartPlugin}{Enabled} |  |
+| Wed Nov 10 21:53:29 2010 |  | 190.109.184.33 | {DefaultUrlHost} | http://190.109.184.33 |
+| Thu Nov 11 13:27:52 2010 |  | 190.109.184.33 | {DefaultUrlHost} | http://sgi.frigorificodelcauca.com |
+| Fri Nov 12 15:57:26 2010 |  | 190.109.184.33 | {DisplayTimeValues} | servertime |
+| Fri Nov 12 16:07:49 2010 |  | 190.109.184.33 | {Stats}{TopViews} | 11 |
+| Fri Nov 12 16:08:15 2010 |  | 190.109.184.33 | {Stats}{TopViews} | 10 |

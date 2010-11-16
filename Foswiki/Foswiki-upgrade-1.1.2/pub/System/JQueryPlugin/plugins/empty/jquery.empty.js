@@ -1,0 +1,1 @@
+(function(a){a.empty={build:function(b){a.log("called empty()");var c=a.extend({},a.empty.defaults,b);return this.each(function(){var e=a(this);var d=a.extend(c,e.metadata())})},helper:function(){},defaults:{}};a.fn.empty=a.empty.build})(jQuery);

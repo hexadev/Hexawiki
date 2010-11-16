@@ -1,0 +1,266 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289885847" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+<!-- PDFSTART -->
+
+<span style="color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; white-space: normal;">La unidad está desarrollada en formato presentación. Presione el botón para iniciar la presentación. Recuerde que para agregar un slide a la presentación se debe utilizar un título de primer nivel.</span>
+
+%SLIDESHOWSTART%
+
+---% %FORMFIELD{"Nombre" topic=%WEB%.TOPIC}%
+
+Por Hexa
+
+Medellín %DATE%
+
+---+ Agenda
+
+   * *Curso Anterior*
+   * Continuación de Administración de Foswiki
+   * Sintaxis Foswiki 
+      * Taller
+   * Formularios en Foswiki 
+      * Taller
+
+---+ Curso Anterior
+
+   * Que es Foswiki? 
+      * Topics
+      * Extensiones
+      * WikiWord
+   * Instalación de Foswiki
+   * Administración de Foswiki 
+      * Estructura del sistema en el archivos(bin, lib, data, templates, pub)
+      * Estructura de la URL(http://twiki.host/prefix/bin/action/web/topic)
+      * Instalación de extensiones(http://twiki.host/prefix/bin/configure)
+      * Gestión de usuarios(Creación, contraseñas, etc.)
+      * Creación de Webs(A través de la utilidad de administración de twiki, de !WikiWords o por URL)
+      * Creación de topics(A través de las !WikiWords o por URL).
+      * Herramientas para gestionar el Foswiki(TwikiRCCS:TWiki.AdminToolsCategory)
+
+---+ Agenda
+
+   * Curso Anterior
+   * *Continuación de Administración de Foswiki*
+   * Sintaxis Foswiki 
+      * Taller
+   * Formularios en Foswiki 
+      * Taller
+
+---+ Continuación de Administración de Foswiki
+
+   * Usuario Administrador de Configuración.(http://host/prefijo/bin/configure.pl) 
+      * Cambios de configuración relacionados con cambios en el sistema operativo
+      * Configuración de SMPT(mail) de Foswiki
+      * Configuración de Seguridad(Método de autenticación, manejo de la sesión)
+      * Instalación de plugins
+      * Habilitar los plugins instalados
+
+---+ Continuación de Administración de Foswiki
+
+   * Usuarios Administradores dentro de Foswiki: 
+      * [[System.AdminToolsCategory]]
+      * [[System.ManagingWebs][Gestión de las Webs]]
+      * [[_default.WebHome][Plantillas de Webs]]
+      * [[System.FoswikiSiteTools][Site Tools]]
+      * Cambio de las preferencias de Foswiki
+
+---+ Continuación de Administración de Foswiki - Variables
+
+   * [[System.DefaultPreferences][Variables globales de configuración]]
+   * [[Main.WebPreferences][Variables de configuración en las Webs]] 
+      * Control de acceso
+      * Configurar Plugins por Web
+      * Habilitar Formularios
+      * Configuración general de la WEB
+   * [[Sandbox.TopicPrueba][Variables en un Topic visibles]]
+   * [[Sandbox.TopicPrueba][Variables en un Topic "escondidas"]]
+   * Jerarquía de sobre-escritura de variables: 
+      1 System.DefaultPreferences
+      1 Main.SitePreferences
+      1 plugin topics
+      1 Pagina de Usuario Main.%WIKINAME%
+      1 WebPreferences de cada Web
+      1 preferencias de cada topic
+   * [[System.DefaultPreferences][Bloquear la sobre escritura de variables (FINAL)]]
+
+---+ Agenda
+
+   * Curso Anterior
+   * Continuación de Administración de Foswiki
+   * *Sintaxis Foswiki* 
+      * Taller
+   * Formularios en Foswiki 
+      * Taller
+
+---+ Sintaxis Foswiki
+
+   * [[System.WikiVariables][Uso de variables de Foswiki]] 
+      * Sandbox.PruebaDeSintaxis
+      * TOPIC
+      * WEB
+      * FORMFIELD
+      * WIKINAME
+      * SEARCH
+      * CALC
+      * INCLUDE
+      * TOC
+      * ...
+
+---+ Sintaxis Foswiki
+
+   * [[System.TextFormattingRules][Reglas de formato de Twiki]] 
+      * Forma del contenido 
+         * Párrafos
+         * Títulos
+         * Verbatim(texto exacto utilizado para escribir código fuente)
+         * Separador
+         * Listas(asteriscos, números, letras)
+         * Tablas
+         * !!WikiWords
+         * Links
+      * Sobre la letra 
+         * Negrilla
+         * Italica
+         * Negrilla + Italica
+         * Fuente fija
+         * Fuente fija + Negrilla * Tags de HTML
+
+---+ Agenda
+
+   * Curso Anterior
+   * Continuación de Administración de Foswiki
+   * Sintaxis Foswiki 
+      * *Taller*
+   * Formularios en Foswiki 
+      * Taller
+
+---+ Taller
+
+   * Ingresar a Sandbox.WebHome
+   * Crear un Topic con: 
+      * Un nombre cualquiera dentro de la WEB Sandbox.WebHome
+      * Nombre del topic como título
+      * Una tabla de contenido
+      * El !WikiName de la persona que lo esta viendo
+      * Varias secciones.
+      * Un listado de cosas(así sea la lista del mercado de la casa con varios niveles)
+      * Se debe utilizar palabras con formato *bold* y _italic_.
+      * Link a Main.WebHome y a http://foswiki.org.
+      * Debe tener una tabla con encabezado.
+      * Se debe crear una variable local al topic y ser usada(imprimirla en cualquier lugar)
+      * Debe tener una lista de todos los topics que su nombre comience con las letras ==Web==( [[http://twiki.org/cgi-bin/view/TWiki/FormattedSearch][Busquedas con formato]])
+
+---+ Agenda
+
+   * Curso Anterior
+   * Continuación de Administración de Foswiki
+   * Sintaxis Foswiki 
+      * Taller
+   * *Formularios en Foswiki* 
+      * Taller
+
+---+ Formularios en Foswiki
+
+   * Que es y para que se usan
+   * Como se define un formulario
+   * Como se habilitan los formularios
+   * Como se le asigna un formulario a un topic
+   * Cambios en los formularios
+   * Estructura de una plantilla de formulario
+   * Valores de campos en otros topics
+   * Resumiendo - Un formulario debe tener
+
+---+ Que es y para que se usan
+
+   * Son formularios HTML que se definen en un TOPIC. 
+      * text
+      * select
+      * radiobuttons
+      * checkbox
+      * textarea
+      * date
+   * Se utilizan para estructura el contenido dentro Foswiki
+
+---+ Como se define un formulario
+
+   * Se debe crear un platilla que especifique el formulario
+   * La plantilla es un topic que contiene un tabla.
+   * Las filas de la tabla definen los campos del formulario
+   * (Sandbox.FormularioDePrueba)
+
+---+ Como se habilitan los formularios
+
+   * Se utiliza la variable WEBFORMS en WebPreferences para definir los formularios.
+   * Cuando un topic no tiene formulario en la acción EDIT se puede asociar un formulario habilitado.
+   * Si el topic ya tiene un formulario se le puede cambiar.
+
+---+ Como se le asigna un formulario a un topic
+
+   * Editando el topic y utilizar la utilidad de "add form" o "change form"
+   * Creando un topic que defina un formulario HTML que permita crear nuevos topics utilizando una plantilla y un formulario especifico
+   * (Sandbox.CrearRegistroPrueba)
+
+---+ Cambios en los formularios
+
+   * Los cambios sobre un formulario serian: 
+      * Agregar campos
+      * Eliminar campos
+      * Cambiar el nombre a un capo
+   * (Sandbox.FormularioDePrueba)
+
+---+ Estructura de una plantilla de formulario
+
+   * Es un topic con una tabla con una estructura definida
+   * La tabla debe contener los siguientes campos en el mismo orden:
+<literal>| Name | Type | Size | Value | Tooltip message | Attributes |</literal>
+   * Los tipos de dato son:
+<form action=""> 
+   * Text: <input type="text" name="Text" size="40" />
+   * Text area: <textarea name="TextArea" col=5 row=40></textarea>
+   * Select: <select name="Select" size="1"><option value="-">-</option><option value="1">1</option></select>
+   * Radio Buttons: <input type="radio" name="Radio" value="yes">Yes <input type="radio" name="Radio" value="No">No
+   * CheckBox: <input type="checkbox" name="Checkbox">RCCS</input>
+   * Date
+   * Label
+</form>
+
+---+ Valores de campos en otros topics
+
+   * Se puede definir un topic con los valores para los campos tipo select, checkbox, radio buttons.
+   * Se debe crear el topic con la siguientes estructura:
+<literal>| Name | Type | Tooltip message |</literal>
+   * En este topic se pueden realizar búsquedas con SEARCH
+
+---+ Resumiendo - Un registro debe tener
+
+   * Una definición
+   * Una Web que los agrupe
+   * Una plantilla
+   * Un topic que permita crearlos
+   * Un topic que los consolide
+
+---+ Agenda
+
+   * Curso Anterior
+   * Continuación de Administración de Foswiki
+   * Sintaxis Foswiki 
+      * Taller
+   * Formularios en Foswiki 
+      * *Taller*
+
+---+ Taller
+
+   * Crear un formulario nuevo
+   * Crear una plantilla nueva
+   * Crear un topic para crear topics con la plantilla y el formulario creado
+   * Un topic con el consolidado en forma de tabla para los topics.
+
+---+ Preguntas
+
+   * ¿?
+%SLIDESHOWEND%
+
+<!-- PDFSTOP -->
+
+
+%META:REVCOMMENT{ncomments="0"}%

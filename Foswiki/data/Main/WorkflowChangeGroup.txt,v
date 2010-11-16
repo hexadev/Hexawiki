@@ -1,10 +1,20 @@
-head	1.4;
+head	1.6;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 expand	@o@;
 
+
+1.6
+date	2010.11.16.03.11.33;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2010.11.11.21.55.55;	author dmontenegro;	state Exp;
+branches;
+next	1.4;
 
 1.4
 date	2010.11.02.22.55.42;	author pruebas;	state Exp;
@@ -32,20 +42,45 @@ desc
 @
 
 
-1.4
+1.6
 log
 @save topic
 @
 text
-@%META:TOPICINFO{author="pruebas" comment="save topic" date="1288738542" format="1.1" reprev="3" version="4"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289877093" format="1.1" reprev="5" version="6"}%
 %META:TOPICPARENT{name="WikiGroups"}%
 
 Edit this topic to add a description to the !WorkflowChangeGroup
 
 %META:REVCOMMENT{ncomments="0"}%
 %META:PREFERENCE{name="ALLOWTOPICCHANGE" title="ALLOWTOPICCHANGE" type="Set" value="WorkflowChangeGroup"}%
-%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="AdminUser, WorkflowAprobarGroup, WorkflowEnRevisionGroup, JulianaJaramillo, JonathanUparela"}%
+%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="AdminUser, WorkflowAprobarGroup, WorkflowEnRevisionGroup, JulianaJaramillo, JonathanUparela, WorkflowEnElaboracionGroup"}%
 %META:PREFERENCE{name="VIEW_TEMPLATE" title="VIEW_TEMPLATE" type="Set" value="GroupView"}%
+@
+
+
+1.5
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="dmontenegro" comment="save topic" date="1289512555" format="1.1" reprev="5" version="5"}%
+d8 1
+a8 1
+%META:PREFERENCE{name="GROUP" title="GROUP" type="Set" value="AdminUser, WorkflowAprobarGroup, WorkflowEnRevisionGroup, JulianaJaramillo, JonathanUparela"}%
+@
+
+
+1.4
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="pruebas" comment="save topic" date="1288738542" format="1.1" reprev="3" version="4"}%
 @
 
 

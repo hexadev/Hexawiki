@@ -1,6 +1,6 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1287585138" format="1.1" reprev="6" version="6"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289881955" format="1.1" reprev="7" version="9"}%
 <!--
-   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+   * Set WORKFLOW = Estructuras.WorkflowAprobacionDeDocumentos
 -->
 %INCLUDE{"Estructuras.EstructuraDeProcedimiento"}%
 ---+++ Descripción
@@ -9,19 +9,23 @@
 | *Fecha* | *Descripción* |
 |  |  |
 
----++ Objetivo
+---++ 1. Objetivo
 
----++ Alcance
+---++ 2. Alcance
 
----++ Campo de aplicación
+---++ 3. Campo de aplicación
 
----++ Responsables
+---++ 4. Responsables
 
----++ Términos y definiciones
+---++ 5. Términos y definiciones
 
----++ Contenido
+---++ 6. Contenido
 
----++ Anexos
+---++ 7. Documentos de Referencia
+
+---++ 8. Registros
+
+---++ 9. Anexos
 
 
 %META:REVCOMMENT{ncomments="0"}%

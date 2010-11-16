@@ -1,36 +1,3 @@
-WebPreferences	BaseUserMapping_333	1287098058	1	
-CaracterizacionDelProceso	BaseUserMapping_333	1287098059	1	
-DocumentosDeApoyo	BaseUserMapping_333	1287098059	1	
-DocumentosExternos	BaseUserMapping_333	1287098059	1	
-FormatosDelProceso	BaseUserMapping_333	1287098059	1	
-InstructivosDelProceso	BaseUserMapping_333	1287098059	1	
-ManualesDelProceso	BaseUserMapping_333	1287098059	1	
-ProcedimientoId20101012151535	BaseUserMapping_333	1287098059	1	
-ProcedimientosDelProceso	BaseUserMapping_333	1287098059	1	
-WebAtom	BaseUserMapping_333	1287098059	1	
-WebChanges	BaseUserMapping_333	1287098059	1	
-WebCreateNewTopic	BaseUserMapping_333	1287098059	1	
-WebHome	BaseUserMapping_333	1287098059	1	
-WebIndex	BaseUserMapping_333	1287098059	1	
-WebLeftBar	BaseUserMapping_333	1287098059	1	
-WebNotify	BaseUserMapping_333	1287098059	1	
-WebPreferences	BaseUserMapping_333	1287098059	2	
-WebRss	BaseUserMapping_333	1287098059	1	
-WebSearch	BaseUserMapping_333	1287098059	1	
-WebSearchAdvanced	BaseUserMapping_333	1287098059	1	
-WebStatistics	BaseUserMapping_333	1287098059	1	
-WebTopicList	BaseUserMapping_333	1287098059	1	
-WebPreferences	BaseUserMapping_333	1287098059	2	minor, reprev
-WebHome	BaseUserMapping_333	1287098096	1	minor, reprev
-InstructivoId20101015120039	BaseUserMapping_333	1287162146	1	
-FormatoId20101015120311	BaseUserMapping_333	1287162253	1	
-ManualId20101015120433	BaseUserMapping_333	1287162290	1	
-DocumentoDeApoyoId20101015120434	BaseUserMapping_333	1287162305	1	
-DocumentoExternoId20101015120434	BaseUserMapping_333	1287162344	1	
-ProcedimientoId20101012151535	BaseUserMapping_333	1287175572	2	
-ManualId20101015120433	BaseUserMapping_333	1287180104	2	
-DocumentoExternoId20101015120434	BaseUserMapping_333	1287181200	2	
-DocumentoExternoId20101015120434	BaseUserMapping_333	1287181392	2	minor, reprev
 ProcedimientoId20101017155534	BaseUserMapping_333	1287349183	1	
 ProcedimientoId20101017155534	BaseUserMapping_333	1287349773	2	
 ProcedimientoId20101017155534	BaseUserMapping_333	1287349780	3	
@@ -54,3 +21,11 @@ InstructivoId20101015120039	BaseUserMapping_333	1287442227	3
 CaracterizacionDelProceso	BaseUserMapping_333	1287585839	3	
 CaracterizacionDelProceso	BaseUserMapping_333	1288889480	4	
 InstructivoId20101015120039	BaseUserMapping_333	1289260943	4	
+InstructivoId20101015120039	pruebas	1289503787	5	
+InstructivoId20101015120039	pruebas	1289504039	5	minor, reprev
+InstructivoId20101015120039	dmontenegro	1289515147	6	
+InstructivoId20101015120039	dmontenegro	1289515167	6	minor, reprev
+InstructivoId20101015120039	pruebas	1289571332	7	
+InstructivoId20101015120039	pruebas	1289571342	8	
+CaracterizacionDelProceso	BaseUserMapping_333	1289877859	5	
+CaracterizacionDelProceso	BaseUserMapping_333	1289882172	6	

@@ -1,0 +1,114 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.11.16.05.26.07;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289885167" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+---+ Preguntas Frecuentes
+
+%TOC%
+
+---+ Como elimino o renombro un topic?
+
+Las dos preguntas se responden juntas ya que eliminar un topic es lo mismo que moverlo/renombrarlo a la web Trash.WebHome.
+Usted puede renombrer, mover o eliminar un topic directamente desde su navegador. Mover permite transefrir un topic de una Web a otra. Eliminar permite moverlo a la Web Trash.WebHome donde queda "escondido" pero puede ser recuperado posteriormente por un administrador.
+Haga click en "Mas Acciones del Tema" al final del topic que desee Mover/Renombrar/Borrar. Allí encontrará las opciones para estas acciones. 
+
+%ICON{info}% La configuración del sitio y sus permisos de acceso determinarán si es posible que usted acceda a esta funcionalidad.
+
+%ICON{info}% Para administradores: para eliminar un topic de manera permanente se debe acceder al sistema de archivos al directorio data/Trash y eliminar manualmente los archivos con el nombre del topic y extensión .txt y .txt,v
+
+---+ Como elimino o renombro un archivo adjunto?
+
+Puede mover o eliminar un adjunto directamente desde su navegador. Mover le permite transferir un adjunto de un topic a otro. Eliminar mueve el adjunto a un topic especial dentro de la Web Trash.WebHome llamado Trash.TrashAttachment donde el adjunto queda "escondido" pero puede, posteriormente, ser recuperado por un administrador.
+Actualmente Foswiki no permite renombrar los adjuntos.
+Haga click en [Manage] en la tabla de archivos adjuntos al final del topic. En la pantalla siguiente seleccione Mover o Eliminar en la esquina inferior derecha del topic y realize el cambio deseado.
+
+%ICON{info}% La configuración del sitio y sus permisos de acceso determinarán si es posible que usted acceda a esta funcionalidad.
+
+%ICON{info}% Para administradores: para eliminar un adjunto de manera permanente se debe acceder al sistema de archivos al directorio data/Trash/TrashAttachment y eliminar manualmente los archivos con el nombre del adjunto y nombre_del_adjunto,v
+
+---+ Como creo una aplicación simple basada en formularios?
+
+   * Ver [[System.AnApplicationWithWikiForm][AnApplicationWithWikiForm (inglés)]]
+
+---+ Que pasa si dos personas editan un topic al mismo tiempo?
+
+Foswiki permite la edición simultánea de un topic por varios usuarios y luego consolida los diferentes cambios automáticamente. El usuario no debería notar ninguna diferencia con una edición normal a menos que exista un conflicto entre dos ediciones y estas no puedan ser consolidadas. En este caso, usted notará markas en el contenido editado que resaltan el conflico. Los conflictos ocurren generalmente cuando dos personas intentan editar la misma sección del topic.
+Adicionalmente, Foswiki notificara si al usted tratar de editar un topic, este está siendo esditado por alguien más. Adicionalmente notifica a los editores si se realizo alguna consolidación al guardar los cambios.
+
+
+
+---+ Como veo el código de un topic?
+
+Al final de cada topic existe un vínculo que dice *ver código*. Este link muestra el topic de manera "cruda". Puede ser util para entender el funcionamiento del topic o para copiar el contenido y utilizarl en otro topic.
+
+---+ Como creo una tabla de contenido?
+
+El macro =%<nop>TOC%= genera una tabla de contenido automática basada en los encabezados del topic. Para prevenir que algun encabezado se muestre en la tabla agregue =!!= luego de definir el encabezado de esta manera: escriba =---+!!= para un encabezado =---+= y asi sucesivamente para los ancabezados de diferentes niveles.
+
+---+ Como creo un vínculo a un adjunto?
+
+Se puede crear un vínculo a un adjunto utilizando el macro =%<nop>ATTACHURL%=
+
+=%<nop>ATTACHURL%= es la ruta url completa de los adjuntos de el topic donde el macro se defina.
+
+Por ejemplo:
+
+=%<nop>ATTACHURL%/documento.doc=
+
+---+ Como hago para que un !WikiWord no se convierta en enlace?
+
+Para deshabilitar una palabra wiki utilice un signo de exclamación antes de la palabra. Por ejemplo:
+
+Para dehabilitar =SunOS= escriba =!SunOS= y obtendrá !SunOS.
+
+Puede tambien deshabilitar todas las palabras wiki dentro de una región de texto delimitando esta con los tags =&lt;noautolink&gt;= y =&lt;/noautolink&gt;=. Cada tag debe estar él sólo en una línea.
+
+
+---+ Como es la jerarquía de preferencias?
+
+Foswiki tiene cinco niveles de preferencias.
+   1 Preferencias por defecto: %SYSTEMWEB%.DefaultPreferences
+      * Son las preferencias por defecto para todo el sitio.
+      * Incluyen el nombre del sitio, control de acceso, skin utilizado, etc.
+      * No deben ser modificadas por nadie.
+   1 Preferencias del Sitio: %USERSWEB%.SitePreferences
+      * Permiten sobreescribir las preferencias por defecto del sitio para personalizarlo
+   1 Preferencias de Web: se encuentran en cada Web, por ejemplo. %WEBPREFSTOPIC%
+      * Consienen control de acceso, colores y demas propiedades de la Web.
+   1 Preferencias de Usuario: En la página de cada usuario, por ejemplo. %WIKIUSERNAME%
+      * Son propiedades que solo tienen efecto para el usuario autenticado.
+   1 Preferencias de Topic: Afectan solamente el topic donde estan definidas
+
+Las preferencias son sobreescritas por las que se encuentren en el siguiente nivel. Para evitar esto se pueden definir preferencias finales haciendo una lista de éstas en la variable FINALPREFERENCES.
+ 
+---+ Como veo una revisión anterior?
+
+Al final de cada topic se encuentra el link de *Historia* de este que permite ver todas las revisiones anteriores. Adicionalmente existen links a las últimas revisiones que permiten ver estas de manera completa. Cada revisión, además del contenido, almacena los datos de modificación (usuario, fecha, etc).
+
+
+
+
+%META:REVCOMMENT{ncomments="0"}%
+@

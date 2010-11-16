@@ -1,7 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288889621" format="1.1" reprev="5" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289882230" format="1.1" reprev="5" version="6"}%
 %META:TOPICPARENT{name="WebHome"}%
 <!--
-   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+   * Set WORKFLOW = Estructuras.WorkflowAprobacionDeDocumentos
 -->
 
 %INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
@@ -13,11 +13,11 @@
                 <tr>
                     <td width="50%">
 %EDITTABLE{format="| label, 0, *Objetivo:* | textarea, 5x60, |"}%
-| *Objetivo:* | ... |
+| *Objetivo:* | |
                     </td>   
                     <td width="50%">
 %EDITTABLE{format="| label, 0, *Alcance:* | textarea, 5x60, |"}%
-| *Alcance:* | ...<br /> |
+| *Alcance:* | |
                     </td>   
                 </tr>   
                 <tr>
@@ -50,11 +50,11 @@
                         <tr>             
                             <td width="20%">
 %EDITTABLE{format="| label, 0, * |text, 60, |"}%
-| ... |
+| ... | •	Entes de control, regulación y legislación    •	Procesos del SGI       •	Direccionamiento Organizacional  •	Gestión Financiera |
                             </td>
                             <td width="20%">
 %EDITTABLE{format="|textarea, 5x60, |"}%
-| ... |
+| 1. Normatividad<br />2. Información<br /> |
                             </td>
                             <td align="center" valign="middle"  width="4%" style="background-color: #ddd;"><strong>P</strong></td>
                             <td width="20%">

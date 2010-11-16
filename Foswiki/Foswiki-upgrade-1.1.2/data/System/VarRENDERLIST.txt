@@ -1,0 +1,22 @@
+%META:TOPICINFO{author="ProjectContributor" date="1191140974" format="1.1" version="$Rev$"}%
+%META:TOPICPARENT{name="RenderListPlugin"}%
+#VarRENDERLIST
+---+++ RENDERLIST -- render bullet lists in a variety of formats
+   * The =%<nop>RENDERLIST%= macro is handled by the RenderListPlugin
+   * Syntax: =%<nop>RENDERLIST%=
+   * Example: <verbatim class="tml">%RENDERLIST{"org" focus="Sales.WestCoastTeam"}%
+      * [[Eng.WebHome][Engineering]]
+         * [[Eng.TechPubs][Tech Pubs]]
+      * [[Sales.WestCoastTeam][Sales]]
+         * [[Sales.EastCoastTeam][East Coast]]
+         * [[Sales.WestCoastTeam][West Coast]]</verbatim>
+<div style="padding-left: 3em;">Expands as:
+%RENDERLIST{"org" focus="Sales.WestCoastTeam"}%
+      * [[Eng.WebHome][Engineering]]
+         * [[Eng.TechPubs][Tech Pubs]]
+      * [[Sales.WestCoastTeam][Sales]]
+         * [[Sales.EastCoastTeam][East Coast]]
+         * [[Sales.WestCoastTeam][West Coast]]
+</div>
+   * Related: RenderListPlugin
+<!--%JQREQUIRE{"chili"}%-->

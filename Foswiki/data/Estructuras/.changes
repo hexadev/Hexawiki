@@ -37,3 +37,42 @@ WebHome	BaseUserMapping_333	1289260616	9
 ListadoDeResponsablesSelectOptions	BaseUserMapping_333	1289260697	2	
 DocumentoEditTemplate	BaseUserMapping_333	1289261027	6	
 DocumentoExternoEditTemplate	BaseUserMapping_333	1289261061	3	
+WebLeftBar	BaseUserMapping_333	1289405280	6	
+WebLeftBar	BaseUserMapping_333	1289405309	6	minor, reprev
+PlantillaDeProcedimiento	pruebas	1289493283	7	
+PlantillaDeProcedimiento	pruebas	1289493303	7	minor, reprev
+PlantillaDeManual	pruebas	1289493343	4	
+PlantillaDeInstructivo	pruebas	1289493351	4	
+WorkflowDeDocumentos	BaseUserMapping_333	1289495591	2	
+WorkflowDeDocumentos	BaseUserMapping_333	1289495758	2	minor, reprev
+WorkflowDeDocumentos	BaseUserMapping_333	1289495805	3	
+HeaderFooterPDFAddOn	pruebas	1289504385	4	
+TitleTopicPDFAddOn	pruebas	1289504422	2	
+EstructuraDeProcedimiento	pruebas	1289504535	4	minor
+EstructuraDeProcedimiento	pruebas	1289504632	4	minor, reprev
+DocumentoViewTemplate	pruebas	1289504692	2	minor
+DocumentoViewTemplate	pruebas	1289504739	2	minor, reprev
+EstructuraDeProcedimiento	pruebas	1289504744	4	minor, reprev
+PlantillaDeProcedimiento	pruebas	1289504993	8	
+PlantillaDeManual	pruebas	1289505036	5	
+PlantillaDeInstructivo	pruebas	1289505129	5	
+WebLeftBar	dmontenegro	1289514167	7	
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289876302	1	
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289877000	1	minor, reprev
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289878822	2	minor
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289879929	3	minor
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289880862	4	
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289881045	5	
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289881308	5	minor, reprev
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289881502	5	minor, reprev
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289881539	5	minor, reprev
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289881603	5	minor, reprev
+WorkflowAprobacionDeDocumentos	BaseUserMapping_333	1289881672	5	minor, reprev
+PlantillaDeDocumentoDeApoyo	BaseUserMapping_333	1289881875	4	
+PlantillaDeDocumentoExterno	BaseUserMapping_333	1289881887	4	
+PlantillaDeFormato	BaseUserMapping_333	1289881904	4	
+PlantillaDeInstructivo	BaseUserMapping_333	1289881917	6	
+PlantillaDeManual	BaseUserMapping_333	1289881939	6	
+PlantillaDeProcedimiento	BaseUserMapping_333	1289881955	9	
+PlantillaDeDocumentoExterno	BaseUserMapping_333	1289882335	4	minor, reprev
+PlantillaDeDocumentoDeApoyo	BaseUserMapping_333	1289882362	4	minor, reprev

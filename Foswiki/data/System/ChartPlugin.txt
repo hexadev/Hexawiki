@@ -1,0 +1,226 @@
+%META:TOPICINFO{author="ProjectContributor" date="1100674597" format="1.0" version="1.0"}%
+<!--
+   * Set SHORTDESCRIPTION = Create PNG or GIF charts to visualize Foswiki tables
+-->
+
+---+!! Chart Plugin
+%SHORTDESCRIPTION%
+
+This plugin helps you visualize data in Foswiki tables as charts,
+using a default linear scale or an optional semilogarithmic scale.
+
+%TOC%
+
+Five types of charts, _line_, _area_, _bar_, _scatter_ and _combo_, are currently available:
+
+| *Type of Chart* | *Name* | *What it Does* | *Example* |
+| Area | =area= | Shows a chart using areas under a line to represent the data | <img src="%ATTACHURLPATH%/areaexample.png" /> |
+| Bar | =bar= | Shows a chart using bars to represent the data | <img src="%ATTACHURLPATH%/barexample.png" /> |
+| Line | =line= | Shows a chart using simple lines, points only, or lines with points to represent the data. <br /> __Note:__ Any areas that fall behind already drawn areas are drawn as lines to make them visible | <img src="%ATTACHURLPATH%/lineexample.png" /> |
+| Scatter | =scatter= | Shows a scatter chart (XY data points) and allows mixing =area= or =bar= with =line=, =point=, and =pline= | <img src="%ATTACHURLPATH%/scatterexample.png" /> |
+| Combo | =combo= | Shows a chart combining the features from =area= or =bar= with =line=, =point=, and =pline= <br /> __Note:__ Formally known as =arealine= which is still supported | <img src="%ATTACHURLPATH%/comboexample.png" /> |
+
+The =%<nop>CHART{...}%= variable gets expanded to an image representing the chart. Parameters and global settings determine the type of chart, dimensions, and values.
+
+---++ <nop>%TOPIC% Global Settings
+
+Plugin settings are stored as preferences variables. To reference
+a plugin setting write ==%<nop>&lt;plugin&gt;_&lt;setting&gt;%==, for example, ==%<nop>CHARTPLUGIN_TYPE%==
+
+	* Set DEBUG to 1 to get debug messages in =data/debug.txt=.  Default: =0=
+		* Set DEBUG = 0
+
+	* Default chart used: =area=, =line=, =bar=, =scatter= or =combo=. Default: =line=
+		* Set TYPE = line
+
+	* Default dimensions, scale and colors for a chart. See details in the syntax rules.
+		* Set WIDTH = 400
+		* Set HEIGHT = 250
+		* Set AREA_COLORS = #FF3333, #FFFF33, #33FF33, #CC66FF, #99FFFF, #FFCC00, #008000, #FF8080, #3366CC, #800080
+		* Set LINE_COLORS = #FF0000, #FFCC00, #00CC00, #FF00FF, #33CCCC, #FF8000, #009900, #FF6666, #3333FF, #800080
+		* Set BGCOLOR = #FFFFFF, #FFFFFF
+
+	* Define the grid color.  When xgrid/ygrid = "on", then just use the first color when drawing grid lines.  When their value is "dot", then use the full specification for drawing the grid lines ("transparent" can be used to introduce holes in the line).
+		* Set GRIDCOLOR = #808080, #808080, #808080, transparent, transparent, transparent
+		* Set NUMYGRIDS = 9
+
+	* Define what to do when an empty table cell is found.  "none" means assume no default value.  A value of "10" would mean empty cells would be assumed to have a value of 10
+		* Set DEFAULTDATA = none
+
+	* Define the default scale: linear or semilog
+		* Set SCALE = linear
+
+	* Define the number of pixels wide lines are drawn with
+		* Set LINEWIDTH = 3
+
+	* Define the number of pixels (in both the X and Y directions) to use when drawing a point
+		* Set POINTSIZE = 5
+
+	* Define bar chart specific parameters.  BARSPACE defines the space (in pixels) between bars.  BARLEADINGSPACE defines the leading space (in pixels) before the first bar.  BARTRAILINGSPACE defines the trailing space (in pixels) after the last bar
+		* Set BARLEADINGSPACE = 6
+		* Set BARTRAILINGSPACE = 6
+		* Set BARSPACE = 5
+
+---++ Syntax Rules
+
+The =%<nop>CHART{...}%= variable gets expanded to an image representing the chart. 
+
+	* Some parameters expect a range of table cells, using *extended* SpreadSheetPlugin syntax:
+		* A single table cell can be addressed as ==R1:C1==. Cell addresses:
+		  | ==R1:C1== | ==R1:C2== | ==R1:C3== | ==R1:C4== |
+		  | ==R2:C1== | ==R2:C2== | ==R2:C3== | ==R2:C4== |
+	* A range of table cells is defined by two cell addresses separated by ==".."==. For example, "row 1-20, column 3" is: ==R1:C3..R20:C3== and "row 15-5, column 2" is: ==R15:C2..R5:C2==
+   * Ranges can be discontinuous. Discontinous ranges are joined using =="+"==. For example: ==R4:C1..R5:C2+R9:C1..R15:C2==.
+   * When you are specifying datasets, you specify the range so that you have one data set per row (column). You can also specify multiple data sets using discontinuous blocks of cells; for example, ==R4:C1..R5:C2,R9:C1..R10:C2== specifies *4* data sets: R4:C1..R4:C2, R5:C1..R5:C2, R9:C1..R9:C15 and R10:C1..R10:C2
+   * ==+== has higher precedence than ==,==
+
+| *%<nop>CHART% Parameter* | *Comment* | *Default* |
+| =type= | The type of chart to create. One of ="area"=, ="bar"=, ="line"=, ="scatter"=, ="combo"= | Global =TYPE= setting |
+| =subtype= | Sub type of chart. Supported values depend on chart type: | |
+|^| - for =type="area"= =&nbsp;&nbsp;&nbsp;subtype="area" | ="area"= |
+|^| - for =type="bar"= =&nbsp;&nbsp;&nbsp;&nbsp;subtype="bar" | ="bar"= |
+|^| - for =type="line"= =&nbsp;&nbsp;&nbsp;subtype="line, point, pline" (point line) | ="line"= |
+|^| - for =type="scatter"= subtype="area, bar, line, point, pline"<br />Note: you cannot mix =area= and =bar= on the same chart.<br />Note: It is not recommended using showing a =bar= on a =scatter= chart as the X axis placement is skewed with =bar= and will not exactly line up with drawn X axis values which will defeat the purpose of using =scatter= in the first place.| ="point"= |
+|^| - for =type="combo"= &nbsp;&nbsp;subtype="area, bar, line, point, pline" (note: you can not mix =area= and =bar= on the same chart)| All but the last data set are drawn as ="area"= and the last is drawn as ="line"= |
+|^| You can use a comma delimited list of values to set a specific subtype for each data set. For example ="area, area, point, line"= would say that the first two data sets are areas, the third is point and the last one is a line | |
+| =scale= | The scale to use when creating the chart.  ="linear"= or ="semilog"= | Global =SCALE= setting |
+| =name= | Name to uniquely identify the chart file that is auto-created. | None; is required for all charts |
+| =web= | The web in which to find =topic= (specified below) in which to find the Foswiki tables | The current web |
+| =topic= | The topic in which to find the Foswiki tables | The current topic |
+| =table= | Foswiki table used to build the chart. A numerical value refers to the table number, where "1" is the first table seen in a topic. Any other non-numeric string refers to a named table defined by the =TABLE= variable with a =name= parameter. For example, table="trends" refers to the table that is preceded by =%<nop>TABLE{ name="trends" }%=. | ="1"= |
+| =title= | The title placed at the top of the chart | None |
+| =xlabel= | The label placed under the X axis describing the X values | None |
+| =ylabel= | The label placed to the left of the Y axis describing the Y values | None |
+| =data= | The source data to build the chart, defined as a range of table cells. For example for =type="line"=, a =data="R2:C3..R999:C6"= would say that four lines were to be drawn with first line being rows 2-999 column 3 and last line being rows 2-999 column 6. | None; is required for all charts |
+| =defaultdata= | If there is sparse data, then use the value specified by =defaultdata= to fill in the missing data.  A value of ="none"= means only draw actual data points. | Global =DEFAULTDATA= setting |
+| =xaxis= | X-Axis labels: The values are defined as a range of table cells.  In case of scatter graph, =xaxis= represents the actual X values.  The range also defines the orientation -- row or column oriented (if specified). For example ="R2:C2..R999:C2"= would take all of column 2 starting at row 2 and going through row 999.  It would also denote that all remaining data is oriented columnar. | None.  Is required for =type="scatter"=.  If not specified, then no X axis labels shown and data assumed to be in columnar format. |
+| =xaxisangle= | Angle the X-Axis labels are drawn.  Only two angles are supported at this time, ="0"= draws horizontal labels, other numbers draw vertical labels | ="0"= |
+| =yaxis= | Y-Axis labels: ="on"= to show the labels, ="off"= for no labels. | ="off"= |
+| =ymin= | Minimum value drawn on the Y axis | The minimum value specified by =data= |
+| =ymax= | Maximum value drawn on the Y axis | The maximum value specified by =data= |
+| =xgrid= | Grid shown for X axis: ="on"= for solid grid lines, ="dot"= for dotted grid lines, ="off"= for none. | ="dot"= |
+| =ygrid= | Grid shown for Y axis: ="on"= for solid grid lines, ="dot"= for dotted grid lines, ="off"= for none. | ="dot"= |
+| =numygrids= | Number of Y axis grids drawn | Global =NUMYGRIDS= setting |
+| =ytics= | Number of tic marks to draw between Y axis grid lines.  | If =scale="semilog"=, then =ytics="10"=, else defaults to ="0"= |
+| =numxgrids= | Number of X axis grids drawn.  This can be used if there are a large number of X axis data points such that the X axis labels overlap. | Draw all X-Axis labels |
+| =datalabel= | Show data labels: ="on"= for labels, ="box"= for label in a box, ="off"= for none. It can also be a list like ="off, off, off, box"= to show values in a box for the fourth set of data points only. | ="off"= |
+| =legend= | Legend shown to the right of the chart.  For example ="R1:C3..R1:C6"= would take all of row 1 starting at column 3 and going through column 6 as the name/legend of each set of data points | None; no legend if not specified |
+| =width= | Defines the overall width of the chart in pixels. | Global =WIDTH= setting |
+| =height= | Defines the overall height of the chart in pixels. | Global =HEIGHT= setting |
+| =alt= | Alternate text for chart image | Empty alt tag |
+| =colors= | A list of colors defining the color of each set of data points. | Global =LINE_COLORS= setting for lines; global =AREA_COLORS= setting for area |
+| =bgcolor= | Background color of the area surrounding the chart. For example, ="#E7E7E7"= sets a light gray background. Optionally specify a second values for the chart background itself. For example, ="#E7E7E7, #FFFFC0"= defines a chart with a light yellow background on a light gray surrounding. | Global =BGCOLOR= setting |
+| =gridcolor= | Colors/style of the grid (if any).  If =xgrid= or =ygrid= = "on" then use the first =gridcolor= for drawing solid grid lines.  If =xgrid= or =ygrid= = "dot", then use the full set of colors to define the line style for drawing the grid lines ("transparent" can be used to introduce holes in the line)" | Global =GRIDCOLOR= setting |
+| =linewidth= | Width of data lines in pixel | Global =LINEWIDTH= setting |
+| =pointsize= | Size of data points in pixel | Global =POINTSIZE= setting |
+| (other parameters) | Other parameters are passed on to the =img= tag. Useful to add additional image parameters like =align="right"= | None |
+
+__Note:__ To support legacy syntax, =datatype= maps to =subtype=, =arealine= maps to =combo=.
+
+---++ Examples
+
+Assuming the following three Foswiki tables.  The first shows the data oriented in columns while the seconds shows the data oriented in rows
+
+<table><tr><td valign="top">
+*Table 1:*
+%TABLE{name="exampleTable1"}%
+| *Year* | *Actual* |
+| 1998 | 9 |
+| 1999 | 14 |
+| 2000 | 19 | 
+| 2001 | 25 |
+| 2002 | 39 |
+
+</td><td>&nbsp;</td><td valign="top">
+*Table 2:*
+%TABLE{name="exampleTable2"}%
+| *Year* | *1998* | *1999* | *2000* | *2001* | *2002* |
+| *Low* | 8 | 10 | 13 | 17 | 22 |
+| *Target* | 10 | 12 | 17 | 20 | 25 |
+| *High* | 12 | 15 | 19 | 24 | 29 |
+| *Actual* | 9 | 14 | 15 | 19 | 27 |
+
+</td><td>&nbsp;</td><td valign="top">
+*Table 3:*
+%TABLE{name="exampleTable3"}%
+| *X* | *Y1* | *Y2* | *Y3* |
+| 3 | 1 | 3 | 7 |
+| 6 | 5 | 8 | 10 |
+| 11 | 3 | 5 | 9 |
+| 10 | 1 | 3 | 7 |
+| 8 | 2 | 3 | 8 |
+
+</td></tr></table>
+
+| *Type of chart* | *You type* | *You should get...* | *...if installed* |
+| area | Multiple area<br /><br /> =%<nop>CHART{ type="area" name="area1" table="exampleTable2" data="R2:C2..R5:C6" xaxis="R1:C2..R1:C6" legend="R2:C1..R5:C1" width="225" height="200" }%= | <img src="%ATTACHURLPATH%/area1.png" /> | %CHART{ type="area" name="area1" table="exampleTable2" data="R2:C2..R5:C6" xaxis="R1:C2..R1:C6" legend="R2:C1..R5:C1" width="225" height="200" }% |
+| bar | Multiple bars<br /><br /> =%<nop>CHART{ type="bar" name="bar1" table="exampleTable2" data="R3:C2..R5:C4" xaxis="R1:C2..R1:C4" legend="R3:C1..R5:C1" ymin="0" width="225" height="200" }%= | <img src="%ATTACHURLPATH%/bar1.png" /> | %CHART{ type="bar" name="bar1" table="exampleTable2" data="R3:C2..R5:C4" xaxis="R1:C2..R1:C4" legend="R3:C1..R5:C1" ymin="0" width="225" height="200" }% |
+| line | Simple line<br /><br /> =%<nop>CHART{ type="line" name="line1" table="exampleTable1" data="R2:C2..R6:C2" xaxis="R2:C1..R6:C1" legend="R1:C2..R1:C2" width="225" height="200" }%= | <img src="%ATTACHURLPATH%/line1.png" /> | %CHART{ type="line" name="line1" table="exampleTable1" data="R2:C2..R6:C2" xaxis="R2:C1..R6:C1" legend="R1:C2..R1:C2" width="225" height="200" }% |
+| line | Multiple lines<br /><br /> =%<nop>CHART{ type="line" name="line2" table="exampleTable2" data="R2:C2..R5:C6" xaxis="R1:C2..R1:C6" legend="R2:C1..R5:C1" width="225" height="200" }%= | <img src="%ATTACHURLPATH%/line2.png" /> | %CHART{ type="line" name="line2" table="exampleTable2" data="R2:C2..R5:C6" xaxis="R1:C2..R1:C6" legend="R2:C1..R5:C1" width="225" height="200" }% |
+| scatter | Multiple scatter<br /><br /> =%<nop>CHART{ type="scatter" subtype="pline" name="scatter1" table="exampleTable3" data="R2:C2..R6:C4" xaxis="R2:C1..R6:C1" legend="R1:C2..R1:C4" numxgrids="4" linewidth="1" width="225" height="200" }%= | <img src="%ATTACHURLPATH%/scatter1.png" /> | %CHART{ type="scatter" subtype="pline" name="scatter1" table="exampleTable3" data="R2:C2..R6:C4" xaxis="R2:C1..R6:C1" legend="R1:C2..R1:C4" numxgrids="4" linewidth="1" width="225" height="200" }% |
+| combo | Combo with area, pline, point, & line<br /><br /> =%<nop>CHART{ type="combo" subtype="area, pline, point, line" name="combo1" table="exampleTable2" data="R2:C2..R5:C6" xaxis="R1:C2..R1:C6" legend="R2:C1..R5:C1" width="225" height="200" }%= | <img src="%ATTACHURLPATH%/combo1.png" /> | %CHART{ type="combo" subtype="area, pline, point, line" name="combo1" table="exampleTable2" data="R2:C2..R5:C6" xaxis="R1:C2..R1:C6" legend="R2:C1..R5:C1" width="225" height="200" }% |
+| combo | Combo with bar, pline, point, & line<br /><br /> =%<nop>CHART{ type="combo" subtype="bar, pline, point, line" name="combo2" table="exampleTable2" data="R2:C2..R5:C6" xaxis="R1:C2..R1:C6" legend="R2:C1..R5:C1" width="225" height="200" }%= | <img src="%ATTACHURLPATH%/combo2.png" /> | %CHART{ type="combo" subtype="bar, pline, point, line" name="combo2" table="exampleTable2" data="R2:C2..R5:C6" xaxis="R1:C2..R1:C6" legend="R2:C1..R5:C1" width="225" height="200" }% |
+
+The "if installed" column shows images instead of variables in case the plugin is installed correctly.
+
+---++ Output
+
+	* A graphics file in PNG or GIF format is created containing the chart results.  The file is placed in =%<nop>PUBURLPATH%/%<nop>WEB%/%<nop>TOPIC%/_ChartPlugin_&lt;type&gt;_&lt;name&gt;.png= or =.gif= (GIF for GD version 1.19 or older)
+	* =%<nop>CHART{...}%= gets expanded to an =&lt;img ... /&gt;= image tag.
+
+---++ Error Handling
+
+If the required parameters are not defined, then an error message is returned or an &lt;img ... /&gt; image tag is returned pointing to a graphic containing the error message.
+
+---++ Plugin Installation Instructions
+You do not need to install anything in the browser to use this extension. The following instructions are for the administrator who installs the extension on the server.
+
+Open configure, and open the "Extensions" section. Use "Find More Extensions" to get a list of available extensions. Select "Install".
+
+If you have any problems, or if the extension isn't available in =configure=, then you can still install manually from the command-line. See http://foswiki.org/Support/ManuallyInstallingExtensions for more help.
+
+   * Check above examples if the "if installed" column shows images instead of variables.
+   * Check ChartPluginTests for some more tests
+
+---++ Plugin Info
+
+|  Plugin Author: | Current maintainer Foswiki:Main.KennethLavrsen, original authors from old project: TWiki:Main.PeterThoeny, TWiki:Main.TaitCyrus |
+|  Copyright &copy;: | 2004-2006, TWiki:Main.PeterThoeny, TWiki:Main.TaitCyrus; 2008 Kenneth Lavrsen and Foswiki Contributors | 
+|  License: | GPL ([[http://www.gnu.org/copyleft/gpl.html][GNU General Public License]]) |
+|  Release: | 13 Mar 2010 |
+|  Version: | 6743 (2010-03-14) |
+|  Change History: | <!-- specify latest version first -->&nbsp; |
+|   13 Mar 2010: | Foswiki:Main.WillNorris: work around "insecure dependency" error with certain perl/gd/cpan combinations (Foswikitask:Item1322) |
+|   07 Jan 2010: | Foswiki:Main.AndrewJones, Foswiki:Main.SvenDowideit: Add dependencies (Foswikitask:Item8381) |
+|   13 Oct 2009: | Kenneth Lavrsen: Fixed problem where the plugin could not chart the contents of a table if the table is at the end of a topic |
+|   08 Dec 2008: | Kenneth Lavrsen: Changed the author to myself. TWiki:Main.TaitCyrus is the original author but has not been maintaining this since and is not registered user on fork. So now I officially take the task as maintainer. Plugin is changed to Foswiki namespace and tested and works under Foswiki 1.0.0 |  
+|   18 May 2007: | Added discontinuous ranges - Foswiki:Main.CrawfordCurrie |
+|	16 Nov 2004: | V1.401 - Added benchmarks (no code changes) |
+|	30 Aug 2004: | V1.400 - Added support for =subtype="bar"= (includes various global bar settings), updated =gridcolor= to not only define the grid color but allowing the user to define the line style (for drawing user defined dotted lines), add a global for how wide lines are drawn instead of a hard coded value, change the order of how things are drawn so now the order is: areas, grid lines and X/Y axis labels, bars, lines/points/plines, rectangle around chart, data point labels, chart title/X/Y labels, and finally the legends. |
+|	13 May 2004: | V1.300 - Added support for =type="scatter"=; renamed =type="arealine"= to ="combo"= (arealine is undocumented); renamed =datatype= to =subtype= (datatype is undocumented); added =subtype= options ="point"= and ="pline"=, added new settings =GRIDCOLOR=, =DEFAULTDATA=, =POINTSIZE=; fixed bug with how the number of grids were drawn |
+|	17 Oct 2003: | V1.201 - Fix boundary cases with =semilog= scale |
+|	16 Oct 2003: | V1.200 - Add new options of _scale_ and _ytics_. |
+|	16 Jun 2003: | V1.100 - Add support for reversed tables (R999..R1), add new options of _xaxisangle_, _numxgrids_, and _defaultdata_, and allow sparse data. |
+|	7 Oct 2002: | V1.003 - Improved performance, fixed bugs with color allocation, auto-legend placement and parsing of numbers in tables.  Also bumped the upper value when numbers switch from decimal format to engineering format |
+|  13 Sept 2002: | V1.002 - Add support for better placement of legends so they don't overlap, add auto ymin/ymax determination if not specified, add =bgcolor= and =numygrids= options |
+|  27 Jun 2002: | V1.001 - Data range specified is clipped to actual table size; more forgiving data parsing by extracting first numeral from a table cell, e.g. extract =25= from =&lt;u&gt;25%&lt;/u&gt;= |
+|  20 Jun 2002: | Initial version (V1.000) |
+|  Dependencies: | <table class="foswikiTable" border="1"><tr><th>Name</th><th>Version</th><th>Description</th></tr><tr><td align="left">gd</td><td align="left">&gt;0</td><td align="left">Required.</td></tr><tr><td align="left">GD</td><td align="left">&gt;=0.01</td><td align="left">Required.</td></tr><tr><td align="left">POSIX</td><td align="left">&gt;0</td><td align="left">Required.</td></tr></table> |
+|  Plugin Home: | http://foswiki.org/Extensions/%TOPIC% |
+|  Support: | http://foswiki.org/Support/%TOPIC% |
+
+__Related Topics:__ %SYSTEMWEB%.DefaultPreferences, %USERSWEB%.SitePreferences, [[%SYSTEMWEB%.Plugins][Plugins]]
+
+
+%META:FILEATTACHMENT{name="line1.png" attr="h" comment="" date="1093917753" path="line1.png" size="1220" user="PeterThoeny" version="1.4"}%
+%META:FILEATTACHMENT{name="line2.png" attr="h" comment="" date="1093917765" path="line2.png" size="1993" user="PeterThoeny" version="1.4"}%
+%META:FILEATTACHMENT{name="lineexample.png" attr="h" comment="" date="1084659332" path="C:\DATA\MyTWiki\Plugins\ChartPlugin\pub\TWiki\ChartPlugin\lineexample.png" size="2462" user="PeterThoeny" version="1.1"}%
+%META:FILEATTACHMENT{name="areaexample.png" attr="h" comment="" date="1024533210" path="C:\Data\MyTWiki\Plugins\ChartPlugin\pub\TWiki\ChartPlugin\areaexample.png" size="3370" user="PeterThoeny" version="1.1"}%
+%META:FILEATTACHMENT{name="combo1.png" attr="h" comment="" date="1093917959" path="combo1.png" size="1696" user="PeterThoeny" version="1.2"}%
+%META:FILEATTACHMENT{name="comboexample.png" attr="h" comment="" date="1084659314" path="C:\DATA\MyTWiki\Plugins\ChartPlugin\pub\TWiki\ChartPlugin\comboexample.png" size="3071" user="PeterThoeny" version="1.2"}%
+%META:FILEATTACHMENT{name="scatter1.png" attr="h" comment="" date="1093917951" path="scatter1.png" size="2071" user="PeterThoeny" version="1.2"}%
+%META:FILEATTACHMENT{name="scatterexample.png" attr="h" comment="" date="1093918171" path="scatterexample.png" size="1858" user="PeterThoeny" version="1.2"}%
+%META:FILEATTACHMENT{name="area1.png" attr="h" comment="" date="1093917730" path="area1.png" size="1774" user="PeterThoeny" version="1.1"}%
+%META:FILEATTACHMENT{name="bar1.png" attr="h" comment="" date="1093917742" path="bar1.png" size="1041" user="PeterThoeny" version="1.1"}%
+%META:FILEATTACHMENT{name="combo2.png" attr="h" comment="" date="1093917971" path="combo2.png" size="1583" user="PeterThoeny" version="1.1"}%
+%META:FILEATTACHMENT{name="barexample.png" attr="h" comment="" date="1093918158" path="barexample.png" size="1886" user="PeterThoeny" version="1.1"}%

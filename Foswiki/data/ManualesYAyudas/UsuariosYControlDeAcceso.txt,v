@@ -1,0 +1,116 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.11.16.05.36.04;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289885764" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+<!-- PDFSTART --> 
+
+
+
+La unidad está desarrollada en formato presentación. Presione el botón para iniciar la presentación. Recuerde que para agregar un slide a la presentación se debe utilizar un título de primer nivel.
+
+%SLIDESHOWSTART%
+
+---% Curso de Control de acceso en Twiki
+
+Por Hexa
+
+Medellín %DATE%
+
+---+ Agenda
+
+   * Usuarios
+   * Grupos
+   * Control de acceso
+
+---+ Usuarios
+
+   * Personas registradas en Foswiki Main.FoswikiUsers
+   * Los usuarios tienen: 
+      * Nombre Wiki
+      * Contraseña
+      * Pertenece a un grupo Wiki
+      * Nivel de acceso a las WEBs (Permisos)
+
+---+ Grupos
+
+   * Grupos que creados por el administrador de Foswiki para la gestión de usuarios y permisos sobre el contenido(Main.WikiGroups)
+   * Los grupos tienen: 
+      * Usuarios
+      * Un responsable
+      * Nivel de acceso a las WEBs
+
+---+ Taller
+
+   * Crear un usuario de prueba
+   * Crear un grupo de prueba
+
+---+ Control de acceso
+
+   * En Foswiki se utiliza un control de acceso basado en roles(grupos)
+   * De manera general, cada WEB(o Sub Web) define el control de acceso.
+   * También, se puede controlar el acceso a topics especificos
+
+---+ Control de acceso
+
+   * Los permisos se cambian en el WebPreferences de cada WEB.
+   * Las varibales de control de acceso son: 
+      * ALLOWWEBVIEW
+      * ALLOWWEBCHANGE
+      * ALLOWWEBRENAME
+      * ALLOWTOPICVIEW
+      * ALLOWTOPICCHANGE
+      * ALLOWTOPICRENAME
+
+---+ Control de acceso
+
+   * 
+      * DENYWEBVIEW
+      * DENYWEBCHANGE
+      * DENYWEBRENAME
+      * DENYTOPICVIEW
+      * DENYTOPICCHANGE
+      * DENYTOPICRENAME
+
+---+ Control de acceso
+
+   * Recordando... 
+      * La configuración global de Foswiki se encuentra en la WEB System en el topic System.DefaultPreferences y en Main en Main.SitePreferences
+      * La configuración de una WEB la contiene el topic WebPreferences dentro de la WEB.
+      * La configuración de la WEB sobre-escribe los parámetros globales(Si estos permiten la sobre-escritura)
+      * Para configurar la sobre-escritura de parámetros de configuración se debe agregar o eliminar el parámetro del topic System.DefaultPreferences en la WEB Main.SitePreferences
+      * Cada WEB es su WebPreferences tiene variable FINALPREFERENCES, la cual permite o no sobre-escribir parametros dentro de topics o SubWebs dentro de la WEB.
+
+---+ Taller
+
+   * Cambiar los permisos de la WEB Sandbox, utilizando el grupo y el usuario creado anteriormente
+   * Daler permisos de solo lectura a usario sobre la WEB y en un topic darle permisos de Escritura.
+   * Permitir al usuario sobre-escribir las preferencias de control de acceso
+%SLIDESHOWEND%
+
+<!-- PDFSTOP -->
+
+
+%META:REVCOMMENT{ncomments="0"}%
+@

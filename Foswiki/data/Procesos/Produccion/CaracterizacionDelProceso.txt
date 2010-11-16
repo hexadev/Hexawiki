@@ -1,7 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288890262" format="1.1" reprev="5" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289882254" format="1.1" reprev="3" version="4"}%
 %META:TOPICPARENT{name="WebHome"}%
 <!--
-   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+   * Set WORKFLOW = Estructuras.WorkflowAprobacionDeDocumentos
 -->
 
 %INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
@@ -49,8 +49,8 @@
                   <tbody>
                         <tr>             
                             <td width="20%">
-%EDITTABLE{format="| label, 0, * |text, 60, |"}%
-| ... |
+%EDITTABLE{format="| textarea, 5x80, |"}%
+| 1. qweqwe<br />2. asdasdas<br />3. qweqwe |
                             </td>
                             <td width="20%">
 %EDITTABLE{format="|textarea, 5x60, |"}%

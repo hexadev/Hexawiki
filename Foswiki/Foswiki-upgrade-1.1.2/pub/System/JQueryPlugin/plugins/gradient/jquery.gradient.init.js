@@ -1,0 +1,1 @@
+jQuery(function(a){a(".jqGradient:not(.jqInitedGradient)").each(function(){var c=a(this);c.addClass("jqInitedGradient");var b=a.extend({},c.metadata());c.gradient(b)})});

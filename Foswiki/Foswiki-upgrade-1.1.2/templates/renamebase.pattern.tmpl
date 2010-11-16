@@ -1,0 +1,30 @@
+%TMPL:INCLUDE{"renamebase"}%
+%TMPL:DEF{"logo"}%%TMPL:END%
+
+
+%TMPL:DEF{"script:skintemplate"}%%TMPL:END%
+
+
+%TMPL:DEF{"bodyclassname"}%patternNoViewPage patternRenamePage%TMPL:END%
+
+
+%TMPL:DEF{"toolbar"}%<div class="patternTop">%TWISTYBUTTON{id="renamehelp" mode="div" remember="on" showlink="%MAKETEXT{"Show help"}%" hidelink="%MAKETEXT{"Hide help"}%" showimgleft="%ICONURLPATH{toggleopen}%" hideimgleft="%ICONURLPATH{toggleclose}%"  linkclass="patternTwistyButton"}%</div>%TMPL:END%
+
+
+%TMPL:DEF{"pagehelp"}%%TWISTYTOGGLE{id="renamehelp" mode="div" remember="on" noscript="hide"}%<div class="foswikiHelp">%TMPL:P{"notes"}%</div>%ENDTWISTYTOGGLE%%TMPL:END%
+
+%TMPL:DEF{"pagehelp_nojavascript"}%%TWISTYTOGGLE{id="pagehelp_nojavascript" mode="div" start="hide"}%<div class="foswikiHelp">%TMPL:P{"notes"}%</div>%ENDTWISTYTOGGLE%%TMPL:END%
+
+
+%TMPL:DEF{"checkuncheck"}%%{
+   foswikiCheckAllOn and foswikiCheckAllOff are handled in foswikiForm.js
+}%<div class="foswikiMakeVisibleBlock"><hr />
+<p><input type="button" class="foswikiButton foswikiCheckAllOn" value='%MAKETEXT{"Select all"}%' />&nbsp;<input type="button" class="foswikiButton foswikiCheckAllOff" value='%MAKETEXT{"Clear all"}%' /> %MAKETEXT{"checkboxes of referenced topics"}%</p></div>%TMPL:END%
+
+
+%TMPL:DEF{"content"}%%TMPL:P{"toolbar"}%
+%TMPL:P{"pagehelp"}%
+<div class="patternBorder">%TMPL:P{"formstart"}%
+%TMPL:P{"renameformsteps"}%
+%TMPL:P{"topicaction"}%
+%TMPL:P{"formend"}%</div>%TMPL:P{"pagehelp_nojavascript"}%%TMPL:END%

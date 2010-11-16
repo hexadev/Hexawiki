@@ -1,8 +1,10 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1286757609" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="pruebas" comment="save topic" date="1289504739" format="1.1" reprev="2" version="2"}%
 %TMPL:INCLUDE{view}%
 %TMPL:DEF{"form"}%%TMPL:END%
 %TMPL:DEF{"content"}%%TMPL:P{"simpleheader"}%
 %TEXT%
+<!-- PDFSTOP -->
 %TMPL:END%
 
 %META:TOPICMOVED{by="BaseUserMapping_333" date="1286752816" from="Estructuras.ProcedimientoViewTemplate" to="Estructuras.DocumentoViewTemplate"}%
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="2" t_1="1289504692"}%

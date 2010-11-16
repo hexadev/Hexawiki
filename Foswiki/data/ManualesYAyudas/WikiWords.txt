@@ -1,0 +1,31 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289885282" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+---+!! Que es una Palabra Wiki o !WikiWord?
+
+Una palabra Wiki consiste de dos o mas palabras con sus respectivas primeras letras en mayúscula y si espacios entre ellas. Las palabras Wiki son nombres de topics dentro de Foswiki. De esta manera, al escribir el nombre de un topic, usted esta creando un link a ese topic. Por ejemplo uste escribe =%HOMETOPIC%= y al guardar los cambios esto queda %HOMETOPIC%. Es así de facil. Al usted escribir una palabra Wiki se establece automáticamente un hipervínculo al topic con este nobre. Si el topic no existe, se creará un vinculo al final de la palabra que permite crear el topic.
+
+---++ Ejemplos de Palabras Wiki
+
+   * WikiWords
+   * GlosarioDeTerminos
+   * UnNombreLargoTambienEsPosible
+   * Nine2Five: Los números se toman como letras minúsculas
+
+---++ Malos Ejemplos
+
+   * 7Dias: El nombre comienza por un número
+   * Know-How: Nombre con guiones separadores
+
+---++ Vínculos
+
+Adicional a escribir el nombre del topic para generar el link existen otras posibilidades. Estas son algunas de ellas:
+
+   * Para escribir un link con una etiqueta personalizada puede utilizar corchetes: =[<nop>[GlosarioDeTerminos][Glosario de Términos]]= - esto queda: [[GlosarioDeTerminos][Glosario de Términos]]
+   * para vinclular un topic de otra Web escriba: =Sandbox.WebSearch= - esto queda: Sandbox.WebSearch
+   * Para vincular un topic en otra subweb escriba: =Sandbox.Subweb.WebSearch=.
+
+---+ Ver más
+   * System.WikiWord
+
+
+%META:REVCOMMENT{ncomments="0"}%

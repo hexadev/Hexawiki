@@ -1,0 +1,38 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289884525" format="1.1" reprev="1" version="1"}%
+---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
+
+---++ Manuales y Ayudas
+
+   * ManualDeInstalacion
+   * [[GuiaGestionDeUsuarios][Guía rápida para la gestión de usuarios]]
+   * [[PreguntasFrecuentes][Preguntas Frecuentes]]
+   * [[AyudaDeMacros][Ayuda de Macros]]
+   * [[WikiWords][WikiWords]]: Palabras Wiki
+   * [[SintaxisWiki][Sintaxis Wiki]]: Sintaxis y Formato del Texto
+   * [[GlosarioDeTerminos][Glosario de Terminos]]
+   * [[%SYSTEMWEB%.FileAttachments][Archivos Adjuntos (inglés)]]
+   * [[System.ReferenceManual][Manual de Referencia (inglés)]]
+   * [[System.CompleteDocumentation][Documentación Completa (inglés)]]: Igual que el manual de referencia pero en una sola página.
+
+---++ Procesos
+
+   * [[ManualUsoDocumentacionProcesos][Manual de Uso de Web Procesos]]
+
+
+---++ Contacto
+
+   * [[ProcedimientoDeSoporte][Soporte]]
+
+---++ Capacitacion
+
+   * InstalacionYConfiguracion
+   * UsuariosYControlDeAcceso
+   * SintaxisYFormularios
+
+---++ Referencias
+
+   * [[http://foswiki.org][Página Oficial de Foswiki]]
+   * [[Foswiki:Extensions.WebHome][Extensiones de Foswiki]]
+   * [[http://www.hexasas.com][Página de Hexa Ingenieros]]
+
+%META:REVCOMMENT{ncomments="0"}%

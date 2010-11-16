@@ -1,10 +1,3 @@
-SitePreferences	BaseUserMapping_333	1286826659	2	
-SitePreferences	BaseUserMapping_333	1286826659	3	
-SitePreferences	BaseUserMapping_333	1286826683	3	minor, reprev
-SitePreferences	BaseUserMapping_333	1286827495	3	minor, reprev
-SitePreferences	BaseUserMapping_333	1286827534	3	minor, reprev
-WorkflowEnRevisionGroup	BaseUserMapping_333	1287185825	1	
-WorkflowAprobarGroup	BaseUserMapping_333	1287185914	1	
 SitePreferences	BaseUserMapping_333	1287349047	4	
 SitePreferences	BaseUserMapping_333	1287426565	5	
 SitePreferences	BaseUserMapping_333	1287428963	5	minor, reprev
@@ -84,3 +77,42 @@ SitePreferences	BaseUserMapping_333	1288976346	7	minor, reprev
 SitePreferences	BaseUserMapping_333	1288977553	7	minor, reprev
 WebLeftBarExample	BaseUserMapping_333	1289229562	2	
 SitePreferences	BaseUserMapping_333	1289255854	8	
+SitePreferences	BaseUserMapping_333	1289406567	9	
+NuevoGruop	BaseUserMapping_333	1289407629	1	
+NuevoGruop	BaseUserMapping_333	1289407629	1	minor, reprev
+NuevoGruop	BaseUserMapping_333	1289407629	1	minor, reprev
+NuevoGruop	BaseUserMapping_333	1289407629	1	minor, reprev
+WorkflowAprobarGroup	BaseUserMapping_333	1289407772	4	
+NuevoGroup	BaseUserMapping_333	1289407821	1	
+NuevoGroup	BaseUserMapping_333	1289407821	1	minor, reprev
+NuevoGroup	BaseUserMapping_333	1289407821	1	minor, reprev
+NuevoGroup	BaseUserMapping_333	1289407821	1	minor, reprev
+NuevoGroup	BaseUserMapping_333	1289407835	1	minor, reprev
+SitePreferences	BaseUserMapping_333	1289408214	10	
+NuevoGroup	pruebas	1289421477	2	minor, reprev
+NuevoGroup	pruebas	1289421477	2	
+SistemasGroup	pruebas	1289421500	2	
+SistemasGroup	pruebas	1289421500	2	
+SistemasGroup	pruebas	1289421562	2	
+SistemasGroup	pruebas	1289421562	2	minor, reprev
+SistemasGroup	pruebas	1289421580	2	minor, reprev
+SistemasGroup	pruebas	1289421580	2	
+UserPrueba2	dmontenegro	1289430000	2	
+UserPrueba2	dmontenegro	1289430000	2	
+WebHome	jjaramillo	1289483369	3	
+SitePreferences	pruebas	1289491746	11	
+AdminGroup	BaseUserMapping_333	1289494596	4	
+AdminGroup	BaseUserMapping_333	1289495167	4	minor, reprev
+SitePreferences	pruebas	1289503699	12	
+WorkflowEnRevisionGroup	pruebas	1289505190	4	
+WorkflowEnRevisionGroup	pruebas	1289505203	4	minor, reprev
+WorkflowAprobarGroup	pruebas	1289511610	5	
+WorkflowAprobarGroup	dmontenegro	1289512240	6	
+WorkflowAprobarGroup	dmontenegro	1289512260	6	minor, reprev
+WorkflowAprobarGroup	dmontenegro	1289512279	6	minor, reprev
+WorkflowAprobarGroup	dmontenegro	1289512293	6	minor, reprev
+WorkflowChangeGroup	dmontenegro	1289512555	5	
+WorkflowChangeGroup	dmontenegro	1289512555	5	minor, reprev
+WorkflowEnElaboracionGroup	BaseUserMapping_333	1289876517	1	
+WorkflowEnElaboracionGroup	BaseUserMapping_333	1289876572	1	minor, reprev
+WorkflowChangeGroup	BaseUserMapping_333	1289877093	6	

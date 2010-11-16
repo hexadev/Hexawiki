@@ -1,0 +1,116 @@
+.foswikiFormSteps .jqTabPane {
+  margin:0px;
+}
+.jqTabPane form {
+  margin:0px;
+  padding:0px;
+}
+.jqTab {
+  display:none; /* switched on by plugin */
+  border:1px solid #BDBEC5;
+  padding:0px;
+  margin:0px;
+}
+.jqTab.current {
+  display:block;
+}
+.jqTabContents {
+  padding:1em;
+}
+ul.jqTabGroup {
+  margin:0px;
+  padding:0px;
+  list-style:none;
+  display:block;
+  float:left;
+}
+ul.jqTabGroup li {
+  float:left;
+  list-style:none;
+}
+ul.jqTabGroup a:hover,
+ul.jqTabGroup a {
+  text-decoration: none;
+  white-space:nowrap;
+  float:left;
+  display:block;
+}
+.foswikiFormSteps ul.jqTabGroup li.current {
+  background-color: inherit;
+}
+
+.jqTabPane .fltMakeIndexWrapper {
+  margin:0px;
+}
+
+.jqAjaxLoader {
+  background: url(../../images/spinner.gif) 0 0 no-repeat;
+  height: 16px;
+  width: 16px;
+  display: block;
+}
+
+/* default theme */
+.jqTabPaneDefault ul.jqTabGroup li {
+  background-color: transparent;
+  background-image: url('tab_right.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  padding:0px 3px 0px 0px;
+  margin:0px 4px -1px 0px;
+  *margin:5px 4px -6px 0px; /* IE7 */
+  height:29px;
+}
+.jqTabPaneDefault ul.jqTabGroup a:hover,
+.jqTabPaneDefault ul.jqTabGroup a {
+  background-color:transparent;
+  background-image: url('tab_left.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+  color:black;
+  margin:0px 0px 0px 0px;
+  padding:4px 8px 0px 18px;
+  height:25px;
+  font-size:12px;
+  line-height:100%;
+}
+.jqTabPaneDefault ul.jqTabGroup li.current {
+  background-image: url('tab_right_on.png');
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.jqTabPaneDefault ul.jqTabGroup li.current a:hover,
+.jqTabPaneDefault ul.jqTabGroup li.current a {
+  background-image: url('tab_left_on.png');
+  background-repeat:no-repeat;
+  background-position:left top;
+  color: #333;
+}
+.jqTabPaneDefault ul.jqTabGroup a:hover,
+.jqTabPaneDefault ul.jqTabGroup a:focus {
+  color:red;
+}
+
+
+/* simple theme */
+.jqTabPaneSimple ul.jqTabGroup li {
+  background:transparent;
+  margin:6px 6px -1px 0;
+  *height:30px; /* IE7 */
+}
+.jqTabPaneSimple ul.jqTabGroup li.current a {
+  background:#fff;
+  border-bottom:1px solid #fff;
+}
+.jqTabPaneSimple ul.jqTabGroup a:hover,
+.jqTabPaneSimple ul.jqTabGroup a {
+  background:#eee;
+  border: 1px solid #ccc;
+  color:inherit;
+  *color:#000; /* IE7 */
+  padding:5px 10px;
+}
+.jqTabPaneSimple ul.jqTabGroup a:hover {
+  color:red;
+}

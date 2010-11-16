@@ -1,0 +1,84 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.11.16.05.25.36;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289885136" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+<!-- PDFSTART -->
+---+ Guía rapida de Creacion/Eliminacion de usuarios en Foswiki 
+%TOC%
+---++ Creación de usuarios Nuevos
+
+Para la creación de usuarios en Foswiki se deben seguir los siguientes pasos:
+   * Ingresar a System.UserRegistration.
+   * Diligenciar los campos del formulario con los datos del nuevo usuario
+   * Se debe garantizar que ni el WikiName ni el !LoginName ya se encuentren registrados, de lo contrario Foswiki mostrara una alerta mencionado que no es posible crear el usuario.
+      * Se debe garantizar que:
+         * El WikiName no sea un topic existente en la web Main
+         * El LoginName no exista en el archivo .htpasswd en el servidor de Foswiki
+         * La pareja WikiName - LoginName no exista en el topic Main.FoswikiUsers
+
+---++ Eliminación de usuario
+
+Para la eliminación de usuario se debe(Administradores), se hara el ejemplo borrando al usuario PepePerez - pperez:
+   * Modificar el .htpasswd eliminando la linea que contiene el LoginName del usuario.(C:\www\...\Foswiki\data\.htpasswd).
+      * Buscar: _pperez:uOr77GvqFeYuU:pperez@@choucairtesting.com_
+   * Eliminar la pareja WikiName - LoginName del topic Main.FoswikiUsers.
+      * Elimiar la linea: PepePerez - pperez.
+   * Eliminar el usuario de todos los grupos de Foswiki en Main.WikiGroups, con el fin de evitar en un futuro se cree un usuario con el mismo WikiName y LoginName y obtenga permisos no deseados.
+
+*NOTA:* Se deja a consideración del administrador borrar los topic Main.PepePerez o por el sistema de archivos _C:\www\...\Foswiki\data\Main\PepePerez.txt_ y _C:\www\...\Foswiki\data\Main\PepePerez.txt,v_. La consecuencia de borrar el topic es que se perderá la referencia de todas las acciones del usuario.
+
+---++ Borrar y volver a crear un usuario
+---+++ Proceso de eliminación
+
+   * Modificar el .htpasswd eliminando la linea que contiene el LoginName del usuario.(C:\www\...\Foswiki\data\.htpasswd).
+      * Buscar: _pperez:uOr77GvqFeYuU:pperez@@choucairtesting.com_
+   * Eliminar la pareja WikiName - LoginName del topic Main.FoswikiUsers.
+      * Elimiar la linea: PepePerez - pperez.
+   * Si se tiene acceso al sistema de archivos:
+      * Eliminar a través del sistema de archivos los archivos de usuario en Main.
+         * Eliminar: _C:\www\...\Foswiki\data\Main\PepePerez.txt_ y _C:\www\...\Foswiki\data\Main\PepePerez.txt,v_
+   * Si no te se tiene acceso al sistema de archivos:
+      * Se debe borrar el topic PepePerez de la web Main, de la siguiente forma:
+         * Se ingresa al topic !Main.PepePerez
+         * Click en el link "Mas acciones sobre el tema" o "More topic actions"
+         * Click en "Borrar tema... busca enlaces en todas las webs públicas (recomendado)" o "Delete topic... scans links in all public webs (recommended)"
+         * Click en el botón "Borrar todo" o "Clear all" para desmarcar todo las opciones de las referencias.
+         * Click en el botón "Borrar" o "Delete".
+
+---+++ Proceso de creación
+
+   * Si el proceso de eliminación se realizo de manera exitosa, se debe seguir lo siguiente:
+      * Ingresar a System.UserRegistration.
+      * Diligenciar los campos del formulario con los datos del usuario.
+
+---+ Otras referencias
+
+   * System.ManagingUsers
+
+<!-- PDFSTOP -->
+
+
+%META:REVCOMMENT{ncomments="0"}%
+@

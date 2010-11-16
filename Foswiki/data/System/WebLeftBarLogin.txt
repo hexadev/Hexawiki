@@ -1,5 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" date="1286827325" format="1.1" version="2"}%
+%META:TOPICINFO{author="BaseUserMapping_333" date="1289759114" format="1.1" version="3"}%
 %META:TOPICPARENT{name="WebLeftBarExample"}%
 %STARTINCLUDE%<div class="patternLeftBarPersonal">
 %IF{"context authenticated" then='%MAKETEXT{"Hello [_1]" args="[[%WIKIUSERNAME%][%SPACEOUT{%WIKINAME%}%]]"}%'}%%IF{"$ LOGOUT != ''" then='%BR%<ul><li class="patternLogOut">%LOGOUT%</li></ul>'}%%IF{"$ LOGIN != '' and not context authenticated" then='<ul><li class="patternLogIn">%LOGIN% %IF{"context registration_supported AND context registration_enabled" then="%MAKETEXT{"or"}% [[%SYSTEMWEB%.UserRegistration][%MAKETEXT{"Register"}%]]"}%</li></ul>'}%
 </div>
+
+%META:REVCOMMENT{ncomments="0"}%

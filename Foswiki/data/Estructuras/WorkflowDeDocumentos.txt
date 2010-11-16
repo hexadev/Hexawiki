@@ -1,4 +1,4 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287185644" format="1.1" reprev="1" version="1"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289495805" format="1.1" reprev="2" version="3"}%
 ---++ Tags used in controlled topics
    * Set WORKFLOWNOTICE = Este topic esta bajo control de documentos. Version aprobada: %WORKFLOWLASTTIME_APROBADO%: %WORKFLOWLASTVERSION_APROBADO%
    * Set WORKFLOWBUTTON =  <table border="0" cellspacing="0" cellpadding="0"> <tr><td>Usted esta autorizado para cambiar el estado de este documento:</td><td>%WORKFLOWTRANSITION%</TD></tr></table>
@@ -18,3 +18,5 @@
 | ENREVISION | Terminar Revisión  | MODIFICADO | %USERSWEB%.WorkflowEnRevisionGroup  |   |
 | MODIFICADO | Aprobar  | APROBADO | %USERSWEB%.WorkflowAprobarGroup |  |
 | MODIFICADO | Rechazar | ENREVISION | %USERSWEB%.WorkflowAprobarGroup |  |
+
+%META:REVCOMMENT{ncomments="0"}%

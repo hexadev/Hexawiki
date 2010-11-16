@@ -1,0 +1,1 @@
+jQuery(function(a){var b={speed:1000,timeout:5000,type:"sequence",containerheight:"auto"};a(".jqInnerfade:not(.jqInitedInnerfade)").livequery(function(){var d=a(this);d.addClass("jqInitedInnerfade");var c=a.extend({},b,d.metadata());d.innerfade(c)})});

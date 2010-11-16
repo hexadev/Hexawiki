@@ -1,0 +1,1 @@
+jQuery(function(a){a(".jqButton:not(.jqInitedButton)").livequery(function(){var c=a(this),b;c.addClass("jqInitedButton");b=a.extend({},c.metadata());if(b.onclick){c.click(function(){return b.onclick.call(this)})}})});

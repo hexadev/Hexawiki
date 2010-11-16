@@ -1,0 +1,40 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.11.10.15.14.58;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" date="1289402098" format="1.1" version="1"}%
+---+!! %MAKETEXT{"Welcome to the [_1] web" args="<nop>%WEB%"}%
+
+---++ %MAKETEXT{"Available Information"}%
+   * ...
+   * ...
+   * ...
+ 
+---++ <nop>%WEB% Web Utilities
+   * WebTopicList - all topics in alphabetical order
+   * WebChanges - recent topic changes in this web
+   * WebNotify - subscribe to an e-mail alert sent when topics change
+   * WebRss, WebAtom - RSS and ATOM news feeds of topic changes
+   * WebStatistics - listing popular topics and top contributors
+   * WebPreferences - preferences of this web
+@

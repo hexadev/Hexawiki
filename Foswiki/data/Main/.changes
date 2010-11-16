@@ -1,5 +1,3 @@
-WorkflowEnRevisionGroup	BaseUserMapping_333	1287185825	1	
-WorkflowAprobarGroup	BaseUserMapping_333	1287185914	1	
 SitePreferences	BaseUserMapping_333	1287349047	4	
 SitePreferences	BaseUserMapping_333	1287426565	5	
 SitePreferences	BaseUserMapping_333	1287428963	5	minor, reprev
@@ -115,3 +113,6 @@ WorkflowAprobarGroup	dmontenegro	1289512279	6	minor, reprev
 WorkflowAprobarGroup	dmontenegro	1289512293	6	minor, reprev
 WorkflowChangeGroup	dmontenegro	1289512555	5	
 WorkflowChangeGroup	dmontenegro	1289512555	5	minor, reprev
+WorkflowEnElaboracionGroup	BaseUserMapping_333	1289876517	1	
+WorkflowEnElaboracionGroup	BaseUserMapping_333	1289876572	1	minor, reprev
+WorkflowChangeGroup	BaseUserMapping_333	1289877093	6	

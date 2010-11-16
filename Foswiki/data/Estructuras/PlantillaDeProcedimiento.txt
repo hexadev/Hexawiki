@@ -1,6 +1,6 @@
-%META:TOPICINFO{author="pruebas" comment="save topic" date="1289504993" format="1.1" reprev="7" version="8"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289881955" format="1.1" reprev="7" version="9"}%
 <!--
-   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+   * Set WORKFLOW = Estructuras.WorkflowAprobacionDeDocumentos
 -->
 %INCLUDE{"Estructuras.EstructuraDeProcedimiento"}%
 ---+++ Descripción

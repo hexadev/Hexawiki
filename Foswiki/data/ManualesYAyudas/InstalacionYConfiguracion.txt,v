@@ -1,0 +1,204 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.11.16.05.33.05;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289885585" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+<!-- PDFSTART -->  
+
+<span style="color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif; white-space: normal;">La unidad está desarrollada en formato presentación. Presione el botón para iniciar la presentación. Recuerde que para agregar un slide a la presentación se debe utilizar un título de primer nivel.</span>
+
+%SLIDESHOWSTART%
+---+ %FORMFIELD{"Nombre" topic=%WEB%.TOPIC}%
+Por Hexa
+
+Medellín 23 de Septiembre del 2009
+
+---+ Objetivo
+
+   * Conocer los fundamentos de instalación y configuración de Foswiki
+
+---+ Agenda
+
+   * *Que es Foswiki?* 
+      * Topics
+      * Extensiones
+      * !WikiWord
+   * Instalación de Foswiki
+   * Administración de Foswiki
+   * Preguntas
+
+---+ Que es Foswiki?
+
+   * Plataforma Web de colaboración
+   * Es un Wiki estructurado
+   * Webs 
+      * Representa un área de contenido
+      * Agrupa topics
+   * Topics
+
+---+ Agenda
+
+   * Que es Foswiki? 
+      * *Topics*
+      * Extensiones
+      * !WikiWord
+   * Instalación de Foswiki
+   * Administración de Foswiki
+   * Preguntas
+
+---+ Topics
+
+   * Características de los Topics 
+      * Nombre
+      * Contenido
+      * Control de acceso
+      * Control de revisiones
+      * Foswiki Web
+      * Meta data
+      * Editar, renombrar, mover, borrar
+
+---+ Topics
+
+   * En un topic se puede tener: 
+      * Adjuntos
+      * Búsquedas de otros topics
+      * Formulario
+      * Cálculos(Spreadsheet)
+      * Notificaciones
+
+---+ Agenda
+
+   * Que es Foswiki? 
+      * Topics
+      * *Extensiones*
+      * !WikiWord
+   * Instalación de Foswiki
+   * Administración de Foswiki
+   * Preguntas
+
+---+ Extensiones
+
+   * Extensiones de Foswiki 
+      * 
+         * Temas(Skin)
+         * Plugins
+         * Add-Ons
+   * [[http://www.foswiki.org/Extensions]]
+
+---+ Agenda
+
+   * Que es Foswiki? 
+      * Topics
+      * Extensiones
+      * *!WikiWord*
+   * Instalación de Foswiki
+   * Administración de Foswiki
+   * Preguntas
+
+---+ !WikiWord
+
+   * Palabra con 2 o mas letras en mayúscula.
+   * Creación de webs y topics.
+   * Links
+
+---+ Agenda
+
+   * Que es Foswiki? 
+      * Topics
+      * Extensiones
+      * !WikiWord
+   * *Instalación de Foswiki*
+   * Administración de Foswiki
+   * Preguntas
+
+---+ Instalación de Foswiki
+
+   * Documento de la instalación de Twiki 
+      * [[Registros/Anexos/AnexoId20100218144438][Manual Técnico y de Instalación]]
+
+---+ Agenda
+
+   * Que es Foswiki? 
+      * Topics
+      * Extensiones
+      * !WikiWord
+   * Instalación de Foswiki
+   * *Administración de Foswiki*
+   * Preguntas
+
+---+ Administración de Foswiki
+
+   * Estructura en el sistema de archivos 
+      * bin
+      * lib
+      * templates (Backup)
+      * pub (Backup)
+      * data (Backup)
+
+---+ Administración de Twiki
+
+   * Instalación de Plugins, Add-ons y Skins - [[http://www.hexasas.com/twiki/bin/configure.pl][view]]
+   * Creación de usuario 
+      * Múltiples usuarios
+   * Cambio de contraseña 
+      * Múltiples usuarios
+   * Crear una WEBs 
+      * Crear una subWeb
+   * Modificar permisos sobre webs y topics
+   * Crear un topic
+   * Opciones sobre el topic
+
+---+ Herramientas de Administración
+
+   * [[http://www.hexasas.com/twiki/bin/configure.pl][Instalación de plugins]]
+   * [[http://www.hexasas.com/twiki/bin/view.pl/TWiki/AdminToolsCategory][Admin- tools]] 
+      * System.BulkRegistration: Registrar a muchos usuarios
+      * System.ChangeEmailAddress: Cambiar el e-mail de un usuario en el registro de twiki
+      * System.InstalledPlugins: Muestra los plugins Instalados
+      * System.ManagingWebs: Gestionar nombres, renombrar, crear Webs
+      * System.ResetPassword: Cambiar la contraseña de un usuario
+      * System.SitePermissions: Permisos de los usuarios y grupos sobre las Webs
+      * System.FoswikiReferenceManual: Documentación para los administradores
+   * Crear un topic
+
+---+ Agenda
+
+   * Que es Foswiki? 
+      * Topics
+      * Extensiones
+      * !WikiWord
+   * Instalación de Foswiki
+   * Administración de Foswiki
+   * *Preguntas*
+
+---+ Preguntas
+
+   * ¿?
+%SLIDESHOWEND%
+
+<!-- PDFSTOP -->
+
+
+%META:REVCOMMENT{ncomments="0"}%
+@

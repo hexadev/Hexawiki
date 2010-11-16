@@ -1,0 +1,49 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289885238" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+---+!! Macros
+
+%TOC%
+
+A continuación se describen algunos macros que pueden ser útiles para trabajar en Foswiki. Un macro debe estar escrito en mayúsculas y entre signos de %. Opcionalmente puede recibir parametros usando ={}= así %MACRO{}%. La documentación completa de todos los macros se encuentra en [[System.Macros][Macros (inglés)]] o para un macro específico iingrese a =System.VarMACRO= reemplazando MACRO por el nombre del macro que desea consultar.
+
+---++ Macros del Topic
+
+Estos macros se convierten en variables dependientes del topic.
+
+   * El macro TOPIC retorna el nombre del topic en el que esté escrito. =%<nop>TOPIC%= retorna %TOPIC%.
+   * El macro WEB retorna el nombre de la web donde el macro está escrito. =%<nop>WEB%= retirna %WEB%
+   * El macro BASETOPIC retorna el nombre del topic que se está visualizando. =%<nop>BASETOPIC%= retorna %BASETOPIC%.
+   * El macro BASEWEB retorna el nombre de la web que se está visualizando. =%<nop>BASEWEB%= retirna %BASEWEB%
+
+Para este ejemplo BASETOPIC retorna lo mismo que TOPIC y lo mismo pasa con WEB porque en este caso se está visualizando el topic donde los macros estan escritos. En algúnas ocasiones esto no es así. Por ejemplo, si incluimos este topic dentro de otro, WEB y TOPIC retornatian el nombre de este topic y BASEWEB y BASETOPIC retornarian el nombre del topic en el que este está incluido.
+
+---++ Campos de un formulario
+
+El macro FORMFIELD retorna un campo del [[GlosarioDeTerminos][formulariode datos]] de un topic. En su forma más básica este macro recibe como parámetro el nombre del campo así: =%<nop>FORMFIELD{"Campo_de_ejemplo"}%=. Esto retornaría el valor de Campo_de_ejemplo del formulario de este topic.
+
+Adicionalmente se le puede pasar como segundo parámetro el topic donde se encuentra el formulario que nos interesa. Por ejemplo =%<nop>FORMFIELD{"Campo_de_ejemplo" topic="Web_de_interes.Topic_de_interes"}%=. Esto retornaría el valor de Campo_de_ejemplo en el formulario del topic Web_de_interes.Topic_de_interes.
+
+---++ Incluir otro Topic
+
+El macro INCLUDE es reemplazado por el contenido del topic que se le pase como parámetro. Por ejemplo.
+   * =%<nop>INCLUDE{"http://www.google.com/"}%=
+   * =%<nop>INCLUDE{"%SYSTEMWEB%.WebHome"}%=
+   * =%<nop>INCLUDE{"WebHome"}%=
+
+
+---++ Realizar una búsqueda
+
+Para incluir una búsqueda en un topic se tiene el macro SEARCH. En su forma fundamental se le pasa como parámetro el texto que se quiere buscar y el macro retornará un listado con formato de los topics que encontró con ese texto en la Web que se encuentra. Por ejemplo =%<nop>SEARCH{ &lt;parámetros&gt; }%=.
+
+Se pueden pasar otros parámetros para modificar el formato de los resultados o para realizar búsquedas mas complejas. Estos se pueden consultar en [[Macros#VarSEARCH][la página de Macros (inglés)]]
+
+---++ Generar una Tabla de Contenido
+
+Para generar una tabla de contenido se tiene el macro TOC. El macro =%<nop>TOC%= genera una tabla de contenido automática basada en los encabezados del topic. Para prevenir que algun encabezado se muestre en la tabla agregue =!!= luego de definir el encabezado de esta manera: escriba =---+!!= para un encabezado =---+= y asi sucesivamente para los ancabezados de diferentes niveles.
+
+---++ Ver más
+
+   * [[%SYSTEMWEB%.Macros][Documentación completa de Macros (inglés)]]
+
+
+%META:REVCOMMENT{ncomments="0"}%

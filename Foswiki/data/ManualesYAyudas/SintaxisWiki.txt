@@ -1,0 +1,10 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289885378" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+---+ Ver más
+
+   * System.WikiSyntax
+   * System.ShortHand
+   * System.TextFormattingRules
+
+
+%META:REVCOMMENT{ncomments="0"}%

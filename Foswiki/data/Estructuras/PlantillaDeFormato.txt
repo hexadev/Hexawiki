@@ -1,6 +1,6 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1287585229" format="1.1" reprev="1" version="3"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289881904" format="1.1" reprev="1" version="4"}%
 <!--
-   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+   * Set WORKFLOW = Estructuras.WorkflowAprobacionDeDocumentos
 -->
 %INCLUDE{"Estructuras.EstructuraDeFormato"}%
 ---+++ Descripción

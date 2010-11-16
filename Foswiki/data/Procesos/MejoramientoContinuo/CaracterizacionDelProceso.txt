@@ -1,7 +1,7 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1288889665" format="1.1" reprev="2" version="3"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289882239" format="1.1" reprev="2" version="4"}%
 %META:TOPICPARENT{name="WebHome"}%
 <!--
-   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+   * Set WORKFLOW = Estructuras.WorkflowAprobacionDeDocumentos
 -->
 
 %INCLUDE{Estructuras.EstructuraDeCaracterizacion}%

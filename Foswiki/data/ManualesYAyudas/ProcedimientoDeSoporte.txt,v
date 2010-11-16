@@ -1,0 +1,38 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+expand	@o@;
+
+
+1.1
+date	2010.11.16.05.31.45;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.1
+log
+@save topic
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289885505" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+---+ Soporte
+
+Para reportar una Falla, Problema, Incidente, Vulnerabilidad o cualquier evento negativo que se presente durante la utilización de Foswiki o para solicitar asesoría en el uso o administración de Foswiki comuniquese directamente con Hexa Ingenieros.
+
+|Teléfono | +57 (4) 583 9675|
+|Email | soporte@@hexasas.com |
+
+   * NOTA: el costo, horarios y nivel de servicio del soporte han sido acordados previamente entre las partes. Los correos a esta dirección se asumen como órdenes de trabajo y serán atendidos de acuerdo a las condiciones acordadas.
+
+
+%META:REVCOMMENT{ncomments="0"}%
+@

@@ -1,6 +1,6 @@
-%META:TOPICINFO{author="pruebas" comment="" date="1289505036" format="1.1" version="5"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289881939" format="1.1" version="6"}%
 <!--
-   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+   * Set WORKFLOW = Estructuras.WorkflowAprobacionDeDocumentos
 -->
 %INCLUDE{"Estructuras.EstructuraDeManual"}%
 ---+++ Descripción

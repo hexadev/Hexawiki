@@ -1,0 +1,19 @@
+%META:TOPICINFO{author="BaseUserMapping_333" comment="" date="1289885470" format="1.1" version="1"}%
+%META:TOPICPARENT{name="WebHome"}%
+---+ Glosario de Términos
+
+| *Término* | *Definición* |
+| Adjunto | Archivo que se carga desde su browser el cual queda relacionado y es descargable desde un _Topic_ específico. [[%SYSTEMWEB%.FileAttachments][Detalles (inglés)]] |
+| Formulario de Datos | Formulario al final de una página que puede ser rellenado con información y clasificaciónes particulares para el topic que lo contiene. [[%SYSTEMWEB%.DataForms][Detalles (inglés)]] |
+| Macro | Cadena de texto de forma =%<nop>MACRO{}%= que es expandida a texto, imagenes o algun tipo de contenido embebido al visualizar el _topic_. Existen _macros del systema_ que estan definidos en el núcleo de foswiki y macros que son definidos por los plugins instalados. [[AyudaDeMacros][Detalles]] |
+| Página | Una pagina web renderizada por foswiki conpuesta por el _skin/diseño_ y el contenido del topic. |
+| Plugin | Expansión preempacada para extender funcionalidades de foswiki. Esta debe ser instalada en el servidor. [[%SYSTEMWEB%.Plugins][Detalles (inglés)]] |
+| Preferencia | Parámetro que modifica el funcionamiento del sistema y puede ser definido a nivel de Sitio, Web, Usuario o Topic. [[%SYSTEMWEB%.PreferenceSettings][Preferencias del Sitio]] |
+| Sitio | Instalación de Foswiki de Usuario final accesible vía web. |
+| Skin o Diseño | Los Skins o diseños definen la diagrapación del encabezado, pié de página y barras laterales de una página. El skin no afecta de ninguna manera el contenido del topic que se muestre en la página. Los diseños pueden ser habilitados para todo el sitio o en algunos casos, por cada Web. [[%SYSTEMWEB%.Skins][Detalles (inglés)]] |
+| Topics/Temas Plantilla | Determina el contenido por defecto de un topic al momento de su creación. [[%SYSTEMWEB%.SkinTemplates][Detalles (inglés)]] |
+| Topic/Tema | Es el contenido de una página Wiki. Consiste de texto con formato Wiki y, opcionalmente, un formulario y archivos adjuntos. Está contenido dentro de una _Web_ y tiene un nombre Wiki que es único dentro de esa Web. [[%SYSTEMWEB%.TopicsAndWebs][Detalles (inglés)]] |
+| Web | Colección de _topics_ bajo un nombre/agrupador comun. Esta separación lógica permite segmentar rangos de búsqueda, el control de acceso, el diseño de las páginas, la disponibilidad de los Plugins a nivel de cada Web. [[%SYSTEMWEB%.ManagingWebs][Detalles (inglés)]] |
+
+
+%META:REVCOMMENT{ncomments="0"}%

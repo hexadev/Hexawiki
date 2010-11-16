@@ -1,0 +1,161 @@
+head	1.5;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.5
+date	2010.11.16.04.27.52;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2010.11.16.04.14.22;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2010.11.16.03.58.49;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.11.16.03.40.22;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.11.16.03.10.00;	author BaseUserMapping_333;	state Exp;
+branches;
+next	;
+
+
+desc
+@none
+@
+
+
+1.5
+log
+@reprev
+@
+text
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289881672" format="1.1" reprev="5" version="5"}%
+---++ Tags used in controlled topics
+   * Set WORKFLOWNOTICE = Este topic esta bajo control de documentos. Versión aprobada: %WORKFLOWLASTTIME_APROBADO%: %WORKFLOWLASTVERSION_APROBADO%
+   * Set WORKFLOWBUTTON =  <table border="0" cellspacing="0" cellpadding="0"> <tr><td>Usted esta autorizado para cambiar el estado de este documento:</td><td>%WORKFLOWTRANSITION%</TD></tr></table>
+   * Set this to 1 to enable debugging about the workflow
+   * Set WORKFLOWDEBUG = 1
+
+
+---++ States
+
+| *State*       | *Allow Edit* | *Message* |
+| ELABORACION | WorkflowEnElaboracionGroup | This document is being revised. |
+| APROBADO      | nobody       | This document has been approved for release. |
+| ESPERANDOREVISION  | nobody       | This document is waiting for approval by the Quality Manager. |
+| ESPERANDOAPROBACION | nobody       | This document is waiting for approval by the CTO.|
+
+
+---++ Transitions
+
+| *State*       | *Action* | *Next State*  | *Allowed*                        |
+| APROBADO      | Pasar a elaboración   | ELABORACION | QualityGroup                     |
+| ELABORACION | Listo para revisión | ESPERANDOREVISION | QualityGroup                     |
+| ESPERANDOREVISION  | Listo para aprobación  | ESPERANDOAPROBACION | QualityManager                   |
+| ESPERANDOAPROBACION  | aprobado   | APROBADO | QualityManager,QualityGroup      |
+| ESPERANDOREVISION | Requiere modificación  | ELABORACION      | TechnicalDirector                |
+| ESPERANDOAPROBACION | rechazado   | ELABORACION | TechnicalDirector,QualityManager |
+
+
+
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="5" t_1="1289881308"}%
+@
+
+
+1.4
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289880862" format="1.1" reprev="1" version="4"}%
+d11 6
+a16 5
+| *State* | *Allow Edit* | *Message* |
+| ELABORACION | %USERSWEB%.WorkflowEnElaboracionGroup | El documento se encuentra en proceso de construcción. | 
+| ESPERAREVISION | nobody | Este documento se encuentra en espera de revision. |
+| ESPERAAPROBACION | nobody | Este documento ha sido modificado. |
+| APROBADO  | nobody | Este documento ha sido aprobado. |
+d20 8
+a27 7
+| *State* | *Action* | *Next State*  | *Allowed* | *Form* |
+| APROBADO | Modificar  | ELABORACION | %USERSWEB%.WorkflowEnElaboracionGroup  |   |
+| ELABORACION | Revision | ESPERAREVISION | %USERSWEB%.WorkflowEnElaboracionGroup |  |
+| ESPERAREVISION | Aprobacion  | ESPERAAPROBACION | %USERSWEB%.WorkflowEnRevisionGroup  |   |
+| ESPERAREVISION | Rechazar | ELABORACION | %USERSWEB%.WorkflowEnRevisionGroup, %USERSWEB%.WorkflowEnElaboracionGroup |   |
+| ESPERAAPROBACION | Rechazar  | ELABORACION | %USERSWEB%.WorkflowAprobarGroup |  |
+| ESPERAAPROBACION | Aprobar  | APROBADO | %USERSWEB%.WorkflowAprobarGroup |  |
+d30 1
+a30 1
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.3
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289879929" format="1.1" reprev="1" version="3"}%
+d28 1
+a28 1
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="2" t_1="1289878822"}%
+@
+
+
+1.2
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289878822" format="1.1" reprev="1" version="2"}%
+d11 1
+a11 1
+| *State*       | *Allow Edit* | *Message* |
+d20 3
+a22 2
+| ELABORACION | Listo para Revisión | ESPERAREVISION | %USERSWEB%.WorkflowEnElaboracionGroup |  |
+| ESPERAREVISION | Listo para Aprobación  | ESPERAAPROBACION | %USERSWEB%.WorkflowEnRevisionGroup  |   |
+a25 1
+| APROBADO | Modificar documento  | ELABORACION | %USERSWEB%.WorkflowEnElaboracionGroup  |   |
+d28 1
+a28 3
+
+
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="" t_1="1289878822"}%
+@
+
+
+1.1
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289877000" format="1.1" reprev="1" version="1"}%
+d6 1
+a6 1
+   * Set WORKFLOWDEBUG = 0
+d10 1
+d30 1
+a30 1
+%META:REVCOMMENT{ncomments="0"}%
+@

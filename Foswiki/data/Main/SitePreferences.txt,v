@@ -1,9 +1,14 @@
-head	1.12;
+head	1.13;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 
+
+1.13
+date	2010.11.16.19.35.34;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.12;
 
 1.12
 date	2010.11.11.19.28.19;	author pruebas;	state Exp;
@@ -71,12 +76,12 @@ desc
 @
 
 
-1.12
+1.13
 log
-@save topic
+@reprev
 @
 text
-@%META:TOPICINFO{author="pruebas" comment="reprev" date="1289503699" format="1.1" reprev="7" version="12"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289936134" format="1.1" reprev="13" version="13"}%
 ---+!! %TOPIC%
 
 %ICON{"help"}% 
@@ -125,7 +130,7 @@ Skin
 
 ---++ System.WorkflowPlugin
 
-   * Set WORKFLOWHISTORYFORMAT = $n| $state | $wikiusername | $date |
+   * Set WORKFLOWHISTORYFORMAT = $n| $state | $wikiusername | [[%BASEWEB%.%BASETOPIC%?rev=$rev][revisón $rev]] - $date |
 
 
 ---++ !GenPDFAddOn Settings
@@ -181,6 +186,23 @@ Settings for the GenPDFAddOn Plugin
 
 %META:FILEATTACHMENT{name="logo_trans_small.png" attachment="logo_trans_small.png" attr="" comment="" date="1286381449" path="logo_trans_small.png" size="4232" user="BaseUserMapping_333" version="2"}%
 %META:FILEATTACHMENT{name="logo-trans-small.png" attachment="logo-trans-small.png" attr="" comment="" date="1286826659" path="logo-trans-small.png" size="18758" user="BaseUserMapping_333" version="1"}%
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="13" t_1="1289936033"}%
+@
+
+
+1.12
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="pruebas" comment="reprev" date="1289503699" format="1.1" reprev="7" version="12"}%
+d50 1
+a50 1
+   * Set WORKFLOWHISTORYFORMAT = $n| $state | $wikiusername | $date |
+d106 1
+a106 1
 %META:REVCOMMENT{ncomments="0"}%
 @
 

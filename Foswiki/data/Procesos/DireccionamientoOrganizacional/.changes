@@ -1,9 +1,3 @@
-ProcedimientoId20101017155534	BaseUserMapping_333	1287349183	1	
-ProcedimientoId20101017155534	BaseUserMapping_333	1287349773	2	
-ProcedimientoId20101017155534	BaseUserMapping_333	1287349780	3	
-ProcedimientoId20101017155534	BaseUserMapping_333	1287349820	4	
-ProcedimientoId20101017155534	BaseUserMapping_333	1287349826	5	
-CaracterizacionDelProceso	BaseUserMapping_333	1287364586	2	
 ProcedimientoId20101018163257	BaseUserMapping_333	1287437598	1	
 ProcedimientoId20101018163257	BaseUserMapping_333	1287437755	2	minor
 ProcedimientoId20101018163257	BaseUserMapping_333	1287437775	2	minor, reprev
@@ -29,3 +23,7 @@ InstructivoId20101015120039	pruebas	1289571332	7
 InstructivoId20101015120039	pruebas	1289571342	8	
 CaracterizacionDelProceso	BaseUserMapping_333	1289877859	5	
 CaracterizacionDelProceso	BaseUserMapping_333	1289882172	6	
+CaracterizacionDelProceso	BaseUserMapping_333	1290102734	7	
+CaracterizacionDelProceso	BaseUserMapping_333	1290102927	7	minor, reprev
+CaracterizacionDelProceso	BaseUserMapping_333	1290103019	7	minor, reprev
+CaracterizacionDelProceso	BaseUserMapping_333	1290103277	7	minor, reprev

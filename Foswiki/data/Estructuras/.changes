@@ -76,3 +76,7 @@ PlantillaDeManual	BaseUserMapping_333	1289881939	6
 PlantillaDeProcedimiento	BaseUserMapping_333	1289881955	9	
 PlantillaDeDocumentoExterno	BaseUserMapping_333	1289882335	4	minor, reprev
 PlantillaDeDocumentoDeApoyo	BaseUserMapping_333	1289882362	4	minor, reprev
+VistaDeControlDeDocumentos	BaseUserMapping_333	1289936391	3	
+DocumentoEditTemplate	BaseUserMapping_333	1289937527	7	minor
+DocumentoExternoEditTemplate	BaseUserMapping_333	1289941963	4	
+ProcesoEditTemplate	BaseUserMapping_333	1289942042	3	

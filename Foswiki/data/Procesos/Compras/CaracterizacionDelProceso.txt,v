@@ -1,10 +1,15 @@
-head	1.4;
+head	1.5;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 expand	@o@;
 
+
+1.5
+date	2010.11.18.18.00.33;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.4;
 
 1.4
 date	2010.11.11.22.06.57;	author juparela;	state Exp;
@@ -32,28 +37,28 @@ desc
 @
 
 
-1.4
+1.5
 log
 @reprev
 @
 text
-@%META:TOPICINFO{author="juparela" comment="reprev" date="1289513217" format="1.1" reprev="4" version="4"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1290103233" format="1.1" reprev="5" version="5"}%
 %META:TOPICPARENT{name="WebHome"}%
 <!--
-   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+   * Set WORKFLOW = Estructuras.WorkflowAprobacionDeDocumentos
 -->
 %INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
 
 <table width="100%"> <tbody> <tr> <td width="100%"> <table width="100%"> <tbody> <tr> <td width="50%">
 
 %EDITTABLE{format="| label, 0, *Objetivo:* | textarea, 5x60, |"}% 
-| *Objetivo:* | Ut id porta est. Mauris cursus sem sed lacus tempor rhoncus. Mauris condimentum, mauris non ullamcorper lacinia, ante dolor vehicula lectus, vel interdum magna augue eget orci. Vivamus erat nunc, pretium non sollicitudin sit amet, mattis ut libero. Quisque placerat lectus a tellus convallis posuere. |
+| *Objetivo:* | .... |
 </td>
 
 <td width="50%">
 
 %EDITTABLE{format="| label, 0, *Alcance:* | textarea, 5x60, |"}% 
-| *Alcance:* | Ut at tincidunt nulla. Morbi non ipsum tortor. Nullam elit lorem, porta sed varius eget, venenatis id libero. Mauris imperdiet aliquam urna non ullamcorper. Aenean sapien dui, adipiscing vel pharetra sed, suscipit nec est. Etiam orci massa, placerat id malesuada vitae, vulputate eget velit volutpat. |
+| *Alcance:* | .... |
 </td>
 
 </tr> <tr> <td width="50%">
@@ -70,8 +75,8 @@ text
 
 </tr> </tbody> </table> </td> </tr> <tr> <td width="100%"> <table width="100%"> <thead> <tr> <th>Proveedores</th> <th>Entradas</th> <th> - </th> <th>Actividades</th> <th>Salidas</th> <th>Clientes</th> </tr> </thead> <tbody> <tr> <td width="20%">
 
-%EDITTABLE{format="| label, 0, * |text, 60, |"}% 
-| ... | dddddddddddddddddddddddddddddddd |
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
 </td>
 
 <td width="20%">
@@ -196,9 +201,9 @@ text
 | *Ambiente de trabajo*:  | ... |
 </td>
 
-<td width="30%">%~~ DBQUERY{ ~~~ "form.name =~ 'FormularioDe(Procedimiento|Instructivo|Manual|Formato)'" ~~~ web="%WEB%" ~~~ format=" * [[$web.$topic][$percntIF{\"'$topic'~'*ProcedimientoId*'\" then=\"PR\"}$percnt$percntIF{\"'$topic'~'*ManualId*'\" then=\"MA\"}$percnt$percntIF{\"'$topic'~'*FormatoId*'\" then=\"FO\"}$percnt$percntIF{\"'$topic'~'*InstructivoId*'\" then=\"IN\"}$percnt-$formfield(Numero)-$formfield(Nombre)]]" ~~~ }%</td>
+<td width="30%" align="left" valign="top">%DBQUERY{ "form.name =~ 'FormularioDe(Procedimiento|Instructivo|Manual|Formato)'" separator="%BR%" web="%WEB%" format="%BULLET% [[$web.$topic][$percntIF{\"'$topic'~'*ProcedimientoId*'\" then=\"PR\"}$percnt$percntIF{\"'$topic'~'*ManualId*'\" then=\"MA\"}$percnt$percntIF{\"'$topic'~'*FormatoId*'\" then=\"FO\"}$percnt$percntIF{\"'$topic'~'*InstructivoId*'\" then=\"IN\"}$percnt-$formfield(Numero)-$formfield(Nombre)]]"}%</td>
 
-<td width="30%">%~~ DBQUERY{ ~~~ "form.name =~ 'FormularioDeDocumentoExterno'" ~~~ web="%WEB%" ~~~ format=" * [[$web.$topic][$formfield(Nombre)]]" ~~~ }%</td> </tr> </tbody> </table> </td> </tr> </tbody> </table> 
+<td width="30%"  align="left" valign="top">%DBQUERY{"form.name =~ 'FormularioDeDocumentoExterno'" web="%WEB%" separator="%BR%"  format="%BULLET% [[$web.$topic][$formfield(Nombre)]]"}%</td> </tr> </tbody> </table> </td> </tr> </tbody> </table> 
 
 ---++ Indicadores
 
@@ -220,6 +225,36 @@ text
 %META:FIELD{name="Responsable" attributes="M" title="[[Estructuras.ListadoDeCargos][Responsable]]" value="Main.JonathanUparela"}%
 %META:FIELD{name="Version" attributes="M" title="Version" value="00"}%
 %META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.4
+log
+@reprev
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="juparela" comment="reprev" date="1289513217" format="1.1" reprev="4" version="4"}%
+d4 1
+a4 1
+   * Set WORKFLOW = Estructuras.WorkflowDeDocumentos
+d11 1
+a11 1
+| *Objetivo:* | Ut id porta est. Mauris cursus sem sed lacus tempor rhoncus. Mauris condimentum, mauris non ullamcorper lacinia, ante dolor vehicula lectus, vel interdum magna augue eget orci. Vivamus erat nunc, pretium non sollicitudin sit amet, mattis ut libero. Quisque placerat lectus a tellus convallis posuere. |
+d17 1
+a17 1
+| *Alcance:* | Ut at tincidunt nulla. Morbi non ipsum tortor. Nullam elit lorem, porta sed varius eget, venenatis id libero. Mauris imperdiet aliquam urna non ullamcorper. Aenean sapien dui, adipiscing vel pharetra sed, suscipit nec est. Etiam orci massa, placerat id malesuada vitae, vulputate eget velit volutpat. |
+d34 2
+a35 2
+%EDITTABLE{format="| label, 0, * |text, 60, |"}% 
+| ... | dddddddddddddddddddddddddddddddd |
+d160 1
+a160 1
+<td width="30%">%~~ DBQUERY{ ~~~ "form.name =~ 'FormularioDe(Procedimiento|Instructivo|Manual|Formato)'" ~~~ web="%WEB%" ~~~ format=" * [[$web.$topic][$percntIF{\"'$topic'~'*ProcedimientoId*'\" then=\"PR\"}$percnt$percntIF{\"'$topic'~'*ManualId*'\" then=\"MA\"}$percnt$percntIF{\"'$topic'~'*FormatoId*'\" then=\"FO\"}$percnt$percntIF{\"'$topic'~'*InstructivoId*'\" then=\"IN\"}$percnt-$formfield(Numero)-$formfield(Nombre)]]" ~~~ }%</td>
+d162 1
+a162 1
+<td width="30%">%~~ DBQUERY{ ~~~ "form.name =~ 'FormularioDeDocumentoExterno'" ~~~ web="%WEB%" ~~~ format=" * [[$web.$topic][$formfield(Nombre)]]" ~~~ }%</td> </tr> </tbody> </table> </td> </tr> </tbody> </table> 
 @
 
 

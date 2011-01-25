@@ -1,10 +1,11 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1289885044" format="1.1" reprev="3" version="3"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289935098" format="1.1" reprev="4" version="4"}%
    * *%MAKETEXT{"Webs"}%*
 %FLEXWEBLIST{
      format="$indent   * <span style=\"white-space:nowrap\"><a href=\"%SCRIPTURLPATH{"view"}%/$name/%HOMETOPIC%\"><img src=\"%ICONURL{web-bg}%\" border=\"0\" alt=\"\" width=\"16\" height=\"16\" style=\"background-color:%$markerVAR{\"WEBBGCOLOR\" web=$qname}$marker%\" />&nbsp;$name</a></span>$n"
      subwebs="none"
      include="(Main|Procesos|Sandbox)"
 }%
+   * [[System.SiteMap][Mapa de Sitio]]
 
    * *Administración*
 %FLEXWEBLIST{
@@ -14,4 +15,4 @@
 }%
 
 
-%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="3" t_1="1289884909"}%
+%META:REVCOMMENT{ncomments="0"}%

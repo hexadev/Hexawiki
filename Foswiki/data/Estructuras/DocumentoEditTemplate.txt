@@ -1,22 +1,10 @@
-%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289261027" format="1.1" reprev="2" version="6"}%
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289937527" format="1.1" reprev="2" version="7"}%
 %TMPL:INCLUDE{"foswiki"}% 
-%TMPL:INCLUDE{"edit"}% 
+%TMPL:INCLUDE{"edit.pattern"}% 
 %TMPL:DEF{"form"}%%TMPL:END% 
 %TMPL:DEF{"formtop"}%%TMPL:END% 
 %TMPL:DEF{"formbottom"}%%TMPL:END% 
 %TMPL:DEF{"formparameters"}%%TMPL:END% 
-%TMPL:DEF{"titleactionchapter"}%(%MAKETEXT{"edit chapter"}%)%TMPL:END% 
-%TMPL:DEF{"action_buttonschapter"}%%TMPL:P{"button_save"}% %TMPL:P{"button_quietsave"}% %MAKETEXT{"or"}% %TMPL:P{"button_cancel"}%%TMPL:END% 
-%TMPL:DEF{"titlechapter"}%%TOPICTITLE% (%MAKETEXT{"edit chapter"}%) - %WIKITOOLNAME%%TMPL:END% 
-%TMPL:DEF{"pagetitlechapter"}%[[%WEB%.%TOPIC%]] (%MAKETEXT{"edit chapter"}%)%TMPL:END% 
-%TMPL:DEF{"settingstabchapter"}%%TMPL:END% 
-%TMPL:DEF{"chaptertemplate"}% 
-%TMPL:P{"formstart"}% 
-%TMPL:P{"textarea"}% 
-%TMPL:P{"sig"}% 
-%TMPL:P{"topicinfo"}% 
-%TMPL:P{"formbottom"}% 
-%TMPL:END%
 
 %TMPL:DEF{"content"}%
 %TMPL:P{"toolbar"}%
@@ -61,4 +49,4 @@ $(function (){
 %TMPL:END%
 
 
-%META:REVCOMMENT{ncomments="0"}%
+%META:REVCOMMENT{comment_1=" " minor_1="1" ncomments="1" rev_1="" t_1="1289937527"}%

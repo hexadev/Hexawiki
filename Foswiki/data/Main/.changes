@@ -116,3 +116,7 @@ WorkflowChangeGroup	dmontenegro	1289512555	5	minor, reprev
 WorkflowEnElaboracionGroup	BaseUserMapping_333	1289876517	1	
 WorkflowEnElaboracionGroup	BaseUserMapping_333	1289876572	1	minor, reprev
 WorkflowChangeGroup	BaseUserMapping_333	1289877093	6	
+SitePreferences	BaseUserMapping_333	1289935881	13	
+SitePreferences	BaseUserMapping_333	1289936033	13	minor, reprev
+SitePreferences	BaseUserMapping_333	1289936093	13	minor, reprev
+SitePreferences	BaseUserMapping_333	1289936134	13	minor, reprev

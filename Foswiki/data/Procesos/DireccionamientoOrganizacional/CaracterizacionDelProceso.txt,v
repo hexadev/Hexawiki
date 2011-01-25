@@ -1,10 +1,15 @@
-head	1.6;
+head	1.7;
 access;
 symbols;
 locks; strict;
 comment	@# @;
 expand	@o@;
 
+
+1.7
+date	2010.11.18.18.01.17;	author BaseUserMapping_333;	state Exp;
+branches;
+next	1.6;
 
 1.6
 date	2010.11.16.04.36.12;	author BaseUserMapping_333;	state Exp;
@@ -42,18 +47,207 @@ desc
 @
 
 
-1.6
+1.7
 log
-@save topic
+@reprev
 @
 text
-@%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289882172" format="1.1" reprev="1" version="6"}%
+@%META:TOPICINFO{author="BaseUserMapping_333" comment="reprev" date="1290103277" format="1.1" reprev="7" version="7"}%
 %META:TOPICPARENT{name="WebHome"}%
 <!--
    * Set WORKFLOW = Estructuras.WorkflowAprobacionDeDocumentos
 -->
 %INCLUDE{Estructuras.EstructuraDeCaracterizacion}%
 
+<table width="100%"> <tbody> <tr> <td width="100%"> <table width="100%"> <tbody> <tr> <td width="50%">
+
+%EDITTABLE{format="| label, 0, *Objetivo:* | textarea, 5x60, |"}% 
+| *Objetivo:* | .... |
+</td>
+
+<td width="50%">
+
+%EDITTABLE{format="| label, 0, *Alcance:* | textarea, 5x60, |"}% 
+| *Alcance:* | .... |
+</td>
+
+</tr> <tr> <td width="50%">
+
+%EDITTABLE{format="| label, 0, *Requisitos ISO-9000 Aplicables:* | text, 60, |"}% 
+| *Requisitos ISO-9000 Aplicables:* | ... |
+</td>
+
+<td width="50%">
+
+%EDITTABLE{format="| label, 0, *Requisitos HACCP Aplicables:* | text, 60, |"}% 
+| *Requisitos HACCP Aplicables:* | ... |
+</td>
+
+</tr> </tbody> </table> </td> </tr> <tr> <td width="100%"> <table width="100%"> <thead> <tr> <th>Proveedores</th> <th>Entradas</th> <th> - </th> <th>Actividades</th> <th>Salidas</th> <th>Clientes</th> </tr> </thead> <tbody> <tr> <td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td align="center" style="background-color: #ddd;" valign="middle" width="4%"> *P* </td> <td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ...  |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ...  |
+</td>
+
+</tr> <tr> <td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td align="center" style="background-color: #fff;" valign="middle" width="4%"> *H* </td> <td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ...  |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ...  |
+</td>
+
+</tr> <tr> <td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td align="center" style="background-color: #ddd;" valign="middle" width="4%"> *V* </td> <td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ...  |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ...  |
+</td>
+
+</tr> <tr> <td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td align="center" style="background-color: #fff;" valign="middle" width="4%"> *A* </td> <td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ... |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ...  |
+</td>
+
+<td width="20%">
+
+%EDITTABLE{format="|textarea, 5x60, |"}% 
+| ...  |
+</td>
+
+</tr> </tbody> </table> </td> </tr> <tr> <td width="100%"> <table width="100%"> <thead> <tr> <th>Recursos</th> <th>Documentos Internos</th> <th>Documentos Externos</th> </tr> </thead> <tbody> <tr> <td width="30%">
+
+%EDITTABLE{format="| text, 40, | textarea, 5x60, |"}% 
+| *Físicos*:  | ... |
+| *Humanos*:  | ... |
+| *Ambiente de trabajo*:  | ... |
+</td>
+
+<td width="30%" align="left" valign="top">%DBQUERY{ "form.name =~ 'FormularioDe(Procedimiento|Instructivo|Manual|Formato)'" separator="%BR%" web="%WEB%" format="%BULLET% [[$web.$topic][$percntIF{\"'$topic'~'*ProcedimientoId*'\" then=\"PR\"}$percnt$percntIF{\"'$topic'~'*ManualId*'\" then=\"MA\"}$percnt$percntIF{\"'$topic'~'*FormatoId*'\" then=\"FO\"}$percnt$percntIF{\"'$topic'~'*InstructivoId*'\" then=\"IN\"}$percnt-$formfield(Numero)-$formfield(Nombre)]]"}%</td>
+
+<td width="30%"  align="left" valign="top">%DBQUERY{"form.name =~ 'FormularioDeDocumentoExterno'" web="%WEB%" separator="%BR%"  format="%BULLET% [[$web.$topic][$formfield(Nombre)]]"}%</td> </tr> </tbody> </table> </td> </tr> </tbody> </table> 
+
+---++ Indicadores
+
+%EDITTABLE{format="|text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |"}% 
+| *Factor critico de éxito* | *Tipo* | *Fórmula* | *Descripción* | *Meta* | *Rango de gestión* | *Frecuencia* | *Responsable* |
+| | | | | | | | |
+ 
+
+---++ Cambios
+
+%EDITTABLE{format="|date,0,|textarea, 4x80, |"}% 
+| *Fecha* | *Descripción* |
+| | |
+
+%META:FORM{name="Estructuras.FormularioDeFormato"}%
+%META:FIELD{name="Nombre" attributes="M" title="Nombre" value="Caracterización"}%
+%META:FIELD{name="Descripcion" attributes="M" title="Descripcion" value="-"}%
+%META:FIELD{name="Numero" attributes="M" title="Numero" value="-"}%
+%META:FIELD{name="Responsable" attributes="M" title="[[Estructuras.ListadoDeCargos][Responsable]]" value="-"}%
+%META:FIELD{name="Version" attributes="M" title="Version" value="-"}%
+%META:REVCOMMENT{ncomments="0"}%
+@
+
+
+1.6
+log
+@save topic
+@
+text
+@d1 1
+a1 1
+%META:TOPICINFO{author="BaseUserMapping_333" comment="save topic" date="1289882172" format="1.1" reprev="1" version="6"}%
+d8 15
+a22 17
 <table width="100%">
   <tr>
        <td width="100%">
@@ -71,11 +265,13 @@ text
                 <tr>
                     <td width="50%">
 %EDITTABLE{format="| label, 0, *Requisitos ISO-9000 Aplicables:* | text, 60, |"}%
-| *Requisitos ISO-9000 Aplicables:* | ... |
+d24 5
+a28 3
                     </td>   
                     <td width="50%">
 %EDITTABLE{format="| label, 0, *Requisitos HACCP Aplicables:* | text, 60, |"}%
-| *Requisitos HACCP Aplicables:* | ... |
+d30 133
+a162 155
                     </td>   
                 </tr>   
              </table>
@@ -231,26 +427,19 @@ text
         </td>
    </tr>
 </table>
-
----++ Indicadores
-
+d166 2
+a167 2
 %EDITTABLE{format="|text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |text, 20, |"}%
 | *Factor critico de éxito* | *Tipo* | *Fórmula* | *Descripción* | *Meta* | *Rango de gestión* | *Frecuencia* | *Responsable* |  
-| | | | | | | | |
-
-
+d169 1
+d171 1
+d173 1
+a173 2
 ---++ Cambios
 %EDITTABLE{format="|date,0,|textarea, 4x80, |"}%
-| *Fecha* | *Descripción* |
+d175 1
+a175 1
 |  |  |
-
-%META:FORM{name="Estructuras.FormularioDeFormato"}%
-%META:FIELD{name="Nombre" attributes="M" title="Nombre" value="Caracterización"}%
-%META:FIELD{name="Descripcion" attributes="M" title="Descripcion" value="-"}%
-%META:FIELD{name="Numero" attributes="M" title="Numero" value="-"}%
-%META:FIELD{name="Responsable" attributes="M" title="[[Estructuras.ListadoDeCargos][Responsable]]" value="-"}%
-%META:FIELD{name="Version" attributes="M" title="Version" value="-"}%
-%META:REVCOMMENT{ncomments="0"}%
 @
 
 

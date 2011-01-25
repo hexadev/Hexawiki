@@ -5,7 +5,7 @@
 
 
 %TMPL:DEF{"sidebar:webindicator"}%<div class="patternWebIndicator" style="border-color:%WEBBGCOLOR%">
-<a href='%SCRIPTURL{"view"}%/%BASEWEB%/%HOMETOPIC%'><nop>%BASEWEB%</a>
+<a href='%SCRIPTURL{"view"}%/%BASEWEB%/%HOMETOPIC%'><nop>%FORMFIELD{"Nombre" topic="%BASEWEB%.%HOMETOPIC%" alttext="%BASEWEB%"}%</a>
 </div>%TMPL:END%
 
 %TMPL:DEF{"sidebar:wikilogo"}%<div id="patternSidebarLogo"><a href="%WIKILOGOURL%"><img src="%WIKILOGOIMG%" alt="%WIKILOGOALT%" title="%WIKILOGOALT%" border="0" /></a></div>%TMPL:END%

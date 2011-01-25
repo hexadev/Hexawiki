@@ -494,7 +494,7 @@ s/([\n\r])(From|To|CC|BCC)(\:\s*)([^\n\r]*)/$1 . $2 . $3 . _fixLineLength( $4 )/
         $smtp = Net::SMTP->new(
             $this->{MAIL_HOST},
             Hello => $this->{HELLO_HOST},
-            Debug => $Foswiki::cfg{SMTP}{Debug} || 0
+			Debug => $Foswiki::cfg{SMTP}{Debug} || 0
         );
     }
     else {

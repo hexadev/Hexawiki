@@ -98,3 +98,6 @@
 | Fri Nov 12 15:57:26 2010 |  | 190.109.184.33 | {DisplayTimeValues} | servertime |
 | Fri Nov 12 16:07:49 2010 |  | 190.109.184.33 | {Stats}{TopViews} | 11 |
 | Fri Nov 12 16:08:15 2010 |  | 190.109.184.33 | {Stats}{TopViews} | 10 |
+| Fri Nov 19 23:26:02 2010 |  | 127.0.0.1 | {SMTP}{Password} | frigo2010 |
+| Fri Nov 19 23:36:11 2010 |  | 127.0.0.1 | {SMTP}{Username} |  |
+| Fri Nov 19 23:36:11 2010 |  | 127.0.0.1 | {SMTP}{Password} |  |
